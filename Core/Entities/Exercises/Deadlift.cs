@@ -1,5 +1,4 @@
 ﻿using System;
-using Core.Entities.Enums;
 using Core.Entities.Enums.Exercises;
 
 namespace Core.Entities.Exercises
@@ -27,7 +26,5 @@ namespace Core.Entities.Exercises
             DeadliftType.SnatchDeadlift => "Snatch Deadlift",
             _ => throw new ArgumentOutOfRangeException(nameof(_type), "Type is not defined")
         };
-
-        public override EquipmentType EquipmentType => EquipmentType.Barbell;
     }
 }

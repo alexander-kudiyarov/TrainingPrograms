@@ -100,7 +100,7 @@ namespace Core.Entities.Exercises
             _ => throw new ArgumentException()
         };
 
-        public override EquipmentType EquipmentType => _type switch
+        public EquipmentType EquipmentType => _type switch
         {
             AccessoryType.DumbbellFrenchPress => EquipmentType.Dumbbell,
             _ => EquipmentType.Barbell

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Core.Entities.Enums;
 using Core.Entities.Enums.Exercises;
 
 namespace Core.Entities.Exercises
@@ -21,8 +20,6 @@ namespace Core.Entities.Exercises
         }
 
         public override string Name => string.Join(" + ", GetNames(_types));
-
-        public override EquipmentType EquipmentType => EquipmentType.Barbell;
 
         private static IEnumerable<string> GetNames(IEnumerable<CleanAndJerkType> types)
         {

@@ -130,11 +130,17 @@ namespace Core.Bll
         {
             if (repeat.Weight == null) return;
 
-            var factor = exercise.EquipmentType switch
+            var equipment = exercise switch
+            {
+                Accessory accessory => accessory.EquipmentType,
+                _ => EquipmentType.Barbell
+            };
+
+            var factor = equipment switch
             {
                 EquipmentType.Barbell => Stats.BarbellFactor,
                 EquipmentType.Dumbbell => Stats.DumbbellFactor,
-                _ => throw new ArgumentOutOfRangeException(nameof(exercise.EquipmentType), "Type is not defined")
+                _ => throw new ArgumentOutOfRangeException(nameof(equipment), "Type is not defined")
             };
 
             var roundedWeight = Math.Round(repeat.Weight.Value / factor) * factor;

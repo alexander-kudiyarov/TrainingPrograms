@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Core.Entities.Enums;
 
 namespace Core.Entities.Exercises
 {
@@ -11,8 +10,6 @@ namespace Core.Entities.Exercises
         }
 
         public abstract string Name { get; }
-
-        public abstract EquipmentType EquipmentType { get; }
 
         public double? BaseWeight { get; }
 
