@@ -28,7 +28,8 @@ namespace Core.TrainingPrograms
                 new(GetSession1),
                 new(GetSession2),
                 new(GetSession3),
-                new(GetSession4)
+                new(GetSession4),
+                new(GetSession5)
             };
 
             return sessions;
@@ -224,6 +225,63 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 4,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new Accessory(BoxJump)
+            {
+                Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
+            };
+
+            var ex3 = new Snatch(BaseSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3", Sets = 3},
+                    new() {Percent = 0.6, Repeats = "3"}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "1+3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "1+3", Sets = 3}
+                }
+            };
+
+            var ex5 = new Accessory(BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "5"},
+                    new() {Percent = 0.6, Repeats = "5"},
+                    new() {Percent = 0.7, Repeats = "5"},
+                    new() {Percent = 0.8, Repeats = "4", Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Day = 5,
                 Sets = new Set[]
                 {
                     new(ex1),
