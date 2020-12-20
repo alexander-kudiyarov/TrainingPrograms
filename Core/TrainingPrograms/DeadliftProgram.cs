@@ -3,6 +3,7 @@ using Core.Entities;
 using Core.Entities.Exercises;
 using static Core.Entities.Exercises.Enums.AccessoryType;
 using static Core.Entities.Exercises.Enums.CleanAndJerkType;
+using static Core.Entities.Exercises.Enums.DeadliftType;
 using static Core.Entities.Exercises.Enums.SnatchType;
 
 namespace Core.TrainingPrograms
@@ -45,7 +46,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "2+2+1", Sets = 4}}
             };
 
-            var ex3 = new Accessory(Deadlift)
+            var ex3 = new Deadlift(BaseDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -151,7 +152,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "3", Sets = 4}}
             };
 
-            var ex3 = new Accessory(Stats.Deadlift, DeficitDeadlift)
+            var ex3 = new Deadlift(BaseDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -199,7 +200,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "1+2+3", Sets = 4}}
             };
 
-            var ex3 = new Accessory(Deadlift)
+            var ex3 = new Deadlift(BaseDeadlift)
             {
                 Repeats = new Repeat[]
                 {

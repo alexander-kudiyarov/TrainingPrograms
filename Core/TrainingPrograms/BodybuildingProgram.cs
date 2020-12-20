@@ -3,6 +3,7 @@ using Core.Entities;
 using Core.Entities.Exercises;
 using static Core.Entities.Exercises.Enums.AccessoryType;
 using static Core.Entities.Exercises.Enums.CleanAndJerkType;
+using static Core.Entities.Exercises.Enums.DeadliftType;
 using static Core.Entities.Exercises.Enums.SnatchType;
 
 namespace Core.TrainingPrograms
@@ -195,13 +196,13 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession4()
         {
-            var ex1 = new Accessory(SnatchDeadlift)
+            var ex1 = new Deadlift(Stats.SnatchDeadlift, SnatchDeadlift)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex2 = new Accessory(RomanianDeadlift)
+            var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 3}}
             };
@@ -385,13 +386,13 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession8()
         {
-            var ex1 = new Accessory(Deadlift)
+            var ex1 = new Deadlift(BaseDeadlift)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex2 = new Accessory(AsymmetryDeadlift)
+            var ex2 = new Deadlift(AsymmetryDeadlift)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 4}}
             };
@@ -587,7 +588,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 3}}
             };
 
-            var ex2 = new Accessory(RomanianDeadlift)
+            var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
             {
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 3}}
             };
@@ -786,13 +787,13 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession16()
         {
-            var ex1 = new Accessory(Deadlift)
+            var ex1 = new Deadlift(BaseDeadlift)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
             };
 
-            var ex2 = new Accessory(AsymmetryDeadlift)
+            var ex2 = new Deadlift(AsymmetryDeadlift)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 4}}
             };

@@ -18,13 +18,6 @@
         // Calf
         CalfRise,
 
-        // Deadlift
-        Deadlift,
-        DeficitDeadlift,
-        AsymmetryDeadlift,
-        RomanianDeadlift,
-        SnatchDeadlift,
-
         // Shoulders
         DiscRearDeltFly,
         Halo,

@@ -11,7 +11,7 @@ namespace Core.Entities.Exercises
         {
             _type = type;
         }
-        
+
         public Accessory(double baseWeight, AccessoryType type) : base(baseWeight)
         {
             _type = type;
@@ -34,13 +34,6 @@ namespace Core.Entities.Exercises
 
             // Calf
             AccessoryType.CalfRise => "Calf Rise",
-
-            // Deadlift
-            AccessoryType.Deadlift => "Deadlift",
-            AccessoryType.DeficitDeadlift => "Deficit Deadlift",
-            AccessoryType.AsymmetryDeadlift => "Asymmetry Deadlift",
-            AccessoryType.RomanianDeadlift => "Romanian Deadlift",
-            AccessoryType.SnatchDeadlift => "Snatch Deadlift",
 
             // Shoulders
             AccessoryType.DiscRearDeltFly => "Disc Rear Delt Fly",
@@ -131,12 +124,6 @@ namespace Core.Entities.Exercises
                 // Lunges
                 AccessoryType.BackLunges => Stats.Lunges,
                 AccessoryType.ForwardLunges => Stats.Lunges,
-
-                // Deadlift
-                AccessoryType.Deadlift => Stats.Deadlift,
-                AccessoryType.AsymmetryDeadlift => Stats.Deadlift,
-                AccessoryType.RomanianDeadlift => Stats.RomanianDeadlift,
-                AccessoryType.SnatchDeadlift => Stats.SnatchDeadlift,
 
                 // Back
                 AccessoryType.LateralPull => Stats.LateralPull,

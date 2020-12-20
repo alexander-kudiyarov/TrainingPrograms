@@ -50,7 +50,7 @@ namespace Core.Entities.Exercises
 
                 // Front Squat
                 CleanAndJerkType.FrontSquat => "Front Squat",
-                _ => throw new ArgumentException("Unsupported Type", nameof(type))
+                _ => throw new ArgumentOutOfRangeException(nameof(type), "Type is not defined")
             };
 
             return result;
