@@ -1,0 +1,21 @@
+﻿@model ICollection<Core.Entities.ITrainingProgram>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+@foreach (var program in Model)
+{
+    <p>@Html.ActionLink(program.Name, "Program", new {type = program.Name})</p>
+}
+
+@* @foreach (var (key, value) in Model) *@
+@* { *@
+@*     <h3>@key</h3> *@
+@* *@
+@*     @for (var i = 1; i <= value; i++) *@
+@*     { *@
+@*         <p>@Html.ActionLink($"Session {i}", "Session", new {name = key, session = i})</p> *@
+@*     } *@
+@* } *@

@@ -1,0 +1,42 @@
+﻿@model Core.Entities.Session
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div>
+        <h3>Session @Model.Day</h3>
+        @foreach (var set in Model.Sets)
+        {
+            foreach (var _ in Enumerable.Range(0, set.Rounds))
+            {
+                @if (set.IsSuperset)
+                {
+                    var titles = set.Exercises.Select(i => i.Name);
+                    var title = string.Join(" ++ ", titles);
+
+                    var repeats = set.Exercises.SelectMany(c => c.Repeats, (c, e) => $"{(e.Weight != null ? $"{e.Weight} × " : string.Empty)}{e.Repeats}");
+                    var repeat = string.Join(" ++ ", repeats);
+
+                    <div>
+                        <p>@title</p>
+                        <p>@repeat</p>
+                    </div>
+                }
+                else
+                {
+                    foreach (var ex in set.Exercises)
+                    {
+                        <div>
+                            <p>@ex.Name</p>
+                            @foreach (var repeat in ex.Repeats)
+                            {
+                                <p>@(repeat.Weight != null ? $"{repeat.Weight} × " : string.Empty)@repeat.Repeats</p>
+                            }
+                        </div>
+                    }
+                }
+            }
+        }
+    </div>
+</div>
