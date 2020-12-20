@@ -3,9 +3,7 @@
     public enum AccessoryType
     {
         // Back Squat
-        BackSquat,
         BackSplitSquat,
-        BenchBackSquat,
         GakkSquat,
 
         // Lunges

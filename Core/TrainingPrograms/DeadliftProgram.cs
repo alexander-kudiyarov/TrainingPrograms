@@ -3,6 +3,7 @@ using Core.Entities;
 using Core.Entities.Exercises;
 using static Core.Entities.Enums.Exercises.AccessoryType;
 using static Core.Entities.Enums.Exercises.CleanAndJerkType;
+using static Core.Entities.Enums.Exercises.BackSquatType;
 using static Core.Entities.Enums.Exercises.DeadliftType;
 using static Core.Entities.Enums.Exercises.SnatchType;
 
@@ -268,7 +269,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new Accessory(BackSquat)
+            var ex5 = new BackSquat(BaseBackSquat)
             {
                 Repeats = new Repeat[]
                 {

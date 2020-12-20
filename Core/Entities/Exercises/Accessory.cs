@@ -16,9 +16,7 @@ namespace Core.Entities.Exercises
         public override string Name => _type switch
         {
             // Back Squat
-            AccessoryType.BackSquat => "Back Squat",
             AccessoryType.BackSplitSquat => "Back Split Squat",
-            AccessoryType.BenchBackSquat => "Bench Back Squat",
             AccessoryType.GakkSquat => "Gakk Squat",
 
             // Lunges
@@ -113,9 +111,7 @@ namespace Core.Entities.Exercises
             return type switch
             {
                 // Back Squat
-                AccessoryType.BackSquat => Stats.BackSquat,
                 AccessoryType.BackSplitSquat => Stats.BackSplitSquat,
-                AccessoryType.BenchBackSquat => Stats.BackSquat * 1.1,
 
                 // Lunges
                 AccessoryType.BackLunges => Stats.Lunges,

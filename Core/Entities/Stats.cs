@@ -8,6 +8,7 @@
         public static double Snatch => 55;
         public static double CleanAndJerk { get; } = Snatch / 0.825;
         public static double BackSquat { get; } = CleanAndJerk * 1.25;
+        public static double BenchBackSquat { get; } = BackSquat * 1.1;
         public static double FrontSquat { get; } = BackSquat * 0.85;
         public static double Deadlift { get; } = BackSquat * 1.2;
         public static double BenchPress { get; } = BackSquat * 0.75;

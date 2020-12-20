@@ -2,6 +2,7 @@ using System;
 using Core.Entities;
 using Core.Entities.Exercises;
 using static Core.Entities.Enums.Exercises.AccessoryType;
+using static Core.Entities.Enums.Exercises.BackSquatType;
 using static Core.Entities.Enums.Exercises.CleanAndJerkType;
 using static Core.Entities.Enums.Exercises.DeadliftType;
 using static Core.Entities.Enums.Exercises.SnatchType;
@@ -48,13 +49,13 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession1()
         {
-            var ex1 = new Accessory(BackSquat)
+            var ex1 = new BackSquat(BaseBackSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex2 = new Accessory(BenchBackSquat)
+            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
             {
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
             };
@@ -252,7 +253,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 3}}
             };
 
-            var ex2 = new Accessory(BenchBackSquat)
+            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 3}}
             };
@@ -446,7 +447,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession9()
         {
-            var ex1 = new Accessory(BackSquat)
+            var ex1 = new BackSquat(BaseBackSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
@@ -642,7 +643,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex2 = new Accessory(BenchBackSquat)
+            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 2}}
             };
