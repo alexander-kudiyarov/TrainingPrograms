@@ -1,4 +1,4 @@
-﻿namespace Core.Entities.Exercises.Enums
+﻿namespace Core.Entities.Enums
 {
     public enum EquipmentType
     {

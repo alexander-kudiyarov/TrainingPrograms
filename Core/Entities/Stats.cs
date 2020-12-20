@@ -22,23 +22,12 @@
         public static double LateralPull { get; } = RomanianDeadlift; // ?
         public static double PullUp { get; } = BackSquat * 0.675;
         public static double Lunges { get; } = BackSplitSquat;
-        public static double MediumGripPull { get; } = (Snatch + CleanAndJerk) / 2 * PullFactor;
+        private static double MediumGripPull { get; } = (Snatch + CleanAndJerk) / 2 * PullFactor;
         public static double DeficitMediumGripPull { get; } = MediumGripPull * DeficitFactor;
         public static double PushPress { get; } = BackSquat * 0.6375;
         private static double PullFactor => 1.1;
         private static double DeficitFactor => 0.9;
-        private static double Body => 71;
-        private static double Bar => 20;
-
-        // public static double Snatch => BodyWeight;
-        // public static double CleanAndJerk => BodyWeight;
-        // public static double BackSquat => BodyWeight;
-        // public static double BackSplitSquat => BackSquat * 0.5;
-        // public static double BenchPress => BodyWeight * 0.75;
-        // public static double MilitaryPress => BodyWeight * 0.45;
-        // public static double FrenchPress => BodyWeight * 0.3;
-        // public static double Bar => 20;
-        // public static double Factor => 2.5;
-        // public static double BodyWeight => 75;
+        //private static double Body => 71;
+        //private static double Bar => 20;
     }
 }

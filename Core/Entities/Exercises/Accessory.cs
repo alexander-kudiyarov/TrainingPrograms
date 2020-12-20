@@ -1,5 +1,6 @@
 ﻿using System;
-using Core.Entities.Exercises.Enums;
+using Core.Entities.Enums;
+using Core.Entities.Enums.Exercises;
 
 namespace Core.Entities.Exercises
 {
@@ -8,11 +9,6 @@ namespace Core.Entities.Exercises
         private readonly AccessoryType _type;
 
         public Accessory(AccessoryType type) : base(Weight(type))
-        {
-            _type = type;
-        }
-
-        public Accessory(double baseWeight, AccessoryType type) : base(baseWeight)
         {
             _type = type;
         }

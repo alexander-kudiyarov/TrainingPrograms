@@ -1,10 +1,10 @@
 using System;
 using Core.Entities;
 using Core.Entities.Exercises;
-using static Core.Entities.Exercises.Enums.AccessoryType;
-using static Core.Entities.Exercises.Enums.CleanAndJerkType;
-using static Core.Entities.Exercises.Enums.DeadliftType;
-using static Core.Entities.Exercises.Enums.SnatchType;
+using static Core.Entities.Enums.Exercises.AccessoryType;
+using static Core.Entities.Enums.Exercises.CleanAndJerkType;
+using static Core.Entities.Enums.Exercises.DeadliftType;
+using static Core.Entities.Enums.Exercises.SnatchType;
 
 namespace Core.TrainingPrograms
 {

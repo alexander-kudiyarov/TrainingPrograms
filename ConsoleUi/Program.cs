@@ -37,7 +37,7 @@ namespace ConsoleUi
     {
         private static void Main()
         {
-            var summary = BenchmarkRunner.Run<Benchmark>();
+            BenchmarkRunner.Run<Benchmark>();
         }
     }
 }

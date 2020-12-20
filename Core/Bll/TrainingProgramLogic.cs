@@ -5,8 +5,8 @@ using Core.Bll.Interfaces;
 using Core.Common.Helpers;
 using Core.Dal.Interfaces;
 using Core.Entities;
+using Core.Entities.Enums;
 using Core.Entities.Exercises;
-using Core.Entities.Exercises.Enums;
 
 namespace Core.Bll
 {
@@ -134,7 +134,7 @@ namespace Core.Bll
             {
                 EquipmentType.Barbell => Stats.BarbellFactor,
                 EquipmentType.Dumbbell => Stats.DumbbellFactor,
-                _ => throw new ArgumentException()
+                _ => throw new ArgumentOutOfRangeException(nameof(exercise.EquipmentType), "Type is not defined")
             };
 
             var roundedWeight = Math.Round(repeat.Weight.Value / factor) * factor;
