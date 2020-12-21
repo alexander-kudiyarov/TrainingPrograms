@@ -11,6 +11,8 @@
         SnatchPull,
         SnatchPushPress,
         MediumGripPull,
-        DeficitMediumGripPull
+        DeficitMediumGripPull,
+        DeficitPowerSnatch,
+        SotsPress
     }
 }
