@@ -13,6 +13,7 @@
         MediumGripPull,
         DeficitMediumGripPull,
         DeficitPowerSnatch,
-        SotsPress
+        SotsPress,
+        MuscleSquatSnatch
     }
 }

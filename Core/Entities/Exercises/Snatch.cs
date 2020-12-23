@@ -43,6 +43,7 @@ namespace Core.Entities.Exercises
                 SnatchType.DeficitMediumGripPull => "Medium Grip Pull (from Deficit)",
                 SnatchType.DeficitPowerSnatch => "Deficit Power Snatch",
                 SnatchType.SotsPress => "Sots Press",
+                SnatchType.MuscleSquatSnatch => "Muscle Squat Snatch",
                 _ => throw new ArgumentOutOfRangeException(nameof(type), "Type is not defined")
             };
 

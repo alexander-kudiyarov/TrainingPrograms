@@ -9,7 +9,7 @@ using static Core.Entities.Enums.Exercises.SnatchType;
 
 namespace Core.TrainingPrograms
 {
-    public class DeadliftProgram : ITrainingProgram
+    public class DeadliftProgram : Base, ITrainingProgram
     {
         public const string Name = "Deadlift Program";
 
@@ -31,7 +31,8 @@ namespace Core.TrainingPrograms
                 new(GetSession3),
                 new(GetSession4),
                 new(GetSession5),
-                new(GetSession6)
+                new(GetSession6),
+                new(GetSession7)
             };
 
             return sessions;
@@ -332,6 +333,56 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 6,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession7()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new Snatch(MuscleSquatSnatch)
+            {
+                Repeats = GetRange(0.4, 0.5, 4, "4")
+            };
+
+            var ex3 = new Deadlift(BaseDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "5"},
+                    new() {Percent = 0.6, Repeats = "5"},
+                    new() {Percent = 0.7, Repeats = "5"},
+                    new() {Percent = 0.8, Repeats = "4", Sets = 2},
+                    new() {Percent = 0.85, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var ex4 = new Accessory(GakkSquat)
+            {
+                Repeats = new[] {new Repeat {Repeats = "15", Sets = 4}}
+            };
+
+            var ex5 = new Accessory(Plank)
+            {
+                Repeats = new[] {new Repeat {Repeats = "60 sec", Sets = 3}}
+            };
+
+            var session = new Session
+            {
+                Day = 7,
                 Sets = new Set[]
                 {
                     new(ex1),
