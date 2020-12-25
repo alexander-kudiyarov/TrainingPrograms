@@ -21,7 +21,7 @@ namespace WebUi
 
         public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ITrainingProgramLogic, TrainingProgramLogic>();
+            services.AddSingleton<ITrainingProgramLogic, TrainingProgramLogic>();
             services.AddSingleton<IProgramRepository, ProgramRepository>();
             services.AddControllersWithViews();
         }
