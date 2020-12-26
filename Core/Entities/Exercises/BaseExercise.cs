@@ -4,14 +4,14 @@ namespace Core.Entities.Exercises
 {
     public abstract class BaseExercise
     {
-        protected BaseExercise(double? baseWeight)
+        protected BaseExercise(double? weight)
         {
-            BaseWeight = baseWeight;
+            Weight = weight;
         }
 
         public abstract string Name { get; }
 
-        public double? BaseWeight { get; }
+        public double? Weight { get; }
 
         public IList<Repeat> Repeats { get; set; }
 

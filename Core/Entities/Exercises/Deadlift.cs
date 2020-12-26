@@ -12,7 +12,7 @@ namespace Core.Entities.Exercises
             _type = type;
         }
 
-        public Deadlift(double baseWeight, DeadliftType type) : base(baseWeight)
+        public Deadlift(double weight, DeadliftType type) : base(weight)
         {
             _type = type;
         }

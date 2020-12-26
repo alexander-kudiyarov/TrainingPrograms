@@ -14,7 +14,7 @@ namespace Core.Entities.Exercises
             _types = types;
         }
 
-        public Snatch(double baseWeight, params SnatchType[] types) : base(baseWeight)
+        public Snatch(double weight, params SnatchType[] types) : base(weight)
         {
             _types = types;
         }

@@ -8,7 +8,7 @@ namespace Core.Entities.Exercises
     {
         private readonly AccessoryType _type;
 
-        public Accessory(AccessoryType type) : base(Weight(type))
+        public Accessory(AccessoryType type) : base(GetWeight(type))
         {
             _type = type;
         }
@@ -106,7 +106,7 @@ namespace Core.Entities.Exercises
             _ => EquipmentType.Barbell
         };
 
-        private static double? Weight(AccessoryType type)
+        private static double? GetWeight(AccessoryType type)
         {
             return type switch
             {

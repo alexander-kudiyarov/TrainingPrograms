@@ -14,7 +14,7 @@ namespace Core.Entities.Exercises
             _types = types;
         }
 
-        public CleanAndJerk(double baseWeight, params CleanAndJerkType[] types) : base(baseWeight)
+        public CleanAndJerk(double weight, params CleanAndJerkType[] types) : base(weight)
         {
             _types = types;
         }

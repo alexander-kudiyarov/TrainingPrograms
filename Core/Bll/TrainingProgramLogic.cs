@@ -85,7 +85,7 @@ namespace Core.Bll
 
         private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
         {
-            if (exercise.BaseWeight == null || repeat.Percent != null) return;
+            if (exercise.Weight == null || repeat.Percent != null) return;
 
             var repeats = repeat.Repeats.Split('+');
             var firstRepeat = repeats[0];
@@ -122,8 +122,8 @@ namespace Core.Bll
 
         private static void CalculateWeight(BaseExercise exercise, Repeat repeat)
         {
-            if (repeat.Weight == null && exercise.BaseWeight != null)
-                repeat.Weight = exercise.BaseWeight * repeat.Percent;
+            if (repeat.Weight == null && exercise.Weight != null)
+                repeat.Weight = exercise.Weight * repeat.Percent;
         }
 
         private static void RoundWeight(BaseExercise exercise, Repeat repeat)

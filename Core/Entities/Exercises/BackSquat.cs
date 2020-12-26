@@ -12,7 +12,7 @@ namespace Core.Entities.Exercises
             _type = type;
         }
 
-        public BackSquat(double baseWeight, BackSquatType type) : base(baseWeight)
+        public BackSquat(double weight, BackSquatType type) : base(weight)
         {
             _type = type;
         }
