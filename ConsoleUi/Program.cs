@@ -11,6 +11,7 @@ namespace ConsoleUi
     public class Benchmark
     {
         private readonly ITrainingProgramLogic _logic;
+        private readonly BodybuildingProgram _program;
 
         public Benchmark()
         {
@@ -21,14 +22,14 @@ namespace ConsoleUi
         [Benchmark]
         public Session GetSession1()
         {
-            var result = _logic.Get(BodybuildingProgram.Name, 1);
+            var result = _logic.Get(_program.Name, 1);
             return result;
         }
 
         [Benchmark]
         public Session GetSession2()
         {
-            var result = _logic.Get(BodybuildingProgram.Name, 2);
+            var result = _logic.Get(_program.Name, 2);
             return result;
         }
     }

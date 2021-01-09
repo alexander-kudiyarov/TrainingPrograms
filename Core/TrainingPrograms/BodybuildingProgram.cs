@@ -9,20 +9,11 @@ using static Core.Entities.Enums.Exercises.SnatchType;
 
 namespace Core.TrainingPrograms
 {
-    public class BodybuildingProgram : Base, ITrainingProgram
+    public sealed class BodybuildingProgram : TrainingProgramBase
     {
-        public const string Name = "Bodybuilding Program";
+        public override string Name => "Bodybuilding Program";
 
-        public BodybuildingProgram()
-        {
-            Sessions = GetSessions();
-        }
-
-        string ITrainingProgram.Name => Name;
-
-        public Lazy<Session>[] Sessions { get; }
-
-        private static Lazy<Session>[] GetSessions()
+        protected override Lazy<Session>[] GetSessions()
         {
             var sessions = new[]
             {

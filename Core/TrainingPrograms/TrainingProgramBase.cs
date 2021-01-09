@@ -1,10 +1,21 @@
+using System;
 using System.Collections.Generic;
 using Core.Entities;
 
 namespace Core.TrainingPrograms
 {
-    public class Base
+    public abstract class TrainingProgramBase : ITrainingProgram
     {
+        protected TrainingProgramBase()
+        {
+            Sessions = GetSessions();
+        }
+
+        public abstract string Name { get; }
+        public Lazy<Session>[] Sessions { get; }
+
+        protected abstract Lazy<Session>[] GetSessions();
+
         protected static IList<Repeat> GetRange(double start, double stop, int sets, string repeats)
         {
             var step = GetStep(start, stop, sets);
