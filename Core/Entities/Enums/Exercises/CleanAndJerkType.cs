@@ -18,6 +18,9 @@
         PushPress,
 
         // Front Squat
-        FrontSquat
+        FrontSquat,
+
+        //
+        GoodMorningSquat
     }
 }

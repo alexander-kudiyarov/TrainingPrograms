@@ -33,7 +33,8 @@ namespace Core.TrainingPrograms
                 new(GetSession5),
                 new(GetSession6),
                 new(GetSession7),
-                new(GetSession8)
+                new(GetSession8),
+                new(GetSession9)
             };
 
             return sessions;
@@ -444,6 +445,55 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 8,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession9()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new CleanAndJerk(GoodMorningSquat)
+            {
+                Repeats = GetRange(0.4, 0.5, 3, "6")
+            };
+
+            var ex3 = new Deadlift(DeficitDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "5"},
+                    new() {Percent = 0.6, Repeats = "5"},
+                    new() {Percent = 0.7, Repeats = "5"},
+                    new() {Percent = 0.825, Repeats = "4", Sets = 4}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(FrontSquat, PushPress)
+            {
+                Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "1+5", Sets = 4}}
+            };
+
+            var ex5 = new Accessory(ReversePlank)
+            {
+                Repeats = new[] {new Repeat {Repeats = "60 sec", Sets = 3}}
+            };
+
+            var session = new Session
+            {
+                Day = 9,
                 Sets = new Set[]
                 {
                     new(ex1),

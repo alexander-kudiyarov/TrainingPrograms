@@ -48,6 +48,10 @@ namespace Core.Entities.Exercises
 
                 // Front Squat
                 CleanAndJerkType.FrontSquat => "Front Squat",
+
+                //
+                CleanAndJerkType.GoodMorningSquat => "Good Morning + Squat",
+
                 _ => throw new ArgumentOutOfRangeException(nameof(type), "Type is not defined")
             };
 
