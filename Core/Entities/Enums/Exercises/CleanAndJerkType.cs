@@ -6,7 +6,7 @@
         Clean,
         PowerClean,
         PowerCleanBelowKnee,
-        HangClean,
+        HangCleanBelowKnee,
         HangPowerClean,
         CleanPull,
         CleanPullTillPowerPosition,

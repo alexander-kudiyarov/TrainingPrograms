@@ -35,7 +35,7 @@ namespace Core.Entities.Exercises
                 CleanAndJerkType.Clean => "Clean",
                 CleanAndJerkType.PowerClean => "Power Clean",
                 CleanAndJerkType.PowerCleanBelowKnee => "Power Clean (Below Knee)",
-                CleanAndJerkType.HangClean => "Hang Clean",
+                CleanAndJerkType.HangCleanBelowKnee => "Hang Clean (Below Knee)",
                 CleanAndJerkType.HangPowerClean => "Hang Power Clean",
                 CleanAndJerkType.CleanPull => "Clean Pull",
                 CleanAndJerkType.CleanPullTillPowerPosition => "Clean Pull Till Power Position",

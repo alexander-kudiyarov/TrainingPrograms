@@ -29,7 +29,8 @@ namespace Core.TrainingPrograms
                 new(GetSession6),
                 new(GetSession7),
                 new(GetSession8),
-                new(GetSession9)
+                new(GetSession9),
+                new(GetSession10)
             };
 
             return sessions;
@@ -489,6 +490,59 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 9,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession10()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new CleanAndJerk(Clean, HangCleanBelowKnee)
+            {
+                Repeats = new[]
+                {
+                    new Repeat {Percent = 0.5, Repeats = "1+3", Sets = 2},
+                    new Repeat {Percent = 0.6, Repeats = "1+1", Sets = 3}
+                }
+            };
+
+            var ex3 = new Deadlift(BaseDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "4"},
+                    new() {Percent = 0.6, Repeats = "4"},
+                    new() {Percent = 0.7, Repeats = "4"},
+                    new() {Percent = 0.825, Repeats = "3", Sets = 4}
+                }
+            };
+
+            var ex4 = new Accessory(GakkSquat)
+            {
+                Repeats = new[] {new Repeat {Repeats = "15", Sets = 4}}
+            };
+
+            var ex5 = new Accessory(Plank)
+            {
+                Repeats = new[] {new Repeat {Repeats = "60 sec", Sets = 3}}
+            };
+
+            var session = new Session
+            {
+                Day = 10,
                 Sets = new Set[]
                 {
                     new(ex1),
