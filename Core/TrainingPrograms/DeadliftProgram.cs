@@ -11,9 +11,13 @@ namespace Core.TrainingPrograms
 {
     public sealed class DeadliftProgram : TrainingProgramBase
     {
+        public DeadliftProgram() : base(GetSessions())
+        {
+        }
+
         public override string Name => "Deadlift Program";
 
-        protected override Lazy<Session>[] GetSessions()
+        private static Lazy<Session>[] GetSessions()
         {
             var sessions = new Lazy<Session>[]
             {

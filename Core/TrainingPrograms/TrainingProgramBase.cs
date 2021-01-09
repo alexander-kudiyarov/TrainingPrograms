@@ -6,15 +6,14 @@ namespace Core.TrainingPrograms
 {
     public abstract class TrainingProgramBase : ITrainingProgram
     {
-        protected TrainingProgramBase()
+        protected TrainingProgramBase(Lazy<Session>[] sessions)
         {
-            Sessions = GetSessions();
+            Sessions = sessions;
         }
 
         public abstract string Name { get; }
         public Lazy<Session>[] Sessions { get; }
 
-        protected abstract Lazy<Session>[] GetSessions();
 
         protected static IList<Repeat> GetRange(double start, double stop, int sets, string repeats)
         {
