@@ -19,7 +19,7 @@ namespace Core.Bll
             _repository = repository;
         }
 
-        public ICollection<ITrainingProgram> Get()
+        public IEnumerable<ITrainingProgram> Get()
         {
             var result = _repository.Get();
             return result;

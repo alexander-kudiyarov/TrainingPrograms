@@ -5,7 +5,7 @@ namespace Core.Bll.Interfaces
 {
     public interface ITrainingProgramLogic
     {
-        ICollection<ITrainingProgram> Get();
+        IEnumerable<ITrainingProgram> Get();
         ITrainingProgram Get(string type);
         Session Get(string type, int day);
     }
