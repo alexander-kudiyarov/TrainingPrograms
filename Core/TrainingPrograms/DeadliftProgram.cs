@@ -21,17 +21,10 @@ namespace Core.TrainingPrograms
         {
             var sessions = new Lazy<Session>[]
             {
-                new(GetSession1),
-                new(GetSession2),
-                new(GetSession3),
-                new(GetSession4),
-                new(GetSession5),
-                new(GetSession6),
-                new(GetSession7),
-                new(GetSession8),
-                new(GetSession9),
-                new(GetSession10),
-                new(GetSession11)
+                new(GetSession1), new(GetSession2), new(GetSession3),
+                new(GetSession4), new(GetSession5), new(GetSession6),
+                new(GetSession7), new(GetSession8), new(GetSession9),
+                new(GetSession10), new(GetSession11), new(GetSession12)
             };
 
             return sessions;
@@ -601,6 +594,56 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 11,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession12()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new Snatch(DeficitPowerSnatch, OverheadSquat)
+            {
+                Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "3+1", Sets = 4}}
+            };
+
+            var ex3 = new Deadlift(DeficitDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.8, Repeats = "3"},
+                    new() {Percent = 0.825, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var ex4 = new Snatch(SotsPress)
+            {
+                Repeats = new[] {new Repeat {Percent = 0.3, Repeats = "8", Sets = 3}}
+            };
+
+            var ex5 = new Accessory(ReversePlank)
+            {
+                Repeats = new[] {new Repeat {Repeats = "60 sec", Sets = 3}}
+            };
+
+            var session = new Session
+            {
+                Day = 12,
                 Sets = new Set[]
                 {
                     new(ex1),
