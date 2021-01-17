@@ -21,16 +21,16 @@ namespace Core.TrainingPrograms
         {
             var sessions = new Lazy<Session>[]
             {
-                new(GetSession1), new(GetSession2), new(GetSession3),
-                new(GetSession4), new(GetSession5), new(GetSession6),
-                new(GetSession7), new(GetSession8), new(GetSession9),
-                new(GetSession10), new(GetSession11), new(GetSession12)
+                new(GetSession1_1), new(GetSession1_2), new(GetSession1_3),
+                new(GetSession2_1), new(GetSession2_2), new(GetSession2_3),
+                new(GetSession3_1), new(GetSession3_2), new(GetSession3_3),
+                new(GetSession4_1), new(GetSession4_2), new(GetSession4_3)
             };
 
             return sessions;
         }
 
-        private static Session GetSession1()
+        private static Session GetSession1_1()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -79,7 +79,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession2()
+        private static Session GetSession1_2()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -136,7 +136,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession3()
+        private static Session GetSession1_3()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -184,7 +184,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession4()
+        private static Session GetSession2_1()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -233,7 +233,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession5()
+        private static Session GetSession2_2()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -290,7 +290,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession6()
+        private static Session GetSession2_3()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -338,7 +338,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession7()
+        private static Session GetSession3_1()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -388,7 +388,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession8()
+        private static Session GetSession3_2()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -448,7 +448,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession9()
+        private static Session GetSession3_3()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -497,7 +497,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession10()
+        private static Session GetSession4_1()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -550,7 +550,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession11()
+        private static Session GetSession4_2()
         {
             var ex1 = new Accessory(Hyperextension)
             {
@@ -607,7 +607,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession12()
+        private static Session GetSession4_3()
         {
             var ex1 = new Accessory(Hyperextension)
             {

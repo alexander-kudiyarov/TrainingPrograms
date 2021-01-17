@@ -19,30 +19,18 @@ namespace Core.TrainingPrograms
 
         private static Lazy<Session>[] GetSessions()
         {
-            var sessions = new[]
+            var sessions = new Lazy<Session>[]
             {
-                new Lazy<Session>(GetSession1),
-                new Lazy<Session>(GetSession2),
-                new Lazy<Session>(GetSession3),
-                new Lazy<Session>(GetSession4),
-                new Lazy<Session>(GetSession5),
-                new Lazy<Session>(GetSession6),
-                new Lazy<Session>(GetSession7),
-                new Lazy<Session>(GetSession8),
-                new Lazy<Session>(GetSession9),
-                new Lazy<Session>(GetSession10),
-                new Lazy<Session>(GetSession11),
-                new Lazy<Session>(GetSession12),
-                new Lazy<Session>(GetSession13),
-                new Lazy<Session>(GetSession14),
-                new Lazy<Session>(GetSession15),
-                new Lazy<Session>(GetSession16)
+                new(GetSession1_1), new(GetSession1_2), new(GetSession1_3), new(GetSession1_4),
+                new(GetSession2_1), new(GetSession2_2), new(GetSession2_3), new(GetSession2_4),
+                new(GetSession3_1), new(GetSession3_2), new(GetSession3_3), new(GetSession3_4),
+                new(GetSession4_1), new(GetSession4_2), new(GetSession4_3), new(GetSession4_4)
             };
 
             return sessions;
         }
 
-        private static Session GetSession1()
+        private static Session GetSession1_1()
         {
             var ex1 = new BackSquat(BaseBackSquat)
             {
@@ -111,7 +99,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession2()
+        private static Session GetSession1_2()
         {
             var ex1A = new Accessory(PushUp)
             {
@@ -171,7 +159,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession3()
+        private static Session GetSession1_3()
         {
             var ex = new Snatch(PowerSnatch, BaseSnatch)
             {
@@ -190,7 +178,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession4()
+        private static Session GetSession1_4()
         {
             var ex1 = new Deadlift(Stats.SnatchDeadlift, SnatchDeadlift)
             {
@@ -240,7 +228,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession5()
+        private static Session GetSession2_1()
         {
             var ex1 = new CleanAndJerk(FrontSquat)
             {
@@ -285,7 +273,7 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 5,
+                Day = 1,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -301,7 +289,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession6()
+        private static Session GetSession2_2()
         {
             var ex1A = new Accessory(WidePushUp)
             {
@@ -361,7 +349,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession7()
+        private static Session GetSession2_3()
         {
             var ex = new CleanAndJerk(Clean, Jerk)
             {
@@ -380,7 +368,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession8()
+        private static Session GetSession2_4()
         {
             var ex1 = new Deadlift(BaseDeadlift)
             {
@@ -440,7 +428,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession9()
+        private static Session GetSession3_1()
         {
             var ex1 = new BackSquat(BaseBackSquat)
             {
@@ -491,7 +479,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession10()
+        private static Session GetSession3_2()
         {
             var ex1A = new Accessory(ReversePushUp)
             {
@@ -551,7 +539,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession11()
+        private static Session GetSession3_3()
         {
             var ex1 = new Snatch(BaseSnatch, OverheadSquat)
             {
@@ -576,7 +564,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession12()
+        private static Session GetSession3_4()
         {
             var ex1 = new Snatch(Stats.DeficitMediumGripPull, DeficitMediumGripPull)
             {
@@ -630,7 +618,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession13()
+        private static Session GetSession4_1()
         {
             var ex1 = new CleanAndJerk(Stats.FrontSquat, FrontSquat)
             {
@@ -697,7 +685,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession14()
+        private static Session GetSession4_2()
         {
             var ex1A = new Accessory(ReversePushUp)
             {
@@ -756,7 +744,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession15()
+        private static Session GetSession4_3()
         {
             var ex1 = new CleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
             {
@@ -781,7 +769,7 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        private static Session GetSession16()
+        private static Session GetSession4_4()
         {
             var ex1 = new Deadlift(BaseDeadlift)
             {
