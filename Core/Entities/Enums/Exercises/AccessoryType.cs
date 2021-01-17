@@ -12,6 +12,7 @@
 
         // Jumps
         BoxJump,
+        BarbellSquatJump,
 
         // Calf
         CalfRise,

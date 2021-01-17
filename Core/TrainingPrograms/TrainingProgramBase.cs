@@ -14,6 +14,13 @@ namespace Core.TrainingPrograms
         public abstract string Name { get; }
         public Lazy<Session>[] Sessions { get; }
 
+        protected static T[] Concat<T>(ICollection<T> x, ICollection<T> y)
+        {
+            var result = new T[x.Count + y.Count];
+            x.CopyTo(result, 0);
+            y.CopyTo(result, x.Count);
+            return result;
+        }
 
         protected static IList<Repeat> GetRange(double start, double stop, int sets, string repeats)
         {
