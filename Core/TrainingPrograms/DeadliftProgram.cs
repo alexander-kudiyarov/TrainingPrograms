@@ -25,7 +25,7 @@ namespace Core.TrainingPrograms
                 new(GetSession2_1), new(GetSession2_2), new(GetSession2_3),
                 new(GetSession3_1), new(GetSession3_2), new(GetSession3_3),
                 new(GetSession4_1), new(GetSession4_2), new(GetSession4_3),
-                new(GetSession5_1)
+                new(GetSession5_1), new(GetSession5_2)
             };
 
             return sessions;
