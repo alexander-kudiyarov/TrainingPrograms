@@ -44,6 +44,7 @@ namespace Core.Entities.Exercises
 
                 // Jerk
                 CleanAndJerkType.Jerk => "Jerk",
+                CleanAndJerkType.PowerJerk => "Power Jerk",
                 CleanAndJerkType.PushPress => "Push Press",
 
                 // Front Squat

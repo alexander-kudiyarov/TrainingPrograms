@@ -15,6 +15,7 @@
 
         // Jerk
         Jerk,
+        PowerJerk,
         PushPress,
 
         // Front Squat

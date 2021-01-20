@@ -25,7 +25,7 @@ namespace Core.TrainingPrograms
                 new(GetSession2_1), new(GetSession2_2), new(GetSession2_3),
                 new(GetSession3_1), new(GetSession3_2), new(GetSession3_3),
                 new(GetSession4_1), new(GetSession4_2), new(GetSession4_3),
-                new(GetSession5_1), new(GetSession5_2)
+                new(GetSession5_1), new(GetSession5_2), new(GetSession5_3)
             };
 
             return sessions;
@@ -698,6 +698,124 @@ namespace Core.TrainingPrograms
             var session = new Session
             {
                 Day = 13,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_2()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new Accessory(GakkSquat)
+            {
+                Repeats = new[] {new Repeat {Repeats = "12", Sets = 4}}
+            };
+
+            var ex3 = new Snatch(BaseSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "2", Sets = 2},
+                    new() {Percent = 0.7, Repeats = "1", Sets = 4}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "2+2", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "1+1", Sets = 2},
+                    new() {Percent = 0.7, Repeats = "1+1"},
+                    new() {Percent = 0.8, Repeats = "1+1"}
+                }
+            };
+
+            var ex5 = new BackSquat(BaseBackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.65, Repeats = "3"},
+                    new() {Percent = 0.75, Repeats = "3"},
+                    new() {Percent = 0.85, Repeats = "3", Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Day = 14,
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_3()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "10", Sets = 4}}
+            };
+
+            var ex2 = new CleanAndJerk(DeficitClean)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "2", Sets = 2}
+                }
+            };
+
+            var ex3 = new Deadlift(DeficitDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.8, Repeats = "3"},
+                    new() {Percent = 0.85, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(PushPress, PowerJerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "2+3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "1+3", Sets = 3}
+                }
+            };
+
+            var ex5 = new Accessory(ReversePlank)
+            {
+                Repeats = new[] {new Repeat {Repeats = "90 sec", Sets = 3}}
+            };
+
+            var session = new Session
+            {
+                Day = 15,
                 Sets = new Set[]
                 {
                     new(ex1),
