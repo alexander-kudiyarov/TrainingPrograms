@@ -13,6 +13,7 @@
         // Jumps
         BoxJump,
         BarbellSquatJump,
+        DeathJump,
 
         // Calf
         CalfRise,

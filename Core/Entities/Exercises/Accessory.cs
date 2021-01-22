@@ -26,6 +26,7 @@ namespace Core.Entities.Exercises
             // Jumps
             AccessoryType.BoxJump => "Box Jump",
             AccessoryType.BarbellSquatJump => "Barbell Squat Jump",
+            AccessoryType.DeathJump => "Death Jump",
 
             // Calf
             AccessoryType.CalfRise => "Calf Rise",
