@@ -68,7 +68,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 1,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -125,7 +124,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 2,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -173,7 +171,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 3,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -222,7 +219,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 4,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -279,7 +275,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 5,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -327,7 +322,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 6,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -377,7 +371,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 7,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -437,7 +430,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 8,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -486,7 +478,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 9,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -539,7 +530,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 10,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -596,7 +586,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 11,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -646,7 +635,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 12,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -699,7 +687,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 13,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -759,7 +746,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 14,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -817,7 +803,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 15,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -872,7 +857,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 16,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -928,7 +912,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 17,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -983,7 +966,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 18,
                 Sets = new Set[]
                 {
                     new(ex1),
@@ -1042,7 +1024,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 19,
                 Sets = new Set[]
                 {
                     new(ex1),

@@ -34,14 +34,15 @@ namespace Core.Bll
         public Session Get(string type, int day)
         {
             var session = _repository.Get(type, day);
-            if (!session.IsProcessed) ProcessSession(session);
+            if (!session.IsProcessed) ProcessSession(session, day);
             return session;
         }
 
-        private static void ProcessSession(Session session)
+        private static void ProcessSession(Session session, int day)
         {
             ProcessWeights(session);
             SplitRepeats(session);
+            session.Day = day;
             session.IsProcessed = true;
         }
 

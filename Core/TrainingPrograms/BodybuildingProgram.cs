@@ -81,7 +81,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 1,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -144,7 +143,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 2,
                 Sets = new[]
                 {
                     new Set(2, false, ex1A, ex1B),
@@ -168,7 +166,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 3,
                 Sets = new[]
                 {
                     new Set(ex)
@@ -213,7 +210,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 4,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -273,7 +269,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 1,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -334,7 +329,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 6,
                 Sets = new[]
                 {
                     new Set(3, false, ex1A, ex1B),
@@ -358,7 +352,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 7,
                 Sets = new[]
                 {
                     new Set(ex)
@@ -413,7 +406,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 8,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -464,7 +456,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 9,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -524,7 +515,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 10,
                 Sets = new[]
                 {
                     new Set(3, true, ex1A, ex1B),
@@ -553,7 +543,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 11,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -604,7 +593,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 12,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -669,7 +657,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 13,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -729,7 +716,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 14,
                 Sets = new[]
                 {
                     new Set(2, false, ex1A, ex1B),
@@ -758,7 +744,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 15,
                 Sets = new[]
                 {
                     new Set(ex1),
@@ -804,7 +789,6 @@ namespace Core.TrainingPrograms
 
             var session = new Session
             {
-                Day = 16,
                 Sets = new[]
                 {
                     new Set(ex1),
