@@ -7,6 +7,7 @@
         HangSnatch,
         OverheadSquat,
         PowerSnatch,
+        HipSnatch,
         SnatchBalance,
         SnatchPull,
         SnatchPushPress,

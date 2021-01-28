@@ -35,6 +35,7 @@ namespace Core.Entities.Exercises
                 SnatchType.HangSnatch => "Hang Snatch",
                 SnatchType.OverheadSquat => "Overhead Squat",
                 SnatchType.PowerSnatch => "Power Snatch",
+                SnatchType.HipSnatch => "Hip Snatch",
                 SnatchType.BaseSnatch => "Snatch",
                 SnatchType.SnatchBalance => "Snatch Balance",
                 SnatchType.SnatchPull => "Snatch Pull",
