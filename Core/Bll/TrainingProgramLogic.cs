@@ -25,13 +25,13 @@ namespace Core.Bll
             return result;
         }
 
-        public ITrainingProgram Get(string type)
+        public ITrainingProgram Get(ProgramType type)
         {
             var result = _repository.Get(type);
             return result;
         }
 
-        public Session Get(string type, int day)
+        public Session Get(ProgramType type, int day)
         {
             var session = _repository.Get(type, day);
             if (!session.IsProcessed) ProcessSession(session, day);

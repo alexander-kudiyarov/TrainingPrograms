@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Core.Entities;
+using Core.Entities.Enums;
 
 namespace Core.TrainingPrograms
 {
@@ -11,6 +12,7 @@ namespace Core.TrainingPrograms
             Sessions = sessions;
         }
 
+        public abstract ProgramType Type { get; }
         public abstract string Name { get; }
         public Lazy<Session>[] Sessions { get; }
 

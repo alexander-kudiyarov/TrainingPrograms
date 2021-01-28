@@ -1,5 +1,6 @@
 using System;
 using Core.Entities;
+using Core.Entities.Enums;
 using Core.Entities.Exercises;
 using static Core.Entities.Enums.Exercises.AccessoryType;
 using static Core.Entities.Enums.Exercises.CleanAndJerkType;
@@ -15,6 +16,7 @@ namespace Core.TrainingPrograms
         {
         }
 
+        public override ProgramType Type => ProgramType.DeadliftProgram;
         public override string Name => "Deadlift Program";
 
         private static Lazy<Session>[] GetSessions()

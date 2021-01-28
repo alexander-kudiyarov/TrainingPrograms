@@ -1,4 +1,5 @@
 ﻿using Core.Bll.Interfaces;
+using Core.Entities.Enums;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUi.Controllers
@@ -18,13 +19,13 @@ namespace WebUi.Controllers
             return View(result);
         }
 
-        public IActionResult Program(string type)
+        public IActionResult Program(ProgramType type)
         {
             var result = _logic.Get(type);
             return View(result);
         }
 
-        public IActionResult Session(string type, int session)
+        public IActionResult Session(ProgramType type, int session)
         {
             var result = _logic.Get(type, session);
             return View(result);

@@ -8,5 +8,5 @@
 <h3>@Model.Name</h3>
 @foreach (var num in Enumerable.Range(1, Model.Sessions.Length))
 {
-    <p>@Html.ActionLink($"Session {num}", "Session", new {type = Model.Name, session = num})</p>
+    <p>@Html.ActionLink($"Session {num}", "Session", new {type = (int) Model.Type, session = num})</p>
 }

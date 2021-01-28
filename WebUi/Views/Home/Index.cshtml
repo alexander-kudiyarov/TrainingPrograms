@@ -7,5 +7,5 @@
 
 @foreach (var program in Model)
 {
-    <p>@Html.ActionLink(program.Name, "Program", new {type = program.Name})</p>
+    <p>@Html.ActionLink(program.Name, "Program", new {type = (int) program.Type})</p>
 }
