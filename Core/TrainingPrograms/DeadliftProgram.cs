@@ -29,7 +29,7 @@ namespace Core.TrainingPrograms
                 new(GetSession4_1), new(GetSession4_2), new(GetSession4_3),
                 new(GetSession5_1), new(GetSession5_2), new(GetSession5_3),
                 new(GetSession6_1), new(GetSession6_2), new(GetSession6_3),
-                new(GetSession7_1)
+                new(GetSession7_1), new(GetSession7_2)
             };
 
             return sessions;
@@ -1033,6 +1033,63 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(2, false, ex5A, ex5B)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession7_2()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
+            };
+
+            var ex2 = new Accessory(GakkSquat)
+            {
+                Repeats = new[] {new Repeat {Repeats = "15", Sets = 2}}
+            };
+
+            var ex3 = new Snatch(BaseSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "3", Sets = 3},
+                    new() {Percent = 0.7, Repeats = "2", Sets = 2}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "2+2", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "1+3", Sets = 3}
+                }
+            };
+
+            var ex5 = new BackSquat(BaseBackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.8, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
                 }
             };
 
