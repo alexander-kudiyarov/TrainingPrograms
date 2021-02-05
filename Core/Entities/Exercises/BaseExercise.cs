@@ -4,6 +4,8 @@ namespace Core.Entities.Exercises
 {
     public abstract class BaseExercise
     {
+        protected const string TypeErrorMessage = "Type is not defined";
+
         protected BaseExercise(double? weight)
         {
             Weight = weight;

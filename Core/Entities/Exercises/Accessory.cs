@@ -99,7 +99,7 @@ namespace Core.Entities.Exercises
             AccessoryType.DiscRussianTwist => "Disc Russian Twist",
 
             // None
-            _ => throw new ArgumentException()
+            _ => throw new ArgumentOutOfRangeException(nameof(_type), TypeErrorMessage)
         };
 
         public EquipmentType EquipmentType => _type switch

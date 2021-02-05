@@ -24,7 +24,7 @@ namespace Core.Entities.Exercises
             DeadliftType.DeficitDeadlift => "Deficit Deadlift",
             DeadliftType.RomanianDeadlift => "Romanian Deadlift",
             DeadliftType.SnatchDeadlift => "Snatch Deadlift",
-            _ => throw new ArgumentOutOfRangeException(nameof(_type), "Type is not defined")
+            _ => throw new ArgumentOutOfRangeException(nameof(_type), TypeErrorMessage)
         };
     }
 }

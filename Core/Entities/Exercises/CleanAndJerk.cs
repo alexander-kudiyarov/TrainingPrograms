@@ -53,7 +53,7 @@ namespace Core.Entities.Exercises
                 //
                 CleanAndJerkType.GoodMorningSquat => "Good Morning + Squat",
 
-                _ => throw new ArgumentOutOfRangeException(nameof(type), "Type is not defined")
+                _ => throw new ArgumentOutOfRangeException(nameof(type), TypeErrorMessage)
             };
 
             return result;

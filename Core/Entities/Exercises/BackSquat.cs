@@ -21,7 +21,7 @@ namespace Core.Entities.Exercises
         {
             BackSquatType.BaseBackSquat => "Back Squat",
             BackSquatType.BenchBackSquat => "Bench Back Squat",
-            _ => throw new ArgumentOutOfRangeException(nameof(_type), "Type is not defined")
+            _ => throw new ArgumentOutOfRangeException(nameof(_type), TypeErrorMessage)
         };
     }
 }
