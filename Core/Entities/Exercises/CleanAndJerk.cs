@@ -41,6 +41,7 @@ namespace Core.Entities.Exercises
                 CleanAndJerkType.CleanPullTillPowerPosition => "Clean Pull Till Power Position",
                 CleanAndJerkType.MuscleSquatClean => "Muscle Squat Clean",
                 CleanAndJerkType.DeficitClean => "Deficit Clean",
+                CleanAndJerkType.CleanFromBlocks => "Clean from Blocks",
 
                 // Jerk
                 CleanAndJerkType.Jerk => "Jerk",

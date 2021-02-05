@@ -12,6 +12,7 @@
         CleanPullTillPowerPosition,
         MuscleSquatClean,
         DeficitClean,
+        CleanFromBlocks,
 
         // Jerk
         Jerk,

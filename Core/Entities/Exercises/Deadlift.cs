@@ -23,6 +23,7 @@ namespace Core.Entities.Exercises
             DeadliftType.AsymmetryDeadlift => "Asymmetry Deadlift",
             DeadliftType.DeficitDeadlift => "Deficit Deadlift",
             DeadliftType.RomanianDeadlift => "Romanian Deadlift",
+            DeadliftType.DeadliftFromBlocks => "Deadlift from Blocks",
             DeadliftType.SnatchDeadlift => "Snatch Deadlift",
             _ => throw new ArgumentOutOfRangeException(nameof(_type), TypeErrorMessage)
         };

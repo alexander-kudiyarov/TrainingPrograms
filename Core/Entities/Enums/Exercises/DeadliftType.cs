@@ -5,6 +5,7 @@
         BaseDeadlift,
         AsymmetryDeadlift,
         DeficitDeadlift,
+        DeadliftFromBlocks,
         RomanianDeadlift,
         SnatchDeadlift
     }
