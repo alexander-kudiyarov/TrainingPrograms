@@ -45,6 +45,7 @@ namespace Core.Entities.Exercises
                 SnatchType.DeficitPowerSnatch => "Deficit Power Snatch",
                 SnatchType.SotsPress => "Sots Press",
                 SnatchType.MuscleSquatSnatch => "Muscle Squat Snatch",
+                SnatchType.SnatchFromBlocks => "Snatch from Blocks",
                 _ => throw new ArgumentOutOfRangeException(nameof(type), TypeErrorMessage)
             };
 

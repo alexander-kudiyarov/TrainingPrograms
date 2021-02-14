@@ -5,6 +5,7 @@
         BaseSnatch,
         HangPowerSnatch,
         HangSnatch,
+        SnatchFromBlocks,
         OverheadSquat,
         PowerSnatch,
         HipSnatch,
