@@ -668,19 +668,18 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "2+2+2", Sets = 4}}
             };
 
-            var ex3X = new Repeat[]
-            {
-                new() {Percent = 0.5, Repeats = "3"},
-                new() {Percent = 0.6, Repeats = "3"},
-                new() {Percent = 0.7, Repeats = "3"},
-                new() {Percent = 0.8, Repeats = "3"}
-            };
-
-            var ex3Y = GetRange(0.9, 0.95, 3, "2");
-
             var ex3 = new Deadlift(BaseDeadlift)
             {
-                Repeats = Concat(ex3X, ex3Y)
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.8, Repeats = "3"},
+                    new() {Percent = 0.9, Repeats = "2"},
+                    new() {Percent = 0.925, Repeats = "2"},
+                    new() {Percent = 0.95, Repeats = "2"}
+                }
             };
 
             var ex4 = new Accessory(BarbellSquatJump)

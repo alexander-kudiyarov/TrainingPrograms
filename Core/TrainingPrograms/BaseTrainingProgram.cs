@@ -23,15 +23,6 @@ namespace Core.TrainingPrograms
         {
             var func = _sessions[day];
             var result = func.Invoke();
-
-            return result;
-        }
-
-        protected static T[] Concat<T>(ICollection<T> x, ICollection<T> y)
-        {
-            var result = new T[x.Count + y.Count];
-            x.CopyTo(result, 0);
-            y.CopyTo(result, x.Count);
             return result;
         }
 
