@@ -5,16 +5,27 @@ using Core.Entities.Enums;
 
 namespace Core.TrainingPrograms
 {
-    public abstract class TrainingProgramBase : ITrainingProgram
+    public abstract class BaseTrainingProgram
     {
-        protected TrainingProgramBase(Lazy<Session>[] sessions)
+        private readonly IDictionary<int, Func<Session>> _sessions;
+
+        protected BaseTrainingProgram(IDictionary<int, Func<Session>> sessions)
         {
-            Sessions = sessions;
+            _sessions = sessions;
         }
 
         public abstract ProgramType Type { get; }
         public abstract string Name { get; }
-        public Lazy<Session>[] Sessions { get; }
+
+        public int Count => _sessions.Count;
+
+        public Session Get(int day)
+        {
+            var func = _sessions[day];
+            var result = func.Invoke();
+
+            return result;
+        }
 
         protected static T[] Concat<T>(ICollection<T> x, ICollection<T> y)
         {

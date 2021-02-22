@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
@@ -10,7 +11,7 @@ using static Core.Entities.Enums.Exercises.SnatchType;
 
 namespace Core.TrainingPrograms
 {
-    public sealed class DeadliftProgram : TrainingProgramBase
+    public sealed class DeadliftProgram : BaseTrainingProgram
     {
         public DeadliftProgram() : base(GetSessions())
         {
@@ -19,22 +20,24 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.DeadliftProgram;
         public override string Name => "Deadlift Program";
 
-        private static Lazy<Session>[] GetSessions()
+        private static IDictionary<int, Func<Session>> GetSessions()
         {
-            var sessions = new Lazy<Session>[]
+            var key = 0;
+
+            var result = new Dictionary<int, Func<Session>>
             {
-                new(GetSession1_1), new(GetSession1_2), new(GetSession1_3),
-                new(GetSession2_1), new(GetSession2_2), new(GetSession2_3),
-                new(GetSession3_1), new(GetSession3_2), new(GetSession3_3),
-                new(GetSession4_1), new(GetSession4_2), new(GetSession4_3),
-                new(GetSession5_1), new(GetSession5_2), new(GetSession5_3),
-                new(GetSession6_1), new(GetSession6_2), new(GetSession6_3),
-                new(GetSession7_1), new(GetSession7_2), new(GetSession7_3),
-                new(GetSession8_1), new(GetSession8_2), new(GetSession8_3),
-                new(GetSession9_1), new(GetSession9_2), new(GetSession9_3)
+                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3,
+                [++key] = GetSession2_1, [++key] = GetSession2_2, [++key] = GetSession2_3,
+                [++key] = GetSession3_1, [++key] = GetSession3_2, [++key] = GetSession3_3,
+                [++key] = GetSession4_1, [++key] = GetSession4_2, [++key] = GetSession4_3,
+                [++key] = GetSession5_1, [++key] = GetSession5_2, [++key] = GetSession5_3,
+                [++key] = GetSession6_1, [++key] = GetSession6_2, [++key] = GetSession6_3,
+                [++key] = GetSession7_1, [++key] = GetSession7_2, [++key] = GetSession7_3,
+                [++key] = GetSession8_1, [++key] = GetSession8_2, [++key] = GetSession8_3,
+                [++key] = GetSession9_1, [++key] = GetSession9_2, [++key] = GetSession9_3
             };
 
-            return sessions;
+            return result;
         }
 
         private static Session GetSession1_1()

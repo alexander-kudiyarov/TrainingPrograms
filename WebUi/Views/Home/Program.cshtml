@@ -1,4 +1,4 @@
-﻿@model Core.Entities.ITrainingProgram
+﻿@model Core.TrainingPrograms.BaseTrainingProgram
 
 @{
     ViewBag.Title = "title";
@@ -6,7 +6,7 @@
 }
 
 <h3>@Model.Name</h3>
-@foreach (var num in Enumerable.Range(1, Model.Sessions.Length))
+@foreach (var num in Enumerable.Range(1, Model.Count))
 {
     <p>@Html.ActionLink($"Session {num}", "Session", new {type = (int) Model.Type, session = num})</p>
 }

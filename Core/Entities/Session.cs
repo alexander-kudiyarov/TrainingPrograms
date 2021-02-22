@@ -4,6 +4,5 @@
     {
         public int Day { get; set; }
         public Set[] Sets { get; init; }
-        public bool IsProcessed { get; set; }
     }
 }

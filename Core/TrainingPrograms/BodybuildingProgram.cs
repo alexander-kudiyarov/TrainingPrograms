@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
@@ -10,7 +11,7 @@ using static Core.Entities.Enums.Exercises.SnatchType;
 
 namespace Core.TrainingPrograms
 {
-    public sealed class BodybuildingProgram : TrainingProgramBase
+    public sealed class BodybuildingProgram : BaseTrainingProgram
     {
         public BodybuildingProgram() : base(GetSessions())
         {
@@ -19,17 +20,19 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.BodybuildingProgram;
         public override string Name => "Bodybuilding Program";
 
-        private static Lazy<Session>[] GetSessions()
+        private static IDictionary<int, Func<Session>> GetSessions()
         {
-            var sessions = new Lazy<Session>[]
+            var key = 0;
+
+            var result = new Dictionary<int, Func<Session>>
             {
-                new(GetSession1_1), new(GetSession1_2), new(GetSession1_3), new(GetSession1_4),
-                new(GetSession2_1), new(GetSession2_2), new(GetSession2_3), new(GetSession2_4),
-                new(GetSession3_1), new(GetSession3_2), new(GetSession3_3), new(GetSession3_4),
-                new(GetSession4_1), new(GetSession4_2), new(GetSession4_3), new(GetSession4_4)
+                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3, [++key] = GetSession1_4,
+                [++key] = GetSession2_1, [++key] = GetSession2_2, [++key] = GetSession2_3, [++key] = GetSession2_4,
+                [++key] = GetSession3_1, [++key] = GetSession3_2, [++key] = GetSession3_3, [++key] = GetSession3_4,
+                [++key] = GetSession4_1, [++key] = GetSession4_2, [++key] = GetSession4_3, [++key] = GetSession4_4
             };
 
-            return sessions;
+            return result;
         }
 
         private static Session GetSession1_1()

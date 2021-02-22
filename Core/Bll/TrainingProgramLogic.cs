@@ -7,6 +7,7 @@ using Core.Dal.Interfaces;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
+using Core.TrainingPrograms;
 
 namespace Core.Bll
 {
@@ -19,13 +20,13 @@ namespace Core.Bll
             _repository = repository;
         }
 
-        public IEnumerable<ITrainingProgram> Get()
+        public IEnumerable<BaseTrainingProgram> Get()
         {
             var result = _repository.Get();
             return result;
         }
 
-        public ITrainingProgram Get(ProgramType type)
+        public BaseTrainingProgram Get(ProgramType type)
         {
             var result = _repository.Get(type);
             return result;
@@ -34,7 +35,7 @@ namespace Core.Bll
         public Session Get(ProgramType type, int day)
         {
             var session = _repository.Get(type, day);
-            if (!session.IsProcessed) ProcessSession(session, day);
+            ProcessSession(session, day);
             return session;
         }
 
@@ -43,7 +44,6 @@ namespace Core.Bll
             ProcessWeights(session);
             SplitRepeats(session);
             session.Day = day;
-            session.IsProcessed = true;
         }
 
         private static void ProcessWeights(Session session)
