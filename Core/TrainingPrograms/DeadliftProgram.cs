@@ -35,7 +35,8 @@ namespace Core.TrainingPrograms
                 [++key] = GetSession7_1, [++key] = GetSession7_2, [++key] = GetSession7_3,
                 [++key] = GetSession8_1, [++key] = GetSession8_2, [++key] = GetSession8_3,
                 [++key] = GetSession9_1, [++key] = GetSession9_2, [++key] = GetSession9_3,
-                [++key] = GetSession10_1, [++key] = GetSession10_2, [++key] = GetSession10_3
+                [++key] = GetSession10_1, [++key] = GetSession10_2, [++key] = GetSession10_3,
+                [++key] = GetSession11_1
             };
 
             return result;
@@ -1662,6 +1663,67 @@ namespace Core.TrainingPrograms
                 Repeats = new[]
                 {
                     new Repeat {Repeats = "90 sec", Sets = 2}
+                }
+            };
+
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession11_1()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "20", Sets = 2}
+                }
+            };
+
+            var ex2 = new Snatch(PowerSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "2", Sets = 2}
+                }
+            };
+
+            var ex3 = new Deadlift(BaseDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.75, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var ex4 = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "8", Sets = 4}
+                }
+            };
+
+            var ex5 = new Accessory(Plank)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "60 sec", Sets = 2}
                 }
             };
 
