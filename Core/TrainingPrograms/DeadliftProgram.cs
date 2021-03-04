@@ -36,7 +36,7 @@ namespace Core.TrainingPrograms
                 [++key] = GetSession8_1, [++key] = GetSession8_2, [++key] = GetSession8_3,
                 [++key] = GetSession9_1, [++key] = GetSession9_2, [++key] = GetSession9_3,
                 [++key] = GetSession10_1, [++key] = GetSession10_2, [++key] = GetSession10_3,
-                [++key] = GetSession11_1, [++key] = GetSession11_2
+                [++key] = GetSession11_1, [++key] = GetSession11_2, [++key] = GetSession11_3
             };
 
             return result;
@@ -1775,6 +1775,58 @@ namespace Core.TrainingPrograms
                     new(ex1),
                     new(ex2),
                     new(ex3)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession11_3()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new[]
+                {
+                    new Repeat {Repeats = "20", Sets = 2}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(Clean, FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "2+1", Sets = 2},
+                    new() {Percent = 0.6, Repeats = "1+1", Sets = 2}
+                }
+            };
+
+            var ex3 = new BackSquat(BaseBackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3"},
+                    new() {Percent = 0.7, Repeats = "3"},
+                    new() {Percent = 0.75, Repeats = "2", Sets = 3}
+                }
+            };
+
+            var ex4 = new Accessory(ReversePlank)
+            {
+                Repeats = new[]
+                {
+                    new Repeat {Repeats = "60 sec", Sets = 2}
+                }
+            };
+
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
