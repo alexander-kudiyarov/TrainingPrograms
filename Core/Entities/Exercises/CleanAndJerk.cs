@@ -52,6 +52,7 @@ namespace Core.Entities.Exercises
                 CleanAndJerkType.FrontSquat => "Front Squat",
 
                 //
+                CleanAndJerkType.GoodMorning => "Good Morning",
                 CleanAndJerkType.GoodMorningSquat => "Good Morning + Squat",
 
                 _ => throw new ArgumentOutOfRangeException(nameof(type), TypeErrorMessage)

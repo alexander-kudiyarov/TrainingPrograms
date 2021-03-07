@@ -36,7 +36,8 @@ namespace Core.TrainingPrograms
                 [++key] = GetSession8_1, [++key] = GetSession8_2, [++key] = GetSession8_3,
                 [++key] = GetSession9_1, [++key] = GetSession9_2, [++key] = GetSession9_3,
                 [++key] = GetSession10_1, [++key] = GetSession10_2, [++key] = GetSession10_3,
-                [++key] = GetSession11_1, [++key] = GetSession11_2, [++key] = GetSession11_3
+                [++key] = GetSession11_1, [++key] = GetSession11_2, [++key] = GetSession11_3,
+                [++key] = GetSession12_1
             };
 
             return result;
@@ -1827,6 +1828,36 @@ namespace Core.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession12_1()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "15", Sets = 2}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(GoodMorning)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.3, Repeats = "4", Sets = 5}
+                }
+            };
+
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2)
                 }
             };
 

@@ -23,6 +23,7 @@
         FrontSquat,
 
         //
+        GoodMorning,
         GoodMorningSquat
     }
 }
