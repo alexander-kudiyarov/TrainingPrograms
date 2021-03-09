@@ -3,6 +3,7 @@
     public enum ProgramType
     {
         BodybuildingProgram = 1,
-        DeadliftProgram
+        DeadliftProgram,
+        LegsProgram
     }
 }

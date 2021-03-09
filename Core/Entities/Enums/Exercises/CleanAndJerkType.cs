@@ -22,8 +22,11 @@
         // Front Squat
         FrontSquat,
 
-        //
+        // Good Morning
         GoodMorning,
-        GoodMorningSquat
+        GoodMorningSquat,
+        
+        // Romanian
+        DeficitRomanianDeadlift
     }
 }
