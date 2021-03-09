@@ -1863,5 +1863,36 @@ namespace Core.TrainingPrograms
 
             return session;
         }
+
+        private static Session GetSession12_3()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "15", Sets = 2}
+                }
+            };
+
+            var ex2 = new BackSquat(BaseBackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "3"},
+                    new() {Percent = 0.6, Repeats = "3", Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(ex1),
+                    new(ex2)
+                }
+            };
+
+            return session;
+        }
     }
 }
