@@ -37,7 +37,7 @@ namespace Core.TrainingPrograms
                 [++key] = GetSession9_1, [++key] = GetSession9_3, [++key] = GetSession9_5,
                 [++key] = GetSession10_1, [++key] = GetSession10_3, [++key] = GetSession10_5,
                 [++key] = GetSession11_1, [++key] = GetSession11_3, [++key] = GetSession11_5,
-                [++key] = GetSession12_1
+                [++key] = GetSession12_1, [++key] = GetSession12_3
             };
 
             return result;
