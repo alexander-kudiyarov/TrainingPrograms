@@ -27,6 +27,9 @@
         GoodMorningSquat,
         
         // Romanian
-        DeficitRomanianDeadlift
+        DeficitRomanianDeadlift,
+        
+        // TODO Merge all ex types in one enum
+        BackSplitSquat
     }
 }

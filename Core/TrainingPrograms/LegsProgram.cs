@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
+using Core.Entities.Enums.Exercises;
 using Core.Entities.Exercises;
 using static Core.Entities.Enums.Exercises.AccessoryType;
 using static Core.Entities.Enums.Exercises.CleanAndJerkType;
@@ -25,7 +26,7 @@ namespace Core.TrainingPrograms
 
             var result = new Dictionary<int, Func<Session>>
             {
-                [++key] = GetSession1_1
+                [++key] = GetSession1_1, [++key] = GetSession1_2
             };
 
             return result;
@@ -90,6 +91,82 @@ namespace Core.TrainingPrograms
                 }
             };
 
+            var session = new Session
+            {
+                Sets = new Set[]
+                {
+                    new(3, false, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_2()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "10"}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "10"}
+                }
+            };
+
+            var ex1C = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "10"}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(Clean, FrontSquat, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "2+2+2", Sets = 4}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.5, Repeats = "4"},
+                    new() {Percent = 0.6, Repeats = "4"},
+                    new() {Percent = 0.7, Repeats = "4"},
+                    new() {Percent = 0.8, Repeats = "4", Sets = 4}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(CleanAndJerkType.BackSplitSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Percent = 0.4, Repeats = "8+8", Sets = 5}
+                }
+            };
+
+            var ex5 = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new() {Repeats = "6", Sets = 4}
+                }
+            };
+            
             var session = new Session
             {
                 Sets = new Set[]

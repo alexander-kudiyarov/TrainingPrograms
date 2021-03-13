@@ -58,6 +58,9 @@ namespace Core.Entities.Exercises
                 // Romanian
                 CleanAndJerkType.DeficitRomanianDeadlift => "Deficit Romanian Deadlift",
                 
+                // Squat
+                CleanAndJerkType.BackSplitSquat => "Back Split Squat",
+                
                 _ => throw new ArgumentOutOfRangeException(nameof(type), TypeErrorMessage)
             };
 

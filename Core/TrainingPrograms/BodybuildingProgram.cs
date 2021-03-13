@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
+using Core.Entities.Enums.Exercises;
 using Core.Entities.Exercises;
 using static Core.Entities.Enums.Exercises.AccessoryType;
 using static Core.Entities.Enums.Exercises.BackSquatType;
@@ -48,7 +49,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
             };
 
-            var ex3 = new Accessory(BackSplitSquat)
+            var ex3 = new Accessory(AccessoryType.BackSplitSquat)
             {
                 Repeats = new[] {new Repeat {Repeats = "15+15", Sets = 2}}
             };
