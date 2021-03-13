@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
-using static Core.Entities.Enums.Exercises.AccessoryType;
-using static Core.Entities.Enums.Exercises.CleanAndJerkType;
-using static Core.Entities.Enums.Exercises.BackSquatType;
-using static Core.Entities.Enums.Exercises.DeadliftType;
-using static Core.Entities.Enums.Exercises.SnatchType;
+using static Core.Entities.Enums.ExerciseType;
 
 namespace Core.TrainingPrograms
 {
@@ -55,7 +51,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "2+2+1", Sets = 4}}
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -103,7 +99,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -206,7 +202,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "1+2+3", Sets = 4}}
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -254,7 +250,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -272,7 +268,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new BackSquat(BaseBackSquat)
+            var ex5 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -357,7 +353,7 @@ namespace Core.TrainingPrograms
                 Repeats = GetRange(0.4, 0.5, 4, "4")
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -406,7 +402,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -517,7 +513,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -565,7 +561,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -670,7 +666,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Percent = 0.5, Repeats = "2+2+2", Sets = 4}}
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -721,7 +717,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 4}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -742,7 +738,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new BackSquat(BaseBackSquat)
+            var ex5 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -842,7 +838,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -854,7 +850,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex4 = new Accessory(DeathJump)
+            var ex4 = new Accessory(BoxJump)
             {
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
             };
@@ -891,7 +887,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 3}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1003,7 +999,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1058,7 +1054,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 2}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1077,7 +1073,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new BackSquat(BaseBackSquat)
+            var ex5 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1181,7 +1177,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1194,7 +1190,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex4 = new Accessory(DeathJump)
+            var ex4 = new Accessory(BoxJump)
             {
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 4}}
             };
@@ -1236,7 +1232,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1298,7 +1294,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1359,7 +1355,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1415,7 +1411,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 2}}
             };
 
-            var ex3 = new Snatch(BaseSnatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1434,7 +1430,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new BackSquat(BaseBackSquat)
+            var ex5 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1540,7 +1536,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1589,7 +1585,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new Snatch(BaseSnatch)
+            var ex2 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1628,7 +1624,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new Snatch(PowerSnatch, BaseSnatch)
+            var ex2 = new Snatch(PowerSnatch, ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1638,7 +1634,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new BackSquat(BaseBackSquat)
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1701,7 +1697,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new Deadlift(BaseDeadlift)
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1753,7 +1749,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new Snatch(BaseSnatch)
+            var ex2 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1801,7 +1797,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new BackSquat(BaseBackSquat)
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1874,7 +1870,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new BackSquat(BaseBackSquat)
+            var ex2 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {

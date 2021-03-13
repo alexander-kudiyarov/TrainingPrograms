@@ -2,12 +2,8 @@ using System;
 using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
-using Core.Entities.Enums.Exercises;
 using Core.Entities.Exercises;
-using static Core.Entities.Enums.Exercises.AccessoryType;
-using static Core.Entities.Enums.Exercises.CleanAndJerkType;
-using static Core.Entities.Enums.Exercises.BackSquatType;
-using static Core.Entities.Enums.Exercises.SnatchType;
+using static Core.Entities.Enums.ExerciseType;
 
 namespace Core.TrainingPrograms
 {
@@ -58,7 +54,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new Snatch(BaseSnatch, OverheadSquat)
+            var ex2 = new Snatch(ExerciseType.Snatch, OverheadSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -66,7 +62,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex3 = new BackSquat(BaseBackSquat)
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -151,7 +147,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex4 = new CleanAndJerk(CleanAndJerkType.BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -166,7 +162,7 @@ namespace Core.TrainingPrograms
                     new() {Repeats = "6", Sets = 4}
                 }
             };
-            
+
             var session = new Session
             {
                 Sets = new Set[]

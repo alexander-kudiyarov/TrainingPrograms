@@ -2,13 +2,8 @@ using System;
 using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
-using Core.Entities.Enums.Exercises;
 using Core.Entities.Exercises;
-using static Core.Entities.Enums.Exercises.AccessoryType;
-using static Core.Entities.Enums.Exercises.BackSquatType;
-using static Core.Entities.Enums.Exercises.CleanAndJerkType;
-using static Core.Entities.Enums.Exercises.DeadliftType;
-using static Core.Entities.Enums.Exercises.SnatchType;
+using static Core.Entities.Enums.ExerciseType;
 
 namespace Core.TrainingPrograms
 {
@@ -38,7 +33,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession1_1()
         {
-            var ex1 = new BackSquat(BaseBackSquat)
+            var ex1 = new BackSquat(ExerciseType.BackSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
@@ -49,7 +44,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
             };
 
-            var ex3 = new Accessory(AccessoryType.BackSplitSquat)
+            var ex3 = new Accessory(BackSplitSquat)
             {
                 Repeats = new[] {new Repeat {Repeats = "15+15", Sets = 2}}
             };
@@ -70,7 +65,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
             };
 
-            var ex7 = new Accessory(DiscRearDeltFly)
+            var ex7 = new Accessory(ReverseFly)
             {
                 Repeats = new[] {new Repeat {Repeats = "20", Sets = 2}}
             };
@@ -165,7 +160,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession1_3()
         {
-            var ex = new Snatch(PowerSnatch, BaseSnatch)
+            var ex = new Snatch(PowerSnatch, ExerciseType.Snatch)
             {
                 Repeats = GetRange(0.5, 0.6, 6, "2+2")
             };
@@ -313,7 +308,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 4}}
             };
 
-            var ex4 = new Accessory(InclineBenchPressNg)
+            var ex4 = new Accessory(InclineBenchPressNarrowGrip)
             {
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 3}}
             };
@@ -369,7 +364,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession2_4()
         {
-            var ex1 = new Deadlift(BaseDeadlift)
+            var ex1 = new Deadlift(ExerciseType.Deadlift)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "8", Sets = 3}}
@@ -428,7 +423,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession3_1()
         {
-            var ex1 = new BackSquat(BaseBackSquat)
+            var ex1 = new BackSquat(ExerciseType.BackSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
@@ -494,7 +489,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "6", Sets = 4}}
             };
 
-            var ex3 = new Accessory(InclineBenchPressWg)
+            var ex3 = new Accessory(InclineBenchPressWideGrip)
             {
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 3}}
             };
@@ -537,7 +532,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession3_3()
         {
-            var ex1 = new Snatch(BaseSnatch, OverheadSquat)
+            var ex1 = new Snatch(ExerciseType.Snatch, OverheadSquat)
             {
                 Repeats = GetRange(0.5, 0.6, 5, "3+3")
             };
@@ -577,7 +572,7 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "8"}}
             };
 
-            var ex3B = new Accessory(LateralPullRg)
+            var ex3B = new Accessory(LateralPullReverseGrip)
             {
                 Repeats = new[] {new Repeat {Repeats = "15"}}
             };
@@ -690,12 +685,12 @@ namespace Core.TrainingPrograms
                 Repeats = new[] {new Repeat {Repeats = "20"}}
             };
 
-            var ex2 = new Accessory(InclineBenchPressWg)
+            var ex2 = new Accessory(InclineBenchPressWideGrip)
             {
                 Repeats = new[] {new Repeat {Repeats = "12", Sets = 3}}
             };
 
-            var ex3 = new Accessory(InclineBenchPressNg)
+            var ex3 = new Accessory(InclineBenchPressNarrowGrip)
             {
                 Repeats = new[] {new Repeat {Repeats = "15", Sets = 3}}
             };
@@ -762,7 +757,7 @@ namespace Core.TrainingPrograms
 
         private static Session GetSession4_4()
         {
-            var ex1 = new Deadlift(BaseDeadlift)
+            var ex1 = new Deadlift(ExerciseType.Deadlift)
             {
                 IsWarmupNeeded = true,
                 Repeats = new[] {new Repeat {Repeats = "10", Sets = 3}}
