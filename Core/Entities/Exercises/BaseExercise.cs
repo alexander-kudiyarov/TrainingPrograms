@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using Core.Entities.Enums;
+using Core.Entities.Repeats;
 
 namespace Core.Entities.Exercises
 {
     public abstract class BaseExercise
     {
-        private const string TypeErrorMessage = "Type is not defined";
-
         protected BaseExercise(double? weight)
         {
             Weight = weight;
         }
 
         public abstract string Name { get; }
-
         public double? Weight { get; }
-
         public IList<Repeat> Repeats { get; set; }
-
         public bool IsWarmupNeeded { get; set; }
 
+        // TODO extract to WebUi
         protected static string GetName(ExerciseType type)
         {
             // Exercises
@@ -173,7 +170,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.WristFlexion => "Wrist Flexion",
                 ExerciseType.WristRoll => "Wrist Roll",
 
-                _ => throw new ArgumentOutOfRangeException(nameof(type), TypeErrorMessage)
+                _ => throw new ArgumentOutOfRangeException(nameof(type), "Type is not defined")
             };
         }
     }

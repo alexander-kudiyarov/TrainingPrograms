@@ -11,8 +11,7 @@ namespace Core.Entities.Exercises
             _type = type;
         }
 
-        public override string Name
-            => GetName(_type);
+        public override string Name => GetName(_type);
 
         public EquipmentType EquipmentType => _type switch
         {

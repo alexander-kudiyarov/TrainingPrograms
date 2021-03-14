@@ -121,7 +121,7 @@
         WidePushUp,
 
         // Shoulders
-        ReverseFly, // reverse fly
+        ReverseFly,
         Halo,
         LateralRaise,
 

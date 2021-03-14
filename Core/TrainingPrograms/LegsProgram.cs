@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
+using Core.Entities.Repeats;
 using static Core.Entities.Enums.ExerciseType;
 
 namespace Core.TrainingPrograms
@@ -34,7 +35,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -42,7 +43,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -50,7 +51,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -58,7 +59,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.5, Repeats = "3+3", Sets = 4}
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {3, 3}, Sets = 4}
                 }
             };
 
@@ -66,8 +67,8 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.5, Repeats = "8"},
-                    new() {Percent = 0.6, Repeats = "8", Sets = 4}
+                    new SingleRepeat {Percent = 0.5, Repeats = 8},
+                    new SingleRepeat {Percent = 0.6, Repeats = 8, Sets = 4}
                 }
             };
 
@@ -75,7 +76,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.5, Repeats = "12", Sets = 3}
+                    new SingleRepeat {Percent = 0.5, Repeats = 12, Sets = 3}
                 }
             };
 
@@ -83,15 +84,15 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "8", Sets = 4}
+                    new SingleRepeat {Repeats = 8, Sets = 4}
                 }
             };
 
             var session = new Session
             {
-                Sets = new Set[]
+                Rounds = new Round[]
                 {
-                    new(3, false, ex1A, ex1B, ex1C),
+                    new(3, ex1A, ex1B, ex1C),
                     new(ex2),
                     new(ex3),
                     new(ex4),
@@ -108,7 +109,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -116,7 +117,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -124,7 +125,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "10"}
+                    new SingleRepeat {Repeats = 10}
                 }
             };
 
@@ -132,7 +133,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.5, Repeats = "2+2+2", Sets = 4}
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2, 2}, Sets = 4}
                 }
             };
 
@@ -140,10 +141,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.5, Repeats = "4"},
-                    new() {Percent = 0.6, Repeats = "4"},
-                    new() {Percent = 0.7, Repeats = "4"},
-                    new() {Percent = 0.8, Repeats = "4", Sets = 4}
+                    new SingleRepeat {Percent = 0.5, Repeats = 4},
+                    new SingleRepeat {Percent = 0.6, Repeats = 4},
+                    new SingleRepeat {Percent = 0.7, Repeats = 4},
+                    new SingleRepeat {Percent = 0.8, Repeats = 4, Sets = 4}
                 }
             };
 
@@ -151,7 +152,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Percent = 0.4, Repeats = "8+8", Sets = 5}
+                    new MultiRepeat {Percent = 0.4, Repeats = new[] {8, 8}, Sets = 5}
                 }
             };
 
@@ -159,15 +160,15 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new() {Repeats = "6", Sets = 4}
+                    new SingleRepeat {Repeats = 6, Sets = 4}
                 }
             };
 
             var session = new Session
             {
-                Sets = new Set[]
+                Rounds = new Round[]
                 {
-                    new(3, false, ex1A, ex1B, ex1C),
+                    new(3, ex1A, ex1B, ex1C),
                     new(ex2),
                     new(ex3),
                     new(ex4),

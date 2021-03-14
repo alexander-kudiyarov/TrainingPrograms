@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Core.Entities.Enums;
 
 namespace Core.Entities.Exercises
@@ -19,9 +18,6 @@ namespace Core.Entities.Exercises
         }
 
         public override string Name
-            => string.Join(" + ", GetNames(_types));
-
-        private static IEnumerable<string> GetNames(IEnumerable<ExerciseType> types)
-            => types.Select(GetName);
+            => string.Join(" + ", _types.Select(GetName));
     }
 }

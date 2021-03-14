@@ -7,6 +7,7 @@ using Core.Dal.Interfaces;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
+using Core.Entities.Repeats;
 using Core.TrainingPrograms;
 
 namespace Core.Bll
@@ -48,26 +49,28 @@ namespace Core.Bll
 
         private static void ProcessWeights(Session session)
         {
-            foreach (var set in session.Sets)
+            foreach (var set in session.Rounds)
             foreach (var exercise in set.Exercises)
             {
                 foreach (var repeat in exercise.Repeats)
                 {
-                    CalculatePercentage(exercise, repeat);
+                    if (repeat is not WeightedRepeat weightedRepeat) continue;
+                    CalculatePercentage(exercise, weightedRepeat);
                     AddWarmupRepeats(exercise);
                 }
 
                 foreach (var repeat in exercise.Repeats)
                 {
-                    CalculateWeight(exercise, repeat);
-                    RoundWeight(exercise, repeat);
+                    if (repeat is not WeightedRepeat weightedRepeat) continue;
+                    CalculateWeight(exercise, weightedRepeat);
+                    RoundWeight(exercise, weightedRepeat);
                 }
             }
         }
 
         private static void SplitRepeats(Session session)
         {
-            foreach (var set in session.Sets)
+            foreach (var set in session.Rounds)
             foreach (var exercise in set.Exercises)
             {
                 var repeats = exercise.Repeats;
@@ -84,20 +87,21 @@ namespace Core.Bll
             }
         }
 
-        private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
+        private static void CalculatePercentage(BaseExercise exercise, WeightedRepeat repeat)
         {
             if (exercise.Weight == null || repeat.Percent != null) return;
 
-            var repeats = repeat.Repeats.Split('+');
-            var firstRepeat = repeats[0];
-            var isInt = int.TryParse(firstRepeat, out var value);
+            var repeats = repeat switch
+            {
+                SingleRepeat singleRepeat => singleRepeat.Repeats,
+                MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
+                _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
+            };
 
-            if (!isInt) return;
-
-            var percent = value switch
+            var percent = repeats switch
             {
                 1 => 1,
-                _ => 1 - value * 0.025
+                _ => 1 - repeats * 0.025
             };
 
             var result = percent * Stats.WorkWeight;
@@ -106,14 +110,22 @@ namespace Core.Bll
 
         private static void AddWarmupRepeats(BaseExercise exercise)
         {
-            if (!exercise.IsWarmupNeeded) return;
-            var firstRepeat = exercise.Repeats[0];
+            if (!exercise.IsWarmupNeeded
+                || exercise.Repeats[0] is not WeightedRepeat repeat) return;
+
             var warmUps = new List<Repeat>();
 
-            for (var i = 0.5; i.LessThan(firstRepeat.Percent); i += 0.1)
+            for (var i = 0.5; i.LessThan(repeat.Percent); i += 0.1)
             {
-                var warmUp = new Repeat {Percent = i, Repeats = firstRepeat.Repeats};
-                warmUps.Add(warmUp);
+                WeightedRepeat result = repeat switch
+                {
+                    SingleRepeat singleRepeat => new SingleRepeat {Percent = i, Repeats = singleRepeat.Repeats},
+                    MultiRepeat multiRepeat => new MultiRepeat {Percent = i, Repeats = multiRepeat.Repeats},
+                    // TODO Fix
+                    _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
+                };
+
+                warmUps.Add(result);
             }
 
             warmUps.AddRange(exercise.Repeats);
@@ -121,13 +133,13 @@ namespace Core.Bll
             exercise.IsWarmupNeeded = false;
         }
 
-        private static void CalculateWeight(BaseExercise exercise, Repeat repeat)
+        private static void CalculateWeight(BaseExercise exercise, WeightedRepeat repeat)
         {
             if (repeat.Weight == null && exercise.Weight != null)
                 repeat.Weight = exercise.Weight * repeat.Percent;
         }
 
-        private static void RoundWeight(BaseExercise exercise, Repeat repeat)
+        private static void RoundWeight(BaseExercise exercise, WeightedRepeat repeat)
         {
             if (repeat.Weight == null) return;
 

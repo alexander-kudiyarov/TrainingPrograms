@@ -1,4 +1,6 @@
-﻿@model Core.Entities.Session
+﻿@using System.Globalization
+@using Core.Entities.Repeats
+@model Core.Entities.Session
 
 @{
     ViewData["Title"] = "Home Page";
@@ -7,35 +9,30 @@
 <div>
     <div>
         <h3>Session @Model.Day</h3>
-        @foreach (var set in Model.Sets)
+        @foreach (var set in Model.Rounds)
         {
             foreach (var _ in Enumerable.Range(0, set.Rounds))
             {
-                @if (set.IsSuperset)
+                foreach (var ex in set.Exercises)
                 {
-                    var titles = set.Exercises.Select(i => i.Name);
-                    var title = string.Join(" ++ ", titles);
-
-                    var repeats = set.Exercises.SelectMany(c => c.Repeats, (_, e) => $"{(e.Weight != null ? $"{e.Weight} × " : string.Empty)}{e.Repeats}");
-                    var repeat = string.Join(" ++ ", repeats);
-
                     <div>
-                        <p>@title</p>
-                        <p>@repeat</p>
-                    </div>
-                }
-                else
-                {
-                    foreach (var ex in set.Exercises)
-                    {
-                        <div>
-                            <p>@ex.Name</p>
-                            @foreach (var repeat in ex.Repeats)
+                        <p>@ex.Name</p>
+                        @foreach (var repeat in ex.Repeats)
+                        {
+                            switch (repeat)
                             {
-                                <p>@(repeat.Weight != null ? $"{repeat.Weight} × " : string.Empty)@repeat.Repeats</p>
+                                case SingleRepeat singleRepeat:
+                                    <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight} × " : string.Empty)@singleRepeat.Repeats</p>
+                                    break;
+                                case MultiRepeat multiRepeat:
+                                    <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
+                                    break;
+                                case StaticRepeat staticRepeat:
+                                    <p>@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
+                                    break;
                             }
-                        </div>
-                    }
+                        }
+                    </div>
                 }
             }
         }

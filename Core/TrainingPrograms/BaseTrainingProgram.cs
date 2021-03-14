@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
+using Core.Entities.Repeats;
 
 namespace Core.TrainingPrograms
 {
@@ -16,7 +17,6 @@ namespace Core.TrainingPrograms
 
         public abstract ProgramType Type { get; }
         public abstract string Name { get; }
-
         public int Count => _sessions.Count;
 
         public Session Get(int day)
@@ -26,7 +26,7 @@ namespace Core.TrainingPrograms
             return result;
         }
 
-        protected static IList<Repeat> GetRange(double start, double stop, int sets, string repeats)
+        protected static IList<Repeat> GetRange(double start, double stop, int sets, int repeats)
         {
             var step = GetStep(start, stop, sets);
             var result = new Repeat[sets];
@@ -34,12 +34,26 @@ namespace Core.TrainingPrograms
             for (var i = 0; i < sets; i++)
             {
                 var percent = GetPercent(start, step, i);
-                result[i] = new Repeat {Percent = percent, Repeats = repeats};
+                result[i] = new SingleRepeat {Percent = percent, Repeats = repeats};
             }
 
             return result;
         }
 
+        protected static IList<Repeat> GetRange(double start, double stop, int sets, IList<int> repeats)
+        {
+            var step = GetStep(start, stop, sets);
+            var result = new Repeat[sets];
+
+            for (var i = 0; i < sets; i++)
+            {
+                var percent = GetPercent(start, step, i);
+                result[i] = new MultiRepeat {Percent = percent, Repeats = repeats};
+            }
+
+            return result;
+        }
+        
         private static double GetStep(double start, double stop, int sets)
         {
             var diff = stop - start;
