@@ -12,13 +12,13 @@ namespace Core.Dal
 
         public ProgramRepository()
         {
-            // var bodybuildingProgram = new BodybuildingProgram();
+            var bodybuildingProgram = new BodybuildingProgram();
             var deadliftProgram = new DeadliftProgram();
             var legsProgram = new LegsProgram();
 
             _repository = new Dictionary<ProgramType, BaseTrainingProgram>
             {
-                // [bodybuildingProgram.Type] = bodybuildingProgram,
+                [bodybuildingProgram.Type] = bodybuildingProgram,
                 [deadliftProgram.Type] = deadliftProgram,
                 [legsProgram.Type] = legsProgram
             };
