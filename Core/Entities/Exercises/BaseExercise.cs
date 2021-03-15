@@ -75,8 +75,11 @@ namespace Core.Entities.Exercises
                 ExerciseType.FrontSquat => "Front Squat",
 
                 // Back Squat
+                ExerciseType.BackSplitSquat => "Back Split Squat",
                 ExerciseType.BackSquat => "Back Squat",
+                ExerciseType.BackSquatNarrowFeet => "Back Squat (Narrow Feet)",
                 ExerciseType.BenchBackSquat => "Bench Back Squat",
+                ExerciseType.GakkSquat => "Gakk Squat",
 
                 // Deadlift
                 ExerciseType.Deadlift => "Deadlift",
@@ -104,10 +107,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.Hyperextension => "Hyperextension",
                 ExerciseType.LateralPull => "Lateral Pull",
                 ExerciseType.LateralPullReverseGrip => "Lateral Pull Reverse Grip",
-
-                // Back Squat
-                ExerciseType.BackSplitSquat => "Back Split Squat",
-                ExerciseType.GakkSquat => "Gakk Squat",
+                ExerciseType.ReverseHyperextension => "Reverse Hyperextension",
 
                 // Bench Press
                 ExerciseType.AsymmetryBenchPress => $"Asymmetry {benchPress}",

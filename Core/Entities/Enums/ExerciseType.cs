@@ -40,8 +40,11 @@
         FrontSquat,
 
         // Back Squat
+        BackSplitSquat,
         BackSquat,
+        BackSquatNarrowFeet,
         BenchBackSquat,
+        GakkSquat,
 
         // Deadlift
         Deadlift,
@@ -69,10 +72,7 @@
         Hyperextension,
         LateralPull,
         LateralPullReverseGrip,
-
-        // Back Squat
-        BackSplitSquat,
-        GakkSquat,
+        ReverseHyperextension,
 
         // Bench Press
         AsymmetryBenchPress,
