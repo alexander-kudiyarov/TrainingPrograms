@@ -17,7 +17,7 @@ namespace Core.TrainingPrograms
 
         public abstract ProgramType Type { get; }
         public abstract string Name { get; }
-        public int Count => _sessions.Count;
+        public int Days => _sessions.Count;
 
         public Session Get(int day)
         {
@@ -53,7 +53,7 @@ namespace Core.TrainingPrograms
 
             return result;
         }
-        
+
         private static double GetStep(double start, double stop, int sets)
         {
             var diff = stop - start;
