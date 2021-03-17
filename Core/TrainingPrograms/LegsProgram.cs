@@ -17,7 +17,7 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.LegsProgram;
         public override string Name => "Legs Program";
 
-        private static IDictionary<int, Func<Session>> GetSessions()
+        private static IReadOnlyDictionary<int, Func<Session>> GetSessions()
         {
             var key = 0;
 

@@ -17,7 +17,7 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.DeadliftProgram;
         public override string Name => "Deadlift Program";
 
-        private static IDictionary<int, Func<Session>> GetSessions()
+        private static IReadOnlyDictionary<int, Func<Session>> GetSessions()
         {
             var key = 0;
 

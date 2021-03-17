@@ -8,9 +8,9 @@ namespace Core.TrainingPrograms
 {
     public abstract class BaseTrainingProgram
     {
-        private readonly IDictionary<int, Func<Session>> _sessions;
+        private readonly IReadOnlyDictionary<int, Func<Session>> _sessions;
 
-        protected BaseTrainingProgram(IDictionary<int, Func<Session>> sessions)
+        protected BaseTrainingProgram(IReadOnlyDictionary<int, Func<Session>> sessions)
         {
             _sessions = sessions;
         }
