@@ -23,7 +23,7 @@ namespace Core.TrainingPrograms
 
             var result = new Dictionary<int, Func<Session>>
             {
-                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3
+                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3, [++key] = GetSession1_4
             };
 
             return result;
@@ -237,6 +237,63 @@ namespace Core.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_4()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1C = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex2 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 3, Sets = 3},
+                    new SingleRepeat {Percent = 0.6, Repeats = 2, Sets = 5}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2}, Sets = 3},
+                    new MultiRepeat {Percent = 0.6, Repeats = new[] {2, 2}, Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3)
                 }
             };
 
