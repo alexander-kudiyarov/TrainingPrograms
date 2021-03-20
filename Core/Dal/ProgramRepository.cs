@@ -8,7 +8,7 @@ namespace Core.Dal
 {
     public class ProgramRepository : IProgramRepository
     {
-        private readonly IDictionary<ProgramType, BaseTrainingProgram> _repository;
+        private readonly IReadOnlyDictionary<ProgramType, BaseTrainingProgram> _repository;
 
         public ProgramRepository()
         {
