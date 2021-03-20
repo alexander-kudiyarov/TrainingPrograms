@@ -10,22 +10,17 @@ namespace Core.TrainingPrograms
 {
     public sealed class LegsProgram : BaseTrainingProgram
     {
-        public LegsProgram() : base(GetSessions())
+        private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
+        {
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
+        };
+
+        public LegsProgram() : base(Sessions)
         {
         }
 
         public override ProgramType Type => ProgramType.LegsProgram;
         public override string Name => "Legs Program";
-
-        private static IReadOnlyList<Func<Session>> GetSessions()
-        {
-            var result = new Func<Session>[]
-            {
-                GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
-            };
-
-            return result;
-        }
 
         private static Session GetSession1_1()
         {

@@ -10,33 +10,28 @@ namespace Core.TrainingPrograms
 {
     public sealed class DeadliftProgram : BaseTrainingProgram
     {
-        public DeadliftProgram() : base(GetSessions())
+        private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
+        {
+            GetSession1_1, GetSession1_2, GetSession1_3,
+            GetSession2_1, GetSession2_2, GetSession2_3,
+            GetSession3_1, GetSession3_2, GetSession3_3,
+            GetSession4_1, GetSession4_2, GetSession4_3,
+            GetSession5_1, GetSession5_2, GetSession5_3,
+            GetSession6_1, GetSession6_2, GetSession6_3,
+            GetSession7_1, GetSession7_2, GetSession7_3,
+            GetSession8_1, GetSession8_2, GetSession8_3,
+            GetSession9_1, GetSession9_2, GetSession9_3,
+            GetSession10_1, GetSession10_2, GetSession10_3,
+            GetSession11_1, GetSession11_2, GetSession11_3,
+            GetSession12_1, GetSession12_2
+        };
+
+        public DeadliftProgram() : base(Sessions)
         {
         }
 
         public override ProgramType Type => ProgramType.DeadliftProgram;
         public override string Name => "Deadlift Program";
-
-        private static IReadOnlyList<Func<Session>> GetSessions()
-        {
-            var result = new Func<Session>[]
-            {
-                GetSession1_1, GetSession1_2, GetSession1_3,
-                GetSession2_1, GetSession2_2, GetSession2_3,
-                GetSession3_1, GetSession3_2, GetSession3_3,
-                GetSession4_1, GetSession4_2, GetSession4_3,
-                GetSession5_1, GetSession5_2, GetSession5_3,
-                GetSession6_1, GetSession6_2, GetSession6_3,
-                GetSession7_1, GetSession7_2, GetSession7_3,
-                GetSession8_1, GetSession8_2, GetSession8_3,
-                GetSession9_1, GetSession9_2, GetSession9_3,
-                GetSession10_1, GetSession10_2, GetSession10_3,
-                GetSession11_1, GetSession11_2, GetSession11_3,
-                GetSession12_1, GetSession12_2
-            };
-
-            return result;
-        }
 
         private static Session GetSession1_1()
         {
