@@ -17,13 +17,11 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.LegsProgram;
         public override string Name => "Legs Program";
 
-        private static IReadOnlyDictionary<int, Func<Session>> GetSessions()
+        private static IReadOnlyList<Func<Session>> GetSessions()
         {
-            var key = 0;
-
-            var result = new Dictionary<int, Func<Session>>
+            var result = new Func<Session>[]
             {
-                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3, [++key] = GetSession1_4
+                GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
             };
 
             return result;

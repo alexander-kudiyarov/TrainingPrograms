@@ -17,16 +17,14 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.BodybuildingProgram;
         public override string Name => "Bodybuilding Program";
 
-        private static IReadOnlyDictionary<int, Func<Session>> GetSessions()
+        private static IReadOnlyList<Func<Session>> GetSessions()
         {
-            var key = 0;
-
-            var result = new Dictionary<int, Func<Session>>
+            var result = new Func<Session>[]
             {
-                [++key] = GetSession1_1, [++key] = GetSession1_2, [++key] = GetSession1_3, [++key] = GetSession1_4,
-                [++key] = GetSession2_1, [++key] = GetSession2_2, [++key] = GetSession2_3, [++key] = GetSession2_4,
-                [++key] = GetSession3_1, [++key] = GetSession3_2, [++key] = GetSession3_3, [++key] = GetSession3_4,
-                [++key] = GetSession4_1, [++key] = GetSession4_2, [++key] = GetSession4_3, [++key] = GetSession4_4
+                GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
+                GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
+                GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
+                GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
             };
 
             return result;

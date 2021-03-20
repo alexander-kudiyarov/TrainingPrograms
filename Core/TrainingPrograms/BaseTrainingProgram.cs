@@ -8,9 +8,9 @@ namespace Core.TrainingPrograms
 {
     public abstract class BaseTrainingProgram
     {
-        private readonly IReadOnlyDictionary<int, Func<Session>> _sessions;
+        private readonly IReadOnlyList<Func<Session>> _sessions;
 
-        protected BaseTrainingProgram(IReadOnlyDictionary<int, Func<Session>> sessions)
+        protected BaseTrainingProgram(IReadOnlyList<Func<Session>> sessions)
         {
             _sessions = sessions;
         }
@@ -21,7 +21,8 @@ namespace Core.TrainingPrograms
 
         public Session Get(int day)
         {
-            var func = _sessions[day];
+            var index = day - 1;
+            var func = _sessions[index];
             var result = func.Invoke();
             return result;
         }

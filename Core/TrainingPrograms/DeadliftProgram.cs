@@ -17,24 +17,22 @@ namespace Core.TrainingPrograms
         public override ProgramType Type => ProgramType.DeadliftProgram;
         public override string Name => "Deadlift Program";
 
-        private static IReadOnlyDictionary<int, Func<Session>> GetSessions()
+        private static IReadOnlyList<Func<Session>> GetSessions()
         {
-            var key = 0;
-
-            var result = new Dictionary<int, Func<Session>>
+            var result = new Func<Session>[]
             {
-                [++key] = GetSession1_1, [++key] = GetSession1_3, [++key] = GetSession1_5,
-                [++key] = GetSession2_1, [++key] = GetSession2_3, [++key] = GetSession2_5,
-                [++key] = GetSession3_1, [++key] = GetSession3_3, [++key] = GetSession3_5,
-                [++key] = GetSession4_1, [++key] = GetSession4_3, [++key] = GetSession4_5,
-                [++key] = GetSession5_1, [++key] = GetSession5_3, [++key] = GetSession5_5,
-                [++key] = GetSession6_1, [++key] = GetSession6_3, [++key] = GetSession6_5,
-                [++key] = GetSession7_1, [++key] = GetSession7_3, [++key] = GetSession7_5,
-                [++key] = GetSession8_1, [++key] = GetSession8_3, [++key] = GetSession8_5,
-                [++key] = GetSession9_1, [++key] = GetSession9_3, [++key] = GetSession9_5,
-                [++key] = GetSession10_1, [++key] = GetSession10_3, [++key] = GetSession10_5,
-                [++key] = GetSession11_1, [++key] = GetSession11_3, [++key] = GetSession11_5,
-                [++key] = GetSession12_1, [++key] = GetSession12_3
+                GetSession1_1, GetSession1_3, GetSession1_5,
+                GetSession2_1, GetSession2_3, GetSession2_5,
+                GetSession3_1, GetSession3_3, GetSession3_5,
+                GetSession4_1, GetSession4_3, GetSession4_5,
+                GetSession5_1, GetSession5_3, GetSession5_5,
+                GetSession6_1, GetSession6_3, GetSession6_5,
+                GetSession7_1, GetSession7_3, GetSession7_5,
+                GetSession8_1, GetSession8_3, GetSession8_5,
+                GetSession9_1, GetSession9_3, GetSession9_5,
+                GetSession10_1, GetSession10_3, GetSession10_5,
+                GetSession11_1, GetSession11_3, GetSession11_5,
+                GetSession12_1, GetSession12_3
             };
 
             return result;
