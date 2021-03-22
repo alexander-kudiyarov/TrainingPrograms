@@ -42,6 +42,7 @@
         // Back Squat
         BackSplitSquat,
         BackSquat,
+        BackSquatWithPause,
         BackSquatNarrowFeet,
         BenchBackSquat,
         GakkSquat,

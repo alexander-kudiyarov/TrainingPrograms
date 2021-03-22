@@ -13,7 +13,7 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
-            GetSession2_1
+            GetSession2_1, GetSession2_2
         };
 
         public LegsProgram() : base(Sessions)
@@ -351,6 +351,87 @@ namespace Core.TrainingPrograms
                 Repeats = new Repeat[]
                 {
                     new SingleRepeat {Repeats = 8, Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession2_2()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1C = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(Clean, FrontSquat, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2, 2}, Sets = 4}
+                }
+            };
+
+            var ex3 = new BackSquat(BackSquatWithPause)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4},
+                    new SingleRepeat {Percent = 0.6, Repeats = 4},
+                    new SingleRepeat {Percent = 0.7, Repeats = 4, Sets = 4}
+                }
+            };
+
+            var ex4 = new BackSquat(BenchBackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.6, Repeats = 6},
+                    new SingleRepeat {Percent = 0.7, Repeats = 6},
+                    new SingleRepeat {Percent = 0.8, Repeats = 2},
+                    new SingleRepeat {Percent = 0.8, Repeats = 4},
+                    new SingleRepeat {Percent = 0.8, Repeats = 6, Sets = 2},
+                    new SingleRepeat {Percent = 0.8, Repeats = 4},
+                    new SingleRepeat {Percent = 0.8, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var ex5 = new CleanAndJerk(DeficitRomanianDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.65, Repeats = 8, Sets = 3}
                 }
             };
 

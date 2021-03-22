@@ -34,6 +34,7 @@ namespace Core.Entities.Exercises
             const string block = "(from Blocks)";
             const string deficit = "(from Deficit)";
             const string pull = "Pull";
+            const string pause = "(with Pause)";
 
             return type switch
             {
@@ -77,6 +78,7 @@ namespace Core.Entities.Exercises
                 // Back Squat
                 ExerciseType.BackSplitSquat => "Back Split Squat",
                 ExerciseType.BackSquat => "Back Squat",
+                ExerciseType.BackSquatWithPause => $"Back Squat {pause}",
                 ExerciseType.BackSquatNarrowFeet => "Back Squat (Narrow Feet)",
                 ExerciseType.BenchBackSquat => "Bench Back Squat",
                 ExerciseType.GakkSquat => "Gakk Squat",
