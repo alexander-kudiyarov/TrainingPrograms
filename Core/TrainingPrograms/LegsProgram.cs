@@ -13,7 +13,7 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
-            GetSession2_1, GetSession2_2
+            GetSession2_1, GetSession2_2, GetSession2_3
         };
 
         public LegsProgram() : base(Sessions)
@@ -444,6 +444,74 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession2_3()
+        {
+            var ex1A = new Accessory(ReverseHyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1C = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 4},
+                    new SingleRepeat {Percent = 0.7, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.8, Repeats = 4},
+                    new SingleRepeat {Percent = 0.9, Repeats = 3, Sets = 5}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(BackLunges)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.4, Repeats = new[] {8, 8}, Sets = 5}
+                }
+            };
+
+            var ex4 = new Accessory(BarbellSquatJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 6, Sets = 5}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
