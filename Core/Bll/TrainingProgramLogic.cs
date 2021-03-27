@@ -76,10 +76,8 @@ namespace Core.Bll
             static IEnumerable<Repeat> Split(IEnumerable<Repeat> exercise)
             {
                 foreach (var set in exercise)
-                {
-                    var repeats = Enumerable.Range(0, set.Sets);
-                    foreach (var _ in repeats) yield return set;
-                }
+                    for (var i = 0; i < set.Sets; i++)
+                        yield return set;
             }
         }
 

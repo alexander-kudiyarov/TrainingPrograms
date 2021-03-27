@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
-    var days = Enumerable.Range(1, Model.Days);
 }
 
 <h3>@Model.Name</h3>
-@foreach (var day in days)
+@for (var day = 1; day <= Model.Days; day++)
 {
     <p>@Html.ActionLink($"Session {day.ToString()}", "Session", new {Type = (int) Model.Type, Session = day})</p>
 }

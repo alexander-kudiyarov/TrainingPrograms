@@ -8,10 +8,10 @@
 
 <div>
     <div>
-        <h3>Session @Model.Day</h3>
+        <h3>Session @Model.Day.ToString()</h3>
         @foreach (var set in Model.Rounds)
         {
-            foreach (var _ in Enumerable.Range(0, set.Rounds))
+            for (var i = 0; i < set.Rounds; i++)
             {
                 foreach (var ex in set.Exercises)
                 {
@@ -22,10 +22,10 @@
                             switch (repeat)
                             {
                                 case SingleRepeat singleRepeat:
-                                    <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight} × " : string.Empty)@singleRepeat.Repeats</p>
+                                    <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
                                     break;
                                 case MultiRepeat multiRepeat:
-                                    <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
+                                    <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
                                     break;
                                 case StaticRepeat staticRepeat:
                                     <p>@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
