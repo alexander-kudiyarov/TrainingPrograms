@@ -36,15 +36,14 @@ namespace Core.Bll
         public Session Get(ProgramType type, int day)
         {
             var session = _repository.Get(type, day);
-            ProcessSession(session, day);
+            ProcessSession(session);
             return session;
         }
 
-        private static void ProcessSession(Session session, int day)
+        private static void ProcessSession(Session session)
         {
             ProcessWeights(session);
             SplitRepeats(session);
-            session.Day = day;
         }
 
         private static void ProcessWeights(Session session)
@@ -70,20 +69,17 @@ namespace Core.Bll
 
         private static void SplitRepeats(Session session)
         {
-            foreach (var set in session.Rounds)
-            foreach (var exercise in set.Exercises)
+            foreach (var round in session.Rounds)
+            foreach (var exercise in round.Exercises)
+                exercise.Repeats = Split(exercise.Repeats);
+
+            static IEnumerable<Repeat> Split(IEnumerable<Repeat> exercise)
             {
-                var repeats = exercise.Repeats;
-                var sets = repeats.Sum(i => i.Sets);
-                var list = new List<Repeat>(sets);
-
-                foreach (var repeat in repeats)
+                foreach (var set in exercise)
                 {
-                    list.AddRange(Enumerable.Repeat(repeat, repeat.Sets));
-                    repeat.Sets = 1;
+                    var repeats = Enumerable.Range(0, set.Sets);
+                    foreach (var _ in repeats) yield return set;
                 }
-
-                exercise.Repeats = list;
             }
         }
 
@@ -111,7 +107,7 @@ namespace Core.Bll
         private static void AddWarmupRepeats(BaseExercise exercise)
         {
             if (!exercise.IsWarmupNeeded
-                || exercise.Repeats[0] is not WeightedRepeat repeat) return;
+                || exercise.Repeats.First() is not WeightedRepeat repeat) return;
 
             var warmUps = new List<Repeat>();
 

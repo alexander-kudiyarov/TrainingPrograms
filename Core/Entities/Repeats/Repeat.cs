@@ -2,6 +2,6 @@
 {
     public abstract class Repeat
     {
-        public int Sets { get; set; } = 1;
+        public int Sets { get; init; } = 1;
     }
 }
