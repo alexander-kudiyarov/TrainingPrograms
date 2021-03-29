@@ -9,27 +9,30 @@
 <div>
     <div>
         <h3>Session @Model.Day.ToString()</h3>
-        @foreach (var set in Model.Rounds)
+        @foreach (var round in Model.Rounds)
         {
-            for (var i = 0; i < set.Rounds; i++)
+            for (var r = 0; r < round.Rounds; r++)
             {
-                foreach (var ex in set.Exercises)
+                foreach (var exercise in round.Exercises)
                 {
                     <div>
-                        <p>@ex.Name</p>
-                        @foreach (var repeat in ex.Repeats)
+                        <p>@exercise.Name</p>
+                        @foreach (var repeat in exercise.Repeats)
                         {
-                            switch (repeat)
+                            for (var s = 0; s < repeat.Sets; s++)
                             {
-                                case SingleRepeat singleRepeat:
-                                    <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
-                                    break;
-                                case MultiRepeat multiRepeat:
-                                    <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
-                                    break;
-                                case StaticRepeat staticRepeat:
-                                    <p>@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
-                                    break;
+                                switch (repeat)
+                                {
+                                    case SingleRepeat singleRepeat:
+                                        <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
+                                        break;
+                                    case MultiRepeat multiRepeat:
+                                        <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
+                                        break;
+                                    case StaticRepeat staticRepeat:
+                                        <p>@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
+                                        break;
+                                }
                             }
                         }
                     </div>

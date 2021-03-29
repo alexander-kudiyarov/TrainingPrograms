@@ -36,14 +36,8 @@ namespace Core.Bll
         public Session Get(ProgramType type, int day)
         {
             var session = _repository.Get(type, day);
-            ProcessSession(session);
-            return session;
-        }
-
-        private static void ProcessSession(Session session)
-        {
             ProcessWeights(session);
-            SplitRepeats(session);
+            return session;
         }
 
         private static void ProcessWeights(Session session)
@@ -64,20 +58,6 @@ namespace Core.Bll
                     CalculateWeight(exercise, weightedRepeat);
                     RoundWeight(exercise, weightedRepeat);
                 }
-            }
-        }
-
-        private static void SplitRepeats(Session session)
-        {
-            foreach (var round in session.Rounds)
-            foreach (var exercise in round.Exercises)
-                exercise.Repeats = Split(exercise.Repeats);
-
-            static IEnumerable<Repeat> Split(IEnumerable<Repeat> exercise)
-            {
-                foreach (var set in exercise)
-                    for (var i = 0; i < set.Sets; i++)
-                        yield return set;
             }
         }
 
