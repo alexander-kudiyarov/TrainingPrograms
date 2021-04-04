@@ -14,7 +14,7 @@ namespace Core.TrainingPrograms
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
-            GetSession3_1, GetSession3_2, GetSession3_3
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4
         };
 
         public LegsProgram() : base(Sessions)
@@ -819,6 +819,65 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession3_4()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1C = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex2 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 2, Sets = 4},
+                    new SingleRepeat {Percent = 0.7, Repeats = 1, Sets = 3}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.6, Repeats = new[] {2, 2}, Sets = 5},
+                    new MultiRepeat {Percent = 0.7, Repeats = new[] {1, 1}, Sets = 2}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3)
                 }
             };
 
