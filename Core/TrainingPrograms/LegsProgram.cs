@@ -944,7 +944,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex5 = new Accessory(GoodMorningSquat)
+            var ex5 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
