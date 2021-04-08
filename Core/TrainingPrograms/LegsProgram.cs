@@ -15,7 +15,7 @@ namespace Core.TrainingPrograms
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
-            GetSession4_1
+            GetSession4_1, GetSession4_2
         };
 
         public LegsProgram() : base(Sessions)
@@ -970,6 +970,88 @@ namespace Core.TrainingPrograms
                     new(ex4),
                     new(ex5),
                     new(ex6)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession4_2()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1C = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(CleanPull, Clean, FrontSquat, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2, 2, 2}, Sets = 3}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 3},
+                    new SingleRepeat {Percent = 0.6, Repeats = 3},
+                    new SingleRepeat {Percent = 0.7, Repeats = 3},
+                    new SingleRepeat {Percent = 0.8, Repeats = 3},
+                    new SingleRepeat {Percent = 0.9, Repeats = 2, Sets = 2},
+                    new SingleRepeat {Percent = 1, Repeats = 2, Sets = 2},
+                    new SingleRepeat {Percent = 1.05, Repeats = 2},
+                    new SingleRepeat {Percent = 1.05, Repeats = 1},
+                    new SingleRepeat {Percent = 1.05, Repeats = 2},
+                    new SingleRepeat {Percent = 1.05, Repeats = 1}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(BackLunges)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {5, 5}, Sets = 3}
+                }
+            };
+
+            var ex5 = new CleanAndJerk(DeficitRomanianDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.7, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
                 }
             };
 
