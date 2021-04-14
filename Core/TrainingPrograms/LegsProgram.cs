@@ -15,7 +15,8 @@ namespace Core.TrainingPrograms
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4,
+            GetSession5_1
         };
 
         public LegsProgram() : base(Sessions)
@@ -1192,6 +1193,88 @@ namespace Core.TrainingPrograms
                     new(3, ex1A, ex1B, ex1C),
                     new(ex2),
                     new(ex3)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_1()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1B = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex2 = new Snatch(ExerciseType.Snatch, SnatchBalance, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {3, 2, 1}, Sets = 3}
+                }
+            };
+
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 3},
+                    new SingleRepeat {Percent = 0.6, Repeats = 3},
+                    new SingleRepeat {Percent = 0.7, Repeats = 3},
+                    new SingleRepeat {Percent = 0.8, Repeats = 2},
+                    new SingleRepeat {Percent = 0.85, Repeats = 2},
+                    new SingleRepeat {Percent = 0.9, Repeats = 2},
+                    new SingleRepeat {Percent = 0.925, Repeats = 2, Sets = 3}
+                }
+            };
+
+            var ex4 = new BackSquat(BackSquatWithPause)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 3},
+                    new SingleRepeat {Percent = 0.6, Repeats = 3},
+                    new SingleRepeat {Percent = 0.7, Repeats = 3, Sets = 3}
+                }
+            };
+
+            var ex5 = new CleanAndJerk(GoodMorningSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.4, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var ex6 = new Accessory(BarbellSquatJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 6, Sets = 6}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, ex1A, ex1B),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5),
+                    new(ex6)
                 }
             };
 
