@@ -700,10 +700,10 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.7, Repeats = 3},
                     new SingleRepeat {Percent = 0.8, Repeats = 3, Sets = 4},
                     new SingleRepeat {Percent = 0.9, Repeats = 3},
-                    new SingleRepeat {Percent = 1, Repeats = 3, Sets = 4},
-                    new SingleRepeat {Percent = 1, Repeats = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 3},
-                    new SingleRepeat {Percent = 1, Repeats = 2}
+                    new SingleRepeat {Percent = 1.0, Repeats = 3, Sets = 4},
+                    new SingleRepeat {Percent = 1.0, Repeats = 2},
+                    new SingleRepeat {Percent = 1.0, Repeats = 3},
+                    new SingleRepeat {Percent = 1.0, Repeats = 2}
                 }
             };
 
@@ -789,10 +789,10 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.7, Repeats = 2},
                     new SingleRepeat {Percent = 0.8, Repeats = 2},
                     new SingleRepeat {Percent = 0.9, Repeats = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 1},
-                    new SingleRepeat {Percent = 1, Repeats = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 1}
+                    new SingleRepeat {Percent = 1.0, Repeats = 2},
+                    new SingleRepeat {Percent = 1.0, Repeats = 1},
+                    new SingleRepeat {Percent = 1.0, Repeats = 2},
+                    new SingleRepeat {Percent = 1.0, Repeats = 1}
                 }
             };
 
@@ -1020,7 +1020,7 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.7, Repeats = 3},
                     new SingleRepeat {Percent = 0.8, Repeats = 3},
                     new SingleRepeat {Percent = 0.9, Repeats = 2, Sets = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 2, Sets = 2},
+                    new SingleRepeat {Percent = 1.0, Repeats = 2, Sets = 2},
                     new SingleRepeat {Percent = 1.05, Repeats = 2},
                     new SingleRepeat {Percent = 1.05, Repeats = 1},
                     new SingleRepeat {Percent = 1.05, Repeats = 2},
@@ -1115,7 +1115,7 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.7, Repeats = 2},
                     new SingleRepeat {Percent = 0.8, Repeats = 2},
                     new SingleRepeat {Percent = 0.9, Repeats = 2},
-                    new SingleRepeat {Percent = 1, Repeats = 2}
+                    new SingleRepeat {Percent = 1.0, Repeats = 2}
                 }
             };
 
