@@ -15,12 +15,14 @@ namespace Core.Dal
             var bodybuildingProgram = new BodybuildingProgram();
             var deadliftProgram = new DeadliftProgram();
             var legsProgram = new LegsProgram();
+            var pullAndSquatProgram = new PullAndSquatProgram();
 
             _repository = new Dictionary<ProgramType, BaseTrainingProgram>
             {
                 [bodybuildingProgram.Type] = bodybuildingProgram,
                 [deadliftProgram.Type] = deadliftProgram,
-                [legsProgram.Type] = legsProgram
+                [legsProgram.Type] = legsProgram,
+                [pullAndSquatProgram.Type] = pullAndSquatProgram
             };
         }
 

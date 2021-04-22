@@ -4,6 +4,7 @@
     {
         BodybuildingProgram = 1,
         DeadliftProgram,
-        LegsProgram
+        LegsProgram,
+        PullAndSquat
     }
 }
