@@ -29,7 +29,8 @@
         private static double PullFactor => 1.1;
 
         private static double DeficitFactor => 0.9;
+
         //private static double Body => 71;
-        //private static double Bar => 20;
+        public static double Bar => 20;
     }
 }

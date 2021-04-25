@@ -12,7 +12,7 @@ namespace Core.TrainingPrograms
     {
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
-            GetSession1_1
+            GetSession1_1, GetSession1_2
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -84,6 +84,72 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_2()
+        {
+            var ex1A = new Accessory(ReverseHyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 12}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 12}
+                }
+            };
+
+            var ex1C = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(PowerClean)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 3, Sets = 3}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(CleanPull)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.7, Repeats = 3},
+                    new SingleRepeat {Percent = 0.8, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(BackSplitSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {4, 4}, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
