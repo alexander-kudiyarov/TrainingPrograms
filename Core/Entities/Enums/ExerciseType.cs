@@ -6,6 +6,7 @@
         Snatch,
         DeficitMediumGripPull,
         DeficitPowerSnatch,
+        DeficitSnatchPull,
         HangPowerSnatch,
         HangSnatch,
         HangSnatchPullBelowKnee,
