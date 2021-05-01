@@ -12,7 +12,7 @@ namespace Core.TrainingPrograms
     {
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -251,6 +251,63 @@ namespace Core.TrainingPrograms
                 {
                     new(ex1),
                     new(ex2)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_5()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 12}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 12}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(FrontSquat, PushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {1, 5}, Sets = 3}
+                }
+            };
+
+            var ex3 = new BackSquat(BackSquatNarrowFeet)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 6},
+                    new SingleRepeat {Percent = 0.6, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(GoodMorningSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.4, Repeats = 8, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
