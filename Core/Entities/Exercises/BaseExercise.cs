@@ -65,6 +65,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.CleanPull => $"{clean} {pull}",
                 ExerciseType.CleanPullTillPowerPosition => $"{clean} {pull} Till Power Position",
                 ExerciseType.DeficitClean => $"Clean {deficit}",
+                ExerciseType.DeficitCleanPull => $"Clean {pull} {deficit}",
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
                 ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",

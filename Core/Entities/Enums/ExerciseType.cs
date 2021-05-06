@@ -28,6 +28,7 @@
         CleanPull,
         CleanPullTillPowerPosition,
         DeficitClean,
+        DeficitCleanPull,
         HangCleanBelowKnee,
         HangPowerClean,
         MuscleSquatClean,
