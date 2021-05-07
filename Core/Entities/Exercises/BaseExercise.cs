@@ -32,6 +32,7 @@ namespace Core.Entities.Exercises
 
             // Suffixes
             const string block = "(from Blocks)";
+            const string aboveKnee = "(above Knee)";
             const string belowKnee = "(below Knee)";
             const string deficit = "(from Deficit)";
             const string pull = "Pull";
@@ -46,6 +47,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.DeficitSnatchPull => $"{snatch} {pull} {deficit}",
                 ExerciseType.HangPowerSnatch => $"{hang} {power} {snatch}",
                 ExerciseType.HangSnatch => $"{hang} {snatch}",
+                ExerciseType.HangSnatchPullAboveKnee => $"{hang} {snatch} {pull} {aboveKnee}",
                 ExerciseType.HangSnatchPullBelowKnee => $"{hang} {snatch} {pull} {belowKnee}",
                 ExerciseType.HipSnatch => $"Hip {snatch}",
                 ExerciseType.MediumGripPull => $"Medium Grip {pull}",
