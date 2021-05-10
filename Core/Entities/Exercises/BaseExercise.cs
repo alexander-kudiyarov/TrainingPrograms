@@ -76,6 +76,7 @@ namespace Core.Entities.Exercises
 
                 // Jerk
                 ExerciseType.Jerk => jerk,
+                ExerciseType.JerkSupport => $"{jerk} Support",
                 ExerciseType.PowerJerk => $"{power} {jerk}",
                 ExerciseType.PushPress => "Push Press",
 

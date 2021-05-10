@@ -38,6 +38,7 @@
 
         // Jerk
         Jerk,
+        JerkSupport,
         PowerJerk,
         PushPress,
 
