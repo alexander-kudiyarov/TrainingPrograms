@@ -65,6 +65,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.Clean => clean,
                 ExerciseType.CleanFromBlocks => $"{clean} {block}",
                 ExerciseType.CleanPull => $"{clean} {pull}",
+                ExerciseType.CleanPullSlowlyDown => $"{clean} {pull} (Slowly Down)",
                 ExerciseType.CleanPullTillPowerPosition => $"{clean} {pull} Till Power Position",
                 ExerciseType.DeficitClean => $"Clean {deficit}",
                 ExerciseType.DeficitCleanPull => $"Clean {pull} {deficit}",
