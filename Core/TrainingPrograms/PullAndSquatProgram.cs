@@ -13,7 +13,8 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
+            GetSession3_1
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -624,6 +625,79 @@ namespace Core.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession3_1()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 20}
+                }
+            };
+
+            var ex2 = new Snatch(MuscleSquatSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 5, Sets = 4}
+                }
+            };
+
+            var ex3 = new Snatch(DeficitSnatchPull)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4},
+                    new SingleRepeat {Percent = 0.7, Repeats = 4},
+                    new SingleRepeat {Percent = 0.9, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 1.0, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 1.05, Repeats = 2, Sets = 2}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.7, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 0.8, Repeats = 3},
+                    new SingleRepeat {Percent = 0.9, Repeats = 3, Sets = 3}
+                }
+            };
+
+            var ex5 = new Snatch(SnatchPushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 6, Sets = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.7, Repeats = 3, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
                 }
             };
 
