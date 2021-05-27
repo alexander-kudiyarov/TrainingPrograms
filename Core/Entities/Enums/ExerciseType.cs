@@ -27,6 +27,7 @@
         Clean,
         CleanFromBlocks,
         CleanPull,
+        CleanPullFromBlocks,
         CleanPullSlowlyDown,
         CleanPullTillPowerPosition,
         DeficitClean,
