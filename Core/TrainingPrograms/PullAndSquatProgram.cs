@@ -546,9 +546,9 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.8, Repeats = 1},
-                    new SingleRepeat {Percent = 1.0, Repeats = 1},
-                    new SingleRepeat {Percent = 1.05, Repeats = 1, Sets = 3}
+                    new StaticRepeat {Percent = 0.8, Time = TimeSpan.FromSeconds(6)},
+                    new StaticRepeat {Percent = 1.0, Time = TimeSpan.FromSeconds(6)},
+                    new StaticRepeat {Percent = 1.05, Time = TimeSpan.FromSeconds(6), Sets = 3}
                 }
             };
 
@@ -924,7 +924,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 1.1, Repeats = 1, Sets = 4}
+                    new StaticRepeat {Percent = 1.1, Time = TimeSpan.FromSeconds(6), Sets = 4}
                 }
             };
 
@@ -1137,8 +1137,8 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 1.1, Repeats = 1, Sets = 2},
-                    new SingleRepeat {Percent = 1.15, Repeats = 1, Sets = 2}
+                    new StaticRepeat {Percent = 1.1, Time = TimeSpan.FromSeconds(6), Sets = 2},
+                    new StaticRepeat {Percent = 1.15, Time = TimeSpan.FromSeconds(6), Sets = 2}
                 }
             };
 

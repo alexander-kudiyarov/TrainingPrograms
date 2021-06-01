@@ -1,6 +1,6 @@
 ﻿namespace Core.Entities.Repeats
 {
-    public class SingleRepeat : WeightedRepeat
+    public class SingleRepeat : Repeat
     {
         public int Repeats { get; init; }
     }

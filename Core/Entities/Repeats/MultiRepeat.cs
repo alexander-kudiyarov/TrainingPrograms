@@ -2,7 +2,7 @@
 
 namespace Core.Entities.Repeats
 {
-    public class MultiRepeat : WeightedRepeat
+    public class MultiRepeat : Repeat
     {
         public IList<int> Repeats { get; init; }
     }
