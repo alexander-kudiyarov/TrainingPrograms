@@ -1183,7 +1183,7 @@ namespace Core.TrainingPrograms
                 }
             };
 
-            var ex2 = new CleanAndJerk(MuscleSquatClean)
+            var ex2 = new CleanAndJerk(Clean, Jerk)
             {
                 Repeats = new Repeat[]
                 {
