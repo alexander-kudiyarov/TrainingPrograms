@@ -40,7 +40,7 @@ namespace Core.TrainingPrograms
             }
         }
 
-        protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, IList<int> repeats)
+        protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
         {
             var step = GetStep(start, stop, sets);
 
