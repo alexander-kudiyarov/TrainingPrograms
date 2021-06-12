@@ -30,26 +30,30 @@ namespace Core.TrainingPrograms
 
         protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, int repeats)
         {
+            var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);
 
             for (var i = 0; i < sets; i++)
             {
                 var percent = GetPercent(start, step, i);
-                var result = new SingleRepeat {Percent = percent, Repeats = repeats};
-                yield return result;
+                result[i] = new SingleRepeat {Percent = percent, Repeats = repeats};
             }
+
+            return result;
         }
 
         protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
         {
+            var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);
 
             for (var i = 0; i < sets; i++)
             {
                 var percent = GetPercent(start, step, i);
-                var result = new MultiRepeat {Percent = percent, Repeats = repeats};
-                yield return result;
+                result[i] = new MultiRepeat {Percent = percent, Repeats = repeats};
             }
+
+            return result;
         }
 
         private static double GetStep(double start, double stop, int sets)
