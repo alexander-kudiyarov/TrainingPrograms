@@ -16,7 +16,7 @@ namespace Core.TrainingPrograms
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1
+            GetSession5_1, GetSession5_2
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -1287,6 +1287,14 @@ namespace Core.TrainingPrograms
                 }
             };
 
+            var ex1C = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new[]
+                {
+                    new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
+                }
+            };
+
             var ex2 = new CleanAndJerk(MuscleSquatClean)
             {
                 Repeats = new Repeat[]
@@ -1317,6 +1325,64 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.9, Repeats = 2, Sets = 1},
                     new SingleRepeat {Percent = 1.0, Repeats = 2, Sets = 1},
                     new SingleRepeat {Percent = 1.05, Repeats = 2, Sets = 2}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(3, ex1A, ex1B, ex1C),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+        
+        private static Session GetSession5_2()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex2 = new Snatch(PowerSnatch, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {1, 4}, Sets = 3},
+                    new MultiRepeat {Percent = 0.6, Repeats = new[] {1, 4}, Sets = 2},
+                    new MultiRepeat {Percent = 0.7, Repeats = new[] {1, 1}, Sets = 1}
+                }
+            };
+
+            var ex3 = new Snatch(SnatchPushPress, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.7, Repeats = new[] {3, 3}, Sets = 2}
+                }
+            };
+
+            var ex4 = new CleanAndJerk(BackSplitSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {4, 4}, Sets = 3}
                 }
             };
 
