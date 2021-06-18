@@ -16,7 +16,7 @@ namespace Core.TrainingPrograms
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2, GetSession5_3
+            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -1468,6 +1468,36 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_4()
+        {
+            var ex1 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new[]
+                {
+                    new SingleRepeat {Percent = 0.4, Repeats = 3, Sets = 6}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.4, Repeats = new[] {2, 2}, Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2)
                 }
             };
 
