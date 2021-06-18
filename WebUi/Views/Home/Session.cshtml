@@ -24,13 +24,13 @@
                                 switch (repeat)
                                 {
                                     case SingleRepeat singleRepeat:
-                                        <p>@(singleRepeat.Weight != null ? $"{singleRepeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
+                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
                                         break;
                                     case MultiRepeat multiRepeat:
-                                        <p>@(multiRepeat.Weight != null ? $"{multiRepeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
+                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
                                         break;
                                     case StaticRepeat staticRepeat:
-                                        <p>@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
+                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
                                         break;
                                 }
                             }
