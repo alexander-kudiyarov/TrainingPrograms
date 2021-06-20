@@ -16,7 +16,8 @@ namespace Core.TrainingPrograms
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5
+            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
+            GetSession6_1
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -1557,6 +1558,64 @@ namespace Core.TrainingPrograms
                 Rounds = new Round[]
                 {
                     new(3, ex1A, ex1B),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession6_1()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 10}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(PowerClean, FrontSquat, PushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2, 2}, Sets = 3}
+                }
+            };
+
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 2},
+                    new SingleRepeat {Percent = 0.7, Repeats = 2, Sets = 2}
+                }
+            };
+
+            var ex4 = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 5, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, ex1A, ex1B),
                     new(ex2),
                     new(ex3),
                     new(ex4)
