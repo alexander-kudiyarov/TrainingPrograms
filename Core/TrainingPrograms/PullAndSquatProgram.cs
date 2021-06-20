@@ -587,7 +587,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -727,7 +727,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -896,7 +896,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -1036,7 +1036,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -1179,7 +1179,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -1229,7 +1229,7 @@ namespace Core.TrainingPrograms
 
             var ex2 = new CleanAndJerk(FrontSquat, PushPress)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 3}, Sets = 2},
                     new MultiRepeat {Percent = 0.6, Repeats = new[] {1, 3}, Sets = 3}
@@ -1290,7 +1290,7 @@ namespace Core.TrainingPrograms
 
             var ex1C = new CleanAndJerk(FrontSquat)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Weight = Stats.Bar, Repeats = 6}
                 }
@@ -1479,7 +1479,7 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new Snatch(ExerciseType.Snatch)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Percent = 0.4, Repeats = 3, Sets = 6}
                 }
@@ -1525,7 +1525,7 @@ namespace Core.TrainingPrograms
 
             var ex2 = new Snatch(MuscleSquatSnatch)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Percent = 0.5, Repeats = 3, Sets = 2},
                     new SingleRepeat {Percent = 0.6, Repeats = 3, Sets = 2},
@@ -1676,7 +1676,7 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new Snatch(HipSnatch)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat {Percent = 0.5, Repeats = 3, Sets = 3}
                 }
