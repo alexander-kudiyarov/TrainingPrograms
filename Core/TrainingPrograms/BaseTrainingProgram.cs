@@ -30,19 +30,27 @@ namespace Core.TrainingPrograms
 
         protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, int repeats)
         {
-            var result = new Repeat[sets];
-            var step = GetStep(start, stop, sets);
-
-            for (var i = 0; i < sets; i++)
-            {
-                var percent = GetPercent(start, step, i);
-                result[i] = new SingleRepeat {Percent = percent, Repeats = repeats};
-            }
-
+            var result = GetRange(start, stop, sets, Func);
             return result;
+
+            Repeat Func(double percent)
+            {
+                return new SingleRepeat {Percent = percent, Repeats = repeats};
+            }
         }
 
         protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
+        {
+            var result = GetRange(start, stop, sets, Func);
+            return result;
+
+            Repeat Func(double percent)
+            {
+                return new MultiRepeat {Percent = percent, Repeats = repeats};
+            }
+        }
+
+        private static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, Func<double, Repeat> func)
         {
             var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);
@@ -50,7 +58,7 @@ namespace Core.TrainingPrograms
             for (var i = 0; i < sets; i++)
             {
                 var percent = GetPercent(start, step, i);
-                result[i] = new MultiRepeat {Percent = percent, Repeats = repeats};
+                result[i] = func(percent);
             }
 
             return result;
