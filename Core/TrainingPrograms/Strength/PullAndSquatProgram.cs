@@ -6,7 +6,7 @@ using Core.Entities.Exercises;
 using Core.Entities.Repeats;
 using static Core.Entities.Enums.ExerciseType;
 
-namespace Core.TrainingPrograms
+namespace Core.TrainingPrograms.Strength
 {
     public sealed class PullAndSquatProgram : BaseTrainingProgram
     {

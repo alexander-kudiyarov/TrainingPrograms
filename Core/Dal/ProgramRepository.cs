@@ -3,6 +3,7 @@ using Core.Dal.Interfaces;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.TrainingPrograms;
+using Core.TrainingPrograms.Strength;
 
 namespace Core.Dal
 {
