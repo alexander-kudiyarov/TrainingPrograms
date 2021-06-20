@@ -14,8 +14,8 @@ namespace Core.Entities.Exercises
 
         public abstract string Name { get; }
         public double? Weight { get; }
-        public IEnumerable<Repeat> Repeats { get; set; }
-        public bool IsWarmupNeeded { get; set; }
+        public IReadOnlyList<Repeat> Repeats { get; init; }
+        public bool IsWarmupNeeded { get; init; }
 
         // TODO extract to WebUi
         protected static string GetName(ExerciseType type)

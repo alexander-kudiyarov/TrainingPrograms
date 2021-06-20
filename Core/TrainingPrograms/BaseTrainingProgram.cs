@@ -28,7 +28,7 @@ namespace Core.TrainingPrograms
             return result;
         }
 
-        protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, int repeats)
+        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, int repeats)
         {
             var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);
@@ -42,7 +42,7 @@ namespace Core.TrainingPrograms
             return result;
         }
 
-        protected static IEnumerable<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
+        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
         {
             var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);

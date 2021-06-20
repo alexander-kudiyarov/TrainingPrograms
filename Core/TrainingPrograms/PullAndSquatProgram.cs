@@ -17,7 +17,7 @@ namespace Core.TrainingPrograms
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
             GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
-            GetSession6_1, GetSession6_3, GetSession6_4
+            GetSession6_1, GetSession6_3, GetSession6_4, GetSession6_5
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -1698,6 +1698,47 @@ namespace Core.TrainingPrograms
                 {
                     new(ex1),
                     new(ex2)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession6_5()
+        {
+            var ex1A = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15}
+                }
+            };
+
+            var ex1B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 20}
+                }
+            };
+
+            var ex2 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = SingleRepeat.GetMaxoutRepeats()
+            };
+
+            var ex3 = new Deadlift(ExerciseType.Deadlift)
+            {
+                Repeats = SingleRepeat.GetMaxoutRepeats()
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, ex1A, ex1B),
+                    new(ex2),
+                    new(ex3)
                 }
             };
 
