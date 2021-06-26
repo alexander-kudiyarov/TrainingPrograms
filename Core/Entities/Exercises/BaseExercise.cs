@@ -32,8 +32,8 @@ namespace Core.Entities.Exercises
 
             // Suffixes
             const string block = "(from Blocks)";
-            const string aboveKnee = "(above Knee)";
-            const string belowKnee = "(below Knee)";
+            const string aboveKnees = "(above Knees)";
+            const string belowKnees = "(below Knees)";
             const string deficit = "(from Deficit)";
             const string pull = "Pull";
             const string pause = "(with Pause)";
@@ -46,9 +46,10 @@ namespace Core.Entities.Exercises
                 ExerciseType.DeficitPowerSnatch => $"{power} {snatch} {deficit}",
                 ExerciseType.DeficitSnatchPull => $"{snatch} {pull} {deficit}",
                 ExerciseType.HangPowerSnatch => $"{hang} {power} {snatch}",
-                ExerciseType.HangSnatch => $"{hang} {snatch}",
-                ExerciseType.HangSnatchPullAboveKnee => $"{hang} {snatch} {pull} {aboveKnee}",
-                ExerciseType.HangSnatchPullBelowKnee => $"{hang} {snatch} {pull} {belowKnee}",
+                ExerciseType.HangSnatchAboveKnees => $"{hang} {snatch} {aboveKnees}",
+                ExerciseType.HangSnatchBelowKnees => $"{hang} {snatch} {belowKnees}",
+                ExerciseType.HangSnatchPullAboveKnees => $"{hang} {snatch} {pull} {aboveKnees}",
+                ExerciseType.HangSnatchPullBelowKnees => $"{hang} {snatch} {pull} {belowKnees}",
                 ExerciseType.HipSnatch => $"Hip {snatch}",
                 ExerciseType.MediumGripPull => $"Medium Grip {pull}",
                 ExerciseType.MuscleSnatch => $"Muscle {snatch}",

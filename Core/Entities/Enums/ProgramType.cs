@@ -2,9 +2,10 @@
 {
     public enum ProgramType
     {
-        BodybuildingProgram = 1,
+        Competition = 1,
         DeadliftProgram,
         LegsProgram,
-        PullAndSquat
+        PullAndSquat,
+        BodybuildingProgram
     }
 }

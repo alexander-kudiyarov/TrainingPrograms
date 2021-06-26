@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Core.Dal.Interfaces;
 using Core.Entities;
 using Core.Entities.Enums;
@@ -13,18 +14,16 @@ namespace Core.Dal
 
         public ProgramRepository()
         {
-            var bodybuildingProgram = new BodybuildingProgram();
-            var deadliftProgram = new DeadliftProgram();
-            var legsProgram = new LegsProgram();
-            var pullAndSquatProgram = new PullAndSquatProgram();
-
-            _repository = new Dictionary<ProgramType, BaseTrainingProgram>
+            var programs = new BaseTrainingProgram[]
             {
-                [bodybuildingProgram.Type] = bodybuildingProgram,
-                [deadliftProgram.Type] = deadliftProgram,
-                [legsProgram.Type] = legsProgram,
-                [pullAndSquatProgram.Type] = pullAndSquatProgram
+                new CompetitionProgram(),
+                new DeadliftProgram(),
+                new LegsProgram(),
+                new PullAndSquatProgram(),
+                new BodybuildingProgram()
             };
+
+            _repository = programs.ToDictionary(program => program.Type);
         }
 
         public IEnumerable<BaseTrainingProgram> Get()

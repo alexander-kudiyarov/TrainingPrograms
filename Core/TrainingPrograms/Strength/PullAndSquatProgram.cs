@@ -53,7 +53,7 @@ namespace Core.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new Snatch(SnatchPull, HangSnatchPullBelowKnee)
+            var ex3 = new Snatch(SnatchPull, HangSnatchPullBelowKnees)
             {
                 Repeats = new Repeat[]
                 {
@@ -483,7 +483,7 @@ namespace Core.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new Snatch(HangSnatchPullAboveKnee)
+            var ex3 = new Snatch(HangSnatchPullAboveKnees)
             {
                 Repeats = new Repeat[]
                 {
@@ -1111,7 +1111,7 @@ namespace Core.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new Snatch(SnatchPull, HangSnatchPullBelowKnee)
+            var ex3 = new Snatch(SnatchPull, HangSnatchPullBelowKnees)
             {
                 Repeats = new Repeat[]
                 {
