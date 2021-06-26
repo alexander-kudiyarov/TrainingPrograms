@@ -22,7 +22,7 @@ namespace ConsoleUi
         [Benchmark]
         public Session GetSession()
         {
-            return _logic.Get(ProgramType.LegsProgram, 3);
+            return _logic.Get(ProgramType.Legs, 3);
         }
     }
 

@@ -23,7 +23,7 @@ namespace Core.TrainingPrograms.Strength
         {
         }
 
-        public override ProgramType Type => ProgramType.LegsProgram;
+        public override ProgramType Type => ProgramType.Legs;
         public override string Name => "Legs Program";
 
         private static Session GetSession1_1()

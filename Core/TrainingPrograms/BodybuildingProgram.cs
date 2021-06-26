@@ -22,7 +22,7 @@ namespace Core.TrainingPrograms
         {
         }
 
-        public override ProgramType Type => ProgramType.BodybuildingProgram;
+        public override ProgramType Type => ProgramType.Bodybuilding;
         public override string Name => "Bodybuilding Program";
 
         private static Session GetSession1_1()

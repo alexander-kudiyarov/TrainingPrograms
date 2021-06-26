@@ -30,7 +30,7 @@ namespace Core.TrainingPrograms.Strength
         {
         }
 
-        public override ProgramType Type => ProgramType.DeadliftProgram;
+        public override ProgramType Type => ProgramType.Deadlift;
         public override string Name => "Deadlift Program";
 
         private static Session GetSession1_1()
