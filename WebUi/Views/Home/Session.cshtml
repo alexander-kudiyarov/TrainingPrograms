@@ -17,22 +17,24 @@
                 {
                     <div>
                         <p>@exercise.Name</p>
+                        
                         @foreach (var repeat in exercise.Repeats)
                         {
+                            var repeats = repeat switch
+                            {
+                                SingleRepeat singleRepeat => singleRepeat.Repeats.ToString(),
+                                MultiRepeat multiRepeat => string.Join("+", multiRepeat.Repeats),
+                                StaticRepeat staticRepeat => $"{staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture)} sec",
+                                _ => throw new ArgumentOutOfRangeException()
+                            };
+
+                            var repeatDescription = repeat.Weight != null
+                                ? $"{repeat.Weight.ToString()} × {repeats}"
+                                : repeats;
+
                             for (var s = 0; s < repeat.Sets; s++)
                             {
-                                switch (repeat)
-                                {
-                                    case SingleRepeat singleRepeat:
-                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@singleRepeat.Repeats.ToString()</p>
-                                        break;
-                                    case MultiRepeat multiRepeat:
-                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@string.Join("+", multiRepeat.Repeats)</p>
-                                        break;
-                                    case StaticRepeat staticRepeat:
-                                        <p>@(repeat.Weight != null ? $"{repeat.Weight.ToString()} × " : string.Empty)@staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture) sec</p>
-                                        break;
-                                }
+                                <p>@repeatDescription</p>
                             }
                         }
                     </div>
