@@ -73,6 +73,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.DeficitCleanPull => $"Clean {pull} {deficit}",
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
+                ExerciseType.MuscleClean => $"Muscle {clean}",
                 ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",
                 ExerciseType.PowerClean => $"{power} {clean}",
                 ExerciseType.PowerCleanBelowKnee => $"{power} {clean} Below Knee",
@@ -105,6 +106,7 @@ namespace Core.Entities.Exercises
 
                 // ABS
                 ExerciseType.Crunch => "Crunch",
+                ExerciseType.KneesToElbows => "Knees to Elbows",
                 ExerciseType.MilitaryPlank => "Military Plank",
                 ExerciseType.Plank => "Plank",
                 ExerciseType.ReversePlank => "Reverse Plank",

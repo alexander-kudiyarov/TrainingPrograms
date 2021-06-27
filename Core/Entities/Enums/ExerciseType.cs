@@ -35,6 +35,7 @@
         DeficitCleanPull,
         HangCleanBelowKnee,
         HangPowerClean,
+        MuscleClean,
         MuscleSquatClean,
         PowerClean,
         PowerCleanBelowKnee,
@@ -67,6 +68,7 @@
 
         // ABS
         Crunch,
+        KneesToElbows,
         MilitaryPlank,
         Plank,
         ReversePlank,
