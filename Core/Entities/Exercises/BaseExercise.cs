@@ -182,6 +182,7 @@ namespace Core.Entities.Exercises
 
                 // Wrists
                 ExerciseType.DiscJuggling => "Disc Juggling",
+                ExerciseType.WristExtension => "Wrist Extension",
                 ExerciseType.WristFlexion => "Wrist Flexion",
                 ExerciseType.WristRoll => "Wrist Roll",
 

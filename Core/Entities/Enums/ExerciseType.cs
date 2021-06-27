@@ -144,6 +144,7 @@
 
         // Wrists
         DiscJuggling,
+        WristExtension,
         WristFlexion,
         WristRoll
     }
