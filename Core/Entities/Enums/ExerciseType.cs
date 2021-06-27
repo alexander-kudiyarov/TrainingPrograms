@@ -121,6 +121,7 @@
         DiscPress,
         Press,
         PressWithRubberBand,
+        SnatchPressWithRubberBand,
         SittingPress,
 
         // Pull Up

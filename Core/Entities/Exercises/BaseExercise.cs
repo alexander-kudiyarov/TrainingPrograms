@@ -159,6 +159,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.DiscPress => "Disc Press",
                 ExerciseType.Press => "Press",
                 ExerciseType.PressWithRubberBand => "Press With Rubber Band",
+                ExerciseType.SnatchPressWithRubberBand => "Snatch Press With Rubber Band",
                 ExerciseType.SittingPress => "Sitting Press",
 
                 // Pull Up
