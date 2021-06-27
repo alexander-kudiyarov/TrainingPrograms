@@ -12,7 +12,7 @@ namespace Core.TrainingPrograms
     {
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
-            GetSession1_1
+            GetSession1_1, GetSession1_2
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -72,6 +72,60 @@ namespace Core.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_2()
+        {
+            var ex1 = new Snatch(MuscleSquatSnatch, OverheadSquat)
+            {
+                Repeats = GetRange(0.3, 0.35, 4, new[] {4, 4})
+            };
+
+            var ex2 = new CleanAndJerk(DeficitRomanianDeadlift)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.4, Repeats = 6, Sets = 3}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(PushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4, Sets = 5}
+                }
+            };
+
+            var ex4 = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 8, Sets = 4}
+                }
+            };
+
+            var ex5 = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
                 }
             };
 
