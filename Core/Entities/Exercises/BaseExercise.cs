@@ -59,6 +59,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.SnatchBalance => $"{snatch} Balance",
                 ExerciseType.SnatchFromBlocks => $"{snatch} {block}",
                 ExerciseType.SnatchPull => $"{snatch} {pull}",
+                ExerciseType.SnatchPullFromBlocks => $"{snatch} {pull} {block}",
                 ExerciseType.SnatchPushPress => $"{snatch} Push Press",
                 ExerciseType.SotsPress => "Sots Press",
 
@@ -107,6 +108,7 @@ namespace Core.Entities.Exercises
                 // ABS
                 ExerciseType.Crunch => "Crunch",
                 ExerciseType.KneesToElbows => "Knees to Elbows",
+                ExerciseType.LegRaise => "Leg Raise",
                 ExerciseType.MilitaryPlank => "Military Plank",
                 ExerciseType.Plank => "Plank",
                 ExerciseType.ReversePlank => "Reverse Plank",

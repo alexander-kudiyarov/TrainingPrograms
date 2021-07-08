@@ -21,6 +21,7 @@
         SnatchBalance,
         SnatchFromBlocks,
         SnatchPull,
+        SnatchPullFromBlocks,
         SnatchPushPress,
         SotsPress,
 
@@ -69,6 +70,7 @@
         // ABS
         Crunch,
         KneesToElbows,
+        LegRaise,
         MilitaryPlank,
         Plank,
         ReversePlank,
