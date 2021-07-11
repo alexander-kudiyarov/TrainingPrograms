@@ -37,6 +37,7 @@ namespace Core.Entities.Exercises
             const string deficit = "(from Deficit)";
             const string pull = "Pull";
             const string pause = "(with Pause)";
+            const string rubber = "(with Rubber Band)";
 
             return type switch
             {
@@ -160,8 +161,8 @@ namespace Core.Entities.Exercises
                 ExerciseType.AsymmetryPress => "Asymmetry Press",
                 ExerciseType.DiscPress => "Disc Press",
                 ExerciseType.Press => "Press",
-                ExerciseType.PressWithRubberBand => "Press With Rubber Band",
-                ExerciseType.SnatchPressWithRubberBand => "Snatch Press With Rubber Band",
+                ExerciseType.PressWithRubberBand => $"Press {rubber}",
+                ExerciseType.SnatchPressWithRubberBand => $"Snatch Press {rubber}",
                 ExerciseType.SittingPress => "Sitting Press",
 
                 // Pull Up

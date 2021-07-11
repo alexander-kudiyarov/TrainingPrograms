@@ -13,7 +13,7 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1
+            GetSession2_1, GetSession2_2
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -397,6 +397,57 @@ namespace Core.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession2_2()
+        {
+            var ex1 = new Snatch(MuscleSquatSnatch, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.3, Repeats = new[] {4, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.4, Repeats = new[] {3, 2}, Sets = 4}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(PushPress, PowerJerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.4, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.6, Repeats = new[] {1, 1}, Sets = 2}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(PowerJerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.7, Repeats = 2, Sets = 3}
+                }
+            };
+
+            var ex4 = new Snatch(SnatchPressWithRubberBand)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.3, Repeats = 12, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
