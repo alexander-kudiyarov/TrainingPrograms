@@ -13,7 +13,7 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2
+            GetSession2_1, GetSession2_2, GetSession2_3
         };
 
         public CompetitionProgram() : base(Sessions)
