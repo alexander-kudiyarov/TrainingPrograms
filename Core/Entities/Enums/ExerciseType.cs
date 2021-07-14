@@ -28,6 +28,7 @@
         // Clean
         Clean,
         CleanFromBlocks,
+        CleanOnPlates,
         CleanPull,
         CleanPullFromBlocks,
         CleanPullSlowlyDown,
@@ -35,6 +36,7 @@
         DeficitClean,
         DeficitCleanPull,
         HangCleanBelowKnee,
+        HangCleanPullBelowKnee,
         HangPowerClean,
         MuscleClean,
         MuscleSquatClean,

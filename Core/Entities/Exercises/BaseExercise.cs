@@ -38,6 +38,7 @@ namespace Core.Entities.Exercises
             const string pull = "Pull";
             const string pause = "(with Pause)";
             const string rubber = "(with Rubber Band)";
+            const string plates = "(on Plates)";
 
             return type switch
             {
@@ -67,6 +68,7 @@ namespace Core.Entities.Exercises
                 // Clean
                 ExerciseType.Clean => clean,
                 ExerciseType.CleanFromBlocks => $"{clean} {block}",
+                ExerciseType.CleanOnPlates => $"{clean} {plates}",
                 ExerciseType.CleanPull => $"{clean} {pull}",
                 ExerciseType.CleanPullFromBlocks => $"{clean} {pull} {block}",
                 ExerciseType.CleanPullSlowlyDown => $"{clean} {pull} (Slowly Down)",
@@ -74,6 +76,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.DeficitClean => $"Clean {deficit}",
                 ExerciseType.DeficitCleanPull => $"Clean {pull} {deficit}",
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
+                ExerciseType.HangCleanPullBelowKnee => $"Hang {clean} {pull} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
                 ExerciseType.MuscleClean => $"Muscle {clean}",
                 ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",
