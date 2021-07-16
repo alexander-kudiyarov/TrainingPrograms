@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using Core.Bll.Interfaces;
 using Core.Dal.Interfaces;
 using Core.Entities;
+using Core.Entities.CacheKeys;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
 using Core.Entities.Repeats;
 using Core.TrainingPrograms;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Core.Bll
 {
     public class TrainingProgramLogic : ITrainingProgramLogic
     {
+        private readonly IMemoryCache _memoryCache;
         private readonly IProgramRepository _repository;
 
-        public TrainingProgramLogic(IProgramRepository repository)
+        public TrainingProgramLogic(
+            IMemoryCache memoryCache,
+            IProgramRepository repository)
         {
+            _memoryCache = memoryCache;
             _repository = repository;
         }
 
@@ -33,9 +39,20 @@ namespace Core.Bll
 
         public Session Get(ProgramType type, int day)
         {
-            var session = _repository.Get(type, day);
-            ProcessWeights(session);
-            return session;
+            var key = new SessionCacheKey
+            {
+                ProgramType = type,
+                Day = day
+            };
+            
+            var result = _memoryCache.GetOrCreate(key, _ =>
+            {
+                var session = _repository.Get(type, day);
+                ProcessWeights(session);
+                return session;
+            });
+            
+            return result;
         }
 
         private static void ProcessWeights(Session session)

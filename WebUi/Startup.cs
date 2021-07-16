@@ -21,9 +21,10 @@ namespace WebUi
 
         public static void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+            services.AddMemoryCache();
             services.AddSingleton<ITrainingProgramLogic, TrainingProgramLogic>();
             services.AddSingleton<IProgramRepository, ProgramRepository>();
-            services.AddControllersWithViews();
         }
 
         public static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
