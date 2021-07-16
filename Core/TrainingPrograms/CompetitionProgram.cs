@@ -8,7 +8,7 @@ using static Core.Entities.Enums.ExerciseType;
 
 namespace Core.TrainingPrograms
 {
-    public class CompetitionProgram : BaseTrainingProgram
+    public sealed class CompetitionProgram : BaseTrainingProgram
     {
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
