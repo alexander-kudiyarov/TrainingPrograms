@@ -13,7 +13,7 @@ namespace Core.TrainingPrograms
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2, GetSession2_3,
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
             GetSession3_3
         };
 
@@ -497,6 +497,62 @@ namespace Core.TrainingPrograms
                 {
                     // TODO ??
                     new SingleRepeat {Percent = 0.625, Repeats = 8, Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession2_4()
+        {
+            var warmup = GetCleanAndJerkWarmUp2();
+
+            var ex1 = new CleanAndJerk(CleanPull, Clean)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.6, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.65, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.7, Repeats = new[] {1, 2}, Sets = 5}
+                }
+            };
+
+            var ex2 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.7, Repeats = 3, Sets = 1},
+                    new SingleRepeat {Percent = 0.8, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 0.9, Repeats = 3, Sets = 2}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(JerkSupport)
+            {
+                Repeats = new Repeat[]
+                {
+                    new StaticRepeat {Percent = 1.0, Time = TimeSpan.FromSeconds(6), Sets = 6}
+                }
+            };
+
+            var ex4 = new Accessory(BarbellSquatJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Weight = Stats.Bar, Repeats = 6, Sets = 4}
                 }
             };
 
