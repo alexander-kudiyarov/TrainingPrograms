@@ -1,5 +1,6 @@
 ﻿using Core.Bll.Interfaces;
 using Core.Entities.Enums;
+using Core.Entities.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUi.Controllers
@@ -25,9 +26,9 @@ namespace WebUi.Controllers
             return View(result);
         }
 
-        public IActionResult Session(ProgramType type, int session)
+        public IActionResult Session(SessionRequest request)
         {
-            var result = _logic.Get(type, session);
+            var result = _logic.Get(request);
             return View(result);
         }
     }

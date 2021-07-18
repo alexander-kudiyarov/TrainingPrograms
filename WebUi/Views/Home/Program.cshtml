@@ -1,4 +1,5 @@
-﻿@model Core.TrainingPrograms.BaseTrainingProgram
+﻿@using Core.Entities.Requests
+@model Core.TrainingPrograms.BaseTrainingProgram
 
 @{
     ViewBag.Title = "title";
@@ -8,5 +9,11 @@
 <h3>@Model.Name</h3>
 @for (var day = 1; day <= Model.Days; day++)
 {
-    <p>@Html.ActionLink($"Session {day.ToString()}", "Session", new {Type = (int) Model.Type, Session = day})</p>
+    var request = new SessionRequest
+    {
+        ProgramType = Model.Type,
+        Day = day
+    };
+
+    <p>@Html.ActionLink($"Session {day.ToString()}", "Session", request)</p>
 }

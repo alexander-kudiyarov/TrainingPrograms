@@ -3,6 +3,7 @@ using System.Linq;
 using Core.Dal.Interfaces;
 using Core.Entities;
 using Core.Entities.Enums;
+using Core.Entities.Requests;
 using Core.TrainingPrograms;
 using Core.TrainingPrograms.Strength;
 
@@ -38,10 +39,10 @@ namespace Core.Dal
             return result;
         }
 
-        public Session Get(ProgramType type, int day)
+        public Session Get(SessionRequest request)
         {
-            var program = _repository[type];
-            var session = program.Get(day);
+            var program = _repository[request.ProgramType];
+            var session = program.Get(request.Day);
             return session;
         }
     }

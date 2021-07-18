@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Core.Bll.Interfaces;
 using Core.Dal.Interfaces;
 using Core.Entities;
-using Core.Entities.CacheKeys;
 using Core.Entities.Enums;
 using Core.Entities.Exercises;
 using Core.Entities.Repeats;
+using Core.Entities.Requests;
 using Core.TrainingPrograms;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -37,22 +37,17 @@ namespace Core.Bll
             return result;
         }
 
-        public Session Get(ProgramType type, int day)
+        public Session Get(SessionRequest request)
         {
-            var key = new SessionCacheKey
-            {
-                ProgramType = type,
-                Day = day
-            };
-            
-            var result = _memoryCache.GetOrCreate(key, _ =>
-            {
-                var session = _repository.Get(type, day);
-                ProcessWeights(session);
-                return session;
-            });
-            
+            var result = _memoryCache.GetOrCreate(request, _ => GetFromRepository(request));
             return result;
+        }
+
+        private Session GetFromRepository(SessionRequest request)
+        {
+            var session = _repository.Get(request);
+            ProcessWeights(session);
+            return session;
         }
 
         private static void ProcessWeights(Session session)
