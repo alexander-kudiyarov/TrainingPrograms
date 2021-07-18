@@ -18,6 +18,7 @@
         MuscleSquatSnatch,
         OverheadSquat,
         PowerSnatch,
+        PowerSnatchAboveKnee,
         SnatchBalance,
         SnatchFromBlocks,
         SnatchPull,

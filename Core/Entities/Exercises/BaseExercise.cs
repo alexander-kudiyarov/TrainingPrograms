@@ -58,6 +58,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.MuscleSquatSnatch => $"Muscle Squat {snatch}",
                 ExerciseType.OverheadSquat => "Overhead Squat",
                 ExerciseType.PowerSnatch => $"{power} {snatch}",
+                ExerciseType.PowerSnatchAboveKnee => $"{power} {snatch} {aboveKnees}",
                 ExerciseType.SnatchBalance => $"{snatch} Balance",
                 ExerciseType.SnatchFromBlocks => $"{snatch} {block}",
                 ExerciseType.SnatchPull => $"{snatch} {pull}",
