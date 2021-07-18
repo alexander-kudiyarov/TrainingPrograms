@@ -5,6 +5,7 @@ using Core.Bll.Interfaces;
 using Core.Dal;
 using Core.Entities;
 using Core.Entities.Enums;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ConsoleUi
 {
@@ -16,7 +17,7 @@ namespace ConsoleUi
         protected Benchmark()
         {
             var repository = new ProgramRepository();
-            _logic = new TrainingProgramLogic(repository);
+            _logic = new TrainingProgramLogic(repository, new MemoryCache());
         }
 
         [Benchmark]
