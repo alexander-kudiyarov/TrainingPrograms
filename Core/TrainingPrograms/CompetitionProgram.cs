@@ -14,7 +14,7 @@ namespace Core.TrainingPrograms
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1, GetSession3_3
+            GetSession3_1, GetSession3_2, GetSession3_3
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -661,7 +661,7 @@ namespace Core.TrainingPrograms
                     new SingleRepeat {Percent = 0.8, Repeats = 4, Sets = 4}
                 }
             };
-            
+
             var session = new Session
             {
                 Rounds = new Round[]
@@ -677,7 +677,54 @@ namespace Core.TrainingPrograms
             return session;
         }
 
-        // done
+        private static Session GetSession3_2()
+        {
+            var ex1 = new Snatch(MuscleSquatSnatch, SnatchBalance)
+            {
+                Repeats = GetRange(0.35, 0.45, 4, new[] {4, 4})
+            };
+
+            var ex2 = new CleanAndJerk(PowerClean, PowerCleanBelowKnee, PushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.50, Repeats = new[] {1, 2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.60, Repeats = new[] {1, 1, 2}, Sets = 1},
+                    new MultiRepeat {Percent = 0.65, Repeats = new[] {1, 1, 2}, Sets = 1},
+                    new MultiRepeat {Percent = 0.70, Repeats = new[] {1, 1, 1}, Sets = 5}
+                }
+            };
+
+            var ex3 = new CleanAndJerk(BackSplitSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.5, Repeats = new[] {6, 6}, Sets = 3}
+                }
+            };
+
+            var ex4 = new Accessory(GakkSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 12, Sets = 3}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+        
         private static Session GetSession3_3()
         {
             var warmup = GetCleanAndJerkWarmUp3();
