@@ -236,9 +236,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 5},
-                    new SingleRepeat {Percent = 0.6, Repeats = 5},
-                    new SingleRepeat {Percent = 0.7, Repeats = 5},
+                    new SingleRepeat {Percent = 0.500, Repeats = 5},
+                    new SingleRepeat {Percent = 0.600, Repeats = 5},
+                    new SingleRepeat {Percent = 0.700, Repeats = 5},
                     new SingleRepeat {Percent = 0.825, Repeats = 4, Sets = 4}
                 }
             };
@@ -358,8 +358,8 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 5},
-                    new SingleRepeat {Percent = 0.6, Repeats = 5},
+                    new SingleRepeat {Percent = 0.500, Repeats = 5},
+                    new SingleRepeat {Percent = 0.600, Repeats = 5},
                     new SingleRepeat {Percent = 0.775, Repeats = 5, Sets = 4}
                 }
             };
@@ -414,10 +414,10 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 5},
-                    new SingleRepeat {Percent = 0.6, Repeats = 5},
-                    new SingleRepeat {Percent = 0.7, Repeats = 5},
-                    new SingleRepeat {Percent = 0.8, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.50, Repeats = 5},
+                    new SingleRepeat {Percent = 0.60, Repeats = 5},
+                    new SingleRepeat {Percent = 0.70, Repeats = 5},
+                    new SingleRepeat {Percent = 0.80, Repeats = 4, Sets = 2},
                     new SingleRepeat {Percent = 0.85, Repeats = 3, Sets = 3}
                 }
             };
@@ -537,9 +537,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 5},
-                    new SingleRepeat {Percent = 0.6, Repeats = 5},
-                    new SingleRepeat {Percent = 0.7, Repeats = 5},
+                    new SingleRepeat {Percent = 0.500, Repeats = 5},
+                    new SingleRepeat {Percent = 0.600, Repeats = 5},
+                    new SingleRepeat {Percent = 0.700, Repeats = 5},
                     new SingleRepeat {Percent = 0.825, Repeats = 4, Sets = 4}
                 }
             };
@@ -598,9 +598,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 4},
-                    new SingleRepeat {Percent = 0.6, Repeats = 4},
-                    new SingleRepeat {Percent = 0.7, Repeats = 4},
+                    new SingleRepeat {Percent = 0.500, Repeats = 4},
+                    new SingleRepeat {Percent = 0.600, Repeats = 4},
+                    new SingleRepeat {Percent = 0.700, Repeats = 4},
                     new SingleRepeat {Percent = 0.825, Repeats = 3, Sets = 4}
                 }
             };
@@ -720,10 +720,10 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 3},
+                    new SingleRepeat {Percent = 0.500, Repeats = 3},
+                    new SingleRepeat {Percent = 0.600, Repeats = 3},
+                    new SingleRepeat {Percent = 0.700, Repeats = 3},
+                    new SingleRepeat {Percent = 0.800, Repeats = 3},
                     new SingleRepeat {Percent = 0.825, Repeats = 3, Sets = 3}
                 }
             };
@@ -781,13 +781,13 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 3},
-                    new SingleRepeat {Percent = 0.9, Repeats = 2},
+                    new SingleRepeat {Percent = 0.500, Repeats = 3},
+                    new SingleRepeat {Percent = 0.600, Repeats = 3},
+                    new SingleRepeat {Percent = 0.700, Repeats = 3},
+                    new SingleRepeat {Percent = 0.800, Repeats = 3},
+                    new SingleRepeat {Percent = 0.900, Repeats = 2},
                     new SingleRepeat {Percent = 0.925, Repeats = 2},
-                    new SingleRepeat {Percent = 0.95, Repeats = 2}
+                    new SingleRepeat {Percent = 0.950, Repeats = 2}
                 }
             };
 
@@ -865,7 +865,7 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
                     new SingleRepeat {Percent = 0.65, Repeats = 3},
                     new SingleRepeat {Percent = 0.75, Repeats = 3},
                     new SingleRepeat {Percent = 0.85, Repeats = 3, Sets = 4}
@@ -910,10 +910,10 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
+                    new SingleRepeat {Percent = 0.80, Repeats = 3},
                     new SingleRepeat {Percent = 0.85, Repeats = 3, Sets = 3}
                 }
             };
@@ -974,10 +974,10 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
+                    new SingleRepeat {Percent = 0.80, Repeats = 3},
                     new SingleRepeat {Percent = 0.85, Repeats = 3, Sets = 3}
                 }
             };
@@ -1162,11 +1162,11 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 2},
-                    new SingleRepeat {Percent = 0.9, Repeats = 2},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
+                    new SingleRepeat {Percent = 0.80, Repeats = 2},
+                    new SingleRepeat {Percent = 0.90, Repeats = 2},
                     new SingleRepeat {Percent = 0.95, Repeats = 1, Sets = 2}
                 }
             };
@@ -1367,9 +1367,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 4},
-                    new SingleRepeat {Percent = 0.6, Repeats = 4},
-                    new SingleRepeat {Percent = 0.7, Repeats = 4},
+                    new SingleRepeat {Percent = 0.50, Repeats = 4},
+                    new SingleRepeat {Percent = 0.60, Repeats = 4},
+                    new SingleRepeat {Percent = 0.70, Repeats = 4},
                     new SingleRepeat {Percent = 0.75, Repeats = 3, Sets = 2},
                     new SingleRepeat {Percent = 0.85, Repeats = 3, Sets = 3},
                     new SingleRepeat {Percent = 0.95, Repeats = 3}
@@ -1502,11 +1502,11 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
-                    new SingleRepeat {Percent = 0.8, Repeats = 3},
-                    new SingleRepeat {Percent = 0.9, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
+                    new SingleRepeat {Percent = 0.80, Repeats = 3},
+                    new SingleRepeat {Percent = 0.90, Repeats = 3},
                     new SingleRepeat {Percent = 0.95, Repeats = 3, Sets = 3}
                 }
             };
@@ -1777,9 +1777,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 4},
-                    new SingleRepeat {Percent = 0.7, Repeats = 4},
-                    new SingleRepeat {Percent = 0.75, Repeats = 3},
+                    new SingleRepeat {Percent = 0.500, Repeats = 4},
+                    new SingleRepeat {Percent = 0.700, Repeats = 4},
+                    new SingleRepeat {Percent = 0.750, Repeats = 3},
                     new SingleRepeat {Percent = 0.825, Repeats = 3, Sets = 3}
                 }
             };
@@ -1878,11 +1878,11 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 2},
-                    new SingleRepeat {Percent = 0.6, Repeats = 2},
-                    new SingleRepeat {Percent = 0.7, Repeats = 2},
-                    new SingleRepeat {Percent = 0.8, Repeats = 2},
-                    new SingleRepeat {Percent = 0.9, Repeats = 2},
+                    new SingleRepeat {Percent = 0.50, Repeats = 2},
+                    new SingleRepeat {Percent = 0.60, Repeats = 2},
+                    new SingleRepeat {Percent = 0.70, Repeats = 2},
+                    new SingleRepeat {Percent = 0.80, Repeats = 2},
+                    new SingleRepeat {Percent = 0.90, Repeats = 2},
                     new SingleRepeat {Percent = 0.95, Repeats = 2}
                 }
             };
@@ -1941,9 +1941,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
                     new SingleRepeat {Percent = 0.75, Repeats = 3, Sets = 3}
                 }
             };
@@ -2041,9 +2041,9 @@ namespace Core.TrainingPrograms.Strength
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Percent = 0.5, Repeats = 3},
-                    new SingleRepeat {Percent = 0.6, Repeats = 3},
-                    new SingleRepeat {Percent = 0.7, Repeats = 3},
+                    new SingleRepeat {Percent = 0.50, Repeats = 3},
+                    new SingleRepeat {Percent = 0.60, Repeats = 3},
+                    new SingleRepeat {Percent = 0.70, Repeats = 3},
                     new SingleRepeat {Percent = 0.75, Repeats = 2, Sets = 3}
                 }
             };
