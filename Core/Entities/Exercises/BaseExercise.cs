@@ -117,6 +117,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.MilitaryPlank => "Military Plank",
                 ExerciseType.Plank => "Plank",
                 ExerciseType.ReversePlank => "Reverse Plank",
+                ExerciseType.ToesToBar => "Toes to Bar",
 
                 // Accessory
                 ExerciseType.DiscFrontRise => "Disc Front Rise",

@@ -77,6 +77,7 @@
         MilitaryPlank,
         Plank,
         ReversePlank,
+        ToesToBar,
 
         // Accessory
         DiscFrontRise,
