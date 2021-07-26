@@ -47,6 +47,7 @@ namespace Core.Entities.Exercises
                 ExerciseType.DeficitMediumGripPull => $"Medium Grip {pull} {deficit}",
                 ExerciseType.DeficitPowerSnatch => $"{power} {snatch} {deficit}",
                 ExerciseType.DeficitSnatchPull => $"{snatch} {pull} {deficit}",
+                ExerciseType.DeficitSnatchPullWith2Stops => $"{snatch} {pull} {deficit} (with 2 stops)",
                 ExerciseType.HangPowerSnatch => $"{hang} {power} {snatch}",
                 ExerciseType.HangSnatchAboveKnees => $"{hang} {snatch} {aboveKnees}",
                 ExerciseType.HangSnatchBelowKnees => $"{hang} {snatch} {belowKnees}",
