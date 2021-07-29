@@ -34,20 +34,21 @@ namespace Core.Entities.Exercises
             const string block = "(from Blocks)";
             const string aboveKnees = "(above Knees)";
             const string belowKnees = "(below Knees)";
-            const string deficit = "(from Deficit)";
+            const string deficit = "from Deficit";
             const string pull = "Pull";
             const string pause = "(with Pause)";
             const string rubber = "(with Rubber Band)";
             const string plates = "(on Plates)";
+            const string withTwoStops = "with 2 Stops";
 
             return type switch
             {
                 // Snatch
                 ExerciseType.Snatch => snatch,
-                ExerciseType.DeficitMediumGripPull => $"Medium Grip {pull} {deficit}",
-                ExerciseType.DeficitPowerSnatch => $"{power} {snatch} {deficit}",
-                ExerciseType.DeficitSnatchPull => $"{snatch} {pull} {deficit}",
-                ExerciseType.DeficitSnatchPullWith2Stops => $"{snatch} {pull} {deficit} (with 2 stops)",
+                ExerciseType.DeficitMediumGripPull => $"Medium Grip {pull} ({deficit})",
+                ExerciseType.DeficitPowerSnatch => $"{power} {snatch} ({deficit})",
+                ExerciseType.DeficitSnatchPull => $"{snatch} {pull} ({deficit})",
+                ExerciseType.DeficitSnatchPullWith2Stops => $"{snatch} {pull} ({deficit}, {withTwoStops})",
                 ExerciseType.HangPowerSnatch => $"{hang} {power} {snatch}",
                 ExerciseType.HangSnatchAboveKnees => $"{hang} {snatch} {aboveKnees}",
                 ExerciseType.HangSnatchBelowKnees => $"{hang} {snatch} {belowKnees}",
@@ -62,8 +63,10 @@ namespace Core.Entities.Exercises
                 ExerciseType.PowerSnatchAboveKnee => $"{power} {snatch} {aboveKnees}",
                 ExerciseType.SnatchBalance => $"{snatch} Balance",
                 ExerciseType.SnatchFromBlocks => $"{snatch} {block}",
+                ExerciseType.SnatchOnPlates => $"{snatch} {plates}",
                 ExerciseType.SnatchPull => $"{snatch} {pull}",
                 ExerciseType.SnatchPullFromBlocks => $"{snatch} {pull} {block}",
+                ExerciseType.SnatchPullWith2Stops => $"{snatch} {pull} ({withTwoStops})",
                 ExerciseType.SnatchPushPress => $"{snatch} Push Press",
                 ExerciseType.SotsPress => "Sots Press",
 
@@ -75,8 +78,8 @@ namespace Core.Entities.Exercises
                 ExerciseType.CleanPullFromBlocks => $"{clean} {pull} {block}",
                 ExerciseType.CleanPullSlowlyDown => $"{clean} {pull} (Slowly Down)",
                 ExerciseType.CleanPullTillPowerPosition => $"{clean} {pull} Till Power Position",
-                ExerciseType.DeficitClean => $"Clean {deficit}",
-                ExerciseType.DeficitCleanPull => $"Clean {pull} {deficit}",
+                ExerciseType.DeficitClean => $"Clean ({deficit})",
+                ExerciseType.DeficitCleanPull => $"Clean {pull} ({deficit})",
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
                 ExerciseType.HangCleanPullBelowKnee => $"Hang {clean} {pull} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
@@ -106,8 +109,8 @@ namespace Core.Entities.Exercises
                 ExerciseType.Deadlift => "Deadlift",
                 ExerciseType.AsymmetryDeadlift => "Asymmetry Deadlift",
                 ExerciseType.DeadliftFromBlocks => $"Deadlift {block}",
-                ExerciseType.DeficitDeadlift => $"Deadlift {deficit}",
-                ExerciseType.DeficitRomanianDeadlift => $"Romanian Deadlift {deficit}",
+                ExerciseType.DeficitDeadlift => $"Deadlift ({deficit})",
+                ExerciseType.DeficitRomanianDeadlift => $"Romanian Deadlift ({deficit})",
                 ExerciseType.RomanianDeadlift => "Romanian Deadlift",
                 ExerciseType.SnatchDeadlift => $"{snatch} Deadlift",
 

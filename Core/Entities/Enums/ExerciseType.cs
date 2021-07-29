@@ -22,8 +22,10 @@
         PowerSnatchAboveKnee,
         SnatchBalance,
         SnatchFromBlocks,
+        SnatchOnPlates,
         SnatchPull,
         SnatchPullFromBlocks,
+        SnatchPullWith2Stops,
         SnatchPushPress,
         SotsPress,
 

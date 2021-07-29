@@ -14,7 +14,8 @@ namespace Core.TrainingPrograms
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
+            GetSession4_1
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -927,6 +928,67 @@ namespace Core.TrainingPrograms
             return session;
         }
 
+        private static Session GetSession4_1()
+        {
+            var warmup = GetSnatchWarmUp3();
+
+            var ex1 = new Snatch(ExerciseType.Snatch, HangSnatchAboveKnees)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat {Percent = 0.50, Repeats = new[] {2, 2}, Sets = 2},
+                    new MultiRepeat {Percent = 0.60, Repeats = new[] {1, 2}, Sets = 1},
+                    new MultiRepeat {Percent = 0.65, Repeats = new[] {1, 2}, Sets = 1},
+                    new MultiRepeat {Percent = 0.70, Repeats = new[] {1, 1}, Sets = 2},
+                    new MultiRepeat {Percent = 0.75, Repeats = new[] {1, 1}, Sets = 2},
+                    new MultiRepeat {Percent = 0.80, Repeats = new[] {1, 1}, Sets = 3}
+                }
+            };
+
+            var ex2 = new Snatch(SnatchPullWith2Stops)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.8, Repeats = 2, Sets = 2},
+                    new SingleRepeat {Percent = 0.9, Repeats = 2, Sets = 3}
+                }
+            };
+
+            var ex3 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.5, Repeats = 4, Sets = 2},
+                    new SingleRepeat {Percent = 0.6, Repeats = 4, Sets = 1},
+                    new SingleRepeat {Percent = 0.7, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 0.8, Repeats = 3, Sets = 2},
+                    new SingleRepeat {Percent = 0.9, Repeats = 1, Sets = 1}
+                }
+            };
+
+            var ex4 = new Snatch(SotsPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.3, Repeats = 6, Sets = 4}
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
         private static BaseExercise[] GetSnatchWarmUp1()
         {
             var ex1 = new Accessory(Hyperextension)
@@ -964,6 +1026,28 @@ namespace Core.TrainingPrograms
                 Repeats = new Repeat[]
                 {
                     new SingleRepeat {Percent = 0.3, Repeats = 6, Sets = 4}
+                }
+            };
+
+            var result = new BaseExercise[] {ex1, ex2};
+            return result;
+        }
+
+        private static BaseExercise[] GetSnatchWarmUp3()
+        {
+            var ex1 = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Repeats = 15, Sets = 2}
+                }
+            };
+
+            var ex2 = new Snatch(SnatchOnPlates)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat {Percent = 0.3, Repeats = 4, Sets = 4}
                 }
             };
 
