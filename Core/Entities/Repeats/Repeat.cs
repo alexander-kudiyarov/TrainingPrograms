@@ -1,4 +1,4 @@
-﻿namespace Core.Entities.Repeats
+namespace Core.Entities.Repeats
 {
     public abstract class Repeat
     {

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Core.Entities.Enums;
 
 namespace Core.Entities.Exercises

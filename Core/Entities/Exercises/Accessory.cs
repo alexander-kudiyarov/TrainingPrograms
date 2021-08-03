@@ -1,4 +1,4 @@
-﻿using Core.Entities.Enums;
+using Core.Entities.Enums;
 
 namespace Core.Entities.Exercises
 {

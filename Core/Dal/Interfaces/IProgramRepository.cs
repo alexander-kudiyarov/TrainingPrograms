@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Core.Entities;
 using Core.Entities.Enums;
 using Core.Entities.Requests;
