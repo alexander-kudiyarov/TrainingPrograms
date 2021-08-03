@@ -54,7 +54,6 @@ namespace Core.Bll
         {
             foreach (var set in session.Rounds)
             foreach (var exercise in set.Exercises)
-            {
                 // foreach (var repeat in exercise.Repeats)
                 // {
                 //     if (repeat is not WeightedRepeat weightedRepeat) continue;
@@ -62,11 +61,10 @@ namespace Core.Bll
                 //     AddWarmupRepeats(exercise);
                 // }
 
-                foreach (var repeat in exercise.Repeats)
-                {
-                    CalculateWeight(exercise, repeat);
-                    RoundWeight(exercise, repeat);
-                }
+            foreach (var repeat in exercise.Repeats)
+            {
+                CalculateWeight(exercise, repeat);
+                RoundWeight(exercise, repeat);
             }
         }
 

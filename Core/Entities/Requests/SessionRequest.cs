@@ -16,7 +16,7 @@ namespace Core.Entities.Requests
 
         public override int GetHashCode()
         {
-            return HashCode.Combine((int) ProgramType, Day);
+            return HashCode.Combine(ProgramType, Day);
         }
 
         private bool Equals(SessionRequest other)

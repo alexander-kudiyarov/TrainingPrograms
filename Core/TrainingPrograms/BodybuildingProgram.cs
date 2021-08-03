@@ -32,7 +32,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -40,7 +40,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -48,7 +48,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat {Repeats = new[] {15, 15}, Sets = 2}
+                    new MultiRepeat { Repeats = new[] { 15, 15 }, Sets = 2 }
                 }
             };
 
@@ -56,7 +56,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 2}
+                    new SingleRepeat { Repeats = 20, Sets = 2 }
                 }
             };
 
@@ -64,7 +64,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -73,7 +73,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -81,7 +81,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 2}
+                    new SingleRepeat { Repeats = 20, Sets = 2 }
                 }
             };
 
@@ -89,7 +89,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 2}
+                    new SingleRepeat { Repeats = 15, Sets = 2 }
                 }
             };
 
@@ -97,7 +97,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(45), Sets = 2}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
                 }
             };
 
@@ -126,7 +126,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10}
+                    new SingleRepeat { Repeats = 10 }
                 }
             };
 
@@ -134,7 +134,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10}
+                    new SingleRepeat { Repeats = 10 }
                 }
             };
 
@@ -143,7 +143,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -151,7 +151,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -159,7 +159,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 25, Sets = 2}
+                    new SingleRepeat { Repeats = 25, Sets = 2 }
                 }
             };
 
@@ -167,7 +167,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -175,7 +175,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat {Repeats = new[] {20, 20}}
+                    new MultiRepeat { Repeats = new[] { 20, 20 } }
                 }
             };
 
@@ -183,7 +183,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(30)}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
                 }
             };
 
@@ -207,7 +207,7 @@ namespace Core.TrainingPrograms
         {
             var ex = new Snatch(PowerSnatch, ExerciseType.Snatch)
             {
-                Repeats = GetRange(0.5, 0.6, 6, new[] {2, 2})
+                Repeats = GetRange(0.5, 0.6, 6, new[] { 2, 2 })
             };
 
             var session = new Session
@@ -228,7 +228,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -236,7 +236,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -244,7 +244,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -252,7 +252,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -260,7 +260,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 2}
+                    new SingleRepeat { Repeats = 15, Sets = 2 }
                 }
             };
 
@@ -268,7 +268,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 30, Sets = 2}
+                    new SingleRepeat { Repeats = 30, Sets = 2 }
                 }
             };
 
@@ -295,7 +295,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 6, Sets = 3}
+                    new SingleRepeat { Repeats = 6, Sets = 3 }
                 }
             };
 
@@ -303,7 +303,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -311,7 +311,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat {Repeats = new[] {12, 12}, Sets = 3}
+                    new MultiRepeat { Repeats = new[] { 12, 12 }, Sets = 3 }
                 }
             };
 
@@ -319,7 +319,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 4}
+                    new SingleRepeat { Repeats = 15, Sets = 4 }
                 }
             };
 
@@ -327,7 +327,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -335,7 +335,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -343,7 +343,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -351,7 +351,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(45), Sets = 2}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
                 }
             };
 
@@ -378,7 +378,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10}
+                    new SingleRepeat { Repeats = 10 }
                 }
             };
 
@@ -386,7 +386,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -395,7 +395,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -403,7 +403,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 4}
+                    new SingleRepeat { Repeats = 15, Sets = 4 }
                 }
             };
 
@@ -411,7 +411,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -419,7 +419,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 4}
+                    new SingleRepeat { Repeats = 20, Sets = 4 }
                 }
             };
 
@@ -427,7 +427,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 30}
+                    new SingleRepeat { Repeats = 30 }
                 }
             };
 
@@ -435,7 +435,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -459,7 +459,7 @@ namespace Core.TrainingPrograms
         {
             var ex = new CleanAndJerk(Clean, Jerk)
             {
-                Repeats = GetRange(0.5, 0.6, 6, new[] {2, 2})
+                Repeats = GetRange(0.5, 0.6, 6, new[] { 2, 2 })
             };
 
             var session = new Session
@@ -480,7 +480,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -488,7 +488,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 4}
+                    new SingleRepeat { Repeats = 12, Sets = 4 }
                 }
             };
 
@@ -496,7 +496,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 6}
+                    new SingleRepeat { Repeats = 6 }
                 }
             };
 
@@ -504,7 +504,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12}
+                    new SingleRepeat { Repeats = 12 }
                 }
             };
 
@@ -512,7 +512,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -520,7 +520,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 1, Sets = 2}
+                    new SingleRepeat { Repeats = 1, Sets = 2 }
                 }
             };
 
@@ -528,7 +528,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(60)}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
                 }
             };
 
@@ -536,7 +536,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -563,7 +563,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -571,7 +571,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -579,7 +579,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 30, Sets = 2}
+                    new SingleRepeat { Repeats = 30, Sets = 2 }
                 }
             };
 
@@ -588,7 +588,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -596,7 +596,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -604,7 +604,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat {Repeats = new[] {10, 10}, Sets = 3}
+                    new MultiRepeat { Repeats = new[] { 10, 10 }, Sets = 3 }
                 }
             };
 
@@ -630,7 +630,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -638,7 +638,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -647,7 +647,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 6, Sets = 4}
+                    new SingleRepeat { Repeats = 6, Sets = 4 }
                 }
             };
 
@@ -655,7 +655,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -663,7 +663,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 4}
+                    new SingleRepeat { Repeats = 15, Sets = 4 }
                 }
             };
 
@@ -671,7 +671,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 3}
+                    new SingleRepeat { Repeats = 20, Sets = 3 }
                 }
             };
 
@@ -679,7 +679,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(30)}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
                 }
             };
 
@@ -687,7 +687,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(30)}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
                 }
             };
 
@@ -711,12 +711,12 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new Snatch(ExerciseType.Snatch, OverheadSquat)
             {
-                Repeats = GetRange(0.5, 0.6, 5, new[] {3, 3})
+                Repeats = GetRange(0.5, 0.6, 5, new[] { 3, 3 })
             };
 
             var ex2 = new CleanAndJerk(FrontSquat, Jerk)
             {
-                Repeats = GetRange(0.5, 0.6, 5, new[] {1, 4})
+                Repeats = GetRange(0.5, 0.6, 5, new[] { 1, 4 })
             };
 
             var session = new Session
@@ -738,7 +738,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -746,7 +746,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -754,7 +754,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8}
+                    new SingleRepeat { Repeats = 8 }
                 }
             };
 
@@ -762,7 +762,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -770,7 +770,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -778,7 +778,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -786,7 +786,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 30, Sets = 2}
+                    new SingleRepeat { Repeats = 30, Sets = 2 }
                 }
             };
 
@@ -812,7 +812,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -820,7 +820,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 2}
+                    new SingleRepeat { Repeats = 12, Sets = 2 }
                 }
             };
 
@@ -828,7 +828,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 4}
+                    new SingleRepeat { Repeats = 15, Sets = 4 }
                 }
             };
 
@@ -836,7 +836,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 2}
+                    new SingleRepeat { Repeats = 20, Sets = 2 }
                 }
             };
 
@@ -845,7 +845,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 8, Sets = 3}
+                    new SingleRepeat { Repeats = 8, Sets = 3 }
                 }
             };
 
@@ -853,7 +853,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12}
+                    new SingleRepeat { Repeats = 12 }
                 }
             };
 
@@ -861,7 +861,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12}
+                    new SingleRepeat { Repeats = 12 }
                 }
             };
 
@@ -869,7 +869,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 16}
+                    new SingleRepeat { Repeats = 16 }
                 }
             };
 
@@ -877,7 +877,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 16}
+                    new SingleRepeat { Repeats = 16 }
                 }
             };
 
@@ -904,7 +904,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -912,7 +912,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -920,7 +920,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 3}
+                    new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
             };
 
@@ -928,7 +928,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15, Sets = 3}
+                    new SingleRepeat { Repeats = 15, Sets = 3 }
                 }
             };
 
@@ -936,7 +936,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -944,7 +944,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -952,7 +952,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20, Sets = 4}
+                    new SingleRepeat { Repeats = 20, Sets = 4 }
                 }
             };
 
@@ -960,7 +960,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new StaticRepeat {Time = TimeSpan.FromSeconds(45), Sets = 3}
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 3 }
                 }
             };
 
@@ -984,7 +984,7 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new CleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
             {
-                Repeats = GetRange(0.5, 0.6, 5, new[] {3, 3})
+                Repeats = GetRange(0.5, 0.6, 5, new[] { 3, 3 })
             };
 
             var ex2 = new CleanAndJerk(Clean)
@@ -1011,7 +1011,7 @@ namespace Core.TrainingPrograms
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 10, Sets = 3}
+                    new SingleRepeat { Repeats = 10, Sets = 3 }
                 }
             };
 
@@ -1019,7 +1019,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 4}
+                    new SingleRepeat { Repeats = 12, Sets = 4 }
                 }
             };
 
@@ -1027,7 +1027,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 12, Sets = 4}
+                    new SingleRepeat { Repeats = 12, Sets = 4 }
                 }
             };
 
@@ -1035,7 +1035,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 15}
+                    new SingleRepeat { Repeats = 15 }
                 }
             };
 
@@ -1043,7 +1043,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 20}
+                    new SingleRepeat { Repeats = 20 }
                 }
             };
 
@@ -1051,7 +1051,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat {Repeats = 40, Sets = 2}
+                    new SingleRepeat { Repeats = 40, Sets = 2 }
                 }
             };
 
