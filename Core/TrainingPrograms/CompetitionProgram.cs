@@ -33,10 +33,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 2, 1 }, Sets = 4 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 4 }
                 }
             };
 
@@ -44,8 +44,8 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.7, Repeats = new[] { 1, 3 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.8, Repeats = new[] { 1, 3 }, Sets = 4 }
+                    new MultiRepeat { Percent = 0.7, Repeats = Array(1, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 0.8, Repeats = Array(1, 3), Sets = 4 }
                 }
             };
 
@@ -85,7 +85,7 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new Snatch(MuscleSquatSnatch, OverheadSquat)
             {
-                Repeats = GetRange(0.3, 0.35, 4, new[] { 4, 4 })
+                Repeats = GetRange(0.3, 0.35, 4, Array(4, 4))
             };
 
             var ex2 = new CleanAndJerk(DeficitRomanianDeadlift)
@@ -164,10 +164,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 3 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 3 }
                 }
             };
 
@@ -211,10 +211,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 1, 3 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 1 }, Sets = 5 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 5 }
                 }
             };
 
@@ -282,10 +282,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 1 }, Sets = 4 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 4 }
                 }
             };
 
@@ -383,7 +383,7 @@ namespace Core.TrainingPrograms
 
             var ex5 = new Accessory(LegRaise)
             {
-                Repeats = new[]
+                Repeats = new Repeat[]
                 {
                     new SingleRepeat { Repeats = 12, Sets = 3 }
                 }
@@ -411,8 +411,8 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.3, Repeats = new[] { 4, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.4, Repeats = new[] { 3, 2 }, Sets = 4 }
+                    new MultiRepeat { Percent = 0.3, Repeats = Array(4, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.4, Repeats = Array(3, 2), Sets = 4 }
                 }
             };
 
@@ -420,9 +420,9 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.4, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.5, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.6, Repeats = new[] { 1, 1 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.4, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.6, Repeats = Array(1, 1), Sets = 2 }
                 }
             };
 
@@ -464,10 +464,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 1, 3 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 3 }
                 }
             };
 
@@ -475,9 +475,9 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.7, Repeats = new[] { 1, 3 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.8, Repeats = new[] { 1, 3 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.9, Repeats = new[] { 1, 3 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.7, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.8, Repeats = Array(1, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 0.9, Repeats = Array(1, 3), Sets = 2 }
                 }
             };
 
@@ -524,10 +524,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 5 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 5 }
                 }
             };
 
@@ -578,10 +578,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 2, 2, 1 }, Sets = 5 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 2, 1), Sets = 5 }
                 }
             };
 
@@ -624,11 +624,11 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 1, 1 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.80, Repeats = new[] { 1, 1 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
                 }
             };
 
@@ -636,12 +636,12 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 3 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.80, Repeats = new[] { 1, 1 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 3 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
                 }
             };
 
@@ -649,8 +649,8 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.8, Repeats = new[] { 1, 3 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.9, Repeats = new[] { 1, 3 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.8, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.9, Repeats = Array(1, 3), Sets = 3 }
                 }
             };
 
@@ -682,17 +682,17 @@ namespace Core.TrainingPrograms
         {
             var ex1 = new Snatch(MuscleSquatSnatch, SnatchBalance)
             {
-                Repeats = GetRange(0.35, 0.45, 4, new[] { 4, 4 })
+                Repeats = GetRange(0.35, 0.45, 4, Array(4, 4))
             };
 
             var ex2 = new CleanAndJerk(PowerClean, PowerCleanBelowKnee, PushPress)
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 1, 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 1, 1 }, Sets = 5 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1, 1), Sets = 5 }
                 }
             };
 
@@ -700,7 +700,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.5, Repeats = new[] { 6, 6 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(6, 6), Sets = 3 }
                 }
             };
 
@@ -734,12 +734,12 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 2, 1 }, Sets = 1 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(2, 1), Sets = 1 }
                 }
             };
 
@@ -811,12 +811,12 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 1, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.80, Repeats = new[] { 1, 1 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
                 }
             };
 
@@ -889,10 +889,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 2 }, Sets = 5 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 5 }
                 }
             };
 
@@ -936,12 +936,12 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 1, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 1, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.80, Repeats = new[] { 1, 1 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 3 }
                 }
             };
 
@@ -1102,10 +1102,10 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 1 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 1, 1 }, Sets = 4 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 4 }
                 }
             };
 
@@ -1167,12 +1167,12 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.50, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = new[] { 2, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = new[] { 2, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = new[] { 2, 2 }, Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = new[] { 2, 2 }, Sets = 1 },
-                    new MultiRepeat { Percent = 0.80, Repeats = new[] { 2, 1 }, Sets = 2 }
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(2, 1), Sets = 2 }
                 }
             };
 
@@ -1231,7 +1231,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.3, Repeats = new[] { 4, 4, 4 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.3, Repeats = Array(4, 4, 4), Sets = 3 }
                 }
             };
 
@@ -1341,7 +1341,7 @@ namespace Core.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Percent = 0.3, Repeats = new[] { 4, 4, 4 }, Sets = 3 }
+                    new MultiRepeat { Percent = 0.3, Repeats = Array(4, 4, 4), Sets = 3 }
                 }
             };
 

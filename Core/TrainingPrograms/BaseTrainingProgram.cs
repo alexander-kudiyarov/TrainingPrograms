@@ -28,6 +28,11 @@ namespace Core.TrainingPrograms
             return result;
         }
 
+        protected static int[] Array(params int[] value)
+        {
+            return value;
+        }
+
         protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, int repeats)
         {
             var result = GetRange(start, stop, sets, Func);
