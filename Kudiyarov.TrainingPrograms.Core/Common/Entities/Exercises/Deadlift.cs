@@ -2,20 +2,14 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 {
-    public class Deadlift : BaseExercise
+    public class Deadlift : BaseSingleExercise
     {
-        private readonly ExerciseType _type;
-
-        public Deadlift(ExerciseType type) : base(Stats.Deadlift)
+        public Deadlift(ExerciseType type) : base(Stats.Deadlift, type)
         {
-            _type = type;
         }
 
-        public Deadlift(double weight, ExerciseType type) : base(weight)
+        public Deadlift(double weight, ExerciseType type) : base(weight, type)
         {
-            _type = type;
         }
-
-        public override string Name => GetName(_type);
     }
 }

@@ -2,18 +2,13 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 {
-    public class Accessory : BaseExercise
+    public class Accessory : BaseSingleExercise
     {
-        private readonly ExerciseType _type;
-
-        public Accessory(ExerciseType type) : base(GetWeight(type))
+        public Accessory(ExerciseType type) : base(GetWeight(type), type)
         {
-            _type = type;
         }
 
-        public override string Name => GetName(_type);
-
-        public EquipmentType EquipmentType => _type switch
+        public EquipmentType EquipmentType => Type switch
         {
             ExerciseType.DumbbellFrenchPress => EquipmentType.Dumbbell,
             _ => EquipmentType.Barbell
