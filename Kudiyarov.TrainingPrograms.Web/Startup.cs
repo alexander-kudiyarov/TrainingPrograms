@@ -1,7 +1,7 @@
-using Core.Bll;
-using Core.Bll.Interfaces;
-using Core.Dal;
-using Core.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Core.Bll;
+using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Core.Dal;
+using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;

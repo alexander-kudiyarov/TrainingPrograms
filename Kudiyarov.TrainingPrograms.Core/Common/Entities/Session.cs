@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Core.Entities
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities
 {
     public class Session
     {

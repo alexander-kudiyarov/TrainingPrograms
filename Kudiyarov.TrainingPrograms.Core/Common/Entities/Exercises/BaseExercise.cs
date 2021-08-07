@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Core.Entities.Enums;
-using Core.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
 
-namespace Core.Entities.Exercises
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 {
     public abstract class BaseExercise
     {

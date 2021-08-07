@@ -1,6 +1,6 @@
 using System;
 
-namespace Core.Entities.Repeats
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats
 {
     public class StaticRepeat : Repeat
     {

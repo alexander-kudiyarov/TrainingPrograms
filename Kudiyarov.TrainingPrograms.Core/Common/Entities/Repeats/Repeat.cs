@@ -1,4 +1,4 @@
-namespace Core.Entities.Repeats
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats
 {
     public abstract class Repeat
     {

@@ -1,7 +1,7 @@
 using System.Linq;
-using Core.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
-namespace Core.Entities.Exercises
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 {
     public class CleanAndJerk : BaseExercise
     {

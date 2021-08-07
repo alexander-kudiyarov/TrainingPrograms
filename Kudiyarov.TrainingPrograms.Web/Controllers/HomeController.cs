@@ -1,6 +1,6 @@
-using Core.Bll.Interfaces;
-using Core.Entities.Enums;
-using Core.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUi.Controllers

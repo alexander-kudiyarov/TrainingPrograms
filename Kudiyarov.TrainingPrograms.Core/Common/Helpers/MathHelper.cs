@@ -1,6 +1,6 @@
 using System;
 
-namespace Core.Common.Helpers
+namespace Kudiyarov.TrainingPrograms.Core.Common.Helpers
 {
     public static class MathHelper
     {

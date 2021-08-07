@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Core.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
 
-namespace Core.Entities
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities
 {
     public class Round
     {

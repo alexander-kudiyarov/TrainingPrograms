@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
-using Core.Bll.Interfaces;
-using Core.Dal.Interfaces;
-using Core.Entities;
-using Core.Entities.Enums;
-using Core.Entities.Exercises;
-using Core.Entities.Repeats;
-using Core.Entities.Requests;
-using Core.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Core.Bll
+namespace Kudiyarov.TrainingPrograms.Core.Bll
 {
     public class TrainingProgramLogic : ITrainingProgramLogic
     {

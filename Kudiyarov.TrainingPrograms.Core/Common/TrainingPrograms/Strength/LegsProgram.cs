@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Core.Entities;
-using Core.Entities.Enums;
-using Core.Entities.Exercises;
-using Core.Entities.Repeats;
-using static Core.Entities.Enums.ExerciseType;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
+using static Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums.ExerciseType;
 
-namespace Core.TrainingPrograms.Strength
+namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 {
     public sealed class LegsProgram : BaseTrainingProgram
     {

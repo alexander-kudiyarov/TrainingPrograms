@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Core.Entities;
-using Core.Entities.Enums;
-using Core.Entities.Requests;
-using Core.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
 
-namespace Core.Dal.Interfaces
+namespace Kudiyarov.TrainingPrograms.Core.Dal.Interfaces
 {
     public interface IProgramRepository
     {

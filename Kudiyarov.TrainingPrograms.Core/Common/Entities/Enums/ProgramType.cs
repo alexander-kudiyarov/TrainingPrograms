@@ -1,4 +1,4 @@
-namespace Core.Entities.Enums
+namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums
 {
     public enum ProgramType
     {
