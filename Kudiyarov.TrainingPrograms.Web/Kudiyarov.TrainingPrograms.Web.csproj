@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Core\Kudiyarov.TrainingPrograms.Core.csproj" />
+        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Core\Kudiyarov.TrainingPrograms.Core.csproj"/>
     </ItemGroup>
 
 </Project>

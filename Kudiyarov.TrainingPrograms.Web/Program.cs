@@ -14,10 +14,7 @@ namespace Kudiyarov.TrainingPrograms.Web
         private static IHost GetHost(string[] args)
         {
             var host = Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                })
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
                 .Build();
 
             return host;
