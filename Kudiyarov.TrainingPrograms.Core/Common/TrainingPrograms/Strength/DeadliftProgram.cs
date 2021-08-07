@@ -131,7 +131,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(FrontSquat)
+            var ex5 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -167,7 +167,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(DeficitClean)
+            var ex2 = new CleanAndJerk(DeficitClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -493,7 +493,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(FrontSquat)
+            var ex5 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -530,7 +530,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex2 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = GetRange(0.4, 0.5, 3, 6)
             };
@@ -673,7 +673,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(FrontSquat)
+            var ex5 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -899,7 +899,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(DeficitClean)
+            var ex2 = new CleanAndJerk(DeficitClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -1052,7 +1052,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(FrontSquat)
+            var ex5 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1306,7 +1306,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(PushPress)
+            var ex4 = new CleanAndJerk(PushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -1454,7 +1454,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(FrontSquat)
+            var ex5 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1513,7 +1513,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex4 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1694,7 +1694,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(CleanFromBlocks)
+            var ex2 = new CleanAndJerk(CleanFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -1765,7 +1765,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(PowerClean)
+            var ex2 = new CleanAndJerk(PowerClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -2082,7 +2082,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(GoodMorning)
+            var ex2 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {

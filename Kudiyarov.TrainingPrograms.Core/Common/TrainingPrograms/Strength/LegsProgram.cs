@@ -71,7 +71,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(DeficitRomanianDeadlift)
+            var ex4 = new CleanAndJerk(DeficitRomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -136,7 +136,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -147,7 +147,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -212,7 +212,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(GoodMorning)
+            var ex3 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {
@@ -343,7 +343,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex4 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -432,7 +432,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(DeficitRomanianDeadlift)
+            var ex5 = new CleanAndJerk(DeficitRomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -481,7 +481,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(FrontSquat)
+            var ex2 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -493,7 +493,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(BackLunges)
+            var ex3 = new CleanAndJerk(BackLunges)
             {
                 Repeats = new Repeat[]
                 {
@@ -693,7 +693,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -709,7 +709,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(DeficitRomanianDeadlift)
+            var ex4 = new CleanAndJerk(DeficitRomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -717,7 +717,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(GoodMorning)
+            var ex5 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {
@@ -782,7 +782,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -798,7 +798,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -947,7 +947,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex5 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1013,7 +1013,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1030,7 +1030,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackLunges)
+            var ex4 = new CleanAndJerk(BackLunges)
             {
                 Repeats = new Repeat[]
                 {
@@ -1038,7 +1038,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(DeficitRomanianDeadlift)
+            var ex5 = new CleanAndJerk(DeficitRomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1087,7 +1087,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex2 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1108,7 +1108,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(FrontSquat)
+            var ex4 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1251,7 +1251,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex5 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1309,7 +1309,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1321,7 +1321,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(RomanianDeadlift)
+            var ex4 = new CleanAndJerk(RomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -1370,7 +1370,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex2 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1378,7 +1378,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {

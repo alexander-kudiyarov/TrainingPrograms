@@ -90,7 +90,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 Repeats = GetRange(0.3, 0.35, 4, Array(4, 4))
             };
 
-            var ex2 = new MultiCleanAndJerk(DeficitRomanianDeadlift)
+            var ex2 = new CleanAndJerk(DeficitRomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -98,7 +98,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(PushPress)
+            var ex3 = new CleanAndJerk(PushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -141,7 +141,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var warmup = GetCleanAndJerkWarmUp3();
 
-            var ex1 = new MultiCleanAndJerk(CleanFromBlocks)
+            var ex1 = new CleanAndJerk(CleanFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -152,7 +152,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(CleanPullFromBlocks)
+            var ex2 = new CleanAndJerk(CleanPullFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -220,7 +220,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(DeficitCleanPull)
+            var ex2 = new CleanAndJerk(DeficitCleanPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -428,7 +428,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(PowerJerk)
+            var ex3 = new CleanAndJerk(PowerJerk)
             {
                 Repeats = new Repeat[]
                 {
@@ -483,7 +483,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(Jerk)
+            var ex3 = new CleanAndJerk(Jerk)
             {
                 Repeats = new Repeat[]
                 {
@@ -533,7 +533,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(FrontSquat)
+            var ex2 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -543,7 +543,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(JerkSupport)
+            var ex3 = new CleanAndJerk(JerkSupport)
             {
                 Repeats = new Repeat[]
                 {
@@ -698,7 +698,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex3 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -745,7 +745,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(FrontSquat)
+            var ex2 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -822,7 +822,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(CleanPullFromBlocks)
+            var ex2 = new CleanAndJerk(CleanPullFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -833,7 +833,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -908,7 +908,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(PushPress)
+            var ex4 = new CleanAndJerk(PushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -998,7 +998,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 Repeats = GetRange(0.35, 0.45, 4, 4)
             };
 
-            var ex2 = new MultiCleanAndJerk(DeficitClean)
+            var ex2 = new CleanAndJerk(DeficitClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -1009,7 +1009,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(GoodMorning)
+            var ex3 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {
@@ -1043,7 +1043,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var warmup = GetCleanAndJerkWarmUp3();
 
-            var ex1 = new MultiCleanAndJerk(Jerk)
+            var ex1 = new CleanAndJerk(Jerk)
             {
                 Repeats = new Repeat[]
                 {
@@ -1057,7 +1057,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(PushPress)
+            var ex2 = new CleanAndJerk(PushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -1295,7 +1295,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(FrontSquat)
+            var ex2 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1317,7 +1317,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(CleanOnPlates)
+            var ex2 = new CleanAndJerk(CleanOnPlates)
             {
                 Repeats = new Repeat[]
                 {

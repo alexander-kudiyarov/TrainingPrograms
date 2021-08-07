@@ -115,7 +115,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -123,7 +123,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(PowerClean)
+            var ex2 = new CleanAndJerk(PowerClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -132,7 +132,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(CleanPull)
+            var ex3 = new CleanAndJerk(CleanPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -141,7 +141,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -199,7 +199,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(FrontSquat)
+            var ex4 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -299,7 +299,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex4 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -409,7 +409,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -425,7 +425,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(DeficitCleanPull)
+            var ex3 = new CleanAndJerk(DeficitCleanPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -436,7 +436,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(GoodMorning)
+            var ex4 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {
@@ -546,7 +546,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(JerkSupport)
+            var ex3 = new CleanAndJerk(JerkSupport)
             {
                 Repeats = new Repeat[]
                 {
@@ -587,7 +587,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -595,7 +595,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(MuscleSquatClean)
+            var ex2 = new CleanAndJerk(MuscleSquatClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -603,7 +603,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(CleanPullSlowlyDown)
+            var ex3 = new CleanAndJerk(CleanPullSlowlyDown)
             {
                 Repeats = new Repeat[]
                 {
@@ -614,7 +614,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -674,7 +674,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(FrontSquat)
+            var ex4 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -727,7 +727,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -744,7 +744,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(CleanPullSlowlyDown)
+            var ex3 = new CleanAndJerk(CleanPullSlowlyDown)
             {
                 Repeats = new Repeat[]
                 {
@@ -896,7 +896,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -904,7 +904,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(MuscleSquatClean)
+            var ex2 = new CleanAndJerk(MuscleSquatClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -912,7 +912,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -924,7 +924,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(JerkSupport)
+            var ex4 = new CleanAndJerk(JerkSupport)
             {
                 Repeats = new Repeat[]
                 {
@@ -932,7 +932,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(GoodMorningSquat)
+            var ex5 = new CleanAndJerk(GoodMorningSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1036,7 +1036,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1054,7 +1054,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(CleanPullFromBlocks)
+            var ex3 = new CleanAndJerk(CleanPullFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -1125,7 +1125,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(FrontSquat)
+            var ex4 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1137,7 +1137,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(JerkSupport)
+            var ex5 = new CleanAndJerk(JerkSupport)
             {
                 Repeats = new Repeat[]
                 {
@@ -1179,7 +1179,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1290,7 +1290,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex1C = new MultiCleanAndJerk(FrontSquat)
+            var ex1C = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1298,7 +1298,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(MuscleSquatClean)
+            var ex2 = new CleanAndJerk(MuscleSquatClean)
             {
                 Repeats = new Repeat[]
                 {
@@ -1307,7 +1307,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(CleanPull)
+            var ex3 = new CleanAndJerk(CleanPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -1318,7 +1318,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(FrontSquat)
+            var ex4 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1381,7 +1381,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(BackSplitSquat)
+            var ex4 = new CleanAndJerk(BackSplitSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1429,7 +1429,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(DeficitCleanPull)
+            var ex3 = new CleanAndJerk(DeficitCleanPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -1535,7 +1535,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(FrontSquat)
+            var ex3 = new CleanAndJerk(FrontSquat)
             {
                 Repeats = new Repeat[]
                 {
@@ -1545,7 +1545,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiCleanAndJerk(JerkSupport)
+            var ex4 = new CleanAndJerk(JerkSupport)
             {
                 Repeats = new Repeat[]
                 {
@@ -1653,7 +1653,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiCleanAndJerk(GoodMorning)
+            var ex3 = new CleanAndJerk(GoodMorning)
             {
                 Repeats = new Repeat[]
                 {
@@ -1684,7 +1684,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiCleanAndJerk(Clean)
+            var ex2 = new CleanAndJerk(Clean)
             {
                 Repeats = new Repeat[]
                 {

@@ -70,7 +70,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex6 = new MultiCleanAndJerk(Stats.PushPress, PushPress)
+            var ex6 = new CleanAndJerk(Stats.PushPress, PushPress)
             {
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
@@ -292,7 +292,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
 
         private static Session GetSession2_1()
         {
-            var ex1 = new MultiCleanAndJerk(FrontSquat)
+            var ex1 = new CleanAndJerk(FrontSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
@@ -809,7 +809,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
 
         private static Session GetSession4_1()
         {
-            var ex1 = new MultiCleanAndJerk(Stats.FrontSquat, FrontSquat)
+            var ex1 = new CleanAndJerk(Stats.FrontSquat, FrontSquat)
             {
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
@@ -842,7 +842,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex5 = new MultiCleanAndJerk(Stats.PushPress, PushPress)
+            var ex5 = new CleanAndJerk(Stats.PushPress, PushPress)
             {
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]
@@ -989,7 +989,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 Repeats = GetRange(0.5, 0.6, 5, new[] { 3, 3 })
             };
 
-            var ex2 = new MultiCleanAndJerk(Clean)
+            var ex2 = new CleanAndJerk(Clean)
             {
                 Repeats = GetRange(0.5, 0.6, 6, 3)
             };
