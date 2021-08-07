@@ -1,0 +1,45 @@
+@using System.Globalization
+@using Core.Entities.Repeats
+@model Core.Entities.Session
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div>
+        <h3>Session @Model.Day.ToString()</h3>
+        @foreach (var round in Model.Rounds)
+        {
+            for (var r = 0; r < round.Rounds; r++)
+            {
+                foreach (var exercise in round.Exercises)
+                {
+                    <div>
+                        <p>@exercise.Name</p>
+
+                        @foreach (var repeat in exercise.Repeats)
+                        {
+                            var repeats = repeat switch
+                            {
+                                SingleRepeat singleRepeat => singleRepeat.Repeats.ToString(),
+                                MultiRepeat multiRepeat => string.Join("+", multiRepeat.Repeats),
+                                StaticRepeat staticRepeat => $"{staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture)} sec",
+                                _ => throw new ArgumentOutOfRangeException()
+                                };
+
+                            var repeatDescription = repeat.Weight != null
+                                ? $"{repeat.Weight.ToString()} × {repeats}"
+                                : repeats;
+
+                            for (var s = 0; s < repeat.Sets; s++)
+                            {
+                                <p>@repeatDescription</p>
+                            }
+                        }
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>

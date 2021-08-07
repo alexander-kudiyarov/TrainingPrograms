@@ -1,0 +1,10 @@
+@model IEnumerable<Core.TrainingPrograms.BaseTrainingProgram>
+
+@{
+    ViewBag.Title = "title";
+}
+
+@foreach (var program in Model)
+{
+    <p>@Html.ActionLink(program.Name, "Program", new { type = (int)program.Type })</p>
+}
