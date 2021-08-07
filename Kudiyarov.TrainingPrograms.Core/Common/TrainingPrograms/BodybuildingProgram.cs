@@ -325,7 +325,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex5 = new MultiSnatch(SnatchPushPress)
+            var ex5 = new Snatch(SnatchPushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -735,7 +735,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
 
         private static Session GetSession3_4()
         {
-            var ex1 = new MultiSnatch(Stats.DeficitMediumGripPull, DeficitMediumGripPull)
+            var ex1 = new Snatch(Stats.DeficitMediumGripPull, DeficitMediumGripPull)
             {
                 IsWarmupNeeded = true,
                 Repeats = new Repeat[]

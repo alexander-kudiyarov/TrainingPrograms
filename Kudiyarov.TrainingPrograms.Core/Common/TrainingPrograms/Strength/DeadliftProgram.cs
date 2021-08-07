@@ -113,7 +113,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -294,7 +294,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -366,7 +366,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiSnatch(SotsPress)
+            var ex4 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -407,7 +407,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSquatSnatch)
+            var ex2 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = GetRange(0.4, 0.5, 4, 4)
             };
@@ -473,7 +473,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -656,7 +656,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -730,7 +730,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiSnatch(SotsPress)
+            var ex4 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -842,7 +842,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1033,7 +1033,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1111,7 +1111,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new MultiSnatch(SotsPress)
+            var ex4 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -1230,7 +1230,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1435,7 +1435,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1491,7 +1491,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(SnatchFromBlocks)
+            var ex2 = new Snatch(SnatchFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -1562,7 +1562,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSquatSnatch)
+            var ex2 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1638,7 +1638,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(ExerciseType.Snatch)
+            var ex3 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1827,7 +1827,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(ExerciseType.Snatch)
+            var ex2 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1930,7 +1930,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(PowerSnatch)
+            var ex2 = new Snatch(PowerSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1991,7 +1991,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(ExerciseType.Snatch)
+            var ex2 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {

@@ -47,7 +47,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSnatch)
+            var ex2 = new Snatch(MuscleSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -74,7 +74,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiSnatch(SotsPress)
+            var ex5 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -181,7 +181,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSquatSnatch)
+            var ex2 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -189,7 +189,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(DeficitSnatchPull)
+            var ex3 = new Snatch(DeficitSnatchPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -235,7 +235,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
         private static Session GetSession1_4()
         {
-            var ex1 = new MultiSnatch(PowerSnatch)
+            var ex1 = new Snatch(PowerSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -347,7 +347,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(RomanianDeadlift)
+            var ex3 = new Snatch(RomanianDeadlift)
             {
                 Repeats = new Repeat[]
                 {
@@ -368,7 +368,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiSnatch(SotsPress)
+            var ex5 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -485,7 +485,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(HangSnatchPullAboveKnees)
+            var ex3 = new Snatch(HangSnatchPullAboveKnees)
             {
                 Repeats = new Repeat[]
                 {
@@ -527,7 +527,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
         private static Session GetSession2_4()
         {
-            var ex1 = new MultiSnatch(ExerciseType.Snatch)
+            var ex1 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -654,7 +654,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSquatSnatch)
+            var ex2 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -662,7 +662,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(DeficitSnatchPull)
+            var ex3 = new Snatch(DeficitSnatchPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -684,7 +684,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiSnatch(SnatchPushPress)
+            var ex5 = new Snatch(SnatchPushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -803,7 +803,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(MediumGripPull)
+            var ex3 = new Snatch(MediumGripPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -823,7 +823,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex5 = new MultiSnatch(SotsPress)
+            var ex5 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -848,7 +848,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
         private static Session GetSession3_4()
         {
-            var ex1 = new MultiSnatch(ExerciseType.Snatch)
+            var ex1 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -973,7 +973,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(HipSnatch)
+            var ex2 = new Snatch(HipSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -982,7 +982,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new MultiSnatch(DeficitSnatchPull)
+            var ex3 = new Snatch(DeficitSnatchPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -1479,7 +1479,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
         private static Session GetSession5_4()
         {
-            var ex1 = new MultiSnatch(ExerciseType.Snatch)
+            var ex1 = new Snatch(ExerciseType.Snatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1525,7 +1525,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
                 }
             };
 
-            var ex2 = new MultiSnatch(MuscleSquatSnatch)
+            var ex2 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = new Repeat[]
                 {
@@ -1676,7 +1676,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
         private static Session GetSession6_4()
         {
-            var ex1 = new MultiSnatch(HipSnatch)
+            var ex1 = new Snatch(HipSnatch)
             {
                 Repeats = new Repeat[]
                 {

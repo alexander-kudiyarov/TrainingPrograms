@@ -60,7 +60,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex4 = new MultiSnatch(SotsPress)
+            var ex4 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -230,7 +230,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiSnatch(SnatchPushPress)
+            var ex3 = new Snatch(SnatchPushPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -291,7 +291,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(MediumGripPull)
+            var ex2 = new Snatch(MediumGripPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -309,7 +309,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex4 = new MultiSnatch(SnatchPressWithRubberBand)
+            var ex4 = new Snatch(SnatchPressWithRubberBand)
             {
                 Repeats = new Repeat[]
                 {
@@ -344,7 +344,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var warmup = GetSnatchWarmUp2();
 
-            var ex1 = new MultiSnatch(SnatchFromBlocks)
+            var ex1 = new Snatch(SnatchFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -355,7 +355,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(SnatchPullFromBlocks)
+            var ex2 = new Snatch(SnatchPullFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -436,7 +436,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex4 = new MultiSnatch(SnatchPressWithRubberBand)
+            var ex4 = new Snatch(SnatchPressWithRubberBand)
             {
                 Repeats = new Repeat[]
                 {
@@ -587,7 +587,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(DeficitSnatchPull)
+            var ex2 = new Snatch(DeficitSnatchPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -898,7 +898,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiSnatch(DeficitSnatchPullWith2Stops)
+            var ex3 = new Snatch(DeficitSnatchPullWith2Stops)
             {
                 Repeats = new Repeat[]
                 {
@@ -947,7 +947,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(SnatchPullWith2Stops)
+            var ex2 = new Snatch(SnatchPullWith2Stops)
             {
                 Repeats = new Repeat[]
                 {
@@ -968,7 +968,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex4 = new MultiSnatch(SotsPress)
+            var ex4 = new Snatch(SotsPress)
             {
                 Repeats = new Repeat[]
                 {
@@ -993,7 +993,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
 
         private static Session GetSession4_2()
         {
-            var ex1 = new MultiSnatch(MuscleSquatSnatch)
+            var ex1 = new Snatch(MuscleSquatSnatch)
             {
                 Repeats = GetRange(0.35, 0.45, 4, 4)
             };
@@ -1111,7 +1111,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(MediumGripPull)
+            var ex2 = new Snatch(MediumGripPull)
             {
                 Repeats = new Repeat[]
                 {
@@ -1121,7 +1121,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex3 = new MultiSnatch(SnatchPressWithRubberBand)
+            var ex3 = new Snatch(SnatchPressWithRubberBand)
             {
                 Repeats = new Repeat[]
                 {
@@ -1251,7 +1251,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(SnatchPullFromBlocks)
+            var ex2 = new Snatch(SnatchPullFromBlocks)
             {
                 Repeats = new Repeat[]
                 {
@@ -1273,7 +1273,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2 = new MultiSnatch(SnatchOnPlates)
+            var ex2 = new Snatch(SnatchOnPlates)
             {
                 Repeats = new Repeat[]
                 {
