@@ -17,7 +17,8 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
+            GetSession5_1
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -1201,6 +1202,69 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 Repeats = new Repeat[]
                 {
                     new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 4 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_1()
+        {
+            var warmup = GetSnatchWarmUp1();
+
+            var ex1 = new Snatch(SnatchPushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 1 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 4, Sets = 2 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 3 }
+                }
+            };
+
+            var ex2 = new Snatch(SnatchFromBlocks)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.65, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 3 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.80, Repeats = 3, Sets = 3 }
+                }
+            };
+
+            var ex3 = new Snatch(SnatchPullFromBlocks)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.8, Repeats = 4, Sets = 1 },
+                    new SingleRepeat { Percent = 0.9, Repeats = 4, Sets = 2 },
+                    new SingleRepeat { Percent = 1.0, Repeats = 3, Sets = 4 }
+                }
+            };
+
+            var ex4 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 6, Sets = 1 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 6, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 6, Sets = 2 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 6, Sets = 2 }
                 }
             };
 
