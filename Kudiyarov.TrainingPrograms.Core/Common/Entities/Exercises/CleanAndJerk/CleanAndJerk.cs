@@ -2,7 +2,7 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.CleanAndJerk
 {
-    public class CleanAndJerk : BaseSingleExercise
+    public sealed class CleanAndJerk : BaseSingleExercise
     {
         public CleanAndJerk(ExerciseType type) : base(Stats.CleanAndJerk, type)
         {

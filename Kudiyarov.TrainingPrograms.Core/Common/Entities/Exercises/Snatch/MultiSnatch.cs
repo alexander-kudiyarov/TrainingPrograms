@@ -2,7 +2,7 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.Snatch
 {
-    public class MultiSnatch : BaseMultiExercise
+    public sealed class MultiSnatch : BaseMultiExercise
     {
         public MultiSnatch(params ExerciseType[] types) : base(Stats.Snatch, types)
         {

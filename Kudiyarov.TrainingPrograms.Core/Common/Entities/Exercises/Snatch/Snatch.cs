@@ -2,7 +2,7 @@
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.Snatch
 {
-    public class Snatch : BaseSingleExercise
+    public sealed class Snatch : BaseSingleExercise
     {
         public Snatch(ExerciseType type) : base(Stats.Snatch, type)
         {

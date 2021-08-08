@@ -2,7 +2,7 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 {
-    public class Accessory : BaseSingleExercise
+    public sealed class Accessory : BaseSingleExercise
     {
         public Accessory(ExerciseType type) : base(GetWeight(type), type)
         {
