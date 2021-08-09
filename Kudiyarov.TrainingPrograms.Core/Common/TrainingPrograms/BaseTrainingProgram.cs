@@ -28,7 +28,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             return result;
         }
 
-        protected static int[] Array(params int[] value)
+        protected static T[] Array<T>(params T[] value)
         {
             return value;
         }
