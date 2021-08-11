@@ -5,6 +5,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities
 {
     public class Round
     {
+        // TODO split to single-multi
         public Round(params BaseExercise[] exercises) : this(1, exercises)
         {
         }

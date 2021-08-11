@@ -18,7 +18,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2
+            GetSession5_1, GetSession5_2, GetSession5_3
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -1331,6 +1331,77 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_3()
+        {
+            var ex1 = new MultiSnatch(MuscleSquatSnatch, OverheadSquat)
+            {
+                Repeats = GetRange(0.4, 0.5, 4, Array(3, 2))
+            };
+
+            var ex2 = new Snatch(MediumGripPull)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 3 }
+                }
+            };
+
+            var ex3 = new CleanAndJerk(Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.500, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.600, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.650, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.700, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.750, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.800, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.850, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.875, Repeats = 2, Sets = 1 }
+                }
+            };
+
+            var ex4 = new CleanAndJerk(BackSplitSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(6, 6), Sets = 3 }
+                }
+            };
+
+            var ex5A = new Accessory(Plank)
+            {
+                Repeats = new Repeat[]
+                {
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
+                }
+            };
+
+            var ex5B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Repeats = 15 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(4, ex5A, ex5B)
                 }
             };
 
