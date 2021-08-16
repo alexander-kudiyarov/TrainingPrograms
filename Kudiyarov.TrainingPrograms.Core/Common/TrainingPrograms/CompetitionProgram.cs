@@ -18,7 +18,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4
+            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -1461,6 +1461,60 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 Rounds = new Round[]
                 {
                     new(warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession5_5()
+        {
+            var ex1 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.65, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 2, Sets = 5 }
+                }
+            };
+
+            var ex2 = new MultiCleanAndJerk(FrontSquat, PushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.6, Repeats = Array(2, 1), Sets = 4 }
+                }
+            };
+
+            var ex3 = new CleanAndJerk(FrontSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 3 }
+                }
+            };
+
+            var ex4 = new Accessory(KneesToElbows)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Repeats = 12, Sets = 4 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
                     new(ex1),
                     new(ex2),
                     new(ex3),
