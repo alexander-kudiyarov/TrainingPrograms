@@ -19,7 +19,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
             GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
-            GetSession6_1
+            GetSession6_1, GetSession6_2
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -1591,6 +1591,70 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession6_2()
+        {
+            var warmup = GetCleanAndJerkWarmUp2();
+
+            var ex1 = new CleanAndJerk(DeficitClean)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.65, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.80, Repeats = 3, Sets = 3 }
+                }
+            };
+
+            var ex2 = new MultiSnatch(SotsPress, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.3, Repeats = Array(4, 4), Sets = 5 }
+                }
+            };
+
+            var ex3A = new Accessory(WristFlexion)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Weight = Stats.Bar, Repeats = 10 }
+                }
+            };
+
+            var ex3B = new Accessory(WristExtension)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Weight = Stats.Bar, Repeats = 10 }
+                }
+            };
+
+            var ex4 = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Repeats = 20, Sets = 3 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(3, ex3A, ex3B),
+                    new(ex4)
                 }
             };
 
