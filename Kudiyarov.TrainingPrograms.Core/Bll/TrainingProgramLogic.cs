@@ -6,6 +6,7 @@ using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Core.Common.Helpers;
 using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
 using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
@@ -137,7 +138,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Bll
                 _ => throw new ArgumentOutOfRangeException(nameof(equipment), "Type is not defined")
             };
 
-            var roundedWeight = Math.Round(repeat.Weight.Value / factor) * factor;
+            var roundedWeight = MathHelper.RoundToFactor(repeat.Weight.Value, factor);
             repeat.Weight = roundedWeight;
         }
     }
