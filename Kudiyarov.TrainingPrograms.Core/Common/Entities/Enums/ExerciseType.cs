@@ -6,6 +6,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums
         Snatch,
         DeficitMediumGripPull,
         DeficitPowerSnatch,
+        DeficitSnatch,
         DeficitSnatchPull,
         DeficitSnatchPullWith2Stops,
         HangPowerSnatch,

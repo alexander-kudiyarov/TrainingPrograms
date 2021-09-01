@@ -47,6 +47,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
                 ExerciseType.Snatch => snatch,
                 ExerciseType.DeficitMediumGripPull => $"Medium Grip {pull} ({deficit})",
                 ExerciseType.DeficitPowerSnatch => $"{power} {snatch} ({deficit})",
+                ExerciseType.DeficitSnatch => $"{snatch} ({deficit})",
                 ExerciseType.DeficitSnatchPull => $"{snatch} {pull} ({deficit})",
                 ExerciseType.DeficitSnatchPullWith2Stops => $"{snatch} {pull} ({deficit}, {withTwoStops})",
                 ExerciseType.HangPowerSnatch => $"{hang} {power} {snatch}",
