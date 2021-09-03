@@ -44,7 +44,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Helpers
         
         public static double RoundToFactor(double value, double factor)
         {
-            var result = Math.Round(value / factor) * factor;
+            var result = Math.Round(value / factor, MidpointRounding.AwayFromZero) * factor;
             return result;
         }
         
