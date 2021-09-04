@@ -138,7 +138,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Bll
                 _ => throw new ArgumentOutOfRangeException(nameof(equipment), "Type is not defined")
             };
 
-            var roundedWeight = MathHelper.RoundToFactor(repeat.Weight.Value, factor);
+            var roundedWeight = repeat.Weight.Value.RoundTo(factor);
             repeat.Weight = roundedWeight;
         }
     }
