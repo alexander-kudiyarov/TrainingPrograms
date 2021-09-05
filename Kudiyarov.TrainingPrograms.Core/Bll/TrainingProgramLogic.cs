@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
+using Kudiyarov.Packages.DoubleExtensions;
 using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
 using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Core.Common.Helpers;
 using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
 using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
 using Microsoft.Extensions.Caching.Memory;
