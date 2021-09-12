@@ -33,9 +33,9 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             return value;
         }
 
-        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, int repeats)
+        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int repeats, int sets)
         {
-            var result = GetRange(start, stop, sets, Func);
+            var result = GetRange(start, stop, Func, sets);
             return result;
 
             Repeat Func(double percent)
@@ -44,9 +44,9 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             }
         }
 
-        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, IReadOnlyList<int> repeats)
+        protected static IReadOnlyList<Repeat> GetRange(double start, double stop, IReadOnlyList<int> repeats, int sets)
         {
-            var result = GetRange(start, stop, sets, Func);
+            var result = GetRange(start, stop, Func, sets);
             return result;
 
             Repeat Func(double percent)
@@ -55,7 +55,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             }
         }
 
-        private static IReadOnlyList<Repeat> GetRange(double start, double stop, int sets, Func<double, Repeat> func)
+        private static IReadOnlyList<Repeat> GetRange(double start, double stop, Func<double, Repeat> func, int sets)
         {
             var result = new Repeat[sets];
             var step = GetStep(start, stop, sets);

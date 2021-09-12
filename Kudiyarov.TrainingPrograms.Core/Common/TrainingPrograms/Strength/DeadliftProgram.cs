@@ -532,7 +532,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
 
             var ex2 = new CleanAndJerk(GoodMorningSquat)
             {
-                Repeats = GetRange(0.4, 0.5, 3, 6)
+                Repeats = GetRange(0.4, 0.5, 6, 3)
             };
 
             var ex3 = new Deadlift(DeficitDeadlift)

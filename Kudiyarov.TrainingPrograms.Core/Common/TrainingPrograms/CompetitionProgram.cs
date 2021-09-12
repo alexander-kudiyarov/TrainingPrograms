@@ -91,7 +91,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var ex1 = new MultiSnatch(MuscleSquatSnatch, OverheadSquat)
             {
-                Repeats = GetRange(0.3, 0.35, 4, Array(4, 4))
+                Repeats = GetRange(0.3, 0.35, Array(4, 4), 4)
             };
 
             var ex2 = new CleanAndJerk(DeficitRomanianDeadlift)
@@ -688,7 +688,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var ex1 = new MultiSnatch(MuscleSquatSnatch, SnatchBalance)
             {
-                Repeats = GetRange(0.35, 0.45, 4, Array(4, 4))
+                Repeats = GetRange(0.35, 0.45, Array(4, 4), 4)
             };
 
             var ex2 = new MultiCleanAndJerk(PowerClean, PowerCleanBelowKnee, PushPress)
@@ -1344,7 +1344,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var ex1 = new MultiSnatch(MuscleSquatSnatch, OverheadSquat)
             {
-                Repeats = GetRange(0.4, 0.5, 4, Array(3, 2))
+                Repeats = GetRange(0.4, 0.5, Array(3, 2), 4)
             };
 
             var ex2 = new Snatch(MediumGripPull)
@@ -2262,12 +2262,12 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
 
             var ex2 = new Snatch(ExerciseType.Snatch)
             {
-                Repeats = GetRange(0.35, 0.45, 6, 3)
+                Repeats = GetRange(0.35, 0.45, 3, 6)
             };
 
             var ex3 = new MultiCleanAndJerk(Clean, Jerk)
             {
-                Repeats = GetRange(0.35, 0.45, 6, Array(1, 2))
+                Repeats = GetRange(0.35, 0.45, Array(1, 2), 6)
             };
 
             var session = new Session
