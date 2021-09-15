@@ -69,7 +69,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             return result;
         }
 
-        private static double GetStep(double start, double stop, int sets)
+        protected static double GetStep(double start, double stop, int sets)
         {
             var diff = stop - start;
             var steps = sets - 1;
@@ -77,7 +77,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             return result;
         }
 
-        private static double GetPercent(double start, double step, int i)
+        protected static double GetPercent(double start, double step, int i)
         {
             var result = start + step * i;
             return result;
