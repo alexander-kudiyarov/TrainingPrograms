@@ -27,7 +27,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             result.Day = day;
             return result;
         }
-        
+
         protected static T[] Array<T>(params T[] value)
         {
             return value;

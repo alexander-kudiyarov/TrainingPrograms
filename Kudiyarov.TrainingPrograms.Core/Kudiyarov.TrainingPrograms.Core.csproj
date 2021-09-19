@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Kudiyarov.Packages.DoubleExtensions" Version="1.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
+        <PackageReference Include="Kudiyarov.Packages.DoubleExtensions" Version="1.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0"/>
     </ItemGroup>
 
 </Project>
