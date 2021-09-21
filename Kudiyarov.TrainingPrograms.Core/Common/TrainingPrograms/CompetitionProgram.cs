@@ -22,7 +22,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession6_1, GetSession6_2, GetSession6_3, GetSession6_4, GetSession6_5,
             GetSession7_1, GetSession7_2, GetSession7_3, GetSession7_4, GetSession7_5,
             GetSession8_1, GetSession8_2, GetSession8_3, GetSession8_4, GetSession8_5,
-            GetSession9_1
+            GetSession9_1, GetSession9_2
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -2535,6 +2535,48 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex3),
                     new(ex4),
                     new(ex5)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession9_2()
+        {
+            var warmup = GetCleanAndJerkWarmUp1();
+
+            var ex1 = new CleanAndJerk(Clean)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.500, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.600, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.650, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.700, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.750, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.800, Repeats = 2, Sets = 2 },
+                    new SingleRepeat { Percent = 0.850, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.875, Repeats = 2, Sets = 1 }
+                }
+            };
+
+            var ex2 = new CleanAndJerk(CleanPull)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 1.0, Repeats = 2, Sets = 3 },
+                    new SingleRepeat { Percent = 1.1, Repeats = 1, Sets = 1 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(warmup),
+                    new(ex1),
+                    new(ex2)
                 }
             };
 
