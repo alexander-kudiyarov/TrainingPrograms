@@ -2362,21 +2362,20 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2Step = GetStep(0.75, 0.8, 4);
+            var ex2Repeats = new List<Repeat>
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 2 }
+            };
+
+            ex2Repeats.AddRange(
+                GetRange(0.75, 0.8, Array(1, 1), 4));
 
             var ex2 = new MultiSnatch(PowerSnatch, ExerciseType.Snatch)
             {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 2 },
-                    new MultiRepeat { Percent = GetPercent(0.75, ex2Step, 0), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.75, ex2Step, 1), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.75, ex2Step, 2), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.75, ex2Step, 3), Repeats = Array(1, 1) }
-                }
+                Repeats = ex2Repeats
             };
 
             var ex3 = new Snatch(SnatchPull)
@@ -2467,23 +2466,22 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
         {
             var warmup = GetSnatchWarmUp2();
 
-            var ex1Step = GetStep(0.85, 0.875, 4);
+            var ex1Repeats = new List<Repeat>
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
+            };
+
+            ex1Repeats.AddRange(
+                GetRange(0.85, 0.875, Array(1, 1), 4));
 
             var ex1 = new MultiSnatch(ExerciseType.Snatch, HangSnatchBelowKnees)
             {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2), Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
-                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
-                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 },
-                    new MultiRepeat { Percent = GetPercent(0.85, ex1Step, 0), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.85, ex1Step, 1), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.85, ex1Step, 2), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.85, ex1Step, 3), Repeats = Array(1, 1) }
-                }
+                Repeats = ex1Repeats
             };
 
             var ex2 = new MultiSnatch(SnatchPull, HangSnatchBelowKnees)
@@ -2662,23 +2660,22 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex2Step = GetStep(0.9, 0.925, 4);
+            var ex2Repeats = new List<Repeat>
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.85, Repeats = Array(1, 1), Sets = 2 }
+            };
+
+            ex2Repeats.AddRange(
+                GetRange(0.9, 0.925, Array(1, 1), 4));
 
             var ex2 = new MultiCleanAndJerk(Clean, Jerk)
             {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
-                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 1 },
-                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
-                    new MultiRepeat { Percent = 0.80, Repeats = Array(2, 1), Sets = 2 },
-                    new MultiRepeat { Percent = 0.85, Repeats = Array(1, 1), Sets = 2 },
-                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 0), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 1), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 2), Repeats = Array(1, 1) },
-                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 3), Repeats = Array(1, 1) }
-                }
+                Repeats = ex2Repeats
             };
 
             var ex3 = new CleanAndJerk(CleanPull)
