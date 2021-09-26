@@ -22,7 +22,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession6_1, GetSession6_2, GetSession6_3, GetSession6_4, GetSession6_5,
             GetSession7_1, GetSession7_2, GetSession7_3, GetSession7_4, GetSession7_5,
             GetSession8_1, GetSession8_2, GetSession8_3, GetSession8_4, GetSession8_5,
-            GetSession9_1, GetSession9_2, GetSession9_3
+            GetSession9_1, GetSession9_2, GetSession9_3, GetSession9_4
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -2643,6 +2643,92 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession9_4()
+        {
+            var ex1 = new MultiSnatch(PowerSnatch, ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(1, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 4 }
+                }
+            };
+
+            var ex2Step = GetStep(0.9, 0.925, 4);
+
+            var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.65, Repeats = Array(2, 2), Sets = 1 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.85, Repeats = Array(1, 1), Sets = 2 },
+                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 0), Repeats = Array(1, 1) },
+                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 1), Repeats = Array(1, 1) },
+                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 2), Repeats = Array(1, 1) },
+                    new MultiRepeat { Percent = GetPercent(0.9, ex2Step, 3), Repeats = Array(1, 1) }
+                }
+            };
+
+            var ex3 = new CleanAndJerk(CleanPull)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.90, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 1.00, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 1.05, Repeats = 2, Sets = 3 }
+                }
+            };
+
+            var ex4 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.500, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.700, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.800, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.850, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.900, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.925, Repeats = 3, Sets = 1 }
+                }
+            };
+
+            var ex5A = new Accessory(Plank)
+            {
+                Repeats = new Repeat[]
+                {
+                    new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
+                }
+            };
+
+            var ex5B = new Accessory(Crunch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Repeats = 15 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(4, ex5A, ex5B)
                 }
             };
 
