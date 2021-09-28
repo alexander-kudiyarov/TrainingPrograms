@@ -2701,7 +2701,15 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex5A = new Accessory(Plank)
+            var ex5 = new Accessory(BarbellSquatJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 3 }
+                }
+            };
+
+            var ex6A = new Accessory(Plank)
             {
                 Repeats = new Repeat[]
                 {
@@ -2709,7 +2717,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                 }
             };
 
-            var ex5B = new Accessory(Crunch)
+            var ex6B = new Accessory(Crunch)
             {
                 Repeats = new Repeat[]
                 {
@@ -2725,7 +2733,8 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex2),
                     new(ex3),
                     new(ex4),
-                    new(4, ex5A, ex5B)
+                    new(ex5),
+                    new(4, ex6A, ex6B)
                 }
             };
 
