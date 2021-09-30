@@ -31,6 +31,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
 
                 // Press
                 ExerciseType.Press => Stats.Press,
+                ExerciseType.PressInSitPosition => Stats.Press,
                 ExerciseType.AsymmetryPress => Stats.Press,
                 ExerciseType.PressWithRubberBand => Stats.Press,
                 ExerciseType.SittingPress => Stats.Press,

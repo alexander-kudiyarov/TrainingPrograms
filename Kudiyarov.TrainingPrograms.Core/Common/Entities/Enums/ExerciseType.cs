@@ -130,6 +130,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums
         AsymmetryPress,
         DiscPress,
         Press,
+        PressInSitPosition,
         PressWithRubberBand,
         SnatchPressWithRubberBand,
         SittingPress,

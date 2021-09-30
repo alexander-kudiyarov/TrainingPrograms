@@ -171,6 +171,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
                 ExerciseType.AsymmetryPress => "Asymmetry Press",
                 ExerciseType.DiscPress => "Disc Press",
                 ExerciseType.Press => "Press",
+                ExerciseType.PressInSitPosition => "Press in Sit Position",
                 ExerciseType.PressWithRubberBand => $"Press {rubber}",
                 ExerciseType.SnatchPressWithRubberBand => $"Snatch Press {rubber}",
                 ExerciseType.SittingPress => "Sitting Press",
