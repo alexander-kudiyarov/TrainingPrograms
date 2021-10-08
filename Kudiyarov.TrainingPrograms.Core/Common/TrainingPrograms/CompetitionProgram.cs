@@ -23,7 +23,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession7_1, GetSession7_2, GetSession7_3, GetSession7_4, GetSession7_5,
             GetSession8_1, GetSession8_2, GetSession8_3, GetSession8_4, GetSession8_5,
             GetSession9_1, GetSession9_2, GetSession9_3, GetSession9_4, GetSession9_5,
-            GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4
+            GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4, GetSession10_5
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -3059,6 +3059,39 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
                     new(ex4),
                     new(ex5),
                     new(3, ex6A, ex6B)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession10_5()
+        {
+            var ex1 = new CleanAndJerk(GoodMorning)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 5, Sets = 3 }
+                }
+            };
+
+            var ex2 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = GetRange(0.3, 0.4, 3, 6)
+            };
+
+            var ex3 = new MultiCleanAndJerk(Clean, Jerk)
+            {
+                Repeats = GetRange(0.3, 0.4, Array(2, 2), 6)
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2),
+                    new(ex3)
                 }
             };
 
