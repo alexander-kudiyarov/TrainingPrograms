@@ -25,7 +25,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
             GetSession9_1, GetSession9_2, GetSession9_3,
             GetSession10_1, GetSession10_2, GetSession10_3,
             GetSession11_1, GetSession11_2, GetSession11_3,
-            GetSession12_1, GetSession12_2
+            GetSession12_1, GetSession12_2, GetSession12_3
         };
 
         public DeadliftProgram() : base(Sessions)
@@ -2103,6 +2103,11 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
         }
 
         private static Session GetSession12_2()
+        {
+            return Session.Empty;
+        }
+
+        private static Session GetSession12_3()
         {
             var ex1 = new Accessory(Hyperextension)
             {
