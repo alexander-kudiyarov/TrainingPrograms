@@ -24,7 +24,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             GetSession8_1, GetSession8_2, GetSession8_3, GetSession8_4, GetSession8_5,
             GetSession9_1, GetSession9_2, GetSession9_3, GetSession9_4, GetSession9_5,
             GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4, GetSession10_5,
-            GetSession11_1
+            GetSession11_1, GetSession11_2
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -3169,6 +3169,11 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             };
 
             return session;
+        }
+
+        private static Session GetSession11_2()
+        {
+            return Session.Empty;
         }
 
         private static BaseExercise[] GetSnatchWarmUp1()
