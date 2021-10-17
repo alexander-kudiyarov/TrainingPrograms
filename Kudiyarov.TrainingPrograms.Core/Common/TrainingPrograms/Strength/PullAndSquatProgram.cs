@@ -19,7 +19,7 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
             GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
-            GetSession6_1, GetSession6_2, GetSession6_3, GetSession6_4, GetSession6_5
+            GetSession6_1, GetEmptySession, GetSession6_3, GetSession6_4, GetSession6_5
         };
 
         public PullAndSquatProgram() : base(Sessions)
@@ -1625,11 +1625,6 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
             };
 
             return session;
-        }
-
-        private static Session GetSession6_2()
-        {
-            return Session.Empty;
         }
 
         private static Session GetSession6_3()

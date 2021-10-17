@@ -33,6 +33,16 @@ namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
             return value;
         }
 
+        protected static Session GetEmptySession()
+        {
+            var session = new Session
+            {
+                Rounds = System.Array.Empty<Round>()
+            };
+
+            return session;
+        }
+
         protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int repeats, int sets)
         {
             var result = GetRange(start, stop, Func, sets);
