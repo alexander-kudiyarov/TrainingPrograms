@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Dal.Interfaces\Kudiyarov.TrainingPrograms.Dal.Interfaces.csproj" />
+      <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Entities\Kudiyarov.TrainingPrograms.Entities.csproj" />
+    </ItemGroup>
+
+</Project>
