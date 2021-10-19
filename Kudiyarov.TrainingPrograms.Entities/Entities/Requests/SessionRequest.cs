@@ -1,7 +1,7 @@
 using System;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Requests
 {
     public class SessionRequest
     {

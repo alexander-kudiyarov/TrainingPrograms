@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Entities.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
-namespace Kudiyarov.TrainingPrograms.Core.Bll.Interfaces
+namespace Kudiyarov.TrainingPrograms.Bll.Interfaces
 {
     public interface ITrainingProgramLogic
     {

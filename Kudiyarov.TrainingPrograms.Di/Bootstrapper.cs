@@ -1,7 +1,7 @@
-﻿using Kudiyarov.TrainingPrograms.Core.Bll;
-using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
-using Kudiyarov.TrainingPrograms.Core.Dal;
-using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
+﻿using Kudiyarov.TrainingPrograms.Bll;
+using Kudiyarov.TrainingPrograms.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Dal.Memory;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Kudiyarov.TrainingPrograms.Di

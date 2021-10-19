@@ -1,6 +1,6 @@
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.CleanAndJerk
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk
 {
     public sealed class CleanAndJerk : BaseSingleExercise
     {

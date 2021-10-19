@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.CleanAndJerk;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises.Snatch;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
-using static Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums.ExerciseType;
+using Kudiyarov.TrainingPrograms.Entities.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength
+namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
 {
     public sealed class PullAndSquatProgram : BaseTrainingProgram
     {

@@ -1,4 +1,4 @@
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
 {
     public enum ExerciseType
     {

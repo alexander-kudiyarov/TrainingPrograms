@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
-using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms.Strength;
-using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Entities.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 
-namespace Kudiyarov.TrainingPrograms.Core.Dal
+namespace Kudiyarov.TrainingPrograms.Dal.Memory
 {
     public class ProgramRepository : IProgramRepository
     {

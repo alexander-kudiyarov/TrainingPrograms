@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Entities.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms
+namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 {
     public abstract class BaseTrainingProgram
     {

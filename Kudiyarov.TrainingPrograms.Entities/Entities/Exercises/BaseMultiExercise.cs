@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
 {
     public abstract class BaseMultiExercise : BaseExercise
     {

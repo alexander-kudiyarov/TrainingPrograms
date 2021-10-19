@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats
 {
     public class SingleRepeat : Repeat
     {

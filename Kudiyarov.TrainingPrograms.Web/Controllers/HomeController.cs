@@ -1,9 +1,9 @@
-using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUi.Controllers
+namespace Kudiyarov.TrainingPrograms.Web.Controllers
 {
     public class HomeController : Controller
     {

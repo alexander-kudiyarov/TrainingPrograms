@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using Kudiyarov.Packages.DoubleExtensions;
-using Kudiyarov.TrainingPrograms.Core.Bll.Interfaces;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Exercises;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Repeats;
-using Kudiyarov.TrainingPrograms.Core.Common.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Core.Common.TrainingPrograms;
-using Kudiyarov.TrainingPrograms.Core.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Bll.Interfaces;
+using Kudiyarov.TrainingPrograms.Dal.Interfaces;
+using Kudiyarov.TrainingPrograms.Entities.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Kudiyarov.TrainingPrograms.Core.Bll
+namespace Kudiyarov.TrainingPrograms.Bll
 {
     public class TrainingProgramLogic : ITrainingProgramLogic
     {

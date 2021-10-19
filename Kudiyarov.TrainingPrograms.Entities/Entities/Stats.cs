@@ -1,4 +1,4 @@
-namespace Kudiyarov.TrainingPrograms.Core.Common.Entities
+namespace Kudiyarov.TrainingPrograms.Entities.Entities
 {
     public static class Stats
     {
