@@ -25,7 +25,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
             GetSession9_1, GetSession9_2, GetSession9_3, GetSession9_4, GetSession9_5,
             GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4, GetSession10_5,
             GetSession11_1, GetEmptySession, GetSession11_3, GetSession11_4, GetSession11_5,
-            GetSession12_1, GetEmptySession, GetSession12_3
+            GetSession12_1, GetEmptySession, GetSession12_3, GetSession12_4
         };
 
         public CompetitionProgram() : base(Sessions)
@@ -3444,6 +3444,45 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
                     new(ex1),
                     new(ex2),
                     new(ex3)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession12_4()
+        {
+            var ex1 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.65, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 2, Sets = 2 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 2, Sets = 1 },
+                    new SingleRepeat { Percent = 0.80, Repeats = 1, Sets = 2 },
+                    new SingleRepeat { Percent = 0.85, Repeats = 1, Sets = 1 }
+                }
+            };
+
+            var ex2 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 3, Sets = 2 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2)
                 }
             };
 
