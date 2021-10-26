@@ -23,7 +23,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
         {
             var index = day - 1;
             var func = _sessions[index];
-            var result = func.Invoke();
+            var result = func();
             result.Day = day;
             return result;
         }
