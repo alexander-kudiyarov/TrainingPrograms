@@ -10,7 +10,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 {
-    public sealed class CompetitionProgram : BaseTrainingProgram
+    public sealed partial class CompetitionProgram : BaseTrainingProgram
     {
         private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
         {
@@ -26,7 +26,8 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
             GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4, GetSession10_5,
             GetSession11_1, GetEmptySession, GetSession11_3, GetSession11_4, GetSession11_5,
             GetSession12_1, GetEmptySession, GetSession12_3, GetSession12_4, GetSession12_5,
-            GetSession13_1, GetEmptySession, GetSession13_3, GetSession13_4, GetEmptySession
+            GetSession13_1, GetEmptySession, GetSession13_3, GetSession13_4, GetEmptySession,
+            GetSession14_1, GetEmptySession
         };
 
         public CompetitionProgram() : base(Sessions)
