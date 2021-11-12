@@ -5,7 +5,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities
         public static double BarbellFactor => 2.5;
         public static double DumbbellFactor => 1;
         public static double WorkWeight => 0.8;
-        public static double Snatch => 55;
+        public static double Snatch => 57.5;
         public static double CleanAndJerk => Snatch / 0.825;
         public static double BackSquat => CleanAndJerk * 1.25;
         public static double BenchBackSquat => BackSquat * 1.1;
