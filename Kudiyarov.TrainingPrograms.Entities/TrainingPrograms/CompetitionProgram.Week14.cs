@@ -1,5 +1,6 @@
 ﻿using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
@@ -30,6 +31,40 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
                     new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
                     new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
                     new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession14_3()
+        {
+            var ex1 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 2, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 1, Sets = 1 },
+                    new SingleRepeat { Percent = 0.65, Repeats = 1, Sets = 1 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 1, Sets = 3 }
+                }
+            };
+
+            var ex2 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 2, Sets = 2 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 2, Sets = 2 }
                 }
             };
 
