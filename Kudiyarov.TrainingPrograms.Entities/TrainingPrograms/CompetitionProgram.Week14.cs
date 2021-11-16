@@ -79,5 +79,29 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 
             return session;
         }
+
+        private static Session GetSession14_5()
+        {
+            var ex1 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = SingleRepeat.GetMaxoutRepeats()
+            };
+
+            var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+            {
+                Repeats = MultiRepeat.GetMaxoutRepeats()
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(ex1),
+                    new(ex2)
+                }
+            };
+
+            return session;
+        }
     }
 }

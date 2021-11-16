@@ -27,7 +27,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
             GetSession11_1, GetEmptySession, GetSession11_3, GetSession11_4, GetSession11_5,
             GetSession12_1, GetEmptySession, GetSession12_3, GetSession12_4, GetSession12_5,
             GetSession13_1, GetEmptySession, GetSession13_3, GetSession13_4, GetEmptySession,
-            GetSession14_1, GetEmptySession, GetSession14_3, GetEmptySession
+            GetSession14_1, GetEmptySession, GetSession14_3, GetEmptySession, GetSession14_5
         };
 
         public CompetitionProgram() : base(Sessions)
