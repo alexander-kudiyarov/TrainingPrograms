@@ -20,6 +20,7 @@ namespace Kudiyarov.TrainingPrograms.Dal.Memory
                 new CompetitionProgram(),
                 new DeadliftProgram(),
                 new LegsProgram(),
+                new MuscleGainProgram(),
                 new PullAndSquatProgram(),
                 new BodybuildingProgram()
             };
