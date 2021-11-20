@@ -8,21 +8,15 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 {
     public abstract class BaseTrainingProgram
     {
-        private readonly IReadOnlyList<Func<Session>> _sessions;
-
-        protected BaseTrainingProgram(IReadOnlyList<Func<Session>> sessions)
-        {
-            _sessions = sessions;
-        }
-
+        protected abstract IReadOnlyList<Func<Session>> Sessions { get; }
         public abstract ProgramType Type { get; }
         public abstract string Name { get; }
-        public int Days => _sessions.Count;
+        public int Days => Sessions.Count;
 
         public Session Get(int day)
         {
             var index = day - 1;
-            var func = _sessions[index];
+            var func = Sessions[index];
             var result = func();
             result.Day = day;
             return result;

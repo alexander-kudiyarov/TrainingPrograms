@@ -11,14 +11,10 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 {
     public sealed class MuscleGainProgram : BaseTrainingProgram
     {
-        private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
+        protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
             GetSession1_1
         };
-
-        public MuscleGainProgram() : base(Sessions)
-        {
-        }
 
         public override ProgramType Type => ProgramType.MuscleGain;
         public override string Name => "Muscle Gain";

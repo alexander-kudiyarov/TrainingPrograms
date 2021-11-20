@@ -12,17 +12,13 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
 {
     public sealed class BodybuildingProgram : BaseTrainingProgram
     {
-        private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
+        protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
         };
-
-        public BodybuildingProgram() : base(Sessions)
-        {
-        }
 
         public override ProgramType Type => ProgramType.Bodybuilding;
         public override string Name => "Bodybuilding Program";

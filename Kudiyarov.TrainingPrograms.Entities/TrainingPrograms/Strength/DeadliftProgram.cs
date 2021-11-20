@@ -12,7 +12,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
 {
     public sealed class DeadliftProgram : BaseTrainingProgram
     {
-        private static readonly IReadOnlyList<Func<Session>> Sessions = new Func<Session>[]
+        protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3,
             GetSession2_1, GetSession2_2, GetSession2_3,
@@ -27,10 +27,6 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
             GetSession11_1, GetSession11_2, GetSession11_3,
             GetSession12_1, GetEmptySession, GetSession12_3
         };
-
-        public DeadliftProgram() : base(Sessions)
-        {
-        }
 
         public override ProgramType Type => ProgramType.Deadlift;
         public override string Name => "Deadlift Program";
