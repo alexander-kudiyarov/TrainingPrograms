@@ -71,8 +71,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
             {
                 Repeats = new Repeat[]
                 {
-                    // TODO ??
-                    new SingleRepeat { Percent = 0.475, Repeats = 16 }
+                    new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
                 }
             };
 
