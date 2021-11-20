@@ -64,32 +64,58 @@ namespace Kudiyarov.TrainingPrograms.Bll
 
             foreach (var repeat in exercise.Repeats)
             {
+                CalculatePercentage(exercise, repeat);
                 CalculateWeight(exercise, repeat);
                 RoundWeight(exercise, repeat);
             }
         }
 
-        // private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
-        // {
-        //     if (exercise.Weight == null || repeat.Percent != null) return;
-        //
-        //     var repeats = repeat switch
-        //     {
-        //         SingleRepeat singleRepeat => singleRepeat.Repeats,
-        //         MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
-        //         _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
-        //     };
-        //
-        //     var percent = repeats switch
-        //     {
-        //         1 => 1,
-        //         _ => 1 - repeats * 0.025
-        //     };
-        //
-        //     var result = percent * Stats.WorkWeight;
-        //     repeat.Percent = result;
-        // }
-        //
+        private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
+        {
+            if (repeat.Percent != null || exercise.Weight == null)
+            {
+                return;
+            }
+        
+            var repeats = repeat switch
+            {
+                SingleRepeat singleRepeat => singleRepeat.Repeats,
+                // MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
+                _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
+            };
+        
+            var percent = GetPercent(repeats, repeat.Intensity);
+            
+            repeat.Percent = percent;
+        }
+
+        private static double GetPercent(int repeats, Intensity? intensity)
+        {
+            var reserveRepeats = GetReserveRepeats(intensity);
+            var percent = GetPercent(repeats + reserveRepeats);
+            return percent;
+        }
+
+        private static double GetReserveRepeats(Intensity? intensity)
+        {
+            var repeats = intensity switch
+            {
+                null => 0,
+                Intensity.Light => 5,
+                Intensity.Medium => 3.5,
+                Intensity.High => 1.5,
+                _ => throw new ArgumentOutOfRangeException(nameof(intensity))
+            };
+
+            return repeats;
+        }
+
+        private static double GetPercent(double repeats)
+        {
+            var result = 1 - repeats * 0.025;
+            return result;
+        }
+        
         // private static void AddWarmupRepeats(BaseExercise exercise)
         // {
         //     if (!exercise.IsWarmupNeeded
@@ -118,7 +144,9 @@ namespace Kudiyarov.TrainingPrograms.Bll
         private static void CalculateWeight(BaseExercise exercise, Repeat repeat)
         {
             if (repeat.Weight == null && exercise.Weight != null)
+            {
                 repeat.Weight = exercise.Weight * repeat.Percent;
+            }
         }
 
         private static void RoundWeight(BaseExercise exercise, Repeat repeat)
