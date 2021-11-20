@@ -116,6 +116,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 ExerciseType.SnatchDeadlift => $"{snatch} Deadlift",
 
                 // ABS
+                ExerciseType.Abs => "ABS",
                 ExerciseType.Crunch => "Crunch",
                 ExerciseType.KneesToElbows => "Knees to Elbows",
                 ExerciseType.LegRaise => "Leg Raise",

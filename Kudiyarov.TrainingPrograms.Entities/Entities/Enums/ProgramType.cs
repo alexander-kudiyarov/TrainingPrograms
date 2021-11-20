@@ -5,8 +5,9 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
         Competition = 1,
         Deadlift,
         Legs,
-        MuscleGain,
         PullAndSquat,
+        MuscleGain,
+        Snatch,
         Bodybuilding
     }
 }

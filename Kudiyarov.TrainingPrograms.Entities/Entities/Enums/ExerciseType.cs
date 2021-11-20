@@ -75,6 +75,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
         SnatchDeadlift,
 
         // ABS
+        Abs,
         Crunch,
         KneesToElbows,
         LegRaise,

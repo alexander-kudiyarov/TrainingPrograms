@@ -6,6 +6,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
 using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
+using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
 
 namespace Kudiyarov.TrainingPrograms.Dal.Memory
 {
@@ -22,6 +23,7 @@ namespace Kudiyarov.TrainingPrograms.Dal.Memory
                 new LegsProgram(),
                 new MuscleGainProgram(),
                 new PullAndSquatProgram(),
+                new SnatchProgram(),
                 new BodybuildingProgram()
             };
 
