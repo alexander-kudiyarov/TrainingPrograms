@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
@@ -13,7 +14,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
     {
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
-            GetSession1_1
+            GetSession1_1, GetSession1_2
         };
             
         public override ProgramType Type => ProgramType.Snatch;
@@ -83,6 +84,58 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                     new(ex2),
                     new(ex3),
                     new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_2()
+        {
+            var warmupA = new Accessory(ReverseHyperextension)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var warmupB = new Accessory(Abs)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var ex1 = new Snatch(MuscleSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 3 }
+                }
+            };
+
+            var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.6, Repeats = Array(2, 1), Sets = 3 },
+                    new MultiRepeat { Percent = 0.7, Repeats = Array(1, 1), Sets = 2 }
+                }
+            };
+
+            var ex3 = new CleanAndJerk(GoodMorningSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.4, Repeats = 10, Sets = 3 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmupA, warmupB),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3)
                 }
             };
 
