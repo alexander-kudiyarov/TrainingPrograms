@@ -76,16 +76,16 @@ namespace Kudiyarov.TrainingPrograms.Bll
             {
                 return;
             }
-        
+
             var repeats = repeat switch
             {
                 SingleRepeat singleRepeat => singleRepeat.Repeats,
                 // MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
                 _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
             };
-        
+
             var percent = GetPercent(repeats, repeat.Intensity);
-            
+
             repeat.Percent = percent;
         }
 
@@ -115,7 +115,7 @@ namespace Kudiyarov.TrainingPrograms.Bll
             var result = 1 - repeats * 0.025;
             return result;
         }
-        
+
         // private static void AddWarmupRepeats(BaseExercise exercise)
         // {
         //     if (!exercise.IsWarmupNeeded

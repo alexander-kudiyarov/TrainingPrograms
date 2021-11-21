@@ -16,7 +16,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
         {
             GetSession1_1, GetSession1_2
         };
-            
+
         public override ProgramType Type => ProgramType.Snatch;
         public override string Name => "Snatch Program";
 
@@ -26,17 +26,17 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             {
                 Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
             };
-            
+
             var warmupB = new Accessory(Abs)
             {
                 Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
             };
-            
+
             var warmupC = new Accessory(BoxJump)
             {
                 Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
             };
-            
+
             var ex1 = new MultiSnatch(PowerSnatch, OverheadSquat)
             {
                 Repeats = new Repeat[]
@@ -62,7 +62,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                 {
                     new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
                     new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
-                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 3 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 3 }
                 }
             };
 
@@ -71,7 +71,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat { Intensity = Intensity.Light, Repeats = 6, Sets = 3}
+                    new SingleRepeat { Intensity = Intensity.Light, Repeats = 6, Sets = 3 }
                 }
             };
 
@@ -79,7 +79,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             {
                 Rounds = new Round[]
                 {
-                    new(2, warmupA, warmupB,warmupC),
+                    new(2, warmupA, warmupB, warmupC),
                     new(ex1),
                     new(ex2),
                     new(ex3),

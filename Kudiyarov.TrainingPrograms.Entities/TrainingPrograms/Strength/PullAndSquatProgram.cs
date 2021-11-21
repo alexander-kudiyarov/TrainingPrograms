@@ -21,7 +21,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
             GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
             GetSession6_1, GetEmptySession, GetSession6_3, GetSession6_4, GetSession6_5
         };
-        
+
         public override ProgramType Type => ProgramType.PullAndSquat;
         public override string Name => "Pull and Squat Program";
 
