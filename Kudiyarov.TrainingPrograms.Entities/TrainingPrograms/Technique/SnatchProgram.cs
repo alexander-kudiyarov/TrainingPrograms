@@ -22,20 +22,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
 
         private static Session GetSession1_1()
         {
-            var warmupA = new Accessory(Hyperextension)
-            {
-                Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
-            };
-
-            var warmupB = new Accessory(Abs)
-            {
-                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-            };
-
-            var warmupC = new Accessory(BoxJump)
-            {
-                Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
-            };
+            var warmup = GetWarmup1();
 
             var ex1 = new MultiSnatch(PowerSnatch, OverheadSquat)
             {
@@ -79,7 +66,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             {
                 Rounds = new Round[]
                 {
-                    new(2, warmupA, warmupB, warmupC),
+                    new(2, warmup),
                     new(ex1),
                     new(ex2),
                     new(ex3),
@@ -140,6 +127,31 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             };
 
             return session;
+        }
+
+        private static BaseExercise[] GetWarmup1()
+        {
+            var a = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
+            };
+
+            var b = new Accessory(Abs)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var c = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
+            };
+
+            var warmup = new BaseExercise[]
+            {
+                a, b, c
+            };
+
+            return warmup;
         }
     }
 }
