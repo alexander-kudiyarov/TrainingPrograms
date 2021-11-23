@@ -14,7 +14,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
     {
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2
+            GetSession1_1, GetSession1_2, GetSession1_3
         };
 
         public override ProgramType Type => ProgramType.Snatch;
@@ -115,6 +115,63 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                     new(ex1),
                     new(ex2),
                     new(ex3)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_3()
+        {
+            var warmup = GetWarmup1();
+
+            var ex1 = new Snatch(SnatchOnPlates)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.3, Repeats = 4, Sets = 3 }
+                }
+            };
+
+            var ex2 = new Snatch(ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 3 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 4 }
+                }
+            };
+
+            var ex3 = new Snatch(SnatchBalance)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.50, Repeats = 4, Sets = 2 },
+                    new SingleRepeat { Percent = 0.60, Repeats = 4, Sets = 2 },
+                    new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 2 },
+                    new SingleRepeat { Percent = 0.75, Repeats = 2, Sets = 2 }
+                }
+            };
+
+            var ex4 = new Snatch(SnatchPullFromBlocks)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 6, Sets = 2 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 6, Sets = 3 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
                 }
             };
 
