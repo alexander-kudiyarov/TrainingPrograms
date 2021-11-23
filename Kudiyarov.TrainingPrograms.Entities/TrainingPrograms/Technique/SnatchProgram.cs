@@ -79,15 +79,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
 
         private static Session GetSession1_2()
         {
-            var warmupA = new Accessory(ReverseHyperextension)
-            {
-                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-            };
-
-            var warmupB = new Accessory(Abs)
-            {
-                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-            };
+            var warmup = GetWarmup2();
 
             var ex1 = new Snatch(MuscleSnatch)
             {
@@ -119,7 +111,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             {
                 Rounds = new Round[]
                 {
-                    new(2, warmupA, warmupB),
+                    new(2, warmup),
                     new(ex1),
                     new(ex2),
                     new(ex3)
@@ -149,6 +141,26 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             var warmup = new BaseExercise[]
             {
                 a, b, c
+            };
+
+            return warmup;
+        }
+
+        private static BaseExercise[] GetWarmup2()
+        {
+            var a = new Accessory(ReverseHyperextension)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var b = new Accessory(Abs)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var warmup = new BaseExercise[]
+            {
+                a, b
             };
 
             return warmup;
