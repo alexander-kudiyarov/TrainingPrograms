@@ -37,6 +37,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
             const string deficit = "from Deficit";
             const string pull = "Pull";
             const string pause = "(with Pause)";
+            const string pvc = "(with PVC)";
             const string rubber = "(with Rubber Band)";
             const string plates = "(on Plates)";
             const string withTwoStops = "with 2 Stops";
@@ -84,6 +85,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
                 ExerciseType.HangCleanPullBelowKnee => $"Hang {clean} {pull} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
+                ExerciseType.HipCleanBalancePvc => $"Hip {clean} Balance {pvc}",
                 ExerciseType.MuscleClean => $"Muscle {clean}",
                 ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",
                 ExerciseType.PowerClean => $"{power} {clean}",
@@ -195,6 +197,9 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 ExerciseType.DumbbellFrenchPress => "Dumbbell French Press",
                 ExerciseType.FrenchPress => "French Press",
                 ExerciseType.TricepsExtension => "Triceps Extension",
+
+                // Elbows
+                ExerciseType.ElbowsRotation => "Elbows Rotation",
 
                 // Wrists
                 ExerciseType.DiscJuggling => "Disc Juggling",

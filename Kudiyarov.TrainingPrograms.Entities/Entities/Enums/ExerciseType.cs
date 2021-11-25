@@ -43,6 +43,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
         HangCleanBelowKnee,
         HangCleanPullBelowKnee,
         HangPowerClean,
+        HipCleanBalancePvc,
         MuscleClean,
         MuscleSquatClean,
         PowerClean,
@@ -154,6 +155,9 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
         DumbbellFrenchPress,
         FrenchPress,
         TricepsExtension,
+
+        // Elbows
+        ElbowsRotation,
 
         // Wrists
         DiscJuggling,
