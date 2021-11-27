@@ -14,7 +14,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
     {
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
         };
 
         public override ProgramType Type => ProgramType.Snatch;
@@ -216,6 +216,61 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                     new SingleRepeat { Percent = 0.7, Repeats = 2 },
                     new SingleRepeat { Percent = 0.8, Repeats = 2 },
                     new SingleRepeat { Percent = 0.9, Repeats = 2 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession1_5()
+        {
+            var warmup = GetWarmup2();
+
+            var ex1 = new MultiAccessory(SnatchBalancePvc, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Repeats = Array(4, 4), Sets = 2 }
+                }
+            };
+
+            var ex2 = new MultiSnatch(HipPowerSnatch, SnatchBalance)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(3, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.6, Repeats = Array(2, 2), Sets = 3 }
+                }
+            };
+
+            var ex3 = new Snatch(SnatchPushPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 1 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 4, Sets = 1 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 4, Sets = 1 },
+                    new SingleRepeat { Percent = 0.8, Repeats = 2, Sets = 3 }
+                }
+            };
+
+            var ex4 = new Snatch(SotsPress)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.3, Repeats = 8, Sets = 3 }
                 }
             };
 
