@@ -190,11 +190,11 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                 }
             };
 
-            var ex2 = new Accessory(HipCleanBalancePvc)
+            var ex2 = new Accessory(HipCleanBalance)
             {
                 Repeats = new Repeat[]
                 {
-                    new SingleRepeat { Repeats = 6, Sets = 3 }
+                    new SingleRepeat { Weight = 0, Repeats = 6, Sets = 3 }
                 }
             };
 
@@ -238,11 +238,11 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
         {
             var warmup = GetWarmup2();
 
-            var ex1 = new MultiAccessory(SnatchBalancePvc, OverheadSquat)
+            var ex1 = new MultiAccessory(SnatchBalance, OverheadSquat)
             {
                 Repeats = new Repeat[]
                 {
-                    new MultiRepeat { Repeats = Array(4, 4), Sets = 2 }
+                    new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 2 }
                 }
             };
 

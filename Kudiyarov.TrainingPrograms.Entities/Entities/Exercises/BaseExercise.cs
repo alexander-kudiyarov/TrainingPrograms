@@ -37,7 +37,6 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
             const string deficit = "from Deficit";
             const string pull = "Pull";
             const string pause = "(with Pause)";
-            const string pvc = "(with PVC)";
             const string rubber = "(with Rubber Band)";
             const string plates = "(on Plates)";
             const string withTwoStops = "with 2 Stops";
@@ -65,7 +64,6 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 ExerciseType.PowerSnatch => $"{power} {snatch}",
                 ExerciseType.PowerSnatchAboveKnee => $"{power} {snatch} {aboveKnees}",
                 ExerciseType.SnatchBalance => $"{snatch} Balance",
-                ExerciseType.SnatchBalancePvc => $"{snatch} Balance {pvc}",
                 ExerciseType.SnatchFromBlocks => $"{snatch} {block}",
                 ExerciseType.SnatchOnPlates => $"{snatch} {plates}",
                 ExerciseType.SnatchPull => $"{snatch} {pull}",
@@ -87,7 +85,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",
                 ExerciseType.HangCleanPullBelowKnee => $"Hang {clean} {pull} Below Knee",
                 ExerciseType.HangPowerClean => $"Hang {power} {clean}",
-                ExerciseType.HipCleanBalancePvc => $"Hip {clean} Balance {pvc}",
+                ExerciseType.HipCleanBalance => $"Hip {clean} Balance",
                 ExerciseType.MuscleClean => $"Muscle {clean}",
                 ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",
                 ExerciseType.PowerClean => $"{power} {clean}",
