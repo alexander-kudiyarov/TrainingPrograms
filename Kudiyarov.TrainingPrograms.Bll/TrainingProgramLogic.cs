@@ -72,7 +72,7 @@ namespace Kudiyarov.TrainingPrograms.Bll
 
         private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
         {
-            if (repeat.Percent != null || exercise.Weight == null)
+            if (repeat.Weight is not null || repeat.Percent is not null || exercise.Weight is null)
             {
                 return;
             }

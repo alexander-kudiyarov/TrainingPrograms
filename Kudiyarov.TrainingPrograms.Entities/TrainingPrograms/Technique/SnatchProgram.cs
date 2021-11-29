@@ -14,7 +14,8 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
     {
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
+            GetSession2_1
         };
 
         public override ProgramType Type => ProgramType.Snatch;
@@ -289,6 +290,78 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             return session;
         }
 
+        private static Session GetSession2_1()
+        {
+            var warmup = GetWarmup3();
+
+            var ex1 = new MultiSnatch(MuscleSnatch, SnatchBalance, OverheadSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Weight = 0, Repeats = Array(4, 4, 4), Sets = 2 }
+                }
+            };
+
+            var ex2 = new MultiSnatch(PowerSnatch, ExerciseType.Snatch, SnatchBalance)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.5, Repeats = Array(2, 1, 2), Sets = 3 }
+                }
+            };
+
+            var ex3 = new MultiSnatch(ExerciseType.Snatch, HangSnatchBelowKnees)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.500, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.600, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.700, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.750, Repeats = Array(1, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.775, Repeats = Array(1, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.800, Repeats = Array(1, 1), Sets = 1 }
+                }
+            };
+
+            var ex4 = new MultiSnatch(SnatchPull, HangSnatchPullBelowKnees)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.90, Repeats = Array(1, 3), Sets = 2 },
+                    new MultiRepeat { Percent = 1.00, Repeats = Array(1, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 1.05, Repeats = Array(1, 1), Sets = 1 }
+                }
+            };
+
+            var ex5 = new BackSquat(ExerciseType.BackSquat)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 9, Sets = 1 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 7, Sets = 1 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 5, Sets = 1 },
+                    new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 2 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4),
+                    new(ex5)
+                }
+            };
+
+            return session;
+        }
+
         private static BaseExercise[] GetWarmup1()
         {
             var a = new Accessory(Hyperextension)
@@ -329,6 +402,31 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             var warmup = new BaseExercise[]
             {
                 a, b
+            };
+
+            return warmup;
+        }
+
+        private static BaseExercise[] GetWarmup3()
+        {
+            var a = new Accessory(ReverseHyperextension)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
+            };
+
+            var b = new Accessory(Abs)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var c = new Accessory(BoxJump)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
+            };
+
+            var warmup = new BaseExercise[]
+            {
+                a, b, c
             };
 
             return warmup;
