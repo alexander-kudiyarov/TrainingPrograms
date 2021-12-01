@@ -15,7 +15,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1
+            GetSession2_1, GetSession2_2
         };
 
         public override ProgramType Type => ProgramType.Snatch;
@@ -362,6 +362,62 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             return session;
         }
 
+        private static Session GetSession2_2()
+        {
+            var warmup = GetWarmup4();
+
+            var ex1 = new Snatch(MuscleSquatSnatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 4 }
+                }
+            };
+
+            var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.60, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 1 }
+                }
+            };
+
+            var ex3 = new CleanAndJerk(GoodMorning)
+            {
+                Repeats = new Repeat[]
+                {
+                    // TODO ??
+                    new SingleRepeat { Percent = 0.5, Repeats = 6, Sets = 3 }
+                }
+            };
+
+            var ex4 = new Accessory(BarbellSquatJump)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 4 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
         private static BaseExercise[] GetWarmup1()
         {
             var a = new Accessory(Hyperextension)
@@ -427,6 +483,26 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
             var warmup = new BaseExercise[]
             {
                 a, b, c
+            };
+
+            return warmup;
+        }
+
+        private static BaseExercise[] GetWarmup4()
+        {
+            var a = new Accessory(Hyperextension)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var b = new Accessory(Abs)
+            {
+                Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            };
+
+            var warmup = new BaseExercise[]
+            {
+                a, b
             };
 
             return warmup;
