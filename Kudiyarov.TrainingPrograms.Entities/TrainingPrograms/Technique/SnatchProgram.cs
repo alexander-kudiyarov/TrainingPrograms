@@ -15,7 +15,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
         protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2
+            GetSession2_1, GetSession2_2, GetSession2_3
         };
 
         public override ProgramType Type => ProgramType.Snatch;
@@ -400,6 +400,67 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                 Repeats = new Repeat[]
                 {
                     new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 4 }
+                }
+            };
+
+            var session = new Session
+            {
+                Rounds = new Round[]
+                {
+                    new(2, warmup),
+                    new(ex1),
+                    new(ex2),
+                    new(ex3),
+                    new(ex4)
+                }
+            };
+
+            return session;
+        }
+
+        private static Session GetSession2_3()
+        {
+            var warmup = GetWarmup3();
+
+            var ex1 = new Snatch(HipSnatchBalance)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Weight = 0, Repeats = 8, Sets = 3 }
+                }
+            };
+
+            var ex2 = new MultiSnatch(SnatchPull, ExerciseType.Snatch)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.500, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.600, Repeats = Array(2, 2), Sets = 2 },
+                    new MultiRepeat { Percent = 0.700, Repeats = Array(2, 1), Sets = 2 },
+                    new MultiRepeat { Percent = 0.750, Repeats = Array(2, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.775, Repeats = Array(2, 1), Sets = 1 },
+                    new MultiRepeat { Percent = 0.800, Repeats = Array(2, 1), Sets = 1 }
+                }
+            };
+
+            var ex3 = new MultiSnatch(SnatchPull, HangSnatchAboveKnees)
+            {
+                Repeats = new Repeat[]
+                {
+                    new MultiRepeat { Percent = 0.7, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.8, Repeats = Array(1, 3), Sets = 1 },
+                    new MultiRepeat { Percent = 0.9, Repeats = Array(1, 3), Sets = 3 },
+                    new MultiRepeat { Percent = 1.0, Repeats = Array(1, 3), Sets = 1 }
+                }
+            };
+
+            var ex4 = new Snatch(OverheadSquatPause)
+            {
+                Repeats = new Repeat[]
+                {
+                    new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
+                    new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 3 }
                 }
             };
 
