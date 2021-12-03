@@ -105,7 +105,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
                 // Back Squat
                 ExerciseType.BackSplitSquat => "Back Split Squat",
                 ExerciseType.BackSquat => "Back Squat",
-                ExerciseType.BackSquatWithPause => $"Back Squat {pause}",
+                ExerciseType.BackSquatPause => $"Back Squat {pause}",
                 ExerciseType.BackSquatNarrowFeet => "Back Squat (Narrow Feet)",
                 ExerciseType.BenchBackSquat => "Bench Back Squat",
                 ExerciseType.GakkSquat => "Gakk Squat",

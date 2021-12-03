@@ -404,7 +404,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
                 }
             };
 
-            var ex3 = new BackSquat(BackSquatWithPause)
+            var ex3 = new BackSquat(BackSquatPause)
             {
                 Repeats = new Repeat[]
                 {
@@ -1237,7 +1237,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength
                 }
             };
 
-            var ex4 = new BackSquat(BackSquatWithPause)
+            var ex4 = new BackSquat(BackSquatPause)
             {
                 Repeats = new Repeat[]
                 {

@@ -64,7 +64,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
         // Back Squat
         BackSplitSquat,
         BackSquat,
-        BackSquatWithPause,
+        BackSquatPause,
         BackSquatNarrowFeet,
         BenchBackSquat,
         GakkSquat,
