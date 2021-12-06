@@ -443,7 +443,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique
                 }
             };
 
-            var ex3 = new MultiSnatch(SnatchPull, HangSnatchAboveKnees)
+            var ex3 = new MultiSnatch(SnatchPull, HangSnatchPullAboveKnees)
             {
                 Repeats = new Repeat[]
                 {
