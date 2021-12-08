@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Bll.Interfaces\Kudiyarov.TrainingPrograms.Bll.Interfaces.csproj"/>
-        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Bll\Kudiyarov.TrainingPrograms.Bll.csproj"/>
-        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Dal.Memory\Kudiyarov.TrainingPrograms.Dal.Memory.csproj"/>
+        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Bll.Interfaces\Kudiyarov.TrainingPrograms.Bll.Interfaces.csproj" />
+        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Bll\Kudiyarov.TrainingPrograms.Bll.csproj" />
+        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Dal.Memory\Kudiyarov.TrainingPrograms.Dal.Memory.csproj" />
     </ItemGroup>
 
 </Project>
