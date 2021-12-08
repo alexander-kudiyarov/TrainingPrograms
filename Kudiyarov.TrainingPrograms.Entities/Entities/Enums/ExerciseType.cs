@@ -126,6 +126,7 @@ public enum ExerciseType
     // Jumps
     BarbellSquatJump,
     BoxJump,
+    DeathJump,
 
     // Lunges
     BackLunges,

@@ -165,6 +165,7 @@ public abstract class BaseExercise
             // Jumps
             ExerciseType.BarbellSquatJump => "Barbell Squat Jump",
             ExerciseType.BoxJump => "Box Jump",
+            ExerciseType.DeathJump => "Death Jump",
 
             // Lunges
             ExerciseType.BackLunges => "Back Lunges",
