@@ -2,6 +2,7 @@
 
 public enum Intensity
 {
+    None,
     Light,
     Medium,
     High

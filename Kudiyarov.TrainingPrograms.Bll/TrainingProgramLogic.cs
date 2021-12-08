@@ -87,18 +87,18 @@ public class TrainingProgramLogic : ITrainingProgramLogic
         repeat.Percent = percent;
     }
 
-    private static double GetPercent(int repeats, Intensity? intensity)
+    private static double GetPercent(int repeats, Intensity intensity)
     {
         var reserveRepeats = GetReserveRepeats(intensity);
         var percent = GetPercent(repeats + reserveRepeats);
         return percent;
     }
 
-    private static double GetReserveRepeats(Intensity? intensity)
+    private static double GetReserveRepeats(Intensity intensity)
     {
         var repeats = intensity switch
         {
-            null => 0,
+            Intensity.None => 0,
             Intensity.Light => 5,
             Intensity.Medium => 3.5,
             Intensity.High => 1.5,
