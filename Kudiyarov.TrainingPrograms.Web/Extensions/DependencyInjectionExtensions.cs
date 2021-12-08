@@ -2,11 +2,10 @@
 using Kudiyarov.TrainingPrograms.Bll.Interfaces;
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
 using Kudiyarov.TrainingPrograms.Dal.Memory;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Kudiyarov.TrainingPrograms.Di;
+namespace Kudiyarov.TrainingPrograms.Web.Extensions;
 
-public static class Bootstrapper
+public static class DependencyInjectionExtensions
 {
     public static void AddApplicationServices(this IServiceCollection services)
     {

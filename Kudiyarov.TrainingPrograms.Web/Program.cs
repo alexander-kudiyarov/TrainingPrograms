@@ -1,10 +1,10 @@
-using Kudiyarov.TrainingPrograms.Di;
+using Kudiyarov.TrainingPrograms.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplicationServices();
 builder.Services.AddControllersWithViews();
 builder.Services.AddMemoryCache();
-builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
