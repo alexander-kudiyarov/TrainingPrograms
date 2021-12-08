@@ -1,22 +1,20 @@
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using Kudiyarov.TrainingPrograms.Di;
 
-namespace Kudiyarov.TrainingPrograms.Web;
+var builder = WebApplication.CreateBuilder(args);
 
-public static class Program
+builder.Services.AddControllersWithViews();
+builder.Services.AddMemoryCache();
+builder.Services.AddApplicationServices();
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
 {
-    public static async Task Main(string[] args)
-    {
-        await GetHost(args).RunAsync();
-    }
-
-    private static IHost GetHost(string[] args)
-    {
-        var host = Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
-            .Build();
-
-        return host;
-    }
+    app.UseDeveloperExceptionPage();
 }
+
+app.UseRouting();
+app.UseEndpoints(endpoints =>
+    endpoints.MapControllerRoute(
+        "default",
+        "{controller=Home}/{action=Index}/{id?}"));
