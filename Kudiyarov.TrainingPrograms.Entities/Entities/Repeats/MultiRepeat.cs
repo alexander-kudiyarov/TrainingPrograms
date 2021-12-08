@@ -2,7 +2,7 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
 public class MultiRepeat : Repeat
 {
-    public IReadOnlyList<int> Repeats { get; init; }
+    public IReadOnlyList<int> Repeats { get; init; } = Array.Empty<int>();
 
     public static IReadOnlyList<Repeat> GetMaxoutRepeats()
     {
