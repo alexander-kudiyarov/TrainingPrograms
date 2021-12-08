@@ -8,45 +8,44 @@ using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
 
-namespace Kudiyarov.TrainingPrograms.Dal.Memory
+namespace Kudiyarov.TrainingPrograms.Dal.Memory;
+
+public class ProgramRepository : IProgramRepository
 {
-    public class ProgramRepository : IProgramRepository
+    private readonly IReadOnlyDictionary<ProgramType, BaseTrainingProgram> _repository;
+
+    public ProgramRepository()
     {
-        private readonly IReadOnlyDictionary<ProgramType, BaseTrainingProgram> _repository;
-
-        public ProgramRepository()
+        var programs = new BaseTrainingProgram[]
         {
-            var programs = new BaseTrainingProgram[]
-            {
-                new CompetitionProgram(),
-                new DeadliftProgram(),
-                new LegsProgram(),
-                new MuscleGainProgram(),
-                new PullAndSquatProgram(),
-                new SnatchProgram(),
-                new BodybuildingProgram()
-            };
+            new CompetitionProgram(),
+            new DeadliftProgram(),
+            new LegsProgram(),
+            new MuscleGainProgram(),
+            new PullAndSquatProgram(),
+            new SnatchProgram(),
+            new BodybuildingProgram()
+        };
 
-            _repository = programs.ToDictionary(program => program.Type);
-        }
+        _repository = programs.ToDictionary(program => program.Type);
+    }
 
-        public IEnumerable<BaseTrainingProgram> Get()
-        {
-            var result = _repository.Values;
-            return result;
-        }
+    public IEnumerable<BaseTrainingProgram> Get()
+    {
+        var result = _repository.Values;
+        return result;
+    }
 
-        public BaseTrainingProgram Get(ProgramType type)
-        {
-            var result = _repository[type];
-            return result;
-        }
+    public BaseTrainingProgram Get(ProgramType type)
+    {
+        var result = _repository[type];
+        return result;
+    }
 
-        public Session Get(SessionRequest request)
-        {
-            var program = _repository[request.ProgramType];
-            var session = program.Get(request.Day);
-            return session;
-        }
+    public Session Get(SessionRequest request)
+    {
+        var program = _repository[request.ProgramType];
+        var session = program.Get(request.Day);
+        return session;
     }
 }

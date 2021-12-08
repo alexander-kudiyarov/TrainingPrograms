@@ -1,9 +1,8 @@
-﻿namespace Kudiyarov.TrainingPrograms.Entities.Entities
+﻿namespace Kudiyarov.TrainingPrograms.Entities.Entities;
+
+public enum Intensity
 {
-    public enum Intensity
-    {
-        Light,
-        Medium,
-        High
-    }
+    Light,
+    Medium,
+    High
 }

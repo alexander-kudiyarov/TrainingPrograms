@@ -1,15 +1,14 @@
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch
-{
-    public sealed class MultiSnatch : BaseMultiExercise
-    {
-        public MultiSnatch(params ExerciseType[] types) : base(Stats.Snatch, types)
-        {
-        }
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 
-        public MultiSnatch(double weight, params ExerciseType[] types) : base(weight, types)
-        {
-        }
+public sealed class MultiSnatch : BaseMultiExercise
+{
+    public MultiSnatch(params ExerciseType[] types) : base(Stats.Snatch, types)
+    {
+    }
+
+    public MultiSnatch(double weight, params ExerciseType[] types) : base(weight, types)
+    {
     }
 }

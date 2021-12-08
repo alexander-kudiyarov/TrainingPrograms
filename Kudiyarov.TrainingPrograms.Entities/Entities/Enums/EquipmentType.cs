@@ -1,8 +1,7 @@
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+
+public enum EquipmentType
 {
-    public enum EquipmentType
-    {
-        Barbell,
-        Dumbbell
-    }
+    Barbell,
+    Dumbbell
 }

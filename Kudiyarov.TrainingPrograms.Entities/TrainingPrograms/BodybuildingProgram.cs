@@ -8,1064 +8,1063 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms
+namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+
+public sealed class BodybuildingProgram : BaseTrainingProgram
 {
-    public sealed class BodybuildingProgram : BaseTrainingProgram
+    protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
     {
-        protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
+        GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
+        GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
+        GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
+        GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+    };
+
+    public override ProgramType Type => ProgramType.Bodybuilding;
+    public override string Name => "Bodybuilding Program";
+
+    private static Session GetSession1_1()
+    {
+        var ex1 = new BackSquat(ExerciseType.BackSquat)
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
-            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
-            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
         };
 
-        public override ProgramType Type => ProgramType.Bodybuilding;
-        public override string Name => "Bodybuilding Program";
-
-        private static Session GetSession1_1()
+        var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
         {
-            var ex1 = new BackSquat(ExerciseType.BackSquat)
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
 
-            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(BackSplitSquat)
-            {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Repeats = new[] { 15, 15 }, Sets = 2 }
-                }
-            };
-
-            var ex4 = new Accessory(CalfRise)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 2 }
-                }
-            };
-
-            var ex5 = new Accessory(Press)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex6 = new CleanAndJerk(Stats.PushPress, PushPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
-
-            var ex7 = new Accessory(ReverseFly)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 2 }
-                }
-            };
-
-            var ex8 = new Accessory(Crunch)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 2 }
-                }
-            };
-
-            var ex9 = new Accessory(Plank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(ex6),
-                    new(ex7),
-                    new(ex8),
-                    new(ex9)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession1_2()
+        var ex3 = new Accessory(BackSplitSquat)
         {
-            var ex1A = new Accessory(PushUp)
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10 }
-                }
-            };
+                new MultiRepeat { Repeats = new[] { 15, 15 }, Sets = 2 }
+            }
+        };
 
-            var ex1B = new Accessory(ReversePushUp)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10 }
-                }
-            };
-
-            var ex2 = new Accessory(BenchPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(InclineBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex4 = new Accessory(SeatedBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 25, Sets = 2 }
-                }
-            };
-
-            var ex5 = new Accessory(FrenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex6A = new Accessory(TricepsExtension)
-            {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Repeats = new[] { 20, 20 } }
-                }
-            };
-
-            var ex6B = new Accessory(MilitaryPlank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(2, ex1A, ex1B),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(2, ex6A, ex6B)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession1_3()
+        var ex4 = new Accessory(CalfRise)
         {
-            var ex = new MultiSnatch(PowerSnatch, ExerciseType.Snatch)
+            Repeats = new Repeat[]
             {
-                Repeats = GetRange(0.5, 0.6, new[] { 2, 2 }, 6)
-            };
+                new SingleRepeat { Repeats = 20, Sets = 2 }
+            }
+        };
 
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession1_4()
+        var ex5 = new Accessory(Press)
         {
-            var ex1 = new Deadlift(Stats.SnatchDeadlift, SnatchDeadlift)
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
 
-            var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(LateralPull)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
-
-            var ex4 = new Accessory(BicepsCurl)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex5 = new Accessory(WristFlexion)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 2 }
-                }
-            };
-
-            var ex6 = new Accessory(DiscJuggling)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 30, Sets = 2 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(ex6)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession2_1()
+        var ex6 = new CleanAndJerk(Stats.PushPress, PushPress)
         {
-            var ex1 = new CleanAndJerk(FrontSquat)
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 6, Sets = 3 }
-                }
-            };
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
 
-            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(ForwardLunges)
-            {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Repeats = new[] { 12, 12 }, Sets = 3 }
-                }
-            };
-
-            var ex4 = new Accessory(AsymmetryPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 4 }
-                }
-            };
-
-            var ex5 = new Snatch(SnatchPushPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
-
-            var ex6A = new Accessory(LateralRaise)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
-
-            var ex6B = new Accessory(DiscPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
-
-            var ex7 = new Accessory(ReversePlank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(2, ex6A, ex6B),
-                    new(ex7)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession2_2()
+        var ex7 = new Accessory(ReverseFly)
         {
-            var ex1A = new Accessory(WidePushUp)
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10 }
-                }
-            };
+                new SingleRepeat { Repeats = 20, Sets = 2 }
+            }
+        };
 
-            var ex1B = new Accessory(SeatedBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex2 = new Accessory(BenchPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(AsymmetryBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 4 }
-                }
-            };
-
-            var ex4 = new Accessory(InclineBenchPressNarrowGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex5 = new Accessory(FrenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 4 }
-                }
-            };
-
-            var ex6A = new Accessory(TricepsExtension)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 30 }
-                }
-            };
-
-            var ex6B = new Accessory(ReversePushUp)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(3, ex1A, ex1B),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(2, ex6A, ex6B)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession2_3()
+        var ex8 = new Accessory(Crunch)
         {
-            var ex = new MultiCleanAndJerk(Clean, Jerk)
+            Repeats = new Repeat[]
             {
-                Repeats = GetRange(0.5, 0.6, new[] { 2, 2 }, 6)
-            };
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
 
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession2_4()
+        var ex9 = new Accessory(Plank)
         {
-            var ex1 = new Deadlift(ExerciseType.Deadlift)
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
+                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
+            }
+        };
 
-            var ex2 = new Deadlift(AsymmetryDeadlift)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 4 }
-                }
-            };
-
-            var ex3A = new Accessory(ChinUp)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 6 }
-                }
-            };
-
-            var ex3B = new Accessory(DiscLateralPull)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12 }
-                }
-            };
-
-            var ex4 = new Accessory(BicepsCurlReverseGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex5 = new Accessory(WristRoll)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 1, Sets = 2 }
-                }
-            };
-
-            var ex6A = new Accessory(Plank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
-                }
-            };
-
-            var ex6B = new Accessory(Crunch)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(4, ex3A, ex3B),
-                    new(ex4),
-                    new(ex5),
-                    new(2, ex6A, ex6B)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession3_1()
+        var session = new Session
         {
-            var ex1 = new BackSquat(ExerciseType.BackSquat)
+            Rounds = new Round[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(ex6),
+                new(ex7),
+                new(ex8),
+                new(ex9)
+            }
+        };
 
-            var ex2 = new Accessory(BackLunges)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
+        return session;
+    }
 
-            var ex3 = new Accessory(CalfRise)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 30, Sets = 2 }
-                }
-            };
-
-            var ex4 = new Accessory(SittingPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
-
-            var ex5 = new Accessory(PressWithRubberBand)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex6 = new Accessory(Halo)
-            {
-                Repeats = new Repeat[]
-                {
-                    new MultiRepeat { Repeats = new[] { 10, 10 }, Sets = 3 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(ex6)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession3_2()
+    private static Session GetSession1_2()
+    {
+        var ex1A = new Accessory(PushUp)
         {
-            var ex1A = new Accessory(ReversePushUp)
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
 
-            var ex1B = new Accessory(SeatedBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex2 = new Accessory(BenchPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 6, Sets = 4 }
-                }
-            };
-
-            var ex3 = new Accessory(InclineBenchPressWideGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex4 = new Accessory(AsymmetryBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 4 }
-                }
-            };
-
-            var ex5 = new Accessory(FrenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 3 }
-                }
-            };
-
-            var ex6A = new Accessory(Plank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
-                }
-            };
-
-            var ex6B = new Accessory(ReversePlank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(3, ex1A, ex1B),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(3, ex6A, ex6B)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession3_3()
+        var ex1B = new Accessory(ReversePushUp)
         {
-            var ex1 = new MultiSnatch(ExerciseType.Snatch, OverheadSquat)
+            Repeats = new Repeat[]
             {
-                Repeats = GetRange(0.5, 0.6, new[] { 3, 3 }, 5)
-            };
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
 
-            var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
-            {
-                Repeats = GetRange(0.5, 0.6, new[] { 1, 4 }, 5)
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession3_4()
+        var ex2 = new Accessory(BenchPress)
         {
-            var ex1 = new Snatch(Stats.DeficitMediumGripPull, DeficitMediumGripPull)
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
 
-            var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex3A = new Accessory(PullUp)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8 }
-                }
-            };
-
-            var ex3B = new Accessory(LateralPullReverseGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
-
-            var ex4A = new Accessory(BicepsCurl)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
-
-            var ex4B = new Accessory(DiscHammerCurls)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
-
-            var ex5 = new Accessory(Crunch)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 30, Sets = 2 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(3, ex3A, ex3B),
-                    new(3, ex4A, ex4B),
-                    new(ex5)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession4_1()
+        var ex3 = new Accessory(InclineBenchPress)
         {
-            var ex1 = new CleanAndJerk(Stats.FrontSquat, FrontSquat)
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
 
-            var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 2 }
-                }
-            };
-
-            var ex3 = new Accessory(SingleLegReach)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 4 }
-                }
-            };
-
-            var ex4 = new Accessory(SquatReach)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 2 }
-                }
-            };
-
-            var ex5 = new CleanAndJerk(Stats.PushPress, PushPress)
-            {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 8, Sets = 3 }
-                }
-            };
-
-            var ex6A = new Accessory(AsymmetryPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12 }
-                }
-            };
-
-            var ex6B = new Accessory(DiscPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12 }
-                }
-            };
-
-            var ex7A = new Accessory(DiscFrontRise)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 16 }
-                }
-            };
-
-            var ex7B = new Accessory(DiscRussianTwist)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 16 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(ex4),
-                    new(ex5),
-                    new(4, ex6A, ex6B),
-                    new(2, ex7A, ex7B)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession4_2()
+        var ex4 = new Accessory(SeatedBenchPress)
         {
-            var ex1A = new Accessory(ReversePushUp)
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
+                new SingleRepeat { Repeats = 25, Sets = 2 }
+            }
+        };
 
-            var ex1B = new Accessory(SittingPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex2 = new Accessory(InclineBenchPressWideGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 3 }
-                }
-            };
-
-            var ex3 = new Accessory(InclineBenchPressNarrowGrip)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15, Sets = 3 }
-                }
-            };
-
-            var ex4A = new Accessory(DeclineBenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex4B = new Accessory(DiscBridgePullover)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
-
-            var ex5 = new Accessory(DumbbellFrenchPress)
-            {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20, Sets = 4 }
-                }
-            };
-
-            var ex6 = new Accessory(MilitaryPlank)
-            {
-                Repeats = new Repeat[]
-                {
-                    new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 3 }
-                }
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(2, ex1A, ex1B),
-                    new(ex2),
-                    new(ex3),
-                    new(2, ex4A, ex4B),
-                    new(ex5),
-                    new(ex6)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession4_3()
+        var ex5 = new Accessory(FrenchPress)
         {
-            var ex1 = new MultiCleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
+            Repeats = new Repeat[]
             {
-                Repeats = GetRange(0.5, 0.6, new[] { 3, 3 }, 5)
-            };
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
 
-            var ex2 = new CleanAndJerk(Clean)
-            {
-                Repeats = GetRange(0.5, 0.6, 3, 6)
-            };
-
-            var session = new Session
-            {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2)
-                }
-            };
-
-            return session;
-        }
-
-        private static Session GetSession4_4()
+        var ex6A = new Accessory(TricepsExtension)
         {
-            var ex1 = new Deadlift(ExerciseType.Deadlift)
+            Repeats = new Repeat[]
             {
-                IsWarmupNeeded = true,
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 10, Sets = 3 }
-                }
-            };
+                new MultiRepeat { Repeats = new[] { 20, 20 } }
+            }
+        };
 
-            var ex2 = new Deadlift(AsymmetryDeadlift)
+        var ex6B = new Accessory(MilitaryPlank)
+        {
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 4 }
-                }
-            };
+                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+            }
+        };
 
-            var ex3 = new Accessory(LateralPull)
+        var session = new Session
+        {
+            Rounds = new Round[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 12, Sets = 4 }
-                }
-            };
+                new(2, ex1A, ex1B),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(2, ex6A, ex6B)
+            }
+        };
 
-            var ex4A = new Accessory(BicepsCurl)
+        return session;
+    }
+
+    private static Session GetSession1_3()
+    {
+        var ex = new MultiSnatch(PowerSnatch, ExerciseType.Snatch)
+        {
+            Repeats = GetRange(0.5, 0.6, new[] { 2, 2 }, 6)
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 15 }
-                }
-            };
+                new(ex)
+            }
+        };
 
-            var ex4B = new Accessory(WristFlexion)
+        return session;
+    }
+
+    private static Session GetSession1_4()
+    {
+        var ex1 = new Deadlift(Stats.SnatchDeadlift, SnatchDeadlift)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 20 }
-                }
-            };
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
 
-            var ex5 = new Accessory(DiscJuggling)
+        var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
+        {
+            Repeats = new Repeat[]
             {
-                Repeats = new Repeat[]
-                {
-                    new SingleRepeat { Repeats = 40, Sets = 2 }
-                }
-            };
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
 
-            var session = new Session
+        var ex3 = new Accessory(LateralPull)
+        {
+            Repeats = new Repeat[]
             {
-                Rounds = new Round[]
-                {
-                    new(ex1),
-                    new(ex2),
-                    new(ex3),
-                    new(3, ex4A, ex4B),
-                    new(ex5)
-                }
-            };
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
 
-            return session;
-        }
+        var ex4 = new Accessory(BicepsCurl)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex5 = new Accessory(WristFlexion)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var ex6 = new Accessory(DiscJuggling)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 30, Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_1()
+    {
+        var ex1 = new CleanAndJerk(FrontSquat)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(ForwardLunges)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Repeats = new[] { 12, 12 }, Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(AsymmetryPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 4 }
+            }
+        };
+
+        var ex5 = new Snatch(SnatchPushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
+
+        var ex6A = new Accessory(LateralRaise)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex6B = new Accessory(DiscPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex7 = new Accessory(ReversePlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(2, ex6A, ex6B),
+                new(ex7)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_2()
+    {
+        var ex1A = new Accessory(WidePushUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
+
+        var ex1B = new Accessory(SeatedBenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex2 = new Accessory(BenchPress)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(AsymmetryBenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 4 }
+            }
+        };
+
+        var ex4 = new Accessory(InclineBenchPressNarrowGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex5 = new Accessory(FrenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20, Sets = 4 }
+            }
+        };
+
+        var ex6A = new Accessory(TricepsExtension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 30 }
+            }
+        };
+
+        var ex6B = new Accessory(ReversePushUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, ex1A, ex1B),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(2, ex6A, ex6B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_3()
+    {
+        var ex = new MultiCleanAndJerk(Clean, Jerk)
+        {
+            Repeats = GetRange(0.5, 0.6, new[] { 2, 2 }, 6)
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_4()
+    {
+        var ex1 = new Deadlift(ExerciseType.Deadlift)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex2 = new Deadlift(AsymmetryDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 4 }
+            }
+        };
+
+        var ex3A = new Accessory(ChinUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6 }
+            }
+        };
+
+        var ex3B = new Accessory(DiscLateralPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12 }
+            }
+        };
+
+        var ex4 = new Accessory(BicepsCurlReverseGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex5 = new Accessory(WristRoll)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 1, Sets = 2 }
+            }
+        };
+
+        var ex6A = new Accessory(Plank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
+            }
+        };
+
+        var ex6B = new Accessory(Crunch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(4, ex3A, ex3B),
+                new(ex4),
+                new(ex5),
+                new(2, ex6A, ex6B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_1()
+    {
+        var ex1 = new BackSquat(ExerciseType.BackSquat)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
+
+        var ex2 = new Accessory(BackLunges)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(CalfRise)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 30, Sets = 2 }
+            }
+        };
+
+        var ex4 = new Accessory(SittingPress)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex5 = new Accessory(PressWithRubberBand)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex6 = new Accessory(Halo)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Repeats = new[] { 10, 10 }, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_2()
+    {
+        var ex1A = new Accessory(ReversePushUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex1B = new Accessory(SeatedBenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex2 = new Accessory(BenchPress)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var ex3 = new Accessory(InclineBenchPressWideGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(AsymmetryBenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 4 }
+            }
+        };
+
+        var ex5 = new Accessory(FrenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20, Sets = 3 }
+            }
+        };
+
+        var ex6A = new Accessory(Plank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+            }
+        };
+
+        var ex6B = new Accessory(ReversePlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, ex1A, ex1B),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(3, ex6A, ex6B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_3()
+    {
+        var ex1 = new MultiSnatch(ExerciseType.Snatch, OverheadSquat)
+        {
+            Repeats = GetRange(0.5, 0.6, new[] { 3, 3 }, 5)
+        };
+
+        var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
+        {
+            Repeats = GetRange(0.5, 0.6, new[] { 1, 4 }, 5)
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_4()
+    {
+        var ex1 = new Snatch(Stats.DeficitMediumGripPull, DeficitMediumGripPull)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex3A = new Accessory(PullUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8 }
+            }
+        };
+
+        var ex3B = new Accessory(LateralPullReverseGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex4A = new Accessory(BicepsCurl)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex4B = new Accessory(DiscHammerCurls)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex5 = new Accessory(Crunch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 30, Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(3, ex3A, ex3B),
+                new(3, ex4A, ex4B),
+                new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_1()
+    {
+        var ex1 = new CleanAndJerk(Stats.FrontSquat, FrontSquat)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 2 }
+            }
+        };
+
+        var ex3 = new Accessory(SingleLegReach)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 4 }
+            }
+        };
+
+        var ex4 = new Accessory(SquatReach)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20, Sets = 2 }
+            }
+        };
+
+        var ex5 = new CleanAndJerk(Stats.PushPress, PushPress)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex6A = new Accessory(AsymmetryPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12 }
+            }
+        };
+
+        var ex6B = new Accessory(DiscPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12 }
+            }
+        };
+
+        var ex7A = new Accessory(DiscFrontRise)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 16 }
+            }
+        };
+
+        var ex7B = new Accessory(DiscRussianTwist)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 16 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(4, ex6A, ex6B),
+                new(2, ex7A, ex7B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_2()
+    {
+        var ex1A = new Accessory(ReversePushUp)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex1B = new Accessory(SittingPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex2 = new Accessory(InclineBenchPressWideGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(InclineBenchPressNarrowGrip)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex4A = new Accessory(DeclineBenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex4B = new Accessory(DiscBridgePullover)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex5 = new Accessory(DumbbellFrenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20, Sets = 4 }
+            }
+        };
+
+        var ex6 = new Accessory(MilitaryPlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, ex1A, ex1B),
+                new(ex2),
+                new(ex3),
+                new(2, ex4A, ex4B),
+                new(ex5),
+                new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_3()
+    {
+        var ex1 = new MultiCleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
+        {
+            Repeats = GetRange(0.5, 0.6, new[] { 3, 3 }, 5)
+        };
+
+        var ex2 = new CleanAndJerk(Clean)
+        {
+            Repeats = GetRange(0.5, 0.6, 3, 6)
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_4()
+    {
+        var ex1 = new Deadlift(ExerciseType.Deadlift)
+        {
+            IsWarmupNeeded = true,
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 3 }
+            }
+        };
+
+        var ex2 = new Deadlift(AsymmetryDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 4 }
+            }
+        };
+
+        var ex3 = new Accessory(LateralPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 4 }
+            }
+        };
+
+        var ex4A = new Accessory(BicepsCurl)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex4B = new Accessory(WristFlexion)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+
+        var ex5 = new Accessory(DiscJuggling)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 40, Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(3, ex4A, ex4B),
+                new(ex5)
+            }
+        };
+
+        return session;
     }
 }

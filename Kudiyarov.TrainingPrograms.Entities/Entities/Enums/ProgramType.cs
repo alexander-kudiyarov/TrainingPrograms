@@ -1,13 +1,12 @@
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+
+public enum ProgramType
 {
-    public enum ProgramType
-    {
-        Competition = 1,
-        Deadlift,
-        Legs,
-        PullAndSquat,
-        MuscleGain,
-        Snatch,
-        Bodybuilding
-    }
+    Competition = 1,
+    Deadlift,
+    Legs,
+    PullAndSquat,
+    MuscleGain,
+    Snatch,
+    Bodybuilding
 }

@@ -1,171 +1,170 @@
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+
+public enum ExerciseType
 {
-    public enum ExerciseType
-    {
-        // Snatch
-        Snatch,
-        DeficitMediumGripPull,
-        DeficitPowerSnatch,
-        DeficitSnatch,
-        DeficitSnatchPull,
-        DeficitSnatchPullWith2Stops,
-        HangPowerSnatch,
-        HangSnatchAboveKnees,
-        HangSnatchBelowKnees,
-        HangSnatchPullAboveKnees,
-        HangSnatchPullBelowKnees,
-        HipSnatch,
-        HipSnatchBalance,
-        HipPowerSnatch,
-        MediumGripPull,
-        MuscleSnatch,
-        MuscleSquatSnatch,
-        OverheadSquat,
-        OverheadSquatPause,
-        PowerSnatch,
-        PowerSnatchAboveKnee,
-        SnatchBalance,
-        SnatchFromBlocks,
-        SnatchOnPlates,
-        SnatchPull,
-        SnatchPullFromBlocks,
-        SnatchPullWith2Stops,
-        SnatchPushPress,
-        SotsPress,
+    // Snatch
+    Snatch,
+    DeficitMediumGripPull,
+    DeficitPowerSnatch,
+    DeficitSnatch,
+    DeficitSnatchPull,
+    DeficitSnatchPullWith2Stops,
+    HangPowerSnatch,
+    HangSnatchAboveKnees,
+    HangSnatchBelowKnees,
+    HangSnatchPullAboveKnees,
+    HangSnatchPullBelowKnees,
+    HipSnatch,
+    HipSnatchBalance,
+    HipPowerSnatch,
+    MediumGripPull,
+    MuscleSnatch,
+    MuscleSquatSnatch,
+    OverheadSquat,
+    OverheadSquatPause,
+    PowerSnatch,
+    PowerSnatchAboveKnee,
+    SnatchBalance,
+    SnatchFromBlocks,
+    SnatchOnPlates,
+    SnatchPull,
+    SnatchPullFromBlocks,
+    SnatchPullWith2Stops,
+    SnatchPushPress,
+    SotsPress,
 
-        // Clean
-        Clean,
-        CleanFromBlocks,
-        CleanOnPlates,
-        CleanPull,
-        CleanPullFromBlocks,
-        CleanPullSlowlyDown,
-        CleanPullTillPowerPosition,
-        DeficitClean,
-        DeficitCleanPull,
-        HangCleanBelowKnee,
-        HangCleanPullBelowKnee,
-        HangPowerClean,
-        HipCleanBalance,
-        MuscleClean,
-        MuscleSquatClean,
-        PowerClean,
-        PowerCleanBelowKnee,
+    // Clean
+    Clean,
+    CleanFromBlocks,
+    CleanOnPlates,
+    CleanPull,
+    CleanPullFromBlocks,
+    CleanPullSlowlyDown,
+    CleanPullTillPowerPosition,
+    DeficitClean,
+    DeficitCleanPull,
+    HangCleanBelowKnee,
+    HangCleanPullBelowKnee,
+    HangPowerClean,
+    HipCleanBalance,
+    MuscleClean,
+    MuscleSquatClean,
+    PowerClean,
+    PowerCleanBelowKnee,
 
-        // Jerk
-        Jerk,
-        JerkSupport,
-        PowerJerk,
-        PushPress,
+    // Jerk
+    Jerk,
+    JerkSupport,
+    PowerJerk,
+    PushPress,
 
-        // Front Squat
-        FrontSquat,
+    // Front Squat
+    FrontSquat,
 
-        // Back Squat
-        BackSplitSquat,
-        BackSquat,
-        BackSquatPause,
-        BackSquatNarrowFeet,
-        BenchBackSquat,
-        GakkSquat,
+    // Back Squat
+    BackSplitSquat,
+    BackSquat,
+    BackSquatPause,
+    BackSquatNarrowFeet,
+    BenchBackSquat,
+    GakkSquat,
 
-        // Deadlift
-        Deadlift,
-        AsymmetryDeadlift,
-        DeadliftFromBlocks,
-        DeficitDeadlift,
-        DeficitRomanianDeadlift,
-        RomanianDeadlift,
-        SnatchDeadlift,
+    // Deadlift
+    Deadlift,
+    AsymmetryDeadlift,
+    DeadliftFromBlocks,
+    DeficitDeadlift,
+    DeficitRomanianDeadlift,
+    RomanianDeadlift,
+    SnatchDeadlift,
 
-        // ABS
-        Abs,
-        Crunch,
-        KneesToElbows,
-        LegRaise,
-        MilitaryPlank,
-        Plank,
-        ReversePlank,
-        ToesToBar,
+    // ABS
+    Abs,
+    Crunch,
+    KneesToElbows,
+    LegRaise,
+    MilitaryPlank,
+    Plank,
+    ReversePlank,
+    ToesToBar,
 
-        // Accessory
-        DiscFrontRise,
-        DiscRussianTwist,
-        SingleLegReach,
-        SquatReach,
+    // Accessory
+    DiscFrontRise,
+    DiscRussianTwist,
+    SingleLegReach,
+    SquatReach,
 
-        // Back
-        DiscLateralPull,
-        Hyperextension,
-        LateralPull,
-        LateralPullReverseGrip,
-        ReverseHyperextension,
+    // Back
+    DiscLateralPull,
+    Hyperextension,
+    LateralPull,
+    LateralPullReverseGrip,
+    ReverseHyperextension,
 
-        // Bench Press
-        AsymmetryBenchPress,
-        BenchPress,
-        DeclineBenchPress,
-        DiscBridgePullover,
-        InclineBenchPress,
-        InclineBenchPressNarrowGrip,
-        InclineBenchPressWideGrip,
-        SeatedBenchPress,
+    // Bench Press
+    AsymmetryBenchPress,
+    BenchPress,
+    DeclineBenchPress,
+    DiscBridgePullover,
+    InclineBenchPress,
+    InclineBenchPressNarrowGrip,
+    InclineBenchPressWideGrip,
+    SeatedBenchPress,
 
-        // Biceps
-        BicepsCurl,
-        BicepsCurlReverseGrip,
-        DiscHammerCurls,
+    // Biceps
+    BicepsCurl,
+    BicepsCurlReverseGrip,
+    DiscHammerCurls,
 
-        // Calf
-        CalfRise,
+    // Calf
+    CalfRise,
 
-        // Good Morning
-        GoodMorning,
-        GoodMorningSquat,
+    // Good Morning
+    GoodMorning,
+    GoodMorningSquat,
 
-        // Jumps
-        BarbellSquatJump,
-        BoxJump,
+    // Jumps
+    BarbellSquatJump,
+    BoxJump,
 
-        // Lunges
-        BackLunges,
-        ForwardLunges,
+    // Lunges
+    BackLunges,
+    ForwardLunges,
 
-        // Press
-        AsymmetryPress,
-        DiscPress,
-        Press,
-        PressInSitPosition,
-        PressWithRubberBand,
-        SnatchPressWithRubberBand,
-        SittingPress,
+    // Press
+    AsymmetryPress,
+    DiscPress,
+    Press,
+    PressInSitPosition,
+    PressWithRubberBand,
+    SnatchPressWithRubberBand,
+    SittingPress,
 
-        // Pull Up
-        ChinUp,
-        PullUp,
+    // Pull Up
+    ChinUp,
+    PullUp,
 
-        // Push Up
-        PushUp,
-        ReversePushUp,
-        WidePushUp,
+    // Push Up
+    PushUp,
+    ReversePushUp,
+    WidePushUp,
 
-        // Shoulders
-        ReverseFly,
-        Halo,
-        LateralRaise,
+    // Shoulders
+    ReverseFly,
+    Halo,
+    LateralRaise,
 
-        // Triceps
-        DumbbellFrenchPress,
-        FrenchPress,
-        TricepsExtension,
+    // Triceps
+    DumbbellFrenchPress,
+    FrenchPress,
+    TricepsExtension,
 
-        // Elbows
-        ElbowsRotation,
+    // Elbows
+    ElbowsRotation,
 
-        // Wrists
-        DiscJuggling,
-        WristExtension,
-        WristFlexion,
-        WristRoll
-    }
+    // Wrists
+    DiscJuggling,
+    WristExtension,
+    WristFlexion,
+    WristRoll
 }

@@ -1,11 +1,10 @@
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises
+namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+
+public sealed class MultiAccessory : BaseMultiExercise
 {
-    public sealed class MultiAccessory : BaseMultiExercise
+    public MultiAccessory(params ExerciseType[] types) : base(null, types)
     {
-        public MultiAccessory(params ExerciseType[] types) : base(null, types)
-        {
-        }
     }
 }
