@@ -1,5 +1,4 @@
-﻿using System;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
+﻿using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;

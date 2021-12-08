@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+﻿using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 

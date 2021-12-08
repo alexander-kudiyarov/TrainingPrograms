@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Kudiyarov.Packages.DoubleExtensions;
 using Kudiyarov.TrainingPrograms.Bll.Interfaces;
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;

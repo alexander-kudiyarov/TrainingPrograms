@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
+﻿using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;

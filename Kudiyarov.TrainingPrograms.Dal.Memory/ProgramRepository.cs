@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
 using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;

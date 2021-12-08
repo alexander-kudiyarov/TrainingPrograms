@@ -1,4 +1,3 @@
-using System;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Requests;

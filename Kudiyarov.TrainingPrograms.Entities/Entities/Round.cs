@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 
 namespace Kudiyarov.TrainingPrograms.Entities.Entities;

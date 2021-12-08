@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 

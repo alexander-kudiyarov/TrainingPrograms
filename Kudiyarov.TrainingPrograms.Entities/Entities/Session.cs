@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Kudiyarov.TrainingPrograms.Entities.Entities;
 
 public class Session

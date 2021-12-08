@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
 public class SingleRepeat : Repeat
