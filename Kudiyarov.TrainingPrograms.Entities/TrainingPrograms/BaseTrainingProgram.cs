@@ -6,10 +6,13 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
 public abstract class BaseTrainingProgram
 {
-    protected abstract IReadOnlyList<Func<Session>> Sessions { get; }
+    private IReadOnlyList<Func<Session>>? _sessions;
+    private IReadOnlyList<Func<Session>> Sessions => _sessions ??= GetSessions();
+
     public abstract ProgramType Type { get; }
     public abstract string Name { get; }
     public int Days => Sessions.Count;
+    protected abstract IReadOnlyList<Func<Session>> GetSessions();
 
     public Session Get(int day)
     {

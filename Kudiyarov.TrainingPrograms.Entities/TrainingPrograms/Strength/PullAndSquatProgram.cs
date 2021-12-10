@@ -10,18 +10,21 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 
 public sealed class PullAndSquatProgram : BaseTrainingProgram
 {
-    protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
-    {
-        GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-        GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-        GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-        GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-        GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
-        GetSession6_1, GetEmptySession, GetSession6_3, GetSession6_4, GetSession6_5
-    };
-
     public override ProgramType Type => ProgramType.PullAndSquat;
     public override string Name => "Pull and Squat Program";
+
+    protected override IReadOnlyList<Func<Session>> GetSessions()
+    {
+        return new Func<Session>[]
+        {
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
+            GetSession5_1, GetSession5_2, GetSession5_3, GetSession5_4, GetSession5_5,
+            GetSession6_1, GetEmptySession, GetSession6_3, GetSession6_4, GetSession6_5
+        };
+    }
 
     private static Session GetSession1_1()
     {

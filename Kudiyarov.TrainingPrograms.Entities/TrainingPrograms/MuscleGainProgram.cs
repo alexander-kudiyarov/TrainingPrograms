@@ -9,13 +9,16 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
 public sealed class MuscleGainProgram : BaseTrainingProgram
 {
-    protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
-    {
-        GetSession1_1
-    };
-
     public override ProgramType Type => ProgramType.MuscleGain;
     public override string Name => "Muscle Gain";
+
+    protected override IReadOnlyList<Func<Session>> GetSessions()
+    {
+        return new Func<Session>[]
+        {
+            GetSession1_1
+        };
+    }
 
     private static Session GetSession1_1()
     {

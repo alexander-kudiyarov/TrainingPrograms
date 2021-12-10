@@ -10,15 +10,18 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
 
 public sealed class SnatchProgram : BaseTrainingProgram
 {
-    protected override IReadOnlyList<Func<Session>> Sessions { get; } = new Func<Session>[]
-    {
-        GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-        GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-        GetSession3_1
-    };
-
     public override ProgramType Type => ProgramType.Snatch;
     public override string Name => "Snatch Program";
+
+    protected override IReadOnlyList<Func<Session>> GetSessions()
+    {
+        return new Func<Session>[]
+        {
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
+            GetSession3_1
+        };
+    }
 
     private static Session GetSession1_1()
     {
