@@ -30,12 +30,7 @@ public abstract class BaseTrainingProgram
 
     protected static Session GetEmptySession()
     {
-        var session = new Session
-        {
-            Rounds = System.Array.Empty<Round>()
-        };
-
-        return session;
+        return new Session();
     }
 
     protected static IReadOnlyList<Repeat> GetRange(double start, double stop, int repeats, int sets)
