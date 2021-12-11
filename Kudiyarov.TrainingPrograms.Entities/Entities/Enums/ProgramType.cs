@@ -1,8 +1,8 @@
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-public enum ProgramType
+public enum ProgramType : byte
 {
-    Competition = 1,
+    Competition,
     Deadlift,
     Legs,
     PullAndSquat,

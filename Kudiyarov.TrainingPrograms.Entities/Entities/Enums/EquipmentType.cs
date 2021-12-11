@@ -1,6 +1,6 @@
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 
-public enum EquipmentType
+public enum EquipmentType : byte
 {
     Barbell,
     Dumbbell

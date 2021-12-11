@@ -1,6 +1,6 @@
 ﻿namespace Kudiyarov.TrainingPrograms.Entities.Entities;
 
-public enum Intensity
+public enum Intensity : byte
 {
     None,
     Light,
