@@ -19,7 +19,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1
+            GetSession3_1, GetSession3_2
         };
     }
 
@@ -684,6 +684,48 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex4),
                 new(ex5),
                 new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_2()
+    {
+        var warmup = GetWarmup2();
+
+        var ex1 = new MultiCleanAndJerk(Clean, Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 8 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(ChickenJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 

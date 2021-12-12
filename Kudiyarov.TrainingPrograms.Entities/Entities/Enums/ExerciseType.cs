@@ -126,6 +126,7 @@ public enum ExerciseType : byte
     // Jumps
     BarbellSquatJump,
     BoxJump,
+    ChickenJump,
     DeathJump,
 
     // Lunges
