@@ -19,7 +19,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1, GetSession3_2
+            GetSession3_1, GetSession3_2, GetSession3_3
         };
     }
 
@@ -726,6 +726,64 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_3()
+    {
+        var warmup = GetWarmup1();
+
+        var ex1 = new MultiSnatch(HipSnatchBalance, SotsPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(DeficitPowerSnatch, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(3, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(3, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(2, 1), Sets = 3 }
+            }
+        };
+
+        var ex3 = new Snatch(DeficitSnatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.750, Repeats = 2, Sets = 3 },
+                new SingleRepeat { Percent = 0.800, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.825, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.850, Repeats = 1, Sets = 1 }
+            }
+        };
+
+        var ex4 = new Snatch(DeficitSnatchPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 4, Sets = 2 },
+                new SingleRepeat { Percent = 0.9, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
