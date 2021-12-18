@@ -149,7 +149,10 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
     private static void RoundWeight(BaseExercise exercise, Repeat repeat)
     {
-        if (repeat.Weight == null) return;
+        if (repeat.Weight == null)
+        {
+            return;
+        }
 
         var equipment = exercise switch
         {
