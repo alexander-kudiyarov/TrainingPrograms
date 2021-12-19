@@ -677,7 +677,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             Rounds = new Round[]
             {
-                new(2, warmup),
+                new(3, warmup),
                 new(ex1),
                 new(ex2),
                 new(ex3),
@@ -722,7 +722,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             Rounds = new Round[]
             {
-                new(2, warmup),
+                new(3, warmup),
                 new(ex1),
                 new(ex2),
                 new(ex3)
@@ -779,7 +779,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             Rounds = new Round[]
             {
-                new(2, warmup),
+                new(3, warmup),
                 new(ex1),
                 new(ex2),
                 new(ex3),
@@ -831,7 +831,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             Rounds = new Round[]
             {
-                new(2, warmup),
+                new(3, warmup),
                 new(ex1),
                 new(ex2),
                 new(ex3)
