@@ -19,7 +19,8 @@ public sealed class SnatchProgram : BaseTrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
+            GetSession4_1
         };
     }
 
@@ -926,6 +927,82 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return session;
     }
 
+    private static Session GetSession4_1()
+    {
+        var warmup = GetWarmup5();
+
+        var ex1 = new MultiSnatch(MuscleSnatch, SnatchBalance, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = 0, Repeats = Array(3, 3, 3), Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(PowerSnatch, ExerciseType.Snatch)
+        {
+            Repeats = GetRange(0.5, 0.6, Array(2, 1), 3)
+        };
+
+        var ex3 = new Snatch(ExerciseType.Snatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.70, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.75, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.80, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.85, Repeats = 1, Sets = 4 }
+            }
+        };
+
+        var ex4 = new MultiSnatch(SnatchPullTillKnee, SnatchPullTillPower, SnatchPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.7, Repeats = Array(1, 1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.8, Repeats = Array(1, 1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.9, Repeats = Array(1, 1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 1.0, Repeats = Array(1, 1, 1), Sets = 3 }
+            }
+        };
+
+        var ex5 = new BackSquat(ExerciseType.BackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.60, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.80, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.85, Repeats = 3, Sets = 2 }
+            }
+        };
+
+        var ex6 = new Accessory(SnatchPressWithRubberBand)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(ex6)
+            }
+        };
+
+        return session;
+    }
+
     private static BaseExercise[] GetWarmup1()
     {
         var a = new Accessory(Hyperextension)
@@ -1011,6 +1088,31 @@ public sealed class SnatchProgram : BaseTrainingProgram
         var warmup = new BaseExercise[]
         {
             a, b
+        };
+
+        return warmup;
+    }
+
+    private static BaseExercise[] GetWarmup5()
+    {
+        var a = new Accessory(ReverseHyperextension)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+        };
+
+        var c = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
         };
 
         return warmup;

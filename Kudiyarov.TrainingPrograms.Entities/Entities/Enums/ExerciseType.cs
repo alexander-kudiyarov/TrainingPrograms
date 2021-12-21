@@ -29,6 +29,8 @@ public enum ExerciseType : byte
     SnatchOnPlates,
     SnatchPull,
     SnatchPullFromBlocks,
+    SnatchPullTillKnee,
+    SnatchPullTillPower,
     SnatchPullWith2Stops,
     SnatchPushPress,
     SotsPress,
