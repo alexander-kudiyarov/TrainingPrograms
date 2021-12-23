@@ -20,7 +20,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1
+            GetSession4_1, GetSession4_2
         };
     }
 
@@ -997,6 +997,42 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex4),
                 new(ex5),
                 new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_2()
+    {
+        var warmup = GetWarmup4();
+
+        var ex1 = new Snatch(MuscleSquatSnatch)
+        {
+            Repeats = GetRange(0.5, 0.6, 2, 3)
+        };
+
+        var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
+        {
+            Repeats = GetRange(0.5, 0.6, Array(2, 1), 3)
+        };
+
+        var ex3 = new Accessory(BarbellSquatJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 
