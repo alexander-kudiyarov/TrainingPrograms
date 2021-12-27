@@ -20,7 +20,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2
+            GetSession4_1, GetSession4_2, GetSession4_3
         };
     }
 
@@ -1033,6 +1033,67 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_3()
+    {
+        var warmup = GetWarmup2(15, 15, 5);
+
+        var ex1 = new Snatch(HipSnatchBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(ExerciseType.Snatch, HangSnatchBelowKnees, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(2, 1, 2), Sets = 3 }
+            }
+        };
+
+        var ex3 = new MultiSnatch(ExerciseType.Snatch, HangSnatchBelowKnees)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.500, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.600, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.700, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.800, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.850, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.875, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.900, Repeats = Array(1, 1), Sets = 1 }
+            }
+        };
+
+        var ex4 = new MultiSnatch(SnatchPull, HangSnatchPullBelowKnees)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.90, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 1.00, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 1.05, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
