@@ -26,7 +26,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_1()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new MultiSnatch(PowerSnatch, OverheadSquat)
         {
@@ -83,7 +83,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_2()
     {
-        var warmup = GetWarmup2();
+        var warmup = GetWarmup4(15, 15);
 
         var ex1 = new Snatch(MuscleSnatch)
         {
@@ -127,7 +127,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_3()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new Snatch(SnatchOnPlates)
         {
@@ -184,7 +184,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_4()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new Accessory(ElbowsRotation)
         {
@@ -240,7 +240,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_5()
     {
-        var warmup = GetWarmup2();
+        var warmup = GetWarmup4(15, 15);
 
         var ex1 = new MultiAccessory(SnatchBalance, OverheadSquat)
         {
@@ -295,7 +295,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_1()
     {
-        var warmup = GetWarmup3();
+        var warmup = GetWarmup2(10, 15, 5);
 
         var ex1 = new MultiSnatch(MuscleSnatch, SnatchBalance, OverheadSquat)
         {
@@ -367,7 +367,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_2()
     {
-        var warmup = GetWarmup4();
+        var warmup = GetWarmup3(15, 15);
 
         var ex1 = new Snatch(MuscleSquatSnatch)
         {
@@ -423,7 +423,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_3()
     {
-        var warmup = GetWarmup3();
+        var warmup = GetWarmup2(10, 15, 5);
 
         var ex1 = new Snatch(HipSnatchBalance)
         {
@@ -484,7 +484,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_4()
     {
-        var warmup = GetWarmup3();
+        var warmup = GetWarmup2(10, 15, 5);
 
         var ex1 = new Accessory(ElbowsRotation)
         {
@@ -534,7 +534,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_5()
     {
-        var warmup = GetWarmup4();
+        var warmup = GetWarmup3(15, 15);
 
         var ex1 = new Snatch(SnatchPull)
         {
@@ -608,7 +608,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_1()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new MultiSnatch(MuscleSnatch, SnatchBalance, OverheadSquat)
         {
@@ -693,7 +693,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_2()
     {
-        var warmup = GetWarmup2();
+        var warmup = GetWarmup4(15, 15);
 
         var ex1 = new MultiCleanAndJerk(Clean, Jerk)
         {
@@ -735,7 +735,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_3()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new MultiSnatch(HipSnatchBalance, SotsPress)
         {
@@ -793,7 +793,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_4()
     {
-        var warmup = GetWarmup1();
+        var warmup = GetWarmup1(10, 15, 5);
 
         var ex1 = new CleanAndJerk(FrontSquat)
         {
@@ -844,7 +844,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_5()
     {
-        var warmup = GetWarmup2();
+        var warmup = GetWarmup4(15, 15);
 
         var ex1 = new MultiSnatch(SnatchBalance, OverheadSquat)
         {
@@ -929,7 +929,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession4_1()
     {
-        var warmup = GetWarmup5();
+        var warmup = GetWarmup2(15, 15, 5);
 
         var ex1 = new MultiSnatch(MuscleSnatch, SnatchBalance, OverheadSquat)
         {
@@ -1005,7 +1005,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession4_2()
     {
-        var warmup = GetWarmup4();
+        var warmup = GetWarmup3(15, 15);
 
         var ex1 = new Snatch(MuscleSquatSnatch)
         {
@@ -1039,21 +1039,21 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return session;
     }
 
-    private static BaseExercise[] GetWarmup1()
+    private static BaseExercise[] GetWarmup1(int hyperextension, int abs, int boxJump)
     {
         var a = new Accessory(Hyperextension)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = hyperextension } }
         };
 
         var b = new Accessory(Abs)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
         };
 
         var c = new Accessory(BoxJump)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = boxJump } }
         };
 
         var warmup = new BaseExercise[]
@@ -1064,16 +1064,41 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return warmup;
     }
 
-    private static BaseExercise[] GetWarmup2()
+    private static BaseExercise[] GetWarmup2(int reverseHyperextension, int abs, int boxJump)
     {
         var a = new Accessory(ReverseHyperextension)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = reverseHyperextension } }
         };
 
         var b = new Accessory(Abs)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
+        };
+
+        var c = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = boxJump } }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        return warmup;
+    }
+
+    private static BaseExercise[] GetWarmup3(int hyperextension, int abs)
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = hyperextension } }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
         };
 
         var warmup = new BaseExercise[]
@@ -1084,71 +1109,21 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return warmup;
     }
 
-    private static BaseExercise[] GetWarmup3()
+    private static BaseExercise[] GetWarmup4(int reverseHyperextension, int abs)
     {
         var a = new Accessory(ReverseHyperextension)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 10 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = reverseHyperextension } }
         };
 
         var b = new Accessory(Abs)
         {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-        };
-
-        var c = new Accessory(BoxJump)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
-        };
-
-        var warmup = new BaseExercise[]
-        {
-            a, b, c
-        };
-
-        return warmup;
-    }
-
-    private static BaseExercise[] GetWarmup4()
-    {
-        var a = new Accessory(Hyperextension)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-        };
-
-        var b = new Accessory(Abs)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
         };
 
         var warmup = new BaseExercise[]
         {
             a, b
-        };
-
-        return warmup;
-    }
-
-    private static BaseExercise[] GetWarmup5()
-    {
-        var a = new Accessory(ReverseHyperextension)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-        };
-
-        var b = new Accessory(Abs)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 15 } }
-        };
-
-        var c = new Accessory(BoxJump)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = 5 } }
-        };
-
-        var warmup = new BaseExercise[]
-        {
-            a, b, c
         };
 
         return warmup;
