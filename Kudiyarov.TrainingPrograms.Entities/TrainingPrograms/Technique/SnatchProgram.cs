@@ -20,7 +20,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
         };
     }
 
@@ -1094,6 +1094,53 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_4()
+    {
+        var warmup = GetWarmup2(15, 15, 5);
+
+        var ex1 = new MultiCleanAndJerk(MuscleClean, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 3 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(PowerClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 3 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 4 },
+                new SingleRepeat { Percent = 0.8, Repeats = 4 },
+                new SingleRepeat { Percent = 0.9, Repeats = 4 },
+                new SingleRepeat { Percent = 1.0, Repeats = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 
