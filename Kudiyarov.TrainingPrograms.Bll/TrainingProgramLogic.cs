@@ -110,7 +110,10 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
     private static double GetPercent(double repeats)
     {
-        var result = 1 - repeats * 0.025;
+        var result = repeats.RelativeEquals(1)
+            ? 1
+            : 1 - repeats * 0.025;
+
         return result;
     }
 
