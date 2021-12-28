@@ -70,7 +70,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
     private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
     {
-        if (repeat.Weight is not null || repeat.Percent is not null || exercise.Weight is null)
+        if (repeat.Weight != null || repeat.Percent != null || exercise.Weight == null)
         {
             return;
         }
