@@ -1,6 +1,8 @@
+using NodaTime;
+
 namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
 public class StaticRepeat : Repeat
 {
-    public TimeSpan Time { get; init; }
+    public Duration Time { get; init; }
 }

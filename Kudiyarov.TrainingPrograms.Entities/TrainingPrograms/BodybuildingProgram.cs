@@ -4,6 +4,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
@@ -96,7 +97,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
+                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 2 }
             }
         };
 
@@ -182,7 +183,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+                new StaticRepeat { Time = Duration.FromSeconds(30) }
             }
         };
 
@@ -350,7 +351,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 2 }
+                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 2 }
             }
         };
 
@@ -527,7 +528,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(60) }
+                new StaticRepeat { Time = Duration.FromSeconds(60) }
             }
         };
 
@@ -678,7 +679,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+                new StaticRepeat { Time = Duration.FromSeconds(30) }
             }
         };
 
@@ -686,7 +687,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(30) }
+                new StaticRepeat { Time = Duration.FromSeconds(30) }
             }
         };
 
@@ -959,7 +960,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = TimeSpan.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 

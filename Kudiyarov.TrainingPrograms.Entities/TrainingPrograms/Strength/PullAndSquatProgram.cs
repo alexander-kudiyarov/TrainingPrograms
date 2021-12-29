@@ -4,6 +4,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
@@ -547,9 +548,9 @@ public sealed class PullAndSquatProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 0.80, Time = TimeSpan.FromSeconds(6) },
-                new StaticRepeat { Percent = 1.00, Time = TimeSpan.FromSeconds(6) },
-                new StaticRepeat { Percent = 1.05, Time = TimeSpan.FromSeconds(6), Sets = 3 }
+                new StaticRepeat { Percent = 0.80, Time = Duration.FromSeconds(6) },
+                new StaticRepeat { Percent = 1.00, Time = Duration.FromSeconds(6) },
+                new StaticRepeat { Percent = 1.05, Time = Duration.FromSeconds(6), Sets = 3 }
             }
         };
 
@@ -925,7 +926,7 @@ public sealed class PullAndSquatProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1.1, Time = TimeSpan.FromSeconds(6), Sets = 4 }
+                new StaticRepeat { Percent = 1.1, Time = Duration.FromSeconds(6), Sets = 4 }
             }
         };
 
@@ -1138,8 +1139,8 @@ public sealed class PullAndSquatProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1.10, Time = TimeSpan.FromSeconds(6), Sets = 2 },
-                new StaticRepeat { Percent = 1.15, Time = TimeSpan.FromSeconds(6), Sets = 2 }
+                new StaticRepeat { Percent = 1.10, Time = Duration.FromSeconds(6), Sets = 2 },
+                new StaticRepeat { Percent = 1.15, Time = Duration.FromSeconds(6), Sets = 2 }
             }
         };
 
@@ -1546,9 +1547,9 @@ public sealed class PullAndSquatProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1.0, Time = TimeSpan.FromSeconds(4) },
-                new StaticRepeat { Percent = 1.1, Time = TimeSpan.FromSeconds(4) },
-                new StaticRepeat { Percent = 1.2, Time = TimeSpan.FromSeconds(4) }
+                new StaticRepeat { Percent = 1.0, Time = Duration.FromSeconds(4) },
+                new StaticRepeat { Percent = 1.1, Time = Duration.FromSeconds(4) },
+                new StaticRepeat { Percent = 1.2, Time = Duration.FromSeconds(4) }
             }
         };
 
