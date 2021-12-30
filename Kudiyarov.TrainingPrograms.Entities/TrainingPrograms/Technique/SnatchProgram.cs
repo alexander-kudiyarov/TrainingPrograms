@@ -20,7 +20,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5
         };
     }
 
@@ -1141,6 +1141,58 @@ public sealed class SnatchProgram : BaseTrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_5()
+    {
+        var warmup = GetWarmup3(15, 15);
+
+        var ex1 = new Snatch(SnatchPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var ex2 = new Snatch(DeficitPowerSnatch)
+        {
+            Repeats = GetRange(0.5, 0.6, 3, 3)
+        };
+
+        var ex3 = new MultiSnatch(SnatchPull, ExerciseType.Snatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex4 = new Accessory(ChickenJump)
+        {
+            Repeats = new[]
+            {
+                new SingleRepeat { Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
