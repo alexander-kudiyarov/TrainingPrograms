@@ -6,8 +6,14 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
 public abstract class BaseTrainingProgram
 {
-    private IReadOnlyList<Func<Session>>? _sessions;
-    private IReadOnlyList<Func<Session>> Sessions => _sessions ??= GetSessions();
+    private readonly Lazy<IReadOnlyList<Func<Session>>> _sessions;
+
+    protected BaseTrainingProgram()
+    {
+        _sessions = new Lazy<IReadOnlyList<Func<Session>>>(GetSessions);
+    }
+
+    private IReadOnlyList<Func<Session>> Sessions => _sessions.Value;
 
     public abstract ProgramType Type { get; }
     public abstract string Name { get; }
