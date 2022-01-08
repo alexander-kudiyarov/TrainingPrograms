@@ -1269,6 +1269,26 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return session;
     }
 
+    private static BaseExercise[] GetWarmup1(int hyperextension, int abs)
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = hyperextension } }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b
+        };
+
+        return warmup;
+    }
+    
     private static BaseExercise[] GetWarmup1(int hyperextension, int abs, int boxJump)
     {
         var a = new Accessory(Hyperextension)
@@ -1294,6 +1314,26 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return warmup;
     }
 
+    private static BaseExercise[] GetWarmup2(int reverseHyperextension, int abs)
+    {
+        var a = new Accessory(ReverseHyperextension)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = reverseHyperextension } }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b
+        };
+
+        return warmup;
+    }
+    
     private static BaseExercise[] GetWarmup2(int reverseHyperextension, int abs, int boxJump)
     {
         var a = new Accessory(ReverseHyperextension)
@@ -1314,46 +1354,6 @@ public sealed class SnatchProgram : BaseTrainingProgram
         var warmup = new BaseExercise[]
         {
             a, b, c
-        };
-
-        return warmup;
-    }
-
-    private static BaseExercise[] GetWarmup1(int hyperextension, int abs)
-    {
-        var a = new Accessory(Hyperextension)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = hyperextension } }
-        };
-
-        var b = new Accessory(Abs)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
-        };
-
-        var warmup = new BaseExercise[]
-        {
-            a, b
-        };
-
-        return warmup;
-    }
-
-    private static BaseExercise[] GetWarmup2(int reverseHyperextension, int abs)
-    {
-        var a = new Accessory(ReverseHyperextension)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = reverseHyperextension } }
-        };
-
-        var b = new Accessory(Abs)
-        {
-            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
-        };
-
-        var warmup = new BaseExercise[]
-        {
-            a, b
         };
 
         return warmup;
