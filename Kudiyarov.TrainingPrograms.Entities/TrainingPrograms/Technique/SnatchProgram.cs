@@ -84,7 +84,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_2()
     {
-        var warmup = GetWarmup4(15, 15);
+        var warmup = GetWarmup2(15, 15);
 
         var ex1 = new Snatch(MuscleSnatch)
         {
@@ -241,7 +241,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession1_5()
     {
-        var warmup = GetWarmup4(15, 15);
+        var warmup = GetWarmup2(15, 15);
 
         var ex1 = new MultiAccessory(SnatchBalance, OverheadSquat)
         {
@@ -368,7 +368,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_2()
     {
-        var warmup = GetWarmup3(15, 15);
+        var warmup = GetWarmup1(15, 15);
 
         var ex1 = new Snatch(MuscleSquatSnatch)
         {
@@ -535,7 +535,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession2_5()
     {
-        var warmup = GetWarmup3(15, 15);
+        var warmup = GetWarmup1(15, 15);
 
         var ex1 = new Snatch(SnatchPull)
         {
@@ -694,7 +694,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_2()
     {
-        var warmup = GetWarmup4(15, 15);
+        var warmup = GetWarmup2(15, 15);
 
         var ex1 = new MultiCleanAndJerk(Clean, Jerk)
         {
@@ -845,7 +845,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession3_5()
     {
-        var warmup = GetWarmup4(15, 15);
+        var warmup = GetWarmup2(15, 15);
 
         var ex1 = new MultiSnatch(SnatchBalance, OverheadSquat)
         {
@@ -1006,7 +1006,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession4_2()
     {
-        var warmup = GetWarmup3(15, 15);
+        var warmup = GetWarmup1(15, 15);
 
         var ex1 = new Snatch(MuscleSquatSnatch)
         {
@@ -1150,7 +1150,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession4_5()
     {
-        var warmup = GetWarmup3(15, 15);
+        var warmup = GetWarmup1(15, 15);
 
         var ex1 = new Snatch(SnatchPull)
         {
@@ -1202,7 +1202,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession5_1()
     {
-        var warmup = GetWarmup3(10, 15);
+        var warmup = GetWarmup1(10, 15);
 
         var ex1 = new Snatch(SnatchPull)
         {
@@ -1319,7 +1319,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return warmup;
     }
 
-    private static BaseExercise[] GetWarmup3(int hyperextension, int abs)
+    private static BaseExercise[] GetWarmup1(int hyperextension, int abs)
     {
         var a = new Accessory(Hyperextension)
         {
@@ -1339,7 +1339,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
         return warmup;
     }
 
-    private static BaseExercise[] GetWarmup4(int reverseHyperextension, int abs)
+    private static BaseExercise[] GetWarmup2(int reverseHyperextension, int abs)
     {
         var a = new Accessory(ReverseHyperextension)
         {
