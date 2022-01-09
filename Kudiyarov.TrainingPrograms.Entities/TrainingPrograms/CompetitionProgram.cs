@@ -15,7 +15,7 @@ public sealed partial class CompetitionProgram : BaseTrainingProgram
 
     protected override IReadOnlyList<Func<Session>> GetSessions()
     {
-        return new Func<Session>[]
+        var sessions = new[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
@@ -27,11 +27,13 @@ public sealed partial class CompetitionProgram : BaseTrainingProgram
             GetSession8_1, GetSession8_2, GetSession8_3, GetSession8_4, GetSession8_5,
             GetSession9_1, GetSession9_2, GetSession9_3, GetSession9_4, GetSession9_5,
             GetSession10_1, GetSession10_2, GetSession10_3, GetSession10_4, GetSession10_5,
-            GetSession11_1, GetEmptySession, GetSession11_3, GetSession11_4, GetSession11_5,
-            GetSession12_1, GetEmptySession, GetSession12_3, GetSession12_4, GetSession12_5,
-            GetSession13_1, GetEmptySession, GetSession13_3, GetSession13_4, GetEmptySession,
-            GetSession14_1, GetEmptySession, GetSession14_3, GetEmptySession, GetSession14_5
+            GetSession11_1, EmptySession, GetSession11_3, GetSession11_4, GetSession11_5,
+            GetSession12_1, EmptySession, GetSession12_3, GetSession12_4, GetSession12_5,
+            GetSession13_1, EmptySession, GetSession13_3, GetSession13_4, EmptySession,
+            GetSession14_1, EmptySession, GetSession14_3, EmptySession, GetSession14_5
         };
+
+        return sessions;
     }
 
     private static BaseExercise[] GetSnatchWarmUp1()

@@ -16,7 +16,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
 
     protected override IReadOnlyList<Func<Session>> GetSessions()
     {
-        return new Func<Session>[]
+        var sessions = new[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3,
             GetSession2_1, GetSession2_2, GetSession2_3,
@@ -29,8 +29,10 @@ public sealed class DeadliftProgram : BaseTrainingProgram
             GetSession9_1, GetSession9_2, GetSession9_3,
             GetSession10_1, GetSession10_2, GetSession10_3,
             GetSession11_1, GetSession11_2, GetSession11_3,
-            GetSession12_1, GetEmptySession, GetSession12_3
+            GetSession12_1, EmptySession, GetSession12_3
         };
+
+        return sessions;
     }
 
     private static Session GetSession1_1()

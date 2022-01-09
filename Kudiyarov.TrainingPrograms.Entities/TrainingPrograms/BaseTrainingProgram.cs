@@ -6,7 +6,13 @@ namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
 public abstract class BaseTrainingProgram
 {
+    protected static readonly Func<Session> EmptySession;
     private readonly Lazy<IReadOnlyList<Func<Session>>> _sessions;
+
+    static BaseTrainingProgram()
+    {
+        EmptySession = GetEmptySession;
+    }
 
     protected BaseTrainingProgram()
     {
@@ -34,7 +40,7 @@ public abstract class BaseTrainingProgram
         return value;
     }
 
-    protected static Session GetEmptySession()
+    private static Session GetEmptySession()
     {
         return new Session();
     }
