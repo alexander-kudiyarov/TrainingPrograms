@@ -262,7 +262,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60) }
+                new StaticRepeat { Duration = Duration.FromSeconds(60) }
             }
         };
 
@@ -314,7 +314,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1.1, Time = Duration.FromSeconds(6), Sets = 2 }
+                new StaticRepeat { Percent = 1.1, Duration = Duration.FromSeconds(6), Sets = 2 }
             }
         };
 

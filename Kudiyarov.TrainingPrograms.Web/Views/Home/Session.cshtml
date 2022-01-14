@@ -24,7 +24,7 @@
                             {
                                 SingleRepeat singleRepeat => singleRepeat.Repeats.ToString(),
                                 MultiRepeat multiRepeat => string.Join("+", multiRepeat.Repeats),
-                                StaticRepeat staticRepeat => $"{staticRepeat.Time.TotalSeconds.ToString(CultureInfo.CurrentCulture)} sec",
+                                StaticRepeat staticRepeat => $"{staticRepeat.Duration.TotalSeconds.ToString(CultureInfo.CurrentCulture)} sec",
                                 _ => throw new ArgumentOutOfRangeException()
                                 };
 

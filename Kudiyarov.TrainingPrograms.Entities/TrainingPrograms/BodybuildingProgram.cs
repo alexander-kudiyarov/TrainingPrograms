@@ -97,7 +97,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 2 }
             }
         };
 
@@ -183,7 +183,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = Duration.FromSeconds(30) }
             }
         };
 
@@ -351,7 +351,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 2 }
             }
         };
 
@@ -528,7 +528,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60) }
+                new StaticRepeat { Duration = Duration.FromSeconds(60) }
             }
         };
 
@@ -679,7 +679,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = Duration.FromSeconds(30) }
             }
         };
 
@@ -687,7 +687,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = Duration.FromSeconds(30) }
             }
         };
 
@@ -960,7 +960,7 @@ public sealed class BodybuildingProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 

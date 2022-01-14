@@ -4,5 +4,5 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
 public class StaticRepeat : Repeat
 {
-    public Duration Time { get; init; }
+    public Duration Duration { get; init; }
 }

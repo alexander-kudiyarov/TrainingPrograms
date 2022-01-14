@@ -67,7 +67,7 @@ public class CleanProgram : SnatchCleanBaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 

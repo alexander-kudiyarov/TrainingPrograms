@@ -76,7 +76,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -197,7 +197,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -257,7 +257,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -378,7 +378,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -436,7 +436,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -558,7 +558,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -619,7 +619,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -742,7 +742,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -805,7 +805,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 3 }
             }
         };
 
@@ -933,7 +933,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 3 }
             }
         };
 
@@ -996,7 +996,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 3 }
             }
         };
 
@@ -1123,7 +1123,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 3 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 3 }
             }
         };
 
@@ -1185,7 +1185,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1193,7 +1193,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1319,7 +1319,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1327,7 +1327,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1390,7 +1390,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1398,7 +1398,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1525,7 +1525,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1533,7 +1533,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1593,7 +1593,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1601,7 +1601,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1728,7 +1728,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1736,7 +1736,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90) }
+                new StaticRepeat { Duration = Duration.FromSeconds(90) }
             }
         };
 
@@ -1798,7 +1798,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 2 }
             }
         };
 
@@ -1901,7 +1901,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(90), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(90), Sets = 2 }
             }
         };
 
@@ -1962,7 +1962,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 2 }
             }
         };
 
@@ -2054,7 +2054,7 @@ public sealed class DeadliftProgram : BaseTrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Time = Duration.FromSeconds(60), Sets = 2 }
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 2 }
             }
         };
 
