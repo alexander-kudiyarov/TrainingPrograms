@@ -1273,7 +1273,7 @@ public sealed class SnatchProgram : BaseTrainingProgram
 
     private static Session GetSession5_2()
     {
-        var warmup = GetWarmup2(10, 15);
+        var warmup = GetWarmup3(10, 5);
 
         var ex1 = new CleanAndJerk(HipCleanBalance)
         {
