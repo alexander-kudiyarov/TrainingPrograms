@@ -22,6 +22,7 @@ public class ProgramRepository : IProgramRepository
             new MuscleGainProgram(),
             new PullAndSquatProgram(),
             new SnatchProgram(),
+            new CleanProgram(),
             new BodybuildingProgram()
         };
 

@@ -43,6 +43,7 @@ public enum ExerciseType : byte
     CleanPullFromBlocks,
     CleanPullSlowlyDown,
     CleanPullTillPowerPosition,
+    CleanStretching,
     DeficitClean,
     DeficitCleanPull,
     HangCleanBelowKnee,

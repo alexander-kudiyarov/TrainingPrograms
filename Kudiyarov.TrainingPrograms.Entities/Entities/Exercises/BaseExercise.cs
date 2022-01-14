@@ -82,6 +82,7 @@ public abstract class BaseExercise
             ExerciseType.CleanPullFromBlocks => $"{clean} {pull} {block}",
             ExerciseType.CleanPullSlowlyDown => $"{clean} {pull} (Slowly Down)",
             ExerciseType.CleanPullTillPowerPosition => $"{clean} {pull} till Power Position",
+            ExerciseType.CleanStretching => $"{clean} Stretching",
             ExerciseType.DeficitClean => $"Clean ({deficit})",
             ExerciseType.DeficitCleanPull => $"Clean {pull} ({deficit})",
             ExerciseType.HangCleanBelowKnee => $"Hang {clean} Below Knee",

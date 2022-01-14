@@ -8,5 +8,6 @@ public enum ProgramType : byte
     PullAndSquat,
     MuscleGain,
     Snatch,
+    Clean,
     Bodybuilding
 }
