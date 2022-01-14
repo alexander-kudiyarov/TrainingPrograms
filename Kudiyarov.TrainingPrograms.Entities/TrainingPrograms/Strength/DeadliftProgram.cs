@@ -9,7 +9,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 
-public sealed class DeadliftProgram : BaseTrainingProgram
+public sealed class DeadliftProgram : TrainingProgram
 {
     public override ProgramType Type => ProgramType.Deadlift;
     public override string Name => "Deadlift Program";

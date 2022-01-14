@@ -8,7 +8,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 
-public sealed class LegsProgram : BaseTrainingProgram
+public sealed class LegsProgram : TrainingProgram
 {
     public override ProgramType Type => ProgramType.Legs;
     public override string Name => "Legs Program";

@@ -7,7 +7,7 @@ namespace Kudiyarov.TrainingPrograms.Dal.Interfaces;
 
 public interface IProgramRepository
 {
-    IEnumerable<BaseTrainingProgram> Get();
-    BaseTrainingProgram Get(ProgramType type);
+    IEnumerable<TrainingProgram> Get();
+    TrainingProgram Get(ProgramType type);
     Session Get(SessionRequest request);
 }

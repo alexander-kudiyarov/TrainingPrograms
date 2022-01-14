@@ -24,13 +24,13 @@ public class TrainingProgramLogic : ITrainingProgramLogic
         _repository = repository;
     }
 
-    public IEnumerable<BaseTrainingProgram> Get()
+    public IEnumerable<TrainingProgram> Get()
     {
         var result = _repository.Get();
         return result;
     }
 
-    public BaseTrainingProgram Get(ProgramType type)
+    public TrainingProgram Get(ProgramType type)
     {
         var result = _repository.Get(type);
         return result;

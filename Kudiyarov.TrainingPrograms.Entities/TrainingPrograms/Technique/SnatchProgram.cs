@@ -8,7 +8,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
 
-public sealed class SnatchProgram : SnatchCleanBaseTrainingProgram
+public sealed class SnatchProgram : BackTechniqueProgram
 {
     public override ProgramType Type => ProgramType.Snatch;
     public override string Name => "Snatch Program";

@@ -4,7 +4,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
 
-public abstract class SnatchCleanBaseTrainingProgram : BaseTrainingProgram
+public abstract class BackTechniqueProgram : TrainingProgram
 {
     protected static BaseExercise[] GetWarmup1(int hyperextension, int abs)
     {

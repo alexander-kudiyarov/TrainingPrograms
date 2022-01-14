@@ -4,17 +4,17 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
-public abstract class BaseTrainingProgram
+public abstract class TrainingProgram
 {
     protected static readonly Func<Session> EmptySession;
     private readonly Lazy<IReadOnlyList<Func<Session>>> _sessions;
 
-    static BaseTrainingProgram()
+    static TrainingProgram()
     {
         EmptySession = GetEmptySession;
     }
 
-    protected BaseTrainingProgram()
+    protected TrainingProgram()
     {
         _sessions = new Lazy<IReadOnlyList<Func<Session>>>(GetSessions);
     }

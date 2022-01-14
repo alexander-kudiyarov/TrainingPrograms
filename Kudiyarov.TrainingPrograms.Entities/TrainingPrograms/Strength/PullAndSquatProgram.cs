@@ -9,7 +9,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
 
-public sealed class PullAndSquatProgram : BaseTrainingProgram
+public sealed class PullAndSquatProgram : TrainingProgram
 {
     public override ProgramType Type => ProgramType.PullAndSquat;
     public override string Name => "Pull and Squat Program";

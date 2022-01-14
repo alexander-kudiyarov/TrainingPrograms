@@ -8,7 +8,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
-public sealed partial class CompetitionProgram : BaseTrainingProgram
+public sealed partial class CompetitionProgram : TrainingProgram
 {
     public override ProgramType Type => ProgramType.Competition;
     public override string Name => "Competition Program";

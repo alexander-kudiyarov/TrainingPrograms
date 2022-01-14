@@ -7,7 +7,7 @@ namespace Kudiyarov.TrainingPrograms.Bll.Interfaces;
 
 public interface ITrainingProgramLogic
 {
-    IEnumerable<BaseTrainingProgram> Get();
-    BaseTrainingProgram Get(ProgramType type);
+    IEnumerable<TrainingProgram> Get();
+    TrainingProgram Get(ProgramType type);
     Session Get(SessionRequest request);
 }

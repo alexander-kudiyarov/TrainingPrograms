@@ -10,11 +10,11 @@ namespace Kudiyarov.TrainingPrograms.Dal.Memory;
 
 public class ProgramRepository : IProgramRepository
 {
-    private readonly IReadOnlyDictionary<ProgramType, BaseTrainingProgram> _repository;
+    private readonly IReadOnlyDictionary<ProgramType, TrainingProgram> _repository;
 
     public ProgramRepository()
     {
-        var programs = new BaseTrainingProgram[]
+        var programs = new TrainingProgram[]
         {
             new CompetitionProgram(),
             new DeadliftProgram(),
@@ -29,13 +29,13 @@ public class ProgramRepository : IProgramRepository
         _repository = programs.ToDictionary(program => program.Type);
     }
 
-    public IEnumerable<BaseTrainingProgram> Get()
+    public IEnumerable<TrainingProgram> Get()
     {
         var result = _repository.Values;
         return result;
     }
 
-    public BaseTrainingProgram Get(ProgramType type)
+    public TrainingProgram Get(ProgramType type)
     {
         var result = _repository[type];
         return result;

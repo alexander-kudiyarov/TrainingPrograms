@@ -7,7 +7,7 @@ using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
 
-public sealed class MuscleGainProgram : BaseTrainingProgram
+public sealed class MuscleGainProgram : TrainingProgram
 {
     public override ProgramType Type => ProgramType.MuscleGain;
     public override string Name => "Muscle Gain";
