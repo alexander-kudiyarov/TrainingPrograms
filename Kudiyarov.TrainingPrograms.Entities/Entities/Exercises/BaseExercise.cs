@@ -22,10 +22,18 @@ public abstract class BaseExercise
         const string snatch = "Snatch";
         const string clean = "Clean";
         const string jerk = "Jerk";
-        const string benchPress = "Bench Press";
+        const string squat = "Squat";
+        const string backSquat = $"Back {squat}";
+        const string frontSquat = $"Front {squat}";
+        const string overheadSquat = $"Overhead {squat}";
+        const string press = "Press";
+        const string pushPress = $"Push {press}";
+        const string snatchPress = $"{snatch} {press}";
+        const string benchPress = $"Bench {press}";
 
         // Prefixes
         const string hang = "Hang";
+        const string mediumGrip = "Medium Grip";
         const string power = "Power";
 
         // Suffixes
@@ -43,7 +51,7 @@ public abstract class BaseExercise
         {
             // Snatch
             ExerciseType.Snatch => snatch,
-            ExerciseType.DeficitMediumGripPull => $"Medium Grip {pull} ({deficit})",
+            ExerciseType.DeficitMediumGripPull => $"{mediumGrip} {pull} ({deficit})",
             ExerciseType.DeficitPowerSnatch => $"{power} {snatch} ({deficit})",
             ExerciseType.DeficitSnatch => $"{snatch} ({deficit})",
             ExerciseType.DeficitSnatchPull => $"{snatch} {pull} ({deficit})",
@@ -56,11 +64,11 @@ public abstract class BaseExercise
             ExerciseType.HipSnatch => $"Hip {snatch}",
             ExerciseType.HipSnatchBalance => $"Hip {snatch} Balance",
             ExerciseType.HipPowerSnatch => $"Hip {power} {snatch}",
-            ExerciseType.MediumGripPull => $"Medium Grip {pull}",
+            ExerciseType.MediumGripPull => $"{mediumGrip} {pull}",
             ExerciseType.MuscleSnatch => $"Muscle {snatch}",
             ExerciseType.MuscleSquatSnatch => $"Muscle Squat {snatch}",
-            ExerciseType.OverheadSquat => "Overhead Squat",
-            ExerciseType.OverheadSquatPause => $"Overhead Squat {pause}",
+            ExerciseType.OverheadSquat => overheadSquat,
+            ExerciseType.OverheadSquatPause => $"{overheadSquat} {pause}",
             ExerciseType.PowerSnatch => $"{power} {snatch}",
             ExerciseType.PowerSnatchAboveKnee => $"{power} {snatch} {aboveKnees}",
             ExerciseType.SnatchBalance => $"{snatch} Balance",
@@ -71,8 +79,8 @@ public abstract class BaseExercise
             ExerciseType.SnatchPullTillKnee => $"{snatch} {pull} till Knee",
             ExerciseType.SnatchPullTillPower => $"{snatch} {pull} till Power Position",
             ExerciseType.SnatchPullWith2Stops => $"{snatch} {pull} ({withTwoStops})",
-            ExerciseType.SnatchPushPress => $"{snatch} Push Press",
-            ExerciseType.SotsPress => "Sots Press",
+            ExerciseType.SnatchPushPress => $"{snatch} {pushPress}",
+            ExerciseType.SotsPress => $"Sots {press}",
 
             // Clean
             ExerciseType.Clean => clean,
@@ -98,18 +106,18 @@ public abstract class BaseExercise
             ExerciseType.Jerk => jerk,
             ExerciseType.JerkSupport => $"{jerk} Support",
             ExerciseType.PowerJerk => $"{power} {jerk}",
-            ExerciseType.PushPress => "Push Press",
+            ExerciseType.PushPress => pushPress,
 
             // Front Squat
-            ExerciseType.FrontSquat => "Front Squat",
+            ExerciseType.FrontSquat => frontSquat,
 
             // Back Squat
-            ExerciseType.BackSplitSquat => "Back Split Squat",
-            ExerciseType.BackSquat => "Back Squat",
-            ExerciseType.BackSquatPause => $"Back Squat {pause}",
-            ExerciseType.BackSquatNarrowFeet => "Back Squat (Narrow Feet)",
-            ExerciseType.BenchBackSquat => "Bench Back Squat",
-            ExerciseType.GakkSquat => "Gakk Squat",
+            ExerciseType.BackSplitSquat => $"Back Split {squat}",
+            ExerciseType.BackSquat => backSquat,
+            ExerciseType.BackSquatPause => $"{backSquat} {pause}",
+            ExerciseType.BackSquatNarrowFeet => $"{backSquat} (Narrow Feet)",
+            ExerciseType.BenchBackSquat => $"Bench {backSquat}",
+            ExerciseType.GakkSquat => $"Gakk {squat}",
 
             // Deadlift
             ExerciseType.Deadlift => "Deadlift",
@@ -134,7 +142,7 @@ public abstract class BaseExercise
             ExerciseType.DiscFrontRise => "Disc Front Rise",
             ExerciseType.DiscRussianTwist => "Disc Russian Twist",
             ExerciseType.SingleLegReach => "Single Leg Reach",
-            ExerciseType.SquatReach => "Squat Reach",
+            ExerciseType.SquatReach => $"{squat} Reach",
 
             // Back
             ExerciseType.DiscLateralPull => "Disc Lateral Pull",
@@ -163,10 +171,10 @@ public abstract class BaseExercise
 
             // Good Morning
             ExerciseType.GoodMorning => "Good Morning",
-            ExerciseType.GoodMorningSquat => "Good Morning + Squat",
+            ExerciseType.GoodMorningSquat => $"Good Morning + {squat}",
 
             // Jumps
-            ExerciseType.BarbellSquatJump => "Barbell Squat Jump",
+            ExerciseType.BarbellSquatJump => $"Barbell {squat} Jump",
             ExerciseType.BoxJump => "Box Jump",
             ExerciseType.ChickenJump => "Chicken Jump",
             ExerciseType.DeathJump => "Death Jump",
@@ -177,12 +185,12 @@ public abstract class BaseExercise
 
             // Press
             ExerciseType.AsymmetryPress => "Asymmetry Press",
-            ExerciseType.DiscPress => "Disc Press",
-            ExerciseType.Press => "Press",
-            ExerciseType.PressInSitPosition => "Press in Sit Position",
-            ExerciseType.PressWithRubberBand => $"Press {rubber}",
-            ExerciseType.SnatchPressWithRubberBand => $"Snatch Press {rubber}",
-            ExerciseType.SittingPress => "Sitting Press",
+            ExerciseType.DiscPress => $"Disc {press}",
+            ExerciseType.Press => press,
+            ExerciseType.PressInSitPosition => $"{press} in Sit Position",
+            ExerciseType.PressWithRubberBand => $"{press} {rubber}",
+            ExerciseType.SnatchPressWithRubberBand => $"{snatchPress} {rubber}",
+            ExerciseType.SittingPress => $"Sitting {press}",
 
             // Pull Up
             ExerciseType.ChinUp => "Chin Up",
@@ -199,7 +207,7 @@ public abstract class BaseExercise
             ExerciseType.LateralRaise => "Lateral Raise",
 
             // Triceps
-            ExerciseType.DumbbellFrenchPress => "Dumbbell French Press",
+            ExerciseType.DumbbellFrenchPress => $"Dumbbell French {press}",
             ExerciseType.FrenchPress => "French Press",
             ExerciseType.TricepsExtension => "Triceps Extension",
 
