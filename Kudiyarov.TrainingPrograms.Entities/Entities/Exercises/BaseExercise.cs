@@ -97,6 +97,7 @@ public abstract class BaseExercise
             ExerciseType.HangCleanPullBelowKnee => $"Hang {clean} {pull} Below Knee",
             ExerciseType.HangPowerClean => $"Hang {power} {clean}",
             ExerciseType.HipCleanBalance => $"Hip {clean} Balance",
+            ExerciseType.HipMuscleClean => $"Hip Muscle {clean}",
             ExerciseType.MuscleClean => $"Muscle {clean}",
             ExerciseType.MuscleSquatClean => $"Muscle Squat {clean}",
             ExerciseType.PowerClean => $"{power} {clean}",

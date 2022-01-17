@@ -50,6 +50,7 @@ public enum ExerciseType : byte
     HangCleanPullBelowKnee,
     HangPowerClean,
     HipCleanBalance,
+    HipMuscleClean,
     MuscleClean,
     MuscleSquatClean,
     PowerClean,

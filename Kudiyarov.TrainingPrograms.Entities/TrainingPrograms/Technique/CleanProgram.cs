@@ -18,7 +18,7 @@ public class CleanProgram : BackTechniqueProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2
+            GetSession1_1, GetSession1_2, GetSession1_3
         };
 
         return sessions;
@@ -127,6 +127,63 @@ public class CleanProgram : BackTechniqueProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_3()
+    {
+        var warmup = GetWarmup1(15, 15, 5);
+
+        var ex1 = new CleanAndJerk(HipMuscleClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = 0, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(PowerClean, HangPowerClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(1, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(1, 1), Sets = 3 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(MediumGripPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex4 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
