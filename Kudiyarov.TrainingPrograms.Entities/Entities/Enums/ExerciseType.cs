@@ -72,6 +72,7 @@ public enum ExerciseType : byte
     BackSquatNarrowFeet,
     BenchBackSquat,
     GakkSquat,
+    WallSquat,
 
     // Deadlift
     Deadlift,

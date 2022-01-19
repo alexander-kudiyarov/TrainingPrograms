@@ -119,6 +119,7 @@ public abstract class BaseExercise
             ExerciseType.BackSquatNarrowFeet => $"{backSquat} (Narrow Feet)",
             ExerciseType.BenchBackSquat => $"Bench {backSquat}",
             ExerciseType.GakkSquat => $"Gakk {squat}",
+            ExerciseType.WallSquat => $"Wall {squat}",
 
             // Deadlift
             ExerciseType.Deadlift => "Deadlift",
