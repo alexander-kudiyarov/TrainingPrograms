@@ -18,7 +18,8 @@ public class CleanProgram : BackTechniqueProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
+            GetSession2_1
         };
 
         return sessions;
@@ -310,6 +311,68 @@ public class CleanProgram : BackTechniqueProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_1()
+    {
+        var warmup = GetWarmup2(15, 15, 5);
+
+        var ex1 = new MultiCleanAndJerk(CleanStretching, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(PowerClean, FrontSquat, PushPress)
+        {
+            Repeats = GetRange(0.5, 0.6, Array(2, 1, 2), 3)
+        };
+
+        var ex3 = new CleanAndJerk(MediumGripPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 6, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 6, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var ex4 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 4, Sets = 3 },
+                new SingleRepeat { Percent = 1.0, Repeats = 2, Sets = 2 }
+            }
+        };
+
+        var ex5 = new Accessory(ReversePlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5)
             }
         };
 
