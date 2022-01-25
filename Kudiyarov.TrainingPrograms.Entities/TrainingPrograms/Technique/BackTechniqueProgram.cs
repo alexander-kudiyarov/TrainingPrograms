@@ -115,4 +115,29 @@ public abstract class BackTechniqueProgram : TrainingProgram
 
         return warmup;
     }
+
+    protected static BaseExercise[] GetWarmup4(int hyperextension, int abs, int gakkSquat)
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = hyperextension } }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = abs } }
+        };
+
+        var c = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[] { new SingleRepeat { Repeats = gakkSquat } }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        return warmup;
+    }
 }
