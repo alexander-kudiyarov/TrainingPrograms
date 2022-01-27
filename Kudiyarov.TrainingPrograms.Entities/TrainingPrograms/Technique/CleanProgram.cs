@@ -19,7 +19,7 @@ public class CleanProgram : BackTechniqueProgram
         var sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2
+            GetSession2_1, GetSession2_2, GetSession2_3
         };
 
         return sessions;
@@ -431,5 +431,93 @@ public class CleanProgram : BackTechniqueProgram
         };
 
         return session;
+    }
+
+    private static Session GetSession2_3()
+    {
+        var warmup = GetWarmup2(15, 15, 5);
+
+        var ex1 = GetCleanWarmup(6);
+
+        var ex2 = new MultiCleanAndJerk(CleanPullTillPowerPosition, Clean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(2, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.85, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex3 = new MultiCleanAndJerk(DeficitCleanPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.90, Repeats = 4, Sets = 2 },
+                new SingleRepeat { Percent = 1.00, Repeats = 4, Sets = 2 },
+                new SingleRepeat { Percent = 1.05, Repeats = 2, Sets = 2 }
+            }
+        };
+
+        var ex4 = new BackSquat(BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static BaseExercise[] GetCleanWarmup(int repeats)
+    {
+        var a = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats, Sets = 3 }
+            }
+        };
+
+        var b = new Accessory(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = 0, Repeats = repeats, Sets = 3 }
+            }
+        };
+
+        var c = new Accessory(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats, Sets = 3 }
+            }
+        };
+
+        var result = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        return result;
     }
 }
