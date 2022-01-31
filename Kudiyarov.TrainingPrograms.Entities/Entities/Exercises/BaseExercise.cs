@@ -111,6 +111,7 @@ public abstract class BaseExercise
 
             // Front Squat
             ExerciseType.FrontSquat => frontSquat,
+            ExerciseType.BoxFrontSquat => $"Box {frontSquat}",
 
             // Back Squat
             ExerciseType.BackSplitSquat => $"Back Split {squat}",

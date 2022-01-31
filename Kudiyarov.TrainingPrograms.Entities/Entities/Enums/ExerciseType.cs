@@ -64,6 +64,7 @@ public enum ExerciseType : byte
 
     // Front Squat
     FrontSquat,
+    BoxFrontSquat,
 
     // Back Squat
     BackSplitSquat,
