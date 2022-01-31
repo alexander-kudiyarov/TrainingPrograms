@@ -2,7 +2,11 @@ namespace Kudiyarov.TrainingPrograms.Entities.Entities;
 
 public static class Stats
 {
-    public static double Bar => 20;
+    public const double Bar = 20;
+    public const double Pvc = 0;
+    public const double BarbellFactor = 2.5;
+    public const double DumbbellFactor = 1;
+    
 
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
@@ -17,9 +21,6 @@ public static class Stats
 
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
-    public static double BarbellFactor => 2.5;
-    public static double DumbbellFactor => 1;
-    public static double WorkWeight => 0.8;
     public static double BenchBackSquat => BackSquat * 1.1;
     public static double FrontSquat => BackSquat * 0.85;
     public static double BicepsCurl => BackSquat * 0.3;
@@ -34,7 +35,5 @@ public static class Stats
     private static double MediumGripPull => (Snatch + CleanAndJerk) / 2 * PullFactor;
     public static double DeficitMediumGripPull => MediumGripPull * DeficitFactor;
     private static double PullFactor => 1.1;
-
     private static double DeficitFactor => 0.9;
-    //private static double Body => 71;
 }

@@ -33,7 +33,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(5, 5), Sets = 2 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(5, 5), Sets = 2 }
             }
         };
 
@@ -142,7 +142,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 4, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 4, Sets = 3 }
             }
         };
 
@@ -259,7 +259,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
             }
         };
 
@@ -267,7 +267,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
             }
         };
 
@@ -325,7 +325,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -557,7 +557,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
             }
         };
 
@@ -644,7 +644,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = repeats, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = repeats, Sets = 3 }
             }
         };
 

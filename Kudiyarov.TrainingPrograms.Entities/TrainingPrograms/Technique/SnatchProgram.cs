@@ -201,7 +201,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 3 }
             }
         };
 
@@ -249,7 +249,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 2 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4), Sets = 2 }
             }
         };
 
@@ -304,7 +304,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4, 4), Sets = 2 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4, 4), Sets = 2 }
             }
         };
 
@@ -432,7 +432,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -501,7 +501,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 3 }
             }
         };
 
@@ -543,7 +543,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -617,7 +617,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4, 4), Sets = 2 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4, 4), Sets = 2 }
             }
         };
 
@@ -744,7 +744,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 3 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4), Sets = 3 }
             }
         };
 
@@ -853,7 +853,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 3 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4), Sets = 3 }
             }
         };
 
@@ -938,7 +938,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(3, 3, 3), Sets = 3 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(3, 3, 3), Sets = 3 }
             }
         };
 
@@ -1050,7 +1050,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 3 }
             }
         };
 
@@ -1111,7 +1111,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = 0, Repeats = Array(4, 4), Sets = 3 }
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4), Sets = 3 }
             }
         };
 
@@ -1158,7 +1158,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -1210,7 +1210,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -1279,7 +1279,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 4, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 4, Sets = 3 }
             }
         };
 
@@ -1313,7 +1313,7 @@ public sealed class SnatchProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = 0, Repeats = 4, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 4, Sets = 3 }
             }
         };
 
