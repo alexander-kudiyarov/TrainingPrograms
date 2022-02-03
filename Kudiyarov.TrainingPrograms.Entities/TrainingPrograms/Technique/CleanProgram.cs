@@ -19,7 +19,8 @@ public class CleanProgram : BackTechniqueProgram
         var sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
+            GetSession3_1
         };
 
         return sessions;
@@ -611,6 +612,76 @@ public class CleanProgram : BackTechniqueProgram
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(3, ex2A, ex2B),
+                new(ex3),
+                new(ex4),
+                new(ex5),
+                new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_1()
+    {
+        var warmup = GetWarmup1(15, 15, 5);
+
+        var ex2A = new Accessory(ElbowsRotationRackSupport)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6 }
+            }
+        };
+
+        var ex2B = new Accessory(BoxFrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+            }
+        };
+
+        var ex3 = new MultiCleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 5 }
+            }
+        };
+
+        var ex4 = new CleanAndJerk(DeficitRomanianDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.6, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var ex5 = new BackSquat(ExerciseType.BackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.70, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.85, Repeats = 3, Sets = 4 }
+            }
+        };
+
+        var ex6 = new Accessory(ReversePlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
             }
         };
 

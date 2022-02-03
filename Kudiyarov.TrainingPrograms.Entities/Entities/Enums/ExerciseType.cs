@@ -169,6 +169,7 @@ public enum ExerciseType : byte
 
     // Elbows
     ElbowsRotation,
+    ElbowsRotationRackSupport,
 
     // Wrists
     DiscJuggling,

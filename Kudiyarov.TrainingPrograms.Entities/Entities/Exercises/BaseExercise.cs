@@ -216,6 +216,7 @@ public abstract class BaseExercise
 
             // Elbows
             ExerciseType.ElbowsRotation => "Elbows Rotation",
+            ExerciseType.ElbowsRotationRackSupport => "Elbows Rotation (with Rack Support)",
 
             // Wrists
             ExerciseType.DiscJuggling => "Disc Juggling",
