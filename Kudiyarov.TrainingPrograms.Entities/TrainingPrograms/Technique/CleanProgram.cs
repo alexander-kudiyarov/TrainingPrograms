@@ -20,7 +20,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1
+            GetSession3_1, GetSession3_2
         };
 
         return sessions;
@@ -695,6 +695,65 @@ public class CleanProgram : BackTechniqueProgram
                 new(ex4),
                 new(ex5),
                 new(ex6)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_2()
+    {
+        var warmup = GetWarmup5(15, 15, 15);
+
+        var ex2A = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8 }
+            }
+        };
+
+        var ex2B = new Accessory(WallSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 6 }
+            }
+        };
+
+        var ex4 = new Accessory(Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex5 = new Accessory(DeathJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(3, warmup),
+                new(2, ex2A, ex2B),
+                new(ex3),
+                new(ex4),
+                new(ex5)
             }
         };
 
