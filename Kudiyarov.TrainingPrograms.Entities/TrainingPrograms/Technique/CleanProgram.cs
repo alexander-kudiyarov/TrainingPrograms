@@ -20,7 +20,8 @@ public class CleanProgram : BackTechniqueProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
+            GetSession4_1
         };
 
         return sessions;
@@ -939,6 +940,74 @@ public class CleanProgram : BackTechniqueProgram
             Rounds = new Round[]
             {
                 new(3, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_1()
+    {
+        var warmup = GetWarmup2(10, 15, 5);
+
+        var ex1 = new MultiCleanAndJerk(CleanStretching, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(5, 5), Sets = 2 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(Clean, HangCleanBelowKnee)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 3 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(CleanPullFromBlocks)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 1.0, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 1.1, Repeats = 3, Sets = 3 }
+            }
+        };
+
+        var ex4 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new[]
+            {
+                new SingleRepeat { Percent = 0.70, Repeats = 3 },
+                new SingleRepeat { Percent = 0.90, Repeats = 2 },
+                new SingleRepeat { Percent = 1.00, Repeats = 2 },
+                new SingleRepeat { Percent = 1.05, Repeats = 2 }
+            }
+        };
+
+        var ex5 = new Accessory(ReversePlank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(30), Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
                 new(ex1),
                 new(ex2),
                 new(ex3),
