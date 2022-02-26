@@ -21,7 +21,7 @@ public class CleanProgram : BackTechniqueProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
         };
 
         return sessions;
@@ -1127,6 +1127,55 @@ public class CleanProgram : BackTechniqueProgram
             {
                 new(2, warmup),
                 new(2, ex1A, ex1B),
+                new(ex2),
+                new(ex3),
+                new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_4()
+    {
+        var warmup = GetWarmup2(10, 15, 5);
+
+        var ex1A = new MultiCleanAndJerk(MuscleClean, FrontSquat, Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(3, 3, 3), Sets = 2 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
+        {
+            Repeats = GetRange(0.5, 0.6, Array(1, 2), 3)
+        };
+
+        var ex3 = new CleanAndJerk(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                // TODO ??
+                new SingleRepeat { Percent = 0.4, Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(ReversePlank)
+        {
+            Repeats = new[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(30), Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1A),
                 new(ex2),
                 new(ex3),
                 new(ex4)
