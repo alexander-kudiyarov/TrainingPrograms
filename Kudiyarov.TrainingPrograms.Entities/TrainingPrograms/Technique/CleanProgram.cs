@@ -21,7 +21,7 @@ public class CleanProgram : BackTechniqueProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5
         };
 
         return sessions;
@@ -479,7 +479,7 @@ public class CleanProgram : BackTechniqueProgram
             Rounds = new Round[]
             {
                 new(3, warmup),
-                new(ex1),
+                new(3, ex1),
                 new(ex2),
                 new(ex3),
                 new(ex4)
@@ -1185,13 +1185,65 @@ public class CleanProgram : BackTechniqueProgram
         return session;
     }
 
+    private static Session GetSession4_5()
+    {
+        var warmup = GetWarmup4(10, 15, 8);
+
+        var ex1 = GetCleanWarmup(5);
+
+        var ex2 = new MultiCleanAndJerk(CleanFromBlocks, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.85, Repeats = Array(1, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.90, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 2, Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(ChickenJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(2, ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
+            }
+        };
+
+        return session;
+    }
+
     private static BaseExercise[] GetCleanWarmup(int repeats)
     {
         var a = new Accessory(ElbowsRotation)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats }
             }
         };
 
@@ -1199,7 +1251,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = repeats, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = repeats }
             }
         };
 
@@ -1207,7 +1259,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats, Sets = 3 }
+                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats }
             }
         };
 
