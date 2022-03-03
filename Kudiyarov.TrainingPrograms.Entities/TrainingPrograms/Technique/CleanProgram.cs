@@ -22,7 +22,7 @@ public class CleanProgram : BackTechniqueProgram
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1
+            GetSession5_1, GetSession5_2
         };
 
         return sessions;
@@ -1281,6 +1281,39 @@ public class CleanProgram : BackTechniqueProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession5_2()
+    {
+        var warmup = GetWarmup3(10, 5);
+
+        var ex1 = new MultiSnatch(MuscleSquatSnatch, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 3), Sets = 3 }
+            }
+        };
+
+        var ex2 = new Snatch(ExerciseType.Snatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.4, Repeats = 3, Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2)
             }
         };
 
