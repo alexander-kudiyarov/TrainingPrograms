@@ -16,13 +16,13 @@ public class CleanProgram : BackTechniqueProgram
 
     protected override IReadOnlyList<Func<Session>> GetSessions()
     {
-        var sessions = new Func<Session>[]
+        var sessions = new[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2, GetSession5_3
+            GetSession5_1, GetSession5_2, GetSession5_3, EmptySession, GetSession5_5
         };
 
         return sessions;
@@ -1366,6 +1366,43 @@ public class CleanProgram : BackTechniqueProgram
                 new(2, ex1A, ex1B),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession5_5()
+    {
+        var warmup = GetWarmup3(10, 5);
+
+        var ex1 = GetCleanWarmup(5);
+
+        var ex2 = new CleanAndJerk(Clean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.500, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.600, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.700, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.750, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.800, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.850, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.900, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.950, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 1.000, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 1.025, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 1.050, Repeats = 1, Sets = 1 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(2, ex1),
+                new(ex2)
             }
         };
 
