@@ -22,7 +22,7 @@ public class CleanProgram : BackTechniqueProgram
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
             GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5,
-            GetSession5_1, GetSession5_2
+            GetSession5_1, GetSession5_2, GetSession5_3
         };
 
         return sessions;
@@ -1314,6 +1314,58 @@ public class CleanProgram : BackTechniqueProgram
                 new(2, warmup),
                 new(ex1),
                 new(ex2)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession5_3()
+    {
+        var warmup = GetWarmup1(10, 15);
+
+        var ex1A = new CleanAndJerk(HipMuscleClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+            }
+        };
+
+        var ex1B = new CleanAndJerk(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(Clean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 1, Sets = 3 }
+            }
+        };
+
+        var ex3 = new BackSquat(ExerciseType.BackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 2 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(2, ex1A, ex1B),
+                new(ex2),
+                new(ex3)
             }
         };
 
