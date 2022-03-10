@@ -9,5 +9,6 @@ public enum ProgramType : byte
     MuscleGain,
     Snatch,
     Clean,
+    Jerk,
     Bodybuilding
 }

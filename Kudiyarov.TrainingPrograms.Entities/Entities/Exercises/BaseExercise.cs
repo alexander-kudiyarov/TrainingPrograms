@@ -105,6 +105,7 @@ public abstract class BaseExercise
 
             // Jerk
             ExerciseType.Jerk => jerk,
+            ExerciseType.JerkDropBalance => $"{jerk} Drop Balance",
             ExerciseType.JerkSupport => $"{jerk} Support",
             ExerciseType.PowerJerk => $"{power} {jerk}",
             ExerciseType.PushPress => pushPress,

@@ -23,6 +23,7 @@ public class ProgramRepository : IProgramRepository
             new PullAndSquatProgram(),
             new SnatchProgram(),
             new CleanProgram(),
+            new JerkProgram(),
             new BodybuildingProgram()
         };
 
