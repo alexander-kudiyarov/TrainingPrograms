@@ -16,7 +16,7 @@ public class JerkProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1
+            GetSession1_1, GetSession1_2
         };
 
         return sessions;
@@ -104,15 +104,92 @@ public class JerkProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
-                new(ex1A),
-                new(ex1B),
-                new(ex1C),
-                new(ex1D),
-                new(ex1E),
+                new(ex1A, ex1B, ex1C, ex1D, ex1E),
                 new(ex2),
                 new(ex3),
                 new(ex4),
                 new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_2()
+    {
+        var ex1A = new Accessory(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex1B = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var ex1C = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var ex1D = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var ex1E = new Accessory(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(CleanPullTillPowerPosition, MuscleSquatClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 3), Sets = 1 },
+                new MultiRepeat { Percent = 0.5, Repeats = Array(3, 3), Sets = 4 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(DeficitRomanianDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 6, Sets = 6 }
+            }
+        };
+
+        var ex4 = new Accessory(BarbellSquatJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1A, ex1B, ex1C, ex1D, ex1E),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
