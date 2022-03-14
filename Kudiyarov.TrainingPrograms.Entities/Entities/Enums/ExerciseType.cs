@@ -58,6 +58,7 @@ public enum ExerciseType : byte
 
     // Jerk
     Jerk,
+    JerkBehindTheNeck,
     JerkDropBalance,
     JerkSupport,
     PowerJerk,
