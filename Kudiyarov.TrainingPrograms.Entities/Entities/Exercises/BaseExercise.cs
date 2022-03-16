@@ -81,6 +81,7 @@ public abstract class BaseExercise
             ExerciseType.SnatchPullWith2Stops => $"{snatch} {pull} ({withTwoStops})",
             ExerciseType.SnatchPushPress => $"{snatch} {pushPress}",
             ExerciseType.SotsPress => $"Sots {press}",
+            ExerciseType.SotsPressPause => $"Sots {press} {pause}",
 
             // Clean
             ExerciseType.Clean => clean,

@@ -2,6 +2,7 @@
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
+using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
@@ -16,7 +17,7 @@ public class JerkProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
         };
 
         return sessions;
@@ -287,6 +288,82 @@ public class JerkProgram : TrainingProgram
                 new(ex3),
                 new(ex4),
                 new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_4()
+    {
+        var ex1A = new Accessory(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Bar, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex1B = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var ex1C = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var ex1D = new Accessory(SnatchOnPlates)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(SnatchPullTillPower, HangPowerSnatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 3), Sets = 1 },
+                new MultiRepeat { Percent = 0.5, Repeats = Array(2, 2), Sets = 3 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(2, 2), Sets = 3 }
+            }
+        };
+
+        var ex3 = new Snatch(SnatchPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.75, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.85, Repeats = 3, Sets = 4 }
+            }
+        };
+
+        var ex4 = new Accessory(DeathJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1A, ex1B, ex1C, ex1D),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 

@@ -34,6 +34,7 @@ public enum ExerciseType : byte
     SnatchPullWith2Stops,
     SnatchPushPress,
     SotsPress,
+    SotsPressPause,
 
     // Clean
     Clean,
