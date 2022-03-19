@@ -25,47 +25,9 @@ public class JerkProgram : TrainingProgram
 
     private static Session GetSession1_1()
     {
-        var ex1A = new Accessory(Hyperextension)
-        {
-            Repeats = new Repeat[]
-            {
-                new SingleRepeat { Repeats = 10, Sets = 2 }
-            }
-        };
+        var warmup = GetWarmup1();
 
-        var ex1B = new Accessory(BackSplitSquat)
-        {
-            Repeats = new Repeat[]
-            {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(8, 8), Sets = 2 }
-            }
-        };
-
-        var ex1C = new Accessory(SotsPressPause)
-        {
-            Repeats = new Repeat[]
-            {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
-            }
-        };
-
-        var ex1D = new Accessory(CleanStretching)
-        {
-            Repeats = new Repeat[]
-            {
-                new MultiRepeat { Repeats = Array(20, 20), Sets = 2 }
-            }
-        };
-
-        var ex1E = new Accessory(JerkDropBalance)
-        {
-            Repeats = new Repeat[]
-            {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
-            }
-        };
-
-        var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
+        var ex1 = new MultiCleanAndJerk(FrontSquat, Jerk)
         {
             Repeats = new Repeat[]
             {
@@ -76,7 +38,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex3 = new CleanAndJerk(FrontSquat)
+        var ex2 = new CleanAndJerk(FrontSquat)
         {
             Repeats = new Repeat[]
             {
@@ -85,7 +47,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex4 = new CleanAndJerk(PushPress)
+        var ex3 = new CleanAndJerk(PushPress)
         {
             Repeats = new Repeat[]
             {
@@ -93,7 +55,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex5 = new Accessory(PressWithRubberBand)
+        var ex4 = new Accessory(PressWithRubberBand)
         {
             Repeats = new Repeat[]
             {
@@ -105,11 +67,11 @@ public class JerkProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
-                new(ex1A, ex1B, ex1C, ex1D, ex1E),
+                new(warmup),
+                new(ex1),
                 new(ex2),
                 new(ex3),
-                new(ex4),
-                new(ex5)
+                new(ex4)
             }
         };
 
@@ -368,5 +330,55 @@ public class JerkProgram : TrainingProgram
         };
 
         return session;
+    }
+
+    private static BaseExercise[] GetWarmup1()
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var b = new Accessory(BackSplitSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(8, 8), Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(SotsPressPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(CleanStretching)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Repeats = Array(20, 20), Sets = 2 }
+            }
+        };
+
+        var e = new Accessory(JerkDropBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d, e
+        };
+
+        return warmup;
     }
 }
