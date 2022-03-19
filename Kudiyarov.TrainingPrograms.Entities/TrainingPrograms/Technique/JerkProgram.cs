@@ -4,6 +4,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
@@ -17,7 +18,7 @@ public class JerkProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
         };
 
         return sessions;
@@ -323,6 +324,60 @@ public class JerkProgram : TrainingProgram
             Rounds = new Round[]
             {
                 new(ex1A, ex1B, ex1C, ex1D),
+                new(ex2),
+                new(ex3),
+                new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_5()
+    {
+        var warmup = GetWarmup1();
+
+        var ex1 = new CleanAndJerk(Cluster)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.4, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.5, Repeats = 4, Sets = 4 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(PushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 3 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.70, Repeats = 4, Sets = 1 },
+                new SingleRepeat { Percent = 0.85, Repeats = 4, Sets = 3 }
+            }
+        };
+
+        var ex4 = new CleanAndJerk(JerkSupport)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Percent = 0.9, Duration = Duration.FromSeconds(6), Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
                 new(ex2),
                 new(ex3),
                 new(ex4)

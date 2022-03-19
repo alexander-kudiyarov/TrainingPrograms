@@ -65,6 +65,9 @@ public enum ExerciseType : byte
     PowerJerk,
     PushPress,
 
+    // Cluster
+    Cluster,
+
     // Front Squat
     FrontSquat,
     BoxFrontSquat,

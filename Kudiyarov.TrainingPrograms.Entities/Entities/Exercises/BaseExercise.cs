@@ -112,6 +112,9 @@ public abstract class BaseExercise
             ExerciseType.PowerJerk => $"{power} {jerk}",
             ExerciseType.PushPress => pushPress,
 
+            // Cluster
+            ExerciseType.Cluster => "Cluster",
+
             // Front Squat
             ExerciseType.FrontSquat => frontSquat,
             ExerciseType.BoxFrontSquat => $"Box {frontSquat}",
