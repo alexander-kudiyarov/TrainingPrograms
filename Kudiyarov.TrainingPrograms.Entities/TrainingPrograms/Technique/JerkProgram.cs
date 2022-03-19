@@ -41,7 +41,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1C = new Accessory(SotsPress)
+        var ex1C = new Accessory(SotsPressPause)
         {
             Repeats = new Repeat[]
             {
@@ -215,7 +215,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1C = new Accessory(SotsPress)
+        var ex1C = new Accessory(SotsPressPause)
         {
             Repeats = new Repeat[]
             {
