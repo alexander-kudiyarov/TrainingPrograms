@@ -111,7 +111,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 10 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10 }
             }
         };
 
@@ -119,7 +119,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 10 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10 }
             }
         };
 
@@ -248,7 +248,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6, Sets = 4 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6, Sets = 4 }
             }
         };
 

@@ -86,7 +86,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -110,7 +110,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 10, Sets = 2 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10, Sets = 2 }
             }
         };
 
@@ -118,7 +118,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -175,7 +175,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(8, 8), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(8, 8), Sets = 2 }
             }
         };
 
@@ -183,7 +183,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -264,7 +264,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -402,7 +402,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(8, 8), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(8, 8), Sets = 2 }
             }
         };
 
@@ -426,7 +426,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -491,7 +491,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(8, 8), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(8, 8), Sets = 2 }
             }
         };
 
@@ -499,7 +499,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 

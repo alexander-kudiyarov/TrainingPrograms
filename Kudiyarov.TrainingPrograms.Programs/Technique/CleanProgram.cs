@@ -36,7 +36,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(5, 5), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(5, 5), Sets = 2 }
             }
         };
 
@@ -145,7 +145,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 4, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 4, Sets = 3 }
             }
         };
 
@@ -202,7 +202,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 8 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8 }
             }
         };
 
@@ -262,7 +262,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -270,7 +270,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -328,7 +328,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6, Sets = 2 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
             }
         };
 
@@ -498,7 +498,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 8 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8 }
             }
         };
 
@@ -560,7 +560,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -568,7 +568,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -649,7 +649,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -711,7 +711,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 8 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 8 }
             }
         };
 
@@ -770,7 +770,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -778,7 +778,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -891,7 +891,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(4, 4, 4), Sets = 3 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(4, 4, 4), Sets = 3 }
             }
         };
 
@@ -960,7 +960,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(5, 5), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(5, 5), Sets = 2 }
             }
         };
 
@@ -1045,7 +1045,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 5, Sets = 3 }
             }
         };
 
@@ -1071,7 +1071,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -1079,7 +1079,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -1145,7 +1145,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(3, 3, 3), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(3, 3, 3), Sets = 2 }
             }
         };
 
@@ -1246,7 +1246,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Weight = Stats.Pvc, Repeats = Array(3, 3, 3), Sets = 2 }
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(3, 3, 3), Sets = 2 }
             }
         };
 
@@ -1328,7 +1328,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -1336,7 +1336,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
             }
         };
 
@@ -1415,7 +1415,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = repeats }
             }
         };
 
@@ -1423,7 +1423,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Pvc, Repeats = repeats }
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = repeats }
             }
         };
 
@@ -1431,7 +1431,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = repeats }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = repeats }
             }
         };
 

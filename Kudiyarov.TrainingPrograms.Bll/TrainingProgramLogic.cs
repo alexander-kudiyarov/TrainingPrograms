@@ -165,8 +165,8 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
         var factor = equipment switch
         {
-            EquipmentType.Barbell => Stats.BarbellFactor,
-            EquipmentType.Dumbbell => Stats.DumbbellFactor,
+            EquipmentType.Barbell => Constants.BarbellFactor,
+            EquipmentType.Dumbbell => Constants.DumbbellFactor,
             _ => throw new ArgumentOutOfRangeException(nameof(equipment), "Type is not defined")
         };
 

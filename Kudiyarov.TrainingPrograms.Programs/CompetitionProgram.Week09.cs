@@ -254,7 +254,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 5, Sets = 3 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 5, Sets = 3 }
             }
         };
 

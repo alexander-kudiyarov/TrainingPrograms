@@ -119,7 +119,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -413,7 +413,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -591,7 +591,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -731,7 +731,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -900,7 +900,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -1040,7 +1040,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -1183,7 +1183,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 
@@ -1294,7 +1294,7 @@ public sealed class PullAndSquatProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Weight = Stats.Bar, Repeats = 6 }
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
             }
         };
 

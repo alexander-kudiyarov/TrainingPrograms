@@ -2,12 +2,6 @@ namespace Kudiyarov.TrainingPrograms.Entities;
 
 public static class Stats
 {
-    public const double Bar = 20;
-    public const double Pvc = 0;
-    public const double BarbellFactor = 2.5;
-    public const double DumbbellFactor = 1;
-    
-
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
     public static double Snatch => 60;
