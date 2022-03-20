@@ -1,11 +1,11 @@
 using Kudiyarov.Packages.DoubleExtensions;
 using Kudiyarov.TrainingPrograms.Bll.Interfaces;
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
 using Kudiyarov.TrainingPrograms.Programs;
 using Microsoft.Extensions.Caching.Memory;
 

@@ -1,7 +1,7 @@
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
 using Kudiyarov.TrainingPrograms.Programs;
 using Kudiyarov.TrainingPrograms.Programs.Strength;
 using Kudiyarov.TrainingPrograms.Programs.Technique;

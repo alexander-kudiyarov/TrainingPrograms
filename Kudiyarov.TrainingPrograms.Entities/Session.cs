@@ -1,4 +1,4 @@
-namespace Kudiyarov.TrainingPrograms.Entities.Entities;
+namespace Kudiyarov.TrainingPrograms.Entities;
 
 public class Session
 {

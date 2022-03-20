@@ -1,6 +1,6 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Exercises;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities;
+namespace Kudiyarov.TrainingPrograms.Entities;
 
 public class Round
 {

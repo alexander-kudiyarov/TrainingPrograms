@@ -1,6 +1,6 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+namespace Kudiyarov.TrainingPrograms.Entities.Exercises;
 
 public sealed class MultiAccessory : BaseMultiExercise
 {

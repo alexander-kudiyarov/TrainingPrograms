@@ -1,6 +1,6 @@
 using Kudiyarov.TrainingPrograms.Bll.Interfaces;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kudiyarov.TrainingPrograms.Web.Controllers;

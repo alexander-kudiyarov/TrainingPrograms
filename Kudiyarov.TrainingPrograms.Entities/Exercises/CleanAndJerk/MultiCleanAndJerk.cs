@@ -1,6 +1,6 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
+namespace Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 
 public sealed class MultiCleanAndJerk : BaseMultiExercise
 {

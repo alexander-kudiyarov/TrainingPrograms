@@ -1,10 +1,10 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.CleanAndJerk;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
-using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
+using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
+using Kudiyarov.TrainingPrograms.Entities.Repeats;
+using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs.Strength;
 

@@ -1,7 +1,7 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Repeats;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
+namespace Kudiyarov.TrainingPrograms.Entities.Exercises;
 
 public abstract class BaseExercise
 {

@@ -1,6 +1,6 @@
 using NodaTime;
 
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
+namespace Kudiyarov.TrainingPrograms.Entities.Repeats;
 
 public class StaticRepeat : Repeat
 {

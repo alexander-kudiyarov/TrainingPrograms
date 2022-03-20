@@ -1,4 +1,4 @@
-namespace Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
+namespace Kudiyarov.TrainingPrograms.Entities.Enums;
 
 public enum ExerciseType : byte
 {
