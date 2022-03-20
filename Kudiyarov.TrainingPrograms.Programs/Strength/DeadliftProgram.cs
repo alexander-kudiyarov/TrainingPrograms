@@ -7,7 +7,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
+namespace Kudiyarov.TrainingPrograms.Programs.Strength;
 
 public sealed class DeadliftProgram : TrainingProgram
 {

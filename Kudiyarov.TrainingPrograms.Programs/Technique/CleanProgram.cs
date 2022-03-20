@@ -7,7 +7,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
+namespace Kudiyarov.TrainingPrograms.Programs.Technique;
 
 public class CleanProgram : BackTechniqueProgram
 {

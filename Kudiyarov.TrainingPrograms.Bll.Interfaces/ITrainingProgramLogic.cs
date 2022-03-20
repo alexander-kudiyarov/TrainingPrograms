@@ -1,7 +1,7 @@
 using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Programs;
 
 namespace Kudiyarov.TrainingPrograms.Bll.Interfaces;
 

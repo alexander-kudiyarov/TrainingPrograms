@@ -6,7 +6,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Programs;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Kudiyarov.TrainingPrograms.Bll;

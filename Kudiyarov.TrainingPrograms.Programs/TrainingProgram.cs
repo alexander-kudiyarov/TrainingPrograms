@@ -2,7 +2,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 
-namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+namespace Kudiyarov.TrainingPrograms.Programs;
 
 public abstract class TrainingProgram
 {

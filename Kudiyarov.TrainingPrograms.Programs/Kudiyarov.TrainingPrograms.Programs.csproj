@@ -2,12 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Programs\Kudiyarov.TrainingPrograms.Programs.csproj" />
+      <ProjectReference Include="..\Kudiyarov.TrainingPrograms.Entities\Kudiyarov.TrainingPrograms.Entities.csproj" />
     </ItemGroup>
 
 </Project>

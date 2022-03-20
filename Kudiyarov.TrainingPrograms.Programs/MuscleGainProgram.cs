@@ -5,7 +5,7 @@ using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
 using static Kudiyarov.TrainingPrograms.Entities.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+namespace Kudiyarov.TrainingPrograms.Programs;
 
 public sealed class MuscleGainProgram : TrainingProgram
 {

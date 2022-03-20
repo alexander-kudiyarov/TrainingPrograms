@@ -2,9 +2,9 @@ using Kudiyarov.TrainingPrograms.Dal.Interfaces;
 using Kudiyarov.TrainingPrograms.Entities.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
+using Kudiyarov.TrainingPrograms.Programs;
+using Kudiyarov.TrainingPrograms.Programs.Strength;
+using Kudiyarov.TrainingPrograms.Programs.Technique;
 
 namespace Kudiyarov.TrainingPrograms.Dal.Memory;
 
