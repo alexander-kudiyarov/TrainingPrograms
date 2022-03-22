@@ -7,7 +7,7 @@ using Kudiyarov.TrainingPrograms.Entities.Repeats;
 using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
-namespace Kudiyarov.TrainingPrograms.Programs;
+namespace Kudiyarov.TrainingPrograms.Programs.Competition;
 
 public sealed partial class CompetitionProgram
 {

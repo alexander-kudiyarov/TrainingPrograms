@@ -3,6 +3,7 @@ using Kudiyarov.TrainingPrograms.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Requests;
 using Kudiyarov.TrainingPrograms.Programs;
+using Kudiyarov.TrainingPrograms.Programs.Competition;
 using Kudiyarov.TrainingPrograms.Programs.Strength;
 using Kudiyarov.TrainingPrograms.Programs.Technique;
 
