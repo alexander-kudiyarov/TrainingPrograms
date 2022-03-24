@@ -451,7 +451,7 @@ public class JerkProgram : TrainingProgram
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Percent = 0.8, Repeats = 4, Sets = 2 },
-                new SingleRepeat { Percent = 0.9, Repeats = 2, Sets = 3 }
+                new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 3 }
             }
         };
 
