@@ -109,6 +109,7 @@ public abstract class BaseExercise
             ExerciseType.JerkBehindTheNeck => $"{jerk} Behind the Neck",
             ExerciseType.JerkDropBalance => $"{jerk} Drop Balance",
             ExerciseType.JerkSupport => $"{jerk} Support",
+            ExerciseType.OverheadSplitSquat => $"Overhead split {squat}",
             ExerciseType.PowerJerk => $"{power} {jerk}",
             ExerciseType.PushPress => pushPress,
 
@@ -197,6 +198,7 @@ public abstract class BaseExercise
             ExerciseType.DiscPress => $"Disc {press}",
             ExerciseType.Press => press,
             ExerciseType.PressInSitPosition => $"{press} in Sit Position",
+            ExerciseType.PressInSplitPosition => $"{press} in Split Position",
             ExerciseType.PressWithRubberBand => $"{press} {rubber}",
             ExerciseType.SnatchPressWithRubberBand => $"{snatchPress} {rubber}",
             ExerciseType.SittingPress => $"Sitting {press}",

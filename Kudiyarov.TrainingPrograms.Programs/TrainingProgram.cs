@@ -1,6 +1,7 @@
 using Kudiyarov.TrainingPrograms.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
+using NodaTime;
 
 namespace Kudiyarov.TrainingPrograms.Programs;
 
@@ -64,6 +65,17 @@ public abstract class TrainingProgram
         Repeat Func(double percent)
         {
             return new MultiRepeat { Percent = percent, Repeats = repeats };
+        }
+    }
+
+    protected static IReadOnlyList<Repeat> GetRange(double start, double stop, Duration duration, int sets)
+    {
+        var result = GetRange(start, stop, Func, sets);
+        return result;
+
+        Repeat Func(double percent)
+        {
+            return new StaticRepeat { Percent = percent, Duration = duration };
         }
     }
 

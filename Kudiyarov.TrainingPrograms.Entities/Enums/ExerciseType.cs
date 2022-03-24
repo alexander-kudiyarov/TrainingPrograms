@@ -62,6 +62,7 @@ public enum ExerciseType : byte
     JerkBehindTheNeck,
     JerkDropBalance,
     JerkSupport,
+    OverheadSplitSquat,
     PowerJerk,
     PushPress,
 
@@ -150,6 +151,7 @@ public enum ExerciseType : byte
     DiscPress,
     Press,
     PressInSitPosition,
+    PressInSplitPosition,
     PressWithRubberBand,
     SnatchPressWithRubberBand,
     SittingPress,
