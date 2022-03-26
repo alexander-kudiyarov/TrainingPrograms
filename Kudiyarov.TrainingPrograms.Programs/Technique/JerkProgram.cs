@@ -19,7 +19,7 @@ public class JerkProgram : TrainingProgram
         var sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2, GetSession2_3
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4
         };
 
         return sessions;
@@ -649,6 +649,82 @@ public class JerkProgram : TrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_4()
+    {
+        var a = new Accessory(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 4 }
+            }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(SotsPressPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var e = new Accessory(SnatchOnPlates)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d, e
+        };
+
+        var ex1 = new MultiSnatch(SnatchPullTillPower, ExerciseType.Snatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 3), Sets = 6 }
+            }
+        };
+
+        var ex2 = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
+                new(ex2)
             }
         };
 
