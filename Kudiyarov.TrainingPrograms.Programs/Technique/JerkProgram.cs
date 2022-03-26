@@ -636,7 +636,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Intensity = Intensity.Light, Repeats = Array(4, 4), Sets = 2 }
+                new MultiRepeat { Intensity = Intensity.Light, Repeats = Array(4, 4), Sets = 4 }
             }
         };
 
