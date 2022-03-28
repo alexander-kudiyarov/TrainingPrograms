@@ -112,6 +112,7 @@ public abstract class BaseExercise
             ExerciseType.OverheadSplitSquat => $"Overhead split {squat}",
             ExerciseType.PowerJerk => $"{power} {jerk}",
             ExerciseType.PushPress => pushPress,
+            ExerciseType.PausePushPress => $"{pushPress} {pause}",
 
             // Cluster
             ExerciseType.Cluster => "Cluster",
