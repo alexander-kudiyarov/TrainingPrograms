@@ -19,7 +19,8 @@ public class JerkProgram : TrainingProgram
         var sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
+            GetSession3_1
         };
 
         return sessions;
@@ -829,6 +830,85 @@ public class JerkProgram : TrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession3_1()
+    {
+        var a = new Accessory(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 4 }
+            }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(SotsPressPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var e = new MultiAccessory(MuscleSnatch, SnatchBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Repeats = Array(4, 4), Sets = 3 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d, e
+        };
+
+        var ex1 = new MultiSnatch(MuscleSquatSnatch, OverheadSquat)
+        {
+            Repeats = GetRange(0.4, 0.5, Array(3, 2), 4)
+        };
+
+        var ex2 = new CleanAndJerk(Jerk)
+        {
+            Repeats = GetRange(0.3, 0.4, 3, 8)
+        };
+
+        var ex3 = new Accessory(DeathJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 
