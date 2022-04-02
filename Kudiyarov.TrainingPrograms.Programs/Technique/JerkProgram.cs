@@ -20,7 +20,7 @@ public class JerkProgram : TrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
-            GetSession3_1
+            GetSession3_1, GetSession3_2
         };
 
         return sessions;
