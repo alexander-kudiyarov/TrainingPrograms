@@ -164,7 +164,7 @@ public class JerkProgram : TrainingProgram
 
     private static Session GetSession1_3()
     {
-        var ex1A = new Accessory(ReverseHyperextension)
+        var a = new Accessory(ReverseHyperextension)
         {
             Repeats = new Repeat[]
             {
@@ -172,7 +172,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1B = new Accessory(BackSplitSquat)
+        var b = new Accessory(BackSplitSquat)
         {
             Repeats = new Repeat[]
             {
@@ -180,7 +180,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1C = new Accessory(SotsPressPause)
+        var c = new Accessory(SotsPressPause)
         {
             Repeats = new Repeat[]
             {
@@ -188,7 +188,7 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1D = new Accessory(CleanStretching)
+        var d = new Accessory(CleanStretching)
         {
             Repeats = new Repeat[]
             {
@@ -196,13 +196,15 @@ public class JerkProgram : TrainingProgram
             }
         };
 
-        var ex1E = new Accessory(JerkDropBalance)
+        var e = new Accessory(JerkDropBalance)
         {
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Repeats = 8, Sets = 3 }
             }
         };
+
+        var warmup = new BaseExercise[] { a, b, c, d, e };
 
         var ex2 = new MultiCleanAndJerk(Clean, Jerk)
         {
@@ -248,7 +250,7 @@ public class JerkProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
-                new(ex1A, ex1B, ex1C, ex1D, ex1E),
+                new(warmup),
                 new(ex2),
                 new(ex3),
                 new(ex4),
