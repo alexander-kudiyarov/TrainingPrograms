@@ -917,6 +917,93 @@ public class JerkProgram : TrainingProgram
         return session;
     }
 
+    private static Session GetSession3_2()
+    {
+        var a = new Accessory(ReverseHyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var b = new Accessory(BackSplitSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Constants.Pvc, Repeats = Array(8, 8), Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var e = new Accessory(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var warmup = new BaseExercise[] { a, b, c, d, e };
+
+        var ex1 = new MultiCleanAndJerk(Clean, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 3), Sets = 1 },
+                new MultiRepeat { Percent = 0.5, Repeats = Array(3, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(3, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(2, 1), Sets = 3 },
+                new MultiRepeat { Percent = 0.8, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(JerkSupport)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Percent = 0.90, Duration = Duration.FromSeconds(6), Sets = 2 },
+                new StaticRepeat { Percent = 1.05, Duration = Duration.FromSeconds(6), Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
+            }
+        };
+
+        return session;
+    }
+
     private static BaseExercise[] GetWarmup1()
     {
         var a = new Accessory(Hyperextension)
