@@ -65,6 +65,7 @@ public enum ExerciseType : byte
     OverheadSplitSquat,
     PowerJerk,
     PushPress,
+    PushPressInSplit,
     PausePushPress,
 
     // Cluster
