@@ -60,9 +60,12 @@ public enum ExerciseType : byte
     // Jerk
     Jerk,
     JerkBehindTheNeck,
+    JerkDrive,
+    PauseJerkDrive,
     JerkDropBalance,
     JerkSupport,
     OverheadSplitSquat,
+    PauseJerk,
     PowerJerk,
     PushPress,
     PushPressInSplit,

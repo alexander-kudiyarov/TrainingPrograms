@@ -107,9 +107,12 @@ public abstract class BaseExercise
             // Jerk
             ExerciseType.Jerk => jerk,
             ExerciseType.JerkBehindTheNeck => $"{jerk} Behind the Neck",
+            ExerciseType.JerkDrive => $"{jerk} Drive",
+            ExerciseType.PauseJerkDrive => $"{jerk} Drive {pause}",
             ExerciseType.JerkDropBalance => $"{jerk} Drop Balance",
             ExerciseType.JerkSupport => $"{jerk} Support",
             ExerciseType.OverheadSplitSquat => $"Overhead split {squat}",
+            ExerciseType.PauseJerk => $"{jerk} {pause}",
             ExerciseType.PowerJerk => $"{power} {jerk}",
             ExerciseType.PushPress => pushPress,
             ExerciseType.PushPressInSplit => $"{pushPress} in Split Position",
