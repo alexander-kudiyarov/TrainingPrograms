@@ -14,6 +14,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseRouting();
-app.UseEndpoints(endpoints => endpoints.MapDefaultControllerRoute());
+app.MapDefaultControllerRoute();
 
 app.Run();
