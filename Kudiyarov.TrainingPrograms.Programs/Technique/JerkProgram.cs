@@ -21,7 +21,7 @@ public class JerkProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2
+            GetSession4_1, GetSession4_2, GetSession4_3
         };
 
         return sessions;
@@ -1476,6 +1476,104 @@ public class JerkProgram : TrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_3()
+    {
+        var a = new Accessory(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 2 }
+            }
+        };
+
+        var b = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 15, Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(SotsPressPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(JerkDropBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d
+        };
+
+        var ex1 = new MultiCleanAndJerk(PauseJerk, Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.40, Repeats = Array(3, 3), Sets = 1 },
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(2, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(PauseJerkDrive, JerkDrive)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.7, Repeats = Array(2, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.8, Repeats = Array(2, 1), Sets = 1 },
+                new MultiRepeat { Percent = 0.9, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 1.0, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(JerkSupport)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Percent = 1.05, Duration = Duration.FromSeconds(6), Sets = 3 },
+                new StaticRepeat { Percent = 1.10, Duration = Duration.FromSeconds(6), Sets = 1 }
+            }
+        };
+
+        var ex4 = new BackSquat(BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
