@@ -78,7 +78,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
         var repeats = repeat switch
         {
             SingleRepeat singleRepeat => singleRepeat.Repeats,
-            // MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
+            MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
             _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
         };
 
