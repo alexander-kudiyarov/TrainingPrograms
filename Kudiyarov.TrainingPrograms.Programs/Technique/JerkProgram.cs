@@ -21,7 +21,7 @@ public class JerkProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5
         };
 
         return sessions;
@@ -1650,6 +1650,104 @@ public class JerkProgram : TrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+    
+    private static Session GetSession4_5()
+    {
+        var a = new Accessory(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 2 }
+            }
+        };
+
+        var b = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var c = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8, Sets = 2 }
+            }
+        };
+
+        var d = new Accessory(SotsPressPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6, Sets = 2 }
+            }
+        };
+
+        var e = new Accessory(SnatchOnPlates)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 4, Sets = 2 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d, e
+        };
+
+        var ex1 = new MultiSnatch(ExerciseType.Snatch, OverheadSquat)
+        {
+            Repeats = GetRange(0.4, 0.5, Array(3, 1), 6)
+        };
+
+        var ex2 = new Snatch(SnatchPushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 2, Sets = 1 },
+            }
+        };
+
+        var ex3 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.8, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 2, Sets = 3 },
+            }
+        };
+
+        var ex4 = new Snatch(SotsPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.3, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
             }
         };
 
