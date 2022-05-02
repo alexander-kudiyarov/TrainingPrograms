@@ -2,10 +2,20 @@ namespace Kudiyarov.TrainingPrograms.Entities;
 
 public static class Stats
 {
+    private const double Coefficient = 0.825;
+    
+    static Stats()
+    {
+        const double snatch = 62.5;
+        const double cnj = 72.5;
+
+        Snatch = GetMinSnatch(snatch, cnj);
+    }
+    
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
-    public static double Snatch => 60;
-    public static double CleanAndJerk => Snatch / 0.825;
+    public static double Snatch { get; }
+    public static double CleanAndJerk => Snatch / Coefficient;
     public static double BackSquat => CleanAndJerk * 1.25;
     public static double Deadlift => BackSquat * 1.2;
     public static double BenchPress => BackSquat * 0.75;
@@ -30,4 +40,11 @@ public static class Stats
     public static double DeficitMediumGripPull => MediumGripPull * DeficitFactor;
     private static double PullFactor => 1.1;
     private static double DeficitFactor => 0.9;
+
+    private static double GetMinSnatch(double snatch, double cnj)
+    {
+        var snatch2 = cnj * Coefficient;
+        var min = Math.Min(snatch, snatch2);
+        return min;
+    }
 }
