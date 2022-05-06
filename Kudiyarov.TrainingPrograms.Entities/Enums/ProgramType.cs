@@ -10,5 +10,6 @@ public enum ProgramType : byte
     Snatch,
     Clean,
     Jerk,
+    Speed,
     Bodybuilding
 }

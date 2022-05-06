@@ -25,6 +25,7 @@ public class ProgramRepository : IProgramRepository
             new SnatchProgram(),
             new CleanProgram(),
             new JerkProgram(),
+            new SpeedProgram(),
             new BodybuildingProgram()
         };
 
