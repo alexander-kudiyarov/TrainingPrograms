@@ -4,7 +4,7 @@ public static class Stats
 {
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
-    public static double Snatch => 60;
+    public static double Snatch => 62.5;
     public static double CleanAndJerk => Snatch / 0.825;
     public static double BackSquat => CleanAndJerk * 1.25;
     public static double Deadlift => BackSquat * 1.2;
