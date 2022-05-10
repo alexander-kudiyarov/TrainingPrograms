@@ -17,7 +17,7 @@ public class SpeedProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2
+            GetSession1_1, GetSession1_2, GetSession1_3
         };
 
         return sessions;
@@ -167,6 +167,93 @@ public class SpeedProgram : TrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_3()
+    {
+        var a = new Accessory(ReverseHyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
+
+        var b = new Snatch(SnatchBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
+            }
+        };
+
+        var c = new Snatch(SnatchOnPlates)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new MultiSnatch(ExerciseType.Snatch, HangSnatchAboveKnees)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(1, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 3), Sets = 2 }
+            }
+        };
+
+        var ex2 = new Snatch(DeficitSnatchPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 2 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.8, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 2, Sets = 2 }
+            }
+        };
+
+        var ex4 = new Accessory(DeathJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
             }
         };
 
