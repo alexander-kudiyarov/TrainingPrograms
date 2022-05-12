@@ -210,8 +210,8 @@ public class SpeedProgram : TrainingProgram
             {
                 new MultiRepeat { Percent = 0.50, Repeats = Array(1, 3), Sets = 2 },
                 new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 1 },
-                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 3), Sets = 2 },
-                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 3), Sets = 2 }
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 1), Sets = 2 }
             }
         };
 
