@@ -17,7 +17,7 @@ public class SpeedProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
         };
 
         return sessions;
@@ -254,6 +254,83 @@ public class SpeedProgram : TrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_4()
+    {
+        var a = new Accessory(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8 }
+            }
+        };
+
+        var b = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8 }
+            }
+        };
+
+        var c = new MultiCleanAndJerk(MuscleClean, Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Constants.Bar, Repeats = Array(6, 6) }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new CleanAndJerk(PowerClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(FrontSquat, Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 3), Sets = 1 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.80, Repeats = Array(1, 2), Sets = 1 }
+            }
+        };
+
+        var ex3 = new BackSquat(BackSquatPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 
