@@ -151,7 +151,7 @@ public class SpeedProgram : TrainingProgram
             }
         };
 
-        var ex3 = new Accessory(Press)
+        var ex3 = new Accessory(PressWithRubberBand)
         {
             Repeats = new Repeat[]
             {
