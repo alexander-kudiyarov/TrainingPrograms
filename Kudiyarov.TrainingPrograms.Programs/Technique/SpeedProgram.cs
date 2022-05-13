@@ -17,7 +17,7 @@ public class SpeedProgram : TrainingProgram
     {
         var sessions = new Func<Session>[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5
         };
 
         return sessions;
@@ -331,6 +331,66 @@ public class SpeedProgram : TrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_5()
+    {
+        var a = new Accessory(ReverseHyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
+
+        var b = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var c = new Snatch(HipSnatchBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new MultiSnatch(HipSnatch, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.4, Repeats = Array(3, 2), Sets = 10 }
+            }
+        };
+
+        var ex2 = new Accessory(BarbellSquatJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 5, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2)
             }
         };
 
