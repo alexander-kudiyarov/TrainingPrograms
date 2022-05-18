@@ -18,7 +18,7 @@ public class SpeedProgram : TrainingProgram
         var sessions = new Func<Session>[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
-            GetSession2_1
+            GetSession2_1, GetSession2_2
         };
 
         return sessions;
@@ -458,6 +458,78 @@ public class SpeedProgram : TrainingProgram
                 new SingleRepeat { Percent = 0.7, Repeats = 4, Sets = 1 },
                 new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 2 },
                 new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 1 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_2()
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
+
+        var b = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var c = new CleanAndJerk(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Pvc, Repeats = 6 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new MultiCleanAndJerk(PowerClean, HangPowerClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(1, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(1, 1), Sets = 2 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(DeficitCleanPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(ChickenJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
             }
         };
 
