@@ -85,6 +85,7 @@ public enum ExerciseType : byte
     BackSquatNarrowFeet,
     BenchBackSquat,
     GakkSquat,
+    HalfSquat,
     WallSquat,
 
     // Deadlift
@@ -146,6 +147,7 @@ public enum ExerciseType : byte
     BoxJump,
     ChickenJump,
     DeathJump,
+    KoreanJump,
 
     // Lunges
     BackLunges,

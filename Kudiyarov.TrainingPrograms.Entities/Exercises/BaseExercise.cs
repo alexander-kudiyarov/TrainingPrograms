@@ -132,6 +132,7 @@ public abstract class BaseExercise
             ExerciseType.BackSquatNarrowFeet => $"{backSquat} (Narrow Feet)",
             ExerciseType.BenchBackSquat => $"Bench {backSquat}",
             ExerciseType.GakkSquat => $"Gakk {squat}",
+            ExerciseType.HalfSquat => $"Half {squat}",
             ExerciseType.WallSquat => $"Wall {squat}",
 
             // Deadlift
@@ -193,6 +194,7 @@ public abstract class BaseExercise
             ExerciseType.BoxJump => "Box Jump",
             ExerciseType.ChickenJump => "Chicken Jump",
             ExerciseType.DeathJump => "Death Jump",
+            ExerciseType.KoreanJump => "Korean Jump",
 
             // Lunges
             ExerciseType.BackLunges => "Back Lunges",
