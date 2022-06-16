@@ -21,7 +21,7 @@ public class SpeedProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1
+            GetSession4_1, GetSession4_2
         };
 
         return sessions;
@@ -1267,6 +1267,79 @@ public class SpeedProgram : TrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_2()
+    {
+        var a = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 10 }
+            }
+        };
+
+        var b = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var c = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 10 }
+            }
+        };
+
+        var d = new Accessory(HipCleanBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 6 }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c, d
+        };
+
+        var ex1 = new CleanAndJerk(CleanFromBlocks)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.7, Repeats = 2, Sets = 3 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(CleanPullFromBlocks)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.8, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.9, Repeats = 3, Sets = 2 },
+                new SingleRepeat { Percent = 1.0, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 1.1, Repeats = 1, Sets = 1 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2)
             }
         };
 
