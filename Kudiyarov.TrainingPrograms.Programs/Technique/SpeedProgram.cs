@@ -21,7 +21,7 @@ public class SpeedProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
         };
 
         return sessions;
@@ -1429,6 +1429,83 @@ public class SpeedProgram : TrainingProgram
                 new(ex2),
                 new(ex3),
                 new(ex4)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_4()
+    {
+        var a = new Accessory(GoodMorningSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8 }
+            }
+        };
+
+        var b = new Accessory(ElbowsRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Weight = Constants.Bar, Repeats = 8 }
+            }
+        };
+
+        var c = new MultiCleanAndJerk(MuscleClean, FrontSquat, PressInSitPosition)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Constants.Bar, Repeats = Array(4, 4, 4) }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new MultiCleanAndJerk(PowerClean, HangPowerClean)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.50, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.60, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.70, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.75, Repeats = Array(1, 2), Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(FrontSquat, PushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.500, Repeats = Array(2, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.600, Repeats = Array(2, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.700, Repeats = Array(2, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.725, Repeats = Array(2, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.750, Repeats = Array(2, 2), Sets = 1 },
+                new MultiRepeat { Percent = 0.800, Repeats = Array(1, 1), Sets = 1 }
+            }
+        };
+
+        var ex3 = new Accessory(DeathJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(ex2),
+                new(ex3)
             }
         };
 
