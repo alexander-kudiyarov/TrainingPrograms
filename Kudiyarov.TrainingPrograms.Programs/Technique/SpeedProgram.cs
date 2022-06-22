@@ -21,7 +21,7 @@ public class SpeedProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4, GetSession1_5,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4, GetSession2_5,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4, GetSession3_5,
-            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4
+            GetSession4_1, GetSession4_2, GetSession4_3, GetSession4_4, GetSession4_5
         };
 
         return sessions;
@@ -1506,6 +1506,74 @@ public class SpeedProgram : TrainingProgram
                 new(ex1),
                 new(ex2),
                 new(ex3)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_5()
+    {
+        var a = new Accessory(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8 }
+            }
+        };
+
+        var b = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var c = new MultiSnatch(MuscleSnatch, SnatchBalance)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Constants.Bar, Repeats = Array(6, 6) }
+            }
+        };
+
+        var warmup = new BaseExercise[]
+        {
+            a, b, c
+        };
+
+        var ex1 = new Snatch(ExerciseType.Snatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 3, Sets = 10 }
+            }
+        };
+
+        var ex2A = new Accessory(HalfSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(30) }
+            }
+        };
+
+        var ex2B = new Accessory(KoreanJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 12 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(2, warmup),
+                new(ex1),
+                new(3, ex2A, ex2B)
             }
         };
 
