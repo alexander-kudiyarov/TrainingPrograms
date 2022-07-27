@@ -107,11 +107,11 @@ public sealed partial class CompetitionProgram
             }
         };
 
-        var ex4 = new Snatch(SnatchPressWithRubberBand)
+        var ex4 = new Accessory(SnatchPressWithRubberBand)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.3, Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -169,8 +169,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                // TODO ??
-                new SingleRepeat { Percent = 0.625, Repeats = 8, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 8, Sets = 4 }
             }
         };
 

@@ -38,6 +38,7 @@ public sealed class Accessory : BaseSingleExercise
             ExerciseType.PressWithRubberBand => Stats.Press,
             ExerciseType.SittingPress => Stats.Press,
             ExerciseType.SnatchPressWithRubberBand => Stats.Press,
+            ExerciseType.SotsPress => Stats.Press,
 
             // Bench Press
             ExerciseType.BenchPress => Stats.BenchPress,
