@@ -90,11 +90,11 @@ public sealed partial class CompetitionProgram
             }
         };
 
-        var ex3 = new CleanAndJerk(BackSplitSquat)
+        var ex3 = new Accessory(BackSplitSquat)
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Percent = 0.5, Repeats = Array(6, 6), Sets = 3 }
+                new MultiRepeat { Intensity = Intensity.Medium, Repeats = Array(6, 6), Sets = 3 }
             }
         };
 
