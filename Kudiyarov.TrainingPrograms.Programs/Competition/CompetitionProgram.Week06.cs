@@ -54,7 +54,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.725, Repeats = 6, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 6, Sets = 4 }
             }
         };
 
@@ -173,11 +173,11 @@ public sealed partial class CompetitionProgram
             }
         };
 
-        var ex3 = new CleanAndJerk(BackSplitSquat)
+        var ex3 = new Accessory(BackSplitSquat)
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Percent = 0.5, Repeats = Array(6, 6), Sets = 3 }
+                new MultiRepeat { Intensity = Intensity.Medium, Repeats = Array(6, 6), Sets = 3 }
             }
         };
 
