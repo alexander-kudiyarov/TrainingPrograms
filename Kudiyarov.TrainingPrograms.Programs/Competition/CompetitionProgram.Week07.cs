@@ -251,7 +251,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.725, Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 8, Sets = 3 }
             }
         };
 

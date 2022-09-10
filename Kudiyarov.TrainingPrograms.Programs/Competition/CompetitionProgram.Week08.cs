@@ -51,11 +51,11 @@ public sealed partial class CompetitionProgram
             }
         };
 
-        var ex4 = new Snatch(SotsPress)
+        var ex4 = new Accessory(SotsPress)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.3, Repeats = 8, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 8, Sets = 4 }
             }
         };
 
