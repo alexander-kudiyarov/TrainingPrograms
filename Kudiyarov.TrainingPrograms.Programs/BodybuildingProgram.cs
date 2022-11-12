@@ -27,7 +27,39 @@ public sealed class BodybuildingProgram : TrainingProgram
 
     private static Session GetSession1_1()
     {
-        var ex1 = new BackSquat(ExerciseType.BackSquat)
+        var ex1A = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1B = new Accessory(Superman)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1C = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1D = new Accessory(LuRaises)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex2 = new BackSquat(ExerciseType.BackSquat)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
@@ -36,7 +68,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex2 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
+        var ex3 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
         {
             Repeats = new Repeat[]
             {
@@ -44,7 +76,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex3 = new Accessory(BackSplitSquat)
+        var ex4 = new Accessory(BackSplitSquat)
         {
             Repeats = new Repeat[]
             {
@@ -52,7 +84,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex4 = new Accessory(CalfRise)
+        var ex5 = new Accessory(CalfRise)
         {
             Repeats = new Repeat[]
             {
@@ -60,7 +92,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex5 = new Accessory(Press)
+        var ex6 = new Accessory(Press)
         {
             Repeats = new Repeat[]
             {
@@ -68,7 +100,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex6 = new CleanAndJerk(Stats.PushPress, PushPress)
+        var ex7 = new CleanAndJerk(Stats.PushPress, PushPress)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
@@ -77,7 +109,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex7 = new Accessory(ReverseFly)
+        var ex8 = new Accessory(ReverseFly)
         {
             Repeats = new Repeat[]
             {
@@ -85,7 +117,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex8 = new Accessory(Crunch)
+        var ex9 = new Accessory(Crunch)
         {
             Repeats = new Repeat[]
             {
@@ -93,7 +125,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex9 = new Accessory(Plank)
+        var ex10 = new Accessory(Plank)
         {
             Repeats = new Repeat[]
             {
@@ -105,7 +137,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
-                new(ex1),
+                new(2, ex1A, ex1B, ex1C, ex1D),
                 new(ex2),
                 new(ex3),
                 new(ex4),
@@ -113,7 +145,8 @@ public sealed class BodybuildingProgram : TrainingProgram
                 new(ex6),
                 new(ex7),
                 new(ex8),
-                new(ex9)
+                new(ex9),
+                new(ex10)
             }
         };
 

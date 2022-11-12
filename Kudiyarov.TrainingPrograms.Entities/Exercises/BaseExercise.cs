@@ -166,6 +166,7 @@ public abstract class BaseExercise
             ExerciseType.LateralPull => "Lateral Pull",
             ExerciseType.LateralPullReverseGrip => "Lateral Pull Reverse Grip",
             ExerciseType.ReverseHyperextension => "Reverse Hyperextension",
+            ExerciseType.Superman => "Superman",
 
             // Bench Press
             ExerciseType.AsymmetryBenchPress => $"Asymmetry {benchPress}",
@@ -223,6 +224,7 @@ public abstract class BaseExercise
             ExerciseType.ReverseFly => "Reverse Fly",
             ExerciseType.Halo => "Halo",
             ExerciseType.LateralRaise => "Lateral Raise",
+            ExerciseType.LuRaises => "Lu Raises",
 
             // Triceps
             ExerciseType.DumbbellFrenchPress => $"Dumbbell French {press}",

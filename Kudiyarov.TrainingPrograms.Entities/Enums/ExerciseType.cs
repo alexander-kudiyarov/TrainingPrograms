@@ -119,6 +119,7 @@ public enum ExerciseType : byte
     LateralPull,
     LateralPullReverseGrip,
     ReverseHyperextension,
+    Superman,
 
     // Bench Press
     AsymmetryBenchPress,
@@ -176,6 +177,7 @@ public enum ExerciseType : byte
     ReverseFly,
     Halo,
     LateralRaise,
+    LuRaises,
 
     // Triceps
     DumbbellFrenchPress,
