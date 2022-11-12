@@ -64,7 +64,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -72,7 +72,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 10, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 10, Sets = 3 }
             }
         };
 
@@ -80,7 +80,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Repeats = new[] { 15, 15 }, Sets = 2 }
+                new MultiRepeat { Intensity = Intensity.Light, Repeats = new[] { 15, 15 }, Sets = 2 }
             }
         };
 
@@ -92,20 +92,20 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex6 = new Accessory(Press)
-        {
-            Repeats = new Repeat[]
-            {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
-            }
-        };
-
-        var ex7 = new CleanAndJerk(Stats.PushPress, PushPress)
+        var ex6 = new CleanAndJerk(Stats.PushPress, PushPress)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex7 = new Accessory(Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
             }
         };
 
