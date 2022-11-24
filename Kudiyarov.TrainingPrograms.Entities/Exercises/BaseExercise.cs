@@ -12,7 +12,7 @@ public abstract class BaseExercise
 
     public abstract string Name { get; }
     public double? Weight { get; }
-    public IReadOnlyList<Repeat> Repeats { get; init; } = Array.Empty<Repeat>();
+    public IReadOnlyList<Repeat> Repeats { get; set; } = Array.Empty<Repeat>();
     public bool IsWarmupNeeded { get; init; }
 
     // TODO extract to WebUi

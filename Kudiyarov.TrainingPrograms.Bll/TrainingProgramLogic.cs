@@ -53,19 +53,55 @@ public class TrainingProgramLogic : ITrainingProgramLogic
     {
         foreach (var set in session.Rounds)
         foreach (var exercise in set.Exercises)
-            // foreach (var repeat in exercise.Repeats)
-            // {
-            //     if (repeat is not WeightedRepeat weightedRepeat) continue;
-            //     CalculatePercentage(exercise, weightedRepeat);
-            //     AddWarmupRepeats(exercise);
-            // }
-
-        foreach (var repeat in exercise.Repeats)
         {
-            CalculatePercentage(exercise, repeat);
-            CalculateWeight(exercise, repeat);
-            RoundWeight(exercise, repeat);
+            foreach (var repeat in exercise.Repeats)
+            {
+                CalculatePercentage(exercise, repeat);
+            }
+            
+            AddWarmup(exercise);
+            
+            foreach (var repeat in exercise.Repeats)
+            {
+                CalculateWeight(exercise, repeat);
+                RoundWeight(exercise, repeat);
+            }
         }
+    }
+
+    private static void AddWarmup(BaseExercise exercise)
+    {
+        if (!exercise.IsWarmupNeeded)
+        {
+            return;
+        }
+        
+        var firstRepeat = exercise.Repeats.FirstOrDefault();
+
+        if (firstRepeat is not { Percent: { } })
+        {
+            return;
+        }
+        
+        var workPercent = firstRepeat.Percent;
+        var warmupPercent = 0.5;
+        var newList = new List<Repeat>();
+
+        while (warmupPercent.LessThan(workPercent.Value))
+        {
+            Repeat repeat = firstRepeat switch
+            {
+                SingleRepeat single => new SingleRepeat {Percent = warmupPercent, Repeats = single.Repeats},
+                MultiRepeat multi => new MultiRepeat {Percent = warmupPercent, Repeats = multi.Repeats},
+                StaticRepeat staticR => new StaticRepeat {Percent = warmupPercent, Duration = staticR.Duration}
+            };
+                    
+            newList.Add(repeat);
+            warmupPercent += 0.1;
+        }
+        
+        newList.AddRange(exercise.Repeats);
+        exercise.Repeats = newList;
     }
 
     private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
@@ -116,31 +152,6 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
         return result;
     }
-
-    // private static void AddWarmupRepeats(BaseExercise exercise)
-    // {
-    //     if (!exercise.IsWarmupNeeded
-    //         || exercise.Repeats.First() is not WeightedRepeat repeat) return;
-    //
-    //     var warmUps = new List<Repeat>();
-    //
-    //     for (var i = 0.5; i.LessThan(repeat.Percent); i += 0.1)
-    //     {
-    //         Repeat result = repeat switch
-    //         {
-    //             SingleRepeat singleRepeat => new SingleRepeat {Percent = i, Repeats = singleRepeat.Repeats},
-    //             MultiRepeat multiRepeat => new MultiRepeat {Percent = i, Repeats = multiRepeat.Repeats},
-    //             // TODO Fix
-    //             _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
-    //         };
-    //
-    //         warmUps.Add(result);
-    //     }
-    //
-    //     warmUps.AddRange(exercise.Repeats);
-    //     exercise.Repeats = warmUps;
-    //     exercise.IsWarmupNeeded = false;
-    // }
 
     private static void CalculateWeight(BaseExercise exercise, Repeat repeat)
     {
