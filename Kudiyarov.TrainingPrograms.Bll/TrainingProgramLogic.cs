@@ -64,7 +64,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
             foreach (var repeat in exercise.Repeats)
             {
                 CalculateWeight(exercise, repeat);
-                RoundWeight(exercise, repeat);
+                // RoundWeight(exercise, repeat);
             }
         }
     }

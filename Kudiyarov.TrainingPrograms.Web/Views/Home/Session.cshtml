@@ -1,4 +1,5 @@
 @using System.Globalization
+@using Kudiyarov.Packages.DoubleExtensions
 @using Kudiyarov.TrainingPrograms.Entities.Repeats
 @model Kudiyarov.TrainingPrograms.Entities.Session
 
@@ -28,9 +29,37 @@
                                 _ => throw new ArgumentOutOfRangeException()
                                 };
 
-                            var repeatDescription = repeat.Weight != null
-                                ? $"{repeat.Weight} × {repeats}"
-                                : repeats;
+                            const double roundFactor = 2.5;
+                            var weight = repeat.Weight;
+                            var asymmetryWeight = default(double?);
+
+                            if (weight != null)
+                            {
+                                var isAsymmetry = exercise.Name.Contains("Asymmetry", StringComparison.OrdinalIgnoreCase);
+                            
+                                if (isAsymmetry)
+                                {
+                                    asymmetryWeight = weight * 0.85;
+                                    asymmetryWeight = asymmetryWeight.Value.RoundTo(roundFactor);
+                                }
+
+                                weight = weight.Value.RoundTo(roundFactor);
+                            }
+
+                            string repeatDescription;
+
+                            if (weight != null && asymmetryWeight != null)
+                            {
+                                repeatDescription = $"{weight} ({asymmetryWeight}) × {repeats}";
+                            }
+                            else if (weight != null)
+                            {
+                                repeatDescription = $"{weight} × {repeats}";
+                            }
+                            else
+                            {
+                                repeatDescription = repeats;
+                            }
 
                             for (var s = 0; s < repeat.Sets; s++)
                             {
