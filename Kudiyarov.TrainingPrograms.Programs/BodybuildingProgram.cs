@@ -70,7 +70,6 @@ public sealed class BodybuildingProgram : TrainingProgram
 
         var ex3 = new BackSquat(Stats.BenchBackSquat, BenchBackSquat)
         {
-            IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Intensity = Intensity.Medium, Repeats = 10, Sets = 3 }
@@ -272,7 +271,6 @@ public sealed class BodybuildingProgram : TrainingProgram
 
         var ex2 = new Deadlift(Stats.RomanianDeadlift, RomanianDeadlift)
         {
-            IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
@@ -290,7 +288,6 @@ public sealed class BodybuildingProgram : TrainingProgram
 
         var ex4 = new Accessory(BicepsCurl)
         {
-            IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
                 new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
