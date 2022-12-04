@@ -146,6 +146,7 @@ public abstract class BaseExercise
 
             // ABS
             ExerciseType.Abs => "ABS",
+            ExerciseType.CoreRotation => "Core Rotation",
             ExerciseType.Crunch => "Crunch",
             ExerciseType.KneesToElbows => "Knees to Elbows",
             ExerciseType.LegRaise => "Leg Raise",
@@ -162,11 +163,14 @@ public abstract class BaseExercise
 
             // Back
             ExerciseType.DiscLateralPull => "Disc Lateral Pull",
+            ExerciseType.GluteBridge => "GluteBridge",
             ExerciseType.Hyperextension => "Hyperextension",
             ExerciseType.LateralPull => "Lateral Pull",
             ExerciseType.LateralPullReverseGrip => "Lateral Pull Reverse Grip",
             ExerciseType.ReverseHyperextension => "Reverse Hyperextension",
             ExerciseType.Superman => "Superman",
+            ExerciseType.SupermanCrossed => "Superman (Crossed)",
+            ExerciseType.SupermanSwim => "Superman (Swim)",
 
             // Bench Press
             ExerciseType.AsymmetryBenchPress => $"Asymmetry {benchPress}",

@@ -328,12 +328,44 @@ public sealed class BodybuildingProgram : TrainingProgram
 
     private static Session GetSession2_1()
     {
+        var ex1A = new Accessory(SupermanCrossed)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1B = new Accessory(GluteBridge)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1C = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1D = new Accessory(LuRaises)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
         var ex1 = new CleanAndJerk(FrontSquat)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 6, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 6, Sets = 3 }
             }
         };
 
@@ -341,7 +373,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -349,23 +381,24 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new MultiRepeat { Repeats = new[] { 12, 12 }, Sets = 3 }
+                new MultiRepeat { Intensity = Intensity.Light, Repeats = new[] { 12, 12 }, Sets = 3 }
             }
         };
 
-        var ex4 = new Accessory(AsymmetryPress)
+        var ex4 = new Snatch(SnatchPushPress)
         {
+            IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 10, Sets = 3 }
             }
         };
-
-        var ex5 = new Snatch(SnatchPushPress)
+        
+        var ex5 = new Accessory(AsymmetryPress)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 10, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15, Sets = 4 }
             }
         };
 
@@ -397,6 +430,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
+                new(3, ex1A, ex1B, ex1C, ex1D),
                 new(ex1),
                 new(ex2),
                 new(ex3),
@@ -433,7 +467,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 10, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 10, Sets = 3 }
             }
         };
 
@@ -441,7 +475,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15, Sets = 4 }
             }
         };
 
@@ -449,7 +483,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
             }
         };
 
@@ -457,7 +491,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 20, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 20, Sets = 4 }
             }
         };
 
@@ -513,12 +547,28 @@ public sealed class BodybuildingProgram : TrainingProgram
 
     private static Session GetSession2_4()
     {
+        var ex1A = new Accessory(SupermanSwim)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1B = new Accessory(CoreRotation)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+        
         var ex1 = new Deadlift(ExerciseType.Deadlift)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -526,7 +576,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 4 }
             }
         };
 
@@ -538,11 +588,11 @@ public sealed class BodybuildingProgram : TrainingProgram
             }
         };
 
-        var ex3B = new Accessory(DiscLateralPull)
+        var ex3B = new Accessory(LateralPull)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
             }
         };
 
@@ -550,7 +600,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 20 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 20 }
             }
         };
 
@@ -582,6 +632,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
+                new(3, ex1A, ex1B),
                 new(ex1),
                 new(ex2),
                 new(4, ex3A, ex3B),

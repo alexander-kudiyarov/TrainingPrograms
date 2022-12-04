@@ -99,6 +99,7 @@ public enum ExerciseType : byte
 
     // ABS
     Abs,
+    CoreRotation,
     Crunch,
     KneesToElbows,
     LegRaise,
@@ -115,11 +116,14 @@ public enum ExerciseType : byte
 
     // Back
     DiscLateralPull,
+    GluteBridge,
     Hyperextension,
     LateralPull,
     LateralPullReverseGrip,
     ReverseHyperextension,
     Superman,
+    SupermanCrossed,
+    SupermanSwim,
 
     // Bench Press
     AsymmetryBenchPress,
