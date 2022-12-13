@@ -647,12 +647,44 @@ public sealed class BodybuildingProgram : TrainingProgram
 
     private static Session GetSession3_1()
     {
+        var ex1A = new Accessory(GakkSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
+        var ex1B = new Accessory(Superman)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+        
+        var ex1C = new Accessory(Abs)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20 }
+            }
+        };
+        
+        var ex1D = new Accessory(LuRaises)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+        
         var ex1 = new BackSquat(ExerciseType.BackSquat)
         {
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 10, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 10, Sets = 3 }
             }
         };
 
@@ -660,7 +692,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -677,7 +709,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -685,7 +717,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15, Sets = 3 }
             }
         };
 
@@ -701,6 +733,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Rounds = new Round[]
             {
+                new(3, ex1A, ex1B, ex1C, ex1D),
                 new(ex1),
                 new(ex2),
                 new(ex3),
@@ -736,7 +769,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 6, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 6, Sets = 4 }
             }
         };
 
@@ -744,7 +777,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
             }
         };
 
@@ -752,7 +785,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15, Sets = 4 }
             }
         };
 
@@ -760,7 +793,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 20, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 20, Sets = 3 }
             }
         };
 
@@ -827,7 +860,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -835,7 +868,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
             }
         };
 
@@ -843,7 +876,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 8 }
             }
         };
 
@@ -851,7 +884,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15 }
             }
         };
 
@@ -859,7 +892,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15 }
             }
         };
 
