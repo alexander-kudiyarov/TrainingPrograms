@@ -934,7 +934,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -942,7 +942,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 2 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 12, Sets = 2 }
             }
         };
 
@@ -967,7 +967,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 8, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 8, Sets = 3 }
             }
         };
 
@@ -975,7 +975,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
             }
         };
 
@@ -1042,7 +1042,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 3 }
             }
         };
 
@@ -1050,7 +1050,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15, Sets = 3 }
             }
         };
 
@@ -1058,7 +1058,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 20 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 20 }
             }
         };
 
@@ -1074,7 +1074,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 20, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 20, Sets = 4 }
             }
         };
 
