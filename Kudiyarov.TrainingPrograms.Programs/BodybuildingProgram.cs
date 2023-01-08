@@ -1133,7 +1133,7 @@ public sealed class BodybuildingProgram : TrainingProgram
             IsWarmupNeeded = true,
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 10, Sets = 3 }
+                new SingleRepeat { Intensity = Intensity.High, Repeats = 10, Sets = 3 }
             }
         };
 
@@ -1141,7 +1141,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12, Sets = 4 }
             }
         };
 
@@ -1149,7 +1149,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 12, Sets = 4 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 12, Sets = 4 }
             }
         };
 
@@ -1157,7 +1157,7 @@ public sealed class BodybuildingProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Repeats = 15 }
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 15 }
             }
         };
 
