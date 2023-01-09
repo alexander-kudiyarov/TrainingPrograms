@@ -32,13 +32,10 @@ public sealed class MuscleGainProgram : TrainingProgram
 
         var ex2 = new MultiSnatch(MuscleSquatSnatch, SnatchPushPress)
         {
-            Repeats = new Repeat[]
-            {
-                new MultiRepeat { Percent = 0.5, Repeats = Array(4, 4), Sets = 5 }
-            }
+            Repeats = GetRange(0.4, 0.5, Array(4, 4), 5)
         };
 
-        var ex3 = new MultiSnatch(SnatchPull, HangSnatchBelowKnees)
+        var ex3 = new MultiSnatch(SnatchPull, HangSnatchPullBelowKnees)
         {
             Repeats = new Repeat[]
             {
@@ -56,11 +53,11 @@ public sealed class MuscleGainProgram : TrainingProgram
             }
         };
 
-        var ex5A = new Snatch(SotsPress)
+        var ex5A = new Accessory(SotsPress)
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.3, Repeats = 12 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
             }
         };
 
@@ -68,7 +65,7 @@ public sealed class MuscleGainProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15 }
             }
         };
 
