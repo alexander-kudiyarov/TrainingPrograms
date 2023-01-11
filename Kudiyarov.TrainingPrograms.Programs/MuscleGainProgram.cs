@@ -1,8 +1,10 @@
 ﻿using Kudiyarov.TrainingPrograms.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
+using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs;
@@ -14,9 +16,9 @@ public sealed class MuscleGainProgram : TrainingProgram
 
     protected override IReadOnlyList<Func<Session>> GetSessions()
     {
-        return new Func<Session>[]
+        return new[]
         {
-            GetSession1_1
+            GetSession1_1, GetSession1_2
         };
     }
 
@@ -78,6 +80,65 @@ public sealed class MuscleGainProgram : TrainingProgram
                 new(ex3),
                 new(ex4),
                 new(3, ex5A, ex5B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession1_2()
+    {
+        var ex1 = new CleanAndJerk(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.3, Repeats = 12, Sets = 4 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(PowerClean, PushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(1, 6), Sets = 4 }
+            }
+        };
+
+        var ex3 = new Accessory(BackSplitSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Intensity = Intensity.Medium, Repeats = Array(8, 8), Sets = 4 }
+            }
+        };
+
+        var ex4 = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex5 = new Accessory(Plank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(60) },
+                new StaticRepeat { Duration = Duration.FromSeconds(50) },
+                new StaticRepeat { Duration = Duration.FromSeconds(40) }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5)
             }
         };
 
