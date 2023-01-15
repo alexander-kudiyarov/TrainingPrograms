@@ -18,7 +18,7 @@ public sealed class MuscleGainProgram : TrainingProgram
     {
         return new[]
         {
-            GetSession1_1, GetSession1_2, GetSession1_3
+            GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4
         };
     }
 
@@ -216,6 +216,75 @@ public sealed class MuscleGainProgram : TrainingProgram
                 new(ex4),
                 new(ex5),
                 new(3, ex6A, ex6B)
+            }
+        };
+
+        return session;
+    }
+    
+    private static Session GetSession1_4()
+    {
+        var ex1 = new CleanAndJerk(Thruster)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.3, Repeats = 10, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(1, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(1, 2), Sets = 3 }
+            }
+        };
+
+        var ex3 = new MultiCleanAndJerk(CleanPull, HangCleanPullBelowKnee)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.6, Repeats = Array(1, 5), Sets = 1 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(1, 5), Sets = 1 },
+                new MultiRepeat { Percent = 0.8, Repeats = Array(1, 4), Sets = 4 }
+            }
+        };
+
+        var ex4 = new BackSquat(BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.50, Repeats = 6, Sets = 1 },
+                new SingleRepeat { Percent = 0.65, Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var ex5A = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex5B = new Accessory(Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 10 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(3, ex5A, ex5B)
             }
         };
 

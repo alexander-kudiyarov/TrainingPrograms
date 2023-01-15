@@ -73,6 +73,7 @@ public enum ExerciseType : byte
 
     // Cluster
     Cluster,
+    Thruster,
 
     // Front Squat
     FrontSquat,

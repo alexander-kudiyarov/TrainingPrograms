@@ -120,6 +120,7 @@ public abstract class BaseExercise
 
             // Cluster
             ExerciseType.Cluster => "Cluster",
+            ExerciseType.Thruster => "Thruster",
 
             // Front Squat
             ExerciseType.FrontSquat => frontSquat,
