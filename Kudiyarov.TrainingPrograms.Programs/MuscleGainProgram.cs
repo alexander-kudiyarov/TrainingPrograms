@@ -19,7 +19,7 @@ public sealed class MuscleGainProgram : TrainingProgram
         return new[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
-            GetSession2_1
+            GetSession2_1, GetSession2_2
         };
     }
 
@@ -355,6 +355,63 @@ public sealed class MuscleGainProgram : TrainingProgram
                 new(ex3),
                 new(ex4),
                 new(4, ex5A, ex5B)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession2_2()
+    {
+        var ex1 = new MultiCleanAndJerk(FrontSquat, PushPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(4, 4), Sets = 4 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.3, Repeats = 12, Sets = 4 }
+            }
+        };
+
+        var ex3 = new Accessory(BackLunges)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Intensity = Intensity.Medium, Repeats = Array(6, 6), Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(BoxJump)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var ex5 = new Accessory(Plank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 4 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5)
             }
         };
 
