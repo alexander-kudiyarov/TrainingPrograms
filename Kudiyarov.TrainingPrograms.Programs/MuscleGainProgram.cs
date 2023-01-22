@@ -19,7 +19,7 @@ public sealed class MuscleGainProgram : TrainingProgram
         return new[]
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
-            GetSession2_1, GetSession2_2, GetSession2_3
+            GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4
         };
     }
 
@@ -488,6 +488,76 @@ public sealed class MuscleGainProgram : TrainingProgram
                 new(ex4),
                 new(ex5),
                 new(3, ex6A, ex6B)
+            }
+        };
+
+        return session;
+    }
+    
+    private static Session GetSession2_4()
+    {
+        var ex1 = new CleanAndJerk(Thruster)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.3, Repeats = 12, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiCleanAndJerk(Clean, Jerk)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(2, 1), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(2, 1), Sets = 3 }
+            }
+        };
+
+        var ex3 = new CleanAndJerk(ExerciseType.Deadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.75, Repeats = 8, Sets = 2 },
+                new SingleRepeat { Percent = 0.90, Repeats = 6, Sets = 4 }
+            }
+        };
+
+        var ex4 = new BackSquat(BenchBackSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.50, Repeats = 5, Sets = 1 },
+                new SingleRepeat { Percent = 0.65, Repeats = 5, Sets = 2 },
+                new SingleRepeat { Percent = 0.75, Repeats = 5, Sets = 2 },
+                new SingleRepeat { Percent = 0.50, Repeats = 10, Sets = 2 }
+            }
+        };
+
+        var ex5A = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15 }
+            }
+        };
+
+        var ex5B = new Accessory(Press)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Medium, Repeats = 10 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(4, ex5A, ex5B)
             }
         };
 
