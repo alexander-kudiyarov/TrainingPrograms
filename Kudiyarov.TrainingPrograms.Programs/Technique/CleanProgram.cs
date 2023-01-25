@@ -4,7 +4,6 @@ using Kudiyarov.TrainingPrograms.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
-using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs.Technique;
@@ -72,7 +71,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -235,7 +234,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(45), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(45), Sets = 3 }
             }
         };
 
@@ -362,7 +361,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -533,7 +532,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -683,7 +682,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -821,7 +820,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -865,7 +864,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -932,7 +931,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(60), Sets = 3 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(60), Sets = 3 }
             }
         };
 
@@ -1000,7 +999,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(30), Sets = 2 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30), Sets = 2 }
             }
         };
 
@@ -1167,7 +1166,7 @@ public class CleanProgram : BackTechniqueProgram
         {
             Repeats = new[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(30), Sets = 2 }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30), Sets = 2 }
             }
         };
 

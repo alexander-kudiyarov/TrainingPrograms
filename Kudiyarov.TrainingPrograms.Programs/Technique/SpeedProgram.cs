@@ -4,7 +4,6 @@ using Kudiyarov.TrainingPrograms.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
-using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs.Technique;
@@ -762,7 +761,7 @@ public class SpeedProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(20) }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(20) }
             }
         };
 
@@ -922,7 +921,7 @@ public class SpeedProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30) }
             }
         };
 
@@ -1556,7 +1555,7 @@ public class SpeedProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30) }
             }
         };
 
@@ -1709,7 +1708,7 @@ public class SpeedProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Duration = Duration.FromSeconds(30) }
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30) }
             }
         };
 

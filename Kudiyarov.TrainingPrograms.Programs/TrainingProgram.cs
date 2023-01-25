@@ -1,7 +1,6 @@
 using Kudiyarov.TrainingPrograms.Entities;
 using Kudiyarov.TrainingPrograms.Entities.Enums;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
-using NodaTime;
 
 namespace Kudiyarov.TrainingPrograms.Programs;
 
@@ -68,7 +67,7 @@ public abstract class TrainingProgram
         }
     }
 
-    protected static IReadOnlyList<Repeat> GetRange(double start, double stop, Duration duration, int sets)
+    protected static IReadOnlyList<Repeat> GetRange(double start, double stop, TimeSpan duration, int sets)
     {
         var result = GetRange(start, stop, Func, sets);
         return result;

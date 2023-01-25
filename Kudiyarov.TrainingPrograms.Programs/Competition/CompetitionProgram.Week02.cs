@@ -4,7 +4,6 @@ using Kudiyarov.TrainingPrograms.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
-using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs.Competition;
@@ -217,7 +216,7 @@ public sealed partial class CompetitionProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1, Duration = Duration.FromSeconds(6), Sets = 6 }
+                new StaticRepeat { Percent = 1, Duration = TimeSpan.FromSeconds(6), Sets = 6 }
             }
         };
 

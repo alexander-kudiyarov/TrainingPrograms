@@ -39,7 +39,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
     public Session Get(SessionRequest request)
     {
         var result = _memoryCache.GetOrCreate(request, _ => GetFromRepository(request));
-        return result;
+        return result!;
     }
 
     private Session GetFromRepository(SessionRequest request)

@@ -4,7 +4,6 @@ using Kudiyarov.TrainingPrograms.Entities.Exercises;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.CleanAndJerk;
 using Kudiyarov.TrainingPrograms.Entities.Exercises.Snatch;
 using Kudiyarov.TrainingPrograms.Entities.Repeats;
-using NodaTime;
 using static Kudiyarov.TrainingPrograms.Entities.Enums.ExerciseType;
 
 namespace Kudiyarov.TrainingPrograms.Programs.Technique;
@@ -374,7 +373,7 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 0.9, Duration = Duration.FromSeconds(6), Sets = 4 }
+                new StaticRepeat { Percent = 0.9, Duration = TimeSpan.FromSeconds(6), Sets = 4 }
             }
         };
 
@@ -634,7 +633,7 @@ public class JerkProgram : TrainingProgram
 
         var ex3 = new CleanAndJerk(JerkSupport)
         {
-            Repeats = GetRange(0.9, 0.95, Duration.FromSeconds(6), 6)
+            Repeats = GetRange(0.9, 0.95, TimeSpan.FromSeconds(6), 6)
         };
 
         var ex4 = new MultiCleanAndJerk(PressInSplitPosition, OverheadSplitSquat)
@@ -980,8 +979,8 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 0.90, Duration = Duration.FromSeconds(6), Sets = 2 },
-                new StaticRepeat { Percent = 1.05, Duration = Duration.FromSeconds(6), Sets = 3 }
+                new StaticRepeat { Percent = 0.90, Duration = TimeSpan.FromSeconds(6), Sets = 2 },
+                new StaticRepeat { Percent = 1.05, Duration = TimeSpan.FromSeconds(6), Sets = 3 }
             }
         };
 
@@ -1550,8 +1549,8 @@ public class JerkProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new StaticRepeat { Percent = 1.05, Duration = Duration.FromSeconds(6), Sets = 3 },
-                new StaticRepeat { Percent = 1.10, Duration = Duration.FromSeconds(6), Sets = 1 }
+                new StaticRepeat { Percent = 1.05, Duration = TimeSpan.FromSeconds(6), Sets = 3 },
+                new StaticRepeat { Percent = 1.10, Duration = TimeSpan.FromSeconds(6), Sets = 1 }
             }
         };
 
