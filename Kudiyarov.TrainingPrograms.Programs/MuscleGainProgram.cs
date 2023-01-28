@@ -19,7 +19,7 @@ public sealed class MuscleGainProgram : TrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
-            GetSession3_1
+            GetSession3_1, GetSession3_2
         };
     }
 
@@ -597,6 +597,56 @@ public sealed class MuscleGainProgram : TrainingProgram
             {
                 new SingleRepeat { Percent = 0.50, Repeats = 6, Sets = 1 },
                 new SingleRepeat { Percent = 0.65, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4)
+            }
+        };
+
+        return session;
+    }
+    
+    private static Session GetSession3_2()
+    {
+        var ex1 = new MultiCleanAndJerk(MuscleSquatClean, FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(4, 4), Sets = 3 }
+            }
+        };
+
+        var ex2 = new CleanAndJerk(GoodMorning)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.4, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex3 = new Accessory(BackSplitSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Intensity = Intensity.Medium, Repeats = Array(6, 6), Sets = 3 }
+            }
+        };
+
+        var ex4 = new Accessory(Plank)
+        {
+            Repeats = new Repeat[]
+            {
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(40) },
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(35) },
+                new StaticRepeat { Duration = TimeSpan.FromSeconds(30) }
             }
         };
 
