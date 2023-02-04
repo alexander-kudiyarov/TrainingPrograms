@@ -19,7 +19,8 @@ public sealed class MuscleGainProgram : TrainingProgram
         {
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
-            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4
+            GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
+            GetSession4_1
         };
     }
 
@@ -773,6 +774,76 @@ public sealed class MuscleGainProgram : TrainingProgram
                 new(ex3),
                 new(ex4),
                 new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_1()
+    {
+        var ex1 = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 15, Sets = 3 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(ExerciseType.Snatch, OverheadSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(3, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(2, 3), Sets = 2 },
+                new MultiRepeat { Percent = 0.7, Repeats = Array(2, 1), Sets = 2 }
+            }
+        };
+
+        var ex3 = new Snatch(MediumGripPull)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.7, Repeats = 10, Sets = 2 },
+                new SingleRepeat { Percent = 0.8, Repeats = 8, Sets = 2 },
+                new SingleRepeat { Percent = 0.9, Repeats = 6, Sets = 3 }
+            }
+        };
+
+        var ex4 = new BackSquat(BackSquatPause)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 8, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 6, Sets = 3 }
+            }
+        };
+        
+        var ex5A = new Accessory(SotsPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 12 }
+            }
+        };
+
+        var ex5B = new Accessory(FrenchPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Intensity = Intensity.Light, Repeats = 15 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(4, ex5A, ex5B)
             }
         };
 
