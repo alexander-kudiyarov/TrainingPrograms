@@ -675,7 +675,7 @@ public sealed class MuscleGainProgram : TrainingProgram
             }
         };
 
-        var ex2 = new MultiSnatch(HipSnatch, PushPress)
+        var ex2 = new MultiSnatch(HipSnatch, SnatchPushPress)
         {
             Repeats = new Repeat[]
             {
