@@ -20,7 +20,7 @@ public sealed class MuscleGainProgram : TrainingProgram
             GetSession1_1, GetSession1_2, GetSession1_3, GetSession1_4,
             GetSession2_1, GetSession2_2, GetSession2_3, GetSession2_4,
             GetSession3_1, GetSession3_2, GetSession3_3, GetSession3_4,
-            GetSession4_1, GetSession4_2
+            GetSession4_1, GetSession4_2, GetSession4_3
         };
     }
 
@@ -897,6 +897,70 @@ public sealed class MuscleGainProgram : TrainingProgram
             }
         };
 
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1),
+                new(ex2),
+                new(ex3),
+                new(ex4),
+                new(ex5)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetSession4_3()
+    {
+        var ex1 = new Accessory(Hyperextension)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Repeats = 20, Sets = 2 }
+            }
+        };
+
+        var ex2 = new MultiSnatch(MuscleSnatch, SotsPress)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Weight = Constants.Bar, Repeats = Array(6, 6), Sets = 3 }
+            }
+        };
+
+        var ex3 = new MultiSnatch(SnatchPullTillPower, PowerSnatch)
+        {
+            Repeats = new Repeat[]
+            {
+                new MultiRepeat { Percent = 0.5, Repeats = Array(3, 2), Sets = 2 },
+                new MultiRepeat { Percent = 0.6, Repeats = Array(3, 1), Sets = 3 }
+            }
+        };
+
+        var ex4 = new Snatch(DeficitRomanianDeadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.5, Repeats = 12, Sets = 2 },
+                new SingleRepeat { Percent = 0.6, Repeats = 10, Sets = 2 },
+                new SingleRepeat { Percent = 0.7, Repeats = 8, Sets = 3 }
+            }
+        };
+
+        var ex5 = new CleanAndJerk(FrontSquat)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.50, Repeats = 10, Sets = 1 },
+                new SingleRepeat { Percent = 0.60, Repeats = 10, Sets = 1 },
+                new SingleRepeat { Percent = 0.75, Repeats = 10, Sets = 3 },
+                new SingleRepeat { Percent = 0.80, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.90, Repeats = 1, Sets = 1 },
+            }
+        };
+        
         var session = new Session
         {
             Rounds = new Round[]
