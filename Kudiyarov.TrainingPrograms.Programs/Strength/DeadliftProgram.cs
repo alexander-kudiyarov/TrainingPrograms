@@ -496,11 +496,11 @@ public sealed class DeadliftProgram : TrainingProgram
         {
             Repeats = new Repeat[]
             {
-                new SingleRepeat { Percent = 0.5, Repeats = 5 },
-                new SingleRepeat { Percent = 0.6, Repeats = 5 },
-                new SingleRepeat { Percent = 0.7, Repeats = 5 },
-                new SingleRepeat { Percent = 0.8, Repeats = 5 },
-                new SingleRepeat { Percent = 0.8, Repeats = 5, Sets = 5 }
+                new SingleRepeat { Percent = 0.50, Repeats = 5 },
+                new SingleRepeat { Percent = 0.60, Repeats = 5 },
+                new SingleRepeat { Percent = 0.70, Repeats = 5 },
+                new SingleRepeat { Percent = 0.80, Repeats = 5 },
+                new SingleRepeat { Percent = 0.85, Repeats = 5, Sets = 5 }
             }
         };
 
