@@ -28,7 +28,8 @@ public sealed class DeadliftProgram : TrainingProgram
             GetSession9_1, GetSession9_2, GetSession9_3,
             GetSession10_1, GetSession10_2, GetSession10_3,
             GetSession11_1, GetSession11_2, GetSession11_3,
-            GetSession12_1, EmptySession, GetSession12_3
+            GetSession12_1, EmptySession, GetSession12_3,
+            GetRpSession
         };
 
         return sessions;
@@ -2126,6 +2127,35 @@ public sealed class DeadliftProgram : TrainingProgram
             {
                 new(ex1),
                 new(ex2)
+            }
+        };
+
+        return session;
+    }
+
+    private static Session GetRpSession()
+    {
+        var ex1 = new Deadlift(ExerciseType.Deadlift)
+        {
+            Repeats = new Repeat[]
+            {
+                new SingleRepeat { Percent = 0.40, Repeats = 4, Sets = 2 },
+                new SingleRepeat { Percent = 0.50, Repeats = 3, Sets = 1 },
+                new SingleRepeat { Percent = 0.60, Repeats = 2, Sets = 1 },
+                new SingleRepeat { Percent = 0.70, Repeats = 2, Sets = 2 },
+                new SingleRepeat { Percent = 0.80, Repeats = 1, Sets = 2 },
+                new SingleRepeat { Percent = 0.90, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 0.95, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 1.00, Repeats = 1, Sets = 1 },
+                new SingleRepeat { Percent = 1.05, Repeats = 1, Sets = 1 }
+            }
+        };
+
+        var session = new Session
+        {
+            Rounds = new Round[]
+            {
+                new(ex1)
             }
         };
 
