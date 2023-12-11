@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Kudiyarov.Packages.DoubleExtensions" Version="1.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+        <PackageReference Include="Kudiyarov.Packages.DoubleExtensions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
     </ItemGroup>
 
 </Project>

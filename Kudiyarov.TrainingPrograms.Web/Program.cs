@@ -14,9 +14,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-    endpoints.MapControllerRoute(
-        "default",
-        "{controller=Home}/{action=Index}/{id?}"));
+app.MapDefaultControllerRoute();
 
 app.Run();

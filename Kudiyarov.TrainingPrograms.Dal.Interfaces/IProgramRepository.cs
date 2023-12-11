@@ -1,13 +1,13 @@
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Programs;
 
 namespace Kudiyarov.TrainingPrograms.Dal.Interfaces;
 
 public interface IProgramRepository
 {
-    IEnumerable<BaseTrainingProgram> Get();
-    BaseTrainingProgram Get(ProgramType type);
+    IEnumerable<TrainingProgram> Get();
+    TrainingProgram Get(ProgramType type);
     Session Get(SessionRequest request);
 }

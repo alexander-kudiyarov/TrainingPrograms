@@ -1,54 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
-
-    <ItemGroup>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week01.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week02.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week03.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week04.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week05.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week06.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week07.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week08.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week09.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week10.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week11.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week12.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week13.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-        <Compile Update="TrainingPrograms\CompetitionProgram.Week14.cs">
-            <DependentUpon>CompetitionProgram.cs</DependentUpon>
-        </Compile>
-    </ItemGroup>
 
 </Project>

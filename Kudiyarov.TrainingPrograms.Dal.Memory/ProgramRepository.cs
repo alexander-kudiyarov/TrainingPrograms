@@ -1,20 +1,21 @@
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Strength;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms.Technique;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Programs;
+using Kudiyarov.TrainingPrograms.Programs.Competition;
+using Kudiyarov.TrainingPrograms.Programs.Strength;
+using Kudiyarov.TrainingPrograms.Programs.Technique;
 
 namespace Kudiyarov.TrainingPrograms.Dal.Memory;
 
 public class ProgramRepository : IProgramRepository
 {
-    private readonly IReadOnlyDictionary<ProgramType, BaseTrainingProgram> _repository;
+    private readonly IReadOnlyDictionary<ProgramType, TrainingProgram> _repository;
 
     public ProgramRepository()
     {
-        var programs = new BaseTrainingProgram[]
+        var programs = new TrainingProgram[]
         {
             new CompetitionProgram(),
             new DeadliftProgram(),
@@ -22,19 +23,22 @@ public class ProgramRepository : IProgramRepository
             new MuscleGainProgram(),
             new PullAndSquatProgram(),
             new SnatchProgram(),
+            new CleanProgram(),
+            new JerkProgram(),
+            new SpeedProgram(),
             new BodybuildingProgram()
         };
 
         _repository = programs.ToDictionary(program => program.Type);
     }
 
-    public IEnumerable<BaseTrainingProgram> Get()
+    public IEnumerable<TrainingProgram> Get()
     {
         var result = _repository.Values;
         return result;
     }
 
-    public BaseTrainingProgram Get(ProgramType type)
+    public TrainingProgram Get(ProgramType type)
     {
         var result = _repository[type];
         return result;

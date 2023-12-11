@@ -1,12 +1,12 @@
 using Kudiyarov.Packages.DoubleExtensions;
 using Kudiyarov.TrainingPrograms.Bll.Interfaces;
 using Kudiyarov.TrainingPrograms.Dal.Interfaces;
-using Kudiyarov.TrainingPrograms.Entities.Entities;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Enums;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Exercises;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Repeats;
-using Kudiyarov.TrainingPrograms.Entities.Entities.Requests;
-using Kudiyarov.TrainingPrograms.Entities.TrainingPrograms;
+using Kudiyarov.TrainingPrograms.Entities;
+using Kudiyarov.TrainingPrograms.Entities.Enums;
+using Kudiyarov.TrainingPrograms.Entities.Exercises;
+using Kudiyarov.TrainingPrograms.Entities.Repeats;
+using Kudiyarov.TrainingPrograms.Entities.Requests;
+using Kudiyarov.TrainingPrograms.Programs;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Kudiyarov.TrainingPrograms.Bll;
@@ -24,13 +24,13 @@ public class TrainingProgramLogic : ITrainingProgramLogic
         _repository = repository;
     }
 
-    public IEnumerable<BaseTrainingProgram> Get()
+    public IEnumerable<TrainingProgram> Get()
     {
         var result = _repository.Get();
         return result;
     }
 
-    public BaseTrainingProgram Get(ProgramType type)
+    public TrainingProgram Get(ProgramType type)
     {
         var result = _repository.Get(type);
         return result;
@@ -39,7 +39,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
     public Session Get(SessionRequest request)
     {
         var result = _memoryCache.GetOrCreate(request, _ => GetFromRepository(request));
-        return result;
+        return result!;
     }
 
     private Session GetFromRepository(SessionRequest request)
@@ -53,24 +53,60 @@ public class TrainingProgramLogic : ITrainingProgramLogic
     {
         foreach (var set in session.Rounds)
         foreach (var exercise in set.Exercises)
-            // foreach (var repeat in exercise.Repeats)
-            // {
-            //     if (repeat is not WeightedRepeat weightedRepeat) continue;
-            //     CalculatePercentage(exercise, weightedRepeat);
-            //     AddWarmupRepeats(exercise);
-            // }
-
-        foreach (var repeat in exercise.Repeats)
         {
-            CalculatePercentage(exercise, repeat);
-            CalculateWeight(exercise, repeat);
-            RoundWeight(exercise, repeat);
+            foreach (var repeat in exercise.Repeats)
+            {
+                CalculatePercentage(exercise, repeat);
+            }
+            
+            AddWarmup(exercise);
+            
+            foreach (var repeat in exercise.Repeats)
+            {
+                CalculateWeight(exercise, repeat);
+                // RoundWeight(exercise, repeat);
+            }
         }
+    }
+
+    private static void AddWarmup(BaseExercise exercise)
+    {
+        if (!exercise.IsWarmupNeeded)
+        {
+            return;
+        }
+        
+        var firstRepeat = exercise.Repeats.FirstOrDefault();
+
+        if (firstRepeat is not { Percent: { } })
+        {
+            return;
+        }
+        
+        var workPercent = firstRepeat.Percent;
+        var warmupPercent = 0.5;
+        var newList = new List<Repeat>();
+
+        while (warmupPercent.LessThan(workPercent.Value))
+        {
+            Repeat repeat = firstRepeat switch
+            {
+                SingleRepeat single => new SingleRepeat {Percent = warmupPercent, Repeats = single.Repeats},
+                MultiRepeat multi => new MultiRepeat {Percent = warmupPercent, Repeats = multi.Repeats},
+                StaticRepeat staticR => new StaticRepeat {Percent = warmupPercent, Duration = staticR.Duration}
+            };
+                    
+            newList.Add(repeat);
+            warmupPercent += 0.1;
+        }
+        
+        newList.AddRange(exercise.Repeats);
+        exercise.Repeats = newList;
     }
 
     private static void CalculatePercentage(BaseExercise exercise, Repeat repeat)
     {
-        if (repeat.Weight is not null || repeat.Percent is not null || exercise.Weight is null)
+        if (repeat.Weight != null || repeat.Percent != null || exercise.Weight == null)
         {
             return;
         }
@@ -78,7 +114,7 @@ public class TrainingProgramLogic : ITrainingProgramLogic
         var repeats = repeat switch
         {
             SingleRepeat singleRepeat => singleRepeat.Repeats,
-            // MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
+            MultiRepeat multiRepeat => multiRepeat.Repeats.Max(),
             _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
         };
 
@@ -110,34 +146,12 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
     private static double GetPercent(double repeats)
     {
-        var result = 1 - repeats * 0.025;
+        var result = repeats.RelativeEquals(1)
+            ? 1
+            : 1 - repeats * 0.025;
+
         return result;
     }
-
-    // private static void AddWarmupRepeats(BaseExercise exercise)
-    // {
-    //     if (!exercise.IsWarmupNeeded
-    //         || exercise.Repeats.First() is not WeightedRepeat repeat) return;
-    //
-    //     var warmUps = new List<Repeat>();
-    //
-    //     for (var i = 0.5; i.LessThan(repeat.Percent); i += 0.1)
-    //     {
-    //         Repeat result = repeat switch
-    //         {
-    //             SingleRepeat singleRepeat => new SingleRepeat {Percent = i, Repeats = singleRepeat.Repeats},
-    //             MultiRepeat multiRepeat => new MultiRepeat {Percent = i, Repeats = multiRepeat.Repeats},
-    //             // TODO Fix
-    //             _ => throw new ArgumentOutOfRangeException(nameof(repeat), repeat, null)
-    //         };
-    //
-    //         warmUps.Add(result);
-    //     }
-    //
-    //     warmUps.AddRange(exercise.Repeats);
-    //     exercise.Repeats = warmUps;
-    //     exercise.IsWarmupNeeded = false;
-    // }
 
     private static void CalculateWeight(BaseExercise exercise, Repeat repeat)
     {
@@ -162,8 +176,8 @@ public class TrainingProgramLogic : ITrainingProgramLogic
 
         var factor = equipment switch
         {
-            EquipmentType.Barbell => Stats.BarbellFactor,
-            EquipmentType.Dumbbell => Stats.DumbbellFactor,
+            EquipmentType.Barbell => Constants.BarbellFactor,
+            EquipmentType.Dumbbell => Constants.DumbbellFactor,
             _ => throw new ArgumentOutOfRangeException(nameof(equipment), "Type is not defined")
         };
 
