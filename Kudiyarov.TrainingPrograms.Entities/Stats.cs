@@ -15,6 +15,7 @@ public static class Stats
 
     // https://www.t-nation.com/training/know-your-ratios-destroy-weaknesses
 
+    public const double SnatchPress = Press * 0.825;
     public const double BenchBackSquat = BackSquat * 1.1;
     public const double FrontSquat = BackSquat * 0.85;
     public const double BicepsCurl = BackSquat * 0.3;

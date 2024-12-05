@@ -76,9 +76,9 @@ public class TrainingProgramLogic : ITrainingProgramLogic
             return;
         }
         
-        var firstRepeat = exercise.Repeats.FirstOrDefault();
+        var firstRepeat = exercise.Repeats[0];
 
-        if (firstRepeat is not { Percent: { } })
+        if (firstRepeat is not { Percent: not null })
         {
             return;
         }
